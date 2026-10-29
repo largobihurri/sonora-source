@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="smart_recently_added_title">Azkenaldian gehituak</string>
+    <string name="smart_most_played_title">Gehien entzunak</string>
+    <string name="smart_never_played_title">Inoiz entzun gabeak</string>
+    <plurals name="smart_recently_added_empty">
+        <item quantity="one">Azken %1$d egunean gehitutako abestiak hemen agertzen dira.</item>
+        <item quantity="other">Azken %1$d egunetan gehitutako abestiak hemen agertzen dira.</item>
+    </plurals>
+    <string name="smart_most_played_empty">Gehien entzuten dituzun abestiak hemen agertzen dira.</string>
+    <string name="smart_never_played_empty">Abesti guztiak entzun dituzu.</string>
+</resources>

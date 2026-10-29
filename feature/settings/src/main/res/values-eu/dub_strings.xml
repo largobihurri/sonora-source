@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_dub_mode_header">DUB modua</string>
+    <string name="settings_dub_mode">DUB modua</string>
+    <string name="settings_dub_mode_footer">DUB moduak «Orain erreproduzitzen» dub nahasgailu bihurtzen du: taupadarekin sinkronizatutako oihartzuna, ekortze-iragazkia, bost bideko aurreanplifikadorea etenekin, eta oihartzuna jaurtitzeko, mozteko, baxuak kentzeko, izozteko eta zoratzeko padak. Aktibatzean DJ modua desaktibatzen da; begiztak eta puntuak mantentzen dira. Efektuek ez dute jarduten bit-perfect irteera aktibatuta dagoenean, ezta beste gailu batean erreproduzitzean ere. THROW ukitzean entzuten zenutenetik hasten da; gainerako kontrolak ukitu eta 0,2 s inguru geroago entzuten dira. «Orain erreproduzitzen» pantailako … menutik ere aktibatu dezakezu.</string>
+    <string name="settings_dub_pads_header">Padak</string>
+    <string name="settings_dub_pads_hold">Eutsi; ukitu bikoitzak finkatzen du</string>
+    <string name="settings_dub_pads_toggle">Ukitu txandakatzeko</string>
+    <string name="settings_dub_reset">Berrezarri efektuak</string>
+    <string name="settings_dub_pads_footer">Berrezartzeak lehenetsitako balioetara itzultzen ditu oihartzunaren denbora, atzeraelikadura, itzulera, iragazkiaren blokeoa eta aurreanplifikadorearen maiztasun eta maila guztiak.</string>
+</resources>

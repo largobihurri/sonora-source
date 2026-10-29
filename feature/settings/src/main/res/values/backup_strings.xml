@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Backup & Restore: playlists, marks, play counts and settings in one file -->
+    <string name="settings_backup">Backup &amp; Restore</string>
+    <string name="backup_footer">A backup keeps your playlists, favourites, pins, hidden items, play counts and settings in one file. Your music files and folder access are not part of it.</string>
+    <string name="backup_back_up">Back Up</string>
+    <string name="backup_restore">Restore</string>
+    <string name="backup_last">Last backup: %1$s</string>
+    <string name="backup_never">No backup yet</string>
+    <string name="backup_working">Working…</string>
+
+    <!-- What happened -->
+    <string name="backup_saved">Backup saved.</string>
+    <string name="backup_write_failed">Couldn’t save the backup. Try another place.</string>
+    <string name="backup_unreadable">Couldn’t read that file.</string>
+    <string name="backup_other_format">That file isn’t a Sonora backup.</string>
+    <string name="backup_newer_version">This backup was made by a newer version of Sonora. Update Sonora to restore it.</string>
+    <string name="backup_malformed">That backup is damaged and can’t be restored.</string>
+    <string name="backup_restore_failed">Couldn’t finish the restore. What was restored so far stays.</string>
+    <string name="backup_no_picker">No app on this phone can pick a file.</string>
+    <string name="backup_ok">OK</string>
+
+    <!-- The preview before a restore -->
+    <string name="backup_preview_title">Restore Backup?</string>
+    <string name="backup_preview_summary">%1$s · %2$s · %3$s</string>
+    <plurals name="backup_playlists">
+        <item quantity="one">%1$d playlist</item>
+        <item quantity="other">%1$d playlists</item>
+    </plurals>
+    <plurals name="backup_songs_found">
+        <item quantity="one">%1$d song found</item>
+        <item quantity="other">%1$d songs found</item>
+    </plurals>
+    <plurals name="backup_songs_missing">
+        <item quantity="one">%1$d not found</item>
+        <item quantity="other">%1$d not found</item>
+    </plurals>
+    <string name="backup_preview_message">Nothing you have now is removed: playlists, favourites, pins, hidden items and play counts are added to yours, and settings take the backup’s values. A playlist with a name you already use gets a number.</string>
+    <string name="backup_restore_confirm">Restore</string>
+    <string name="backup_cancel">Cancel</string>
+
+    <!-- After a restore -->
+    <string name="backup_restored_title">Backup Restored</string>
+    <plurals name="backup_playlists_added">
+        <item quantity="one">%1$d playlist added.</item>
+        <item quantity="other">%1$d playlists added.</item>
+    </plurals>
+    <plurals name="backup_unmatched_header">
+        <item quantity="one">%1$d song isn’t in your library:</item>
+        <item quantity="other">%1$d songs aren’t in your library:</item>
+    </plurals>
+    <string name="backup_song_line">%1$s — %2$s</string>
+    <string name="backup_unknown_song">Unknown song</string>
+</resources>

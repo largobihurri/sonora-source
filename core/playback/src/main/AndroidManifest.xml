@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Bit-perfect USB output: AudioManager.setPreferredMixerAttributes (a normal permission, granted at install). -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- Lets an app use the external control API (ExternalApiProvider) while the user's "External control" switch is
+         on. Dangerous, so the user grants it per app. The adb shell and root do not need it. -->
+    <permission
+        android:name="io.sonora.permission.EXTERNAL_CONTROL"
+        android:description="@string/external_control_permission_description"
+        android:label="@string/external_control_permission_label"
+        android:protectionLevel="dangerous" />
+
+    <application>
+        <!-- Exported with no permission on purpose: Android Auto, the system media controls and Bluetooth
+             controllers bind to the media session from other packages; the session grants each its commands
+             (SonoraSession.onConnect). -->
+        <service
+            android:name="io.sonora.core.playback.PlaybackService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService" />
+                <!-- The session is also a media library: Android Auto browses and searches it. -->
+                <action android:name="androidx.media3.session.MediaLibraryService" />
+                <!-- Lets the system media controls offer to resume the last queue (onPlaybackResumption). -->
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <!-- Artwork for Android Auto, which can read neither the artwork cache nor the folder grants: read-only and
+             opaque keys only (see CarArtwork). -->
+        <provider
+            android:name="io.sonora.core.playback.ArtworkProvider"
+            android:authorities="${applicationId}.artwork"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <!-- The external control API: queries and commands for other apps and the adb shell. Exported without a
+             manifest permission (that would lock out the shell); the caller is checked in code on its uid, see
+             ExternalApiProvider. Denies everyone but Sonora until the user turns External control on. -->
+        <provider
+            android:name="io.sonora.core.playback.ExternalApiProvider"
+            android:authorities="${applicationId}.api"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <!-- Media buttons (Bluetooth play, the system's resumption controls) start the service when it is not
+             running; it then resumes the saved queue. Must be exported for the system to deliver them. -->
+        <receiver
+            android:name="androidx.media3.session.MediaButtonReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

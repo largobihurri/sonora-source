@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ds_back">Atrás</string>
+    <string name="ds_done">OK</string>
+    <string name="ds_settings">Ajustes</string>
+    <plurals name="ds_file_size_bytes">
+        <item quantity="one">%1$s byte</item>
+        <item quantity="many">%1$s bytes</item>
+        <item quantity="other">%1$s bytes</item>
+    </plurals>
+</resources>

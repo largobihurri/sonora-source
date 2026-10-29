@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dub_page_effects">Efektuak</string>
+    <string name="dub_page_preamp">Aurreanplifikadorea</string>
+    <string name="dub_feedback">Atzeraelikadura</string>
+    <string name="dub_return">Itzulera</string>
+    <string name="dub_echo_time">Oihartzunaren denbora</string>
+    <string name="dub_tap_description">Markatu tempoa; eutsi sakatuta sareta berriro jarraitzeko</string>
+    <string name="dub_clock_none">Saretarik ez · %1$s</string>
+    <string name="dub_stop">Gelditu</string>
+    <string name="dub_stopping">Isatsa jotzen</string>
+    <string name="dub_play">Erreproduzitu</string>
+    <string name="dub_bypass_format">DUB konprimitu gabeko audioarekin bakarrik dabil</string>
+</resources>

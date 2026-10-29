@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="smart_recently_added_title">Añadidas recientemente</string>
+    <string name="smart_most_played_title">Más reproducidas</string>
+    <string name="smart_never_played_title">Nunca reproducidas</string>
+    <plurals name="smart_recently_added_empty">
+        <item quantity="one">Aquí aparecen las canciones añadidas hace %1$d día o menos.</item>
+        <item quantity="many">Aquí aparecen las canciones añadidas hace %1$d días o menos.</item>
+        <item quantity="other">Aquí aparecen las canciones añadidas hace %1$d días o menos.</item>
+    </plurals>
+    <string name="smart_most_played_empty">Aquí aparecen las canciones que más reproduces.</string>
+    <string name="smart_never_played_empty">Ya has reproducido todas las canciones.</string>
+</resources>

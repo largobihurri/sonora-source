@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ajustes › Colección visual: qué álbumes muestra la colección visual en horizontal -->
+    <string name="settings_cover_flow_header">Colección visual</string>
+    <string name="settings_hide_albums_without_artwork">Ocultar en la colección visual los álbumes sin carátula</string>
+    <string name="settings_hide_albums_without_artwork_footer">La colección visual muestra solo los álbumes con carátula, incrustada en sus archivos o como imagen en su carpeta. La lista de álbumes sigue mostrándolos todos.</string>
+</resources>

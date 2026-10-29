@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sort_menu">Ordenatu</string>
+    <string name="sort_by">Ordenatu honen arabera</string>
+    <string name="sort_key_playlist_order">Zerrendaren ordena</string>
+    <string name="sort_key_title">Izenburua</string>
+    <string name="sort_key_name">Izena</string>
+    <string name="sort_key_artist">Artista</string>
+    <string name="sort_key_album">Albuma</string>
+    <string name="sort_key_genre">Generoa</string>
+    <string name="sort_key_release_date">Argitaratze-data</string>
+    <string name="sort_key_date_added">Gehitze-data</string>
+    <string name="sort_key_date_converted">Bihurtze-data</string>
+    <string name="sort_key_duration">Iraupena</string>
+    <string name="sort_ascending">Gorantz</string>
+    <string name="sort_descending">Beherantz</string>
+    <string name="sort_reorder_hint">Abestien ordena aldatzeko, aukeratu «Zerrendaren ordena» Ordenatu menuan.</string>
+</resources>

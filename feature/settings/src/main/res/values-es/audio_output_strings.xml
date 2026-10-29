@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Audio output: the device the sound goes to -->
+    <string name="audio_output_header">Salida de audio</string>
+    <string name="audio_output_device">Dispositivo de salida</string>
+    <string name="audio_output_none">Ninguno</string>
+    <string name="audio_output_footer">Muestra adónde se envía el sonido y lo que ese dispositivo indica que puede reproducir. Toca para ver los detalles.</string>
+    <string name="audio_output_details_title">Dispositivo de salida</string>
+    <string name="audio_output_not_reported">No indicado</string>
+    <string name="audio_output_kind_usb">Audio USB</string>
+    <!-- The type in a named title, e.g. "USB: Scarlett 2i2" -->
+    <string name="audio_output_kind_usb_short">USB</string>
+    <string name="audio_output_kind_wired">Auriculares con cable</string>
+    <string name="audio_output_kind_bluetooth">Bluetooth</string>
+    <string name="audio_output_kind_hdmi">HDMI</string>
+    <string name="audio_output_kind_speaker">Altavoz del teléfono</string>
+    <string name="audio_output_kind_other">Otra salida</string>
+    <!-- A device's title: its type, then its name, e.g. "Bluetooth: Buds Pro" -->
+    <string name="audio_output_title_named">%1$s: %2$s</string>
+    <string name="audio_output_others_header">Otros dispositivos</string>
+    <string name="audio_output_row_rates">Frecuencias de muestreo</string>
+    <string name="audio_output_row_depths">Profundidades de bits</string>
+    <string name="audio_output_row_channels">Canales</string>
+    <string name="audio_output_row_bit_perfect">Bit-perfect</string>
+    <string name="audio_output_mixer_header">Formatos del mezclador</string>
+    <string name="audio_output_active_header">En uso</string>
+    <string name="audio_output_pcm_8">8 bits</string>
+    <string name="audio_output_pcm_16">16 bits</string>
+    <string name="audio_output_pcm_24">24 bits</string>
+    <string name="audio_output_pcm_32">32 bits</string>
+    <string name="audio_output_pcm_float">32 bits en coma flotante</string>
+    <!-- A mixer format: sample rate in kHz, bit depth, channel count; e.g. "96 kHz · 24 bits · 2 can." -->
+    <string name="audio_output_mixer_format">%1$s kHz · %2$s · %3$d can.</string>
+    <string name="audio_output_mixer_bit_perfect">Bit-perfect</string>
+    <string name="audio_output_mixer_default">Estándar</string>
+    <string name="audio_output_bp_offered">Disponible</string>
+    <string name="audio_output_bp_not_offered">No disponible</string>
+    <string name="audio_output_bp_no_usb">Sin dispositivo USB</string>
+    <string name="audio_output_bp_android_old">Requiere Android 14</string>
+    <string name="audio_output_bp_footer_offered">Este dispositivo USB puede recibir el audio sin modificar. Android indica los formatos que acepta en Formatos del mezclador.</string>
+    <string name="audio_output_bp_footer_not_offered">Este dispositivo USB no ofrece salida bit-perfect en este teléfono.</string>
+    <string name="audio_output_bp_footer_no_usb">Conecta un dispositivo de audio USB, como un DAC o una interfaz de audio, para comprobar si ofrece salida bit-perfect.</string>
+    <string name="audio_output_bp_footer_android_old">La salida bit-perfect requiere Android 14 o posterior.</string>
+    <string name="audio_output_bit_perfect_switch">Salida USB bit-perfect</string>
+    <string name="audio_output_bp_switch_off">Envía las muestras de cada canción sin modificar a un dispositivo de audio USB: sin remuestreo, sin cambios de volumen y sin efectos. Requiere Android 14 y un dispositivo USB que la ofrezca. Ajusta el volumen en el propio dispositivo.</string>
+    <string name="audio_output_bp_switch_waiting">Activada. Surtirá efecto cuando conectes un dispositivo de audio USB que ofrezca salida bit-perfect. Hasta entonces, la música suena de la forma habitual.</string>
+    <string name="audio_output_bp_switch_active">En funcionamiento. El dispositivo USB recibe las muestras de cada canción sin modificar, con su propia frecuencia de muestreo y profundidad de bits. El ecualizador, la normalización del volumen, el fundido cruzado, la velocidad, el tono y el tempo de DJ están desactivados mientras tanto. Ajusta el volumen en el propio dispositivo. Las canciones en un formato que el dispositivo no ofrece suenan de la forma habitual.</string>
+    <string name="playback_locked_footer">Desactivado mientras la salida USB bit-perfect está en funcionamiento.</string>
+</resources>

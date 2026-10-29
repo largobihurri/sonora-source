@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Playback: volume normalisation (ReplayGain) -->
+    <string name="playback_header">Playback</string>
+    <string name="playback_normalisation_off">Off</string>
+    <string name="playback_normalisation_off_subtitle">Every song at its own level</string>
+    <string name="playback_normalisation_track">Track</string>
+    <string name="playback_normalisation_track_subtitle">Every song at the same loudness</string>
+    <string name="playback_normalisation_album">Album</string>
+    <string name="playback_normalisation_album_subtitle">Albums keep their quiet and loud songs</string>
+    <string name="playback_normalisation_auto">Automatic</string>
+    <string name="playback_normalisation_auto_subtitle">Album gain while an album plays in order, track gain otherwise</string>
+    <string name="playback_normalisation_footer">Volume normalisation (ReplayGain) uses the gain stored in the files’ tags. Untagged files play unchanged.</string>
+    <string name="playback_preamp">Pre-amp</string>
+    <!-- A pre-amp value: the signed number of decibels, e.g. "+1.5 dB" -->
+    <string name="playback_preamp_value">%1$s dB</string>
+    <string name="playback_preamp_footer">Added to every tagged gain. Peaks are never pushed past full scale.</string>
+</resources>

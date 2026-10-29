@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Watch: music on the Wear OS watch -->
+    <string name="settings_watch_header">Wear OS</string>
+    <string name="settings_watch">Watch</string>
+    <string name="settings_watch_footer">Put albums and playlists on your watch to play them there, without your phone.</string>
+    <string name="watch_refresh">Refresh</string>
+
+    <!-- Connection -->
+    <string name="watch_link_checking">Checking the watch…</string>
+    <string name="watch_link_connected">Connected</string>
+    <string name="watch_link_sending">Sending music</string>
+    <string name="watch_link_no_watch">No watch found</string>
+    <string name="watch_link_outdated">Watch app needs updating</string>
+    <string name="watch_link_unreachable">Can’t reach the watch</string>
+    <string name="watch_advice_no_watch">Pair a Wear OS watch with this phone and install Sonora on it, then keep it close.</string>
+    <string name="watch_advice_outdated">Sonora on the watch and on this phone speak different versions. Update the older one.</string>
+    <string name="watch_advice_unreachable">Make sure the watch is nearby and its Bluetooth is on, then refresh.</string>
+
+    <!-- Space -->
+    <string name="watch_space_header">Storage</string>
+    <string name="watch_space_caption">%1$s used of %2$s</string>
+    <string name="watch_space_free">Free</string>
+    <string name="watch_space_room">Room for songs</string>
+    <string name="watch_space_songs">Sonora songs</string>
+    <string name="watch_space_footer">The watch keeps some space free for itself, so songs can use a little less than the free space.</string>
+    <string name="watch_no_songs">No songs</string>
+    <plurals name="watch_song_count">
+        <item quantity="one">%1$d song</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+
+    <!-- The send in progress -->
+    <string name="watch_transfer_header">Sending</string>
+    <string name="watch_connecting">Connecting to the watch…</string>
+    <string name="watch_song_position">Song %1$d of %2$d</string>
+    <string name="watch_phase_encoding">Converting to Opus</string>
+    <string name="watch_phase_sending">Sending to the watch</string>
+    <string name="watch_overall">Overall: %1$s</string>
+    <string name="watch_cancel">Cancel sending</string>
+
+    <!-- The last result -->
+    <string name="watch_result_header">Last result</string>
+    <plurals name="watch_done_sent">
+        <item quantity="one">%1$d song sent</item>
+        <item quantity="other">%1$d songs sent</item>
+    </plurals>
+    <plurals name="watch_done_already_there">
+        <item quantity="one">%1$d song was already on the watch</item>
+        <item quantity="other">%1$d songs were already on the watch</item>
+    </plurals>
+    <plurals name="watch_done_failed">
+        <item quantity="one">%1$d song failed</item>
+        <item quantity="other">%1$d songs failed</item>
+    </plurals>
+    <string name="watch_done_nothing">Nothing was sent</string>
+    <string name="watch_done_speed">%1$s at %2$s/s</string>
+    <string name="watch_dismiss">Dismiss</string>
+    <string name="watch_failed_song">%1$s — %2$s</string>
+    <string name="watch_reason_no_space">there was no room on the watch</string>
+    <string name="watch_reason_invalid">the watch refused it</string>
+    <string name="watch_reason_damaged">it arrived damaged</string>
+    <string name="watch_reason_storage">the watch couldn’t save it</string>
+    <string name="watch_reason_encoding">couldn’t convert it</string>
+    <string name="watch_failure_no_watch">No watch with Sonora is connected.</string>
+    <string name="watch_failure_incompatible">The watch app is a different version. Update Sonora on the watch.</string>
+    <string name="watch_failure_no_space">The songs need %1$s but the watch has room for %2$s.</string>
+    <string name="watch_failure_connection_lost">The connection to the watch dropped. Send again to carry on where it stopped.</string>
+    <string name="watch_failure_nothing">There are no songs to send.</string>
+    <string name="watch_failure_unexpected">Something went wrong while sending to the watch.</string>
+
+    <!-- Songs on the watch -->
+    <string name="watch_songs_header">On the watch</string>
+    <string name="watch_songs_empty">No songs yet. Send an album or a playlist from the Library with its menu.</string>
+    <string name="watch_no_album">No Album</string>
+    <string name="watch_various_artists">Various Artists</string>
+    <string name="watch_remove_album">Remove album from the watch</string>
+    <string name="watch_remove_song">Remove song from the watch</string>
+    <plurals name="watch_remove_title">
+        <item quantity="one">Remove %1$d Song from the Watch?</item>
+        <item quantity="other">Remove %1$d Songs from the Watch?</item>
+    </plurals>
+    <string name="watch_remove_message">The songs are deleted from the watch only. Your library on the phone is not touched, and you can send them again.</string>
+    <string name="watch_remove_confirm">Remove</string>
+    <string name="watch_cancel_button">Cancel</string>
+    <string name="watch_ok">OK</string>
+    <plurals name="watch_removed">
+        <item quantity="one">%1$d song removed from the watch.</item>
+        <item quantity="other">%1$d songs removed from the watch.</item>
+    </plurals>
+    <string name="watch_removed_partly">Removed %1$d of %2$d songs. The rest are still on the watch.</string>
+    <string name="watch_remove_failed">Couldn’t remove the songs. Check the watch is nearby and try again.</string>
+</resources>

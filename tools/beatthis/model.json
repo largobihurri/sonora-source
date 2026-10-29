@@ -1,0 +1,110 @@
+{
+  "schema": "sonora.beatthis.model/1",
+  "name": "beat-this-small0",
+  "description": "Beat This! (CPJKU, ISMIR 2024) 'small0' checkpoint (2.1M parameters, trained on all datasets except GTZAN, seed 0), converted to ONNX.",
+  "file": "small0.onnx",
+  "url": "https://huggingface.co/ashudesai/songbird-models/resolve/345312bf5604913b3c0d05815f93c81c4b114e4d/small0.onnx",
+  "sizeBytes": 10401044,
+  "sha256": "c462b064a4033050ca6a5354bf866ff4610ab1fd8f1dec1e494b20b22d870aea",
+  "source": {
+    "repository": "https://huggingface.co/ashudesai/songbird-models",
+    "revision": "345312bf5604913b3c0d05815f93c81c4b114e4d",
+    "exporter": "torch.onnx.export (TorchScript tracer) of the upstream PyTorch Lightning checkpoint, as stated in the repository model card (not independently reproduced here)"
+  },
+  "upstream": {
+    "code": "https://github.com/CPJKU/beat_this",
+    "codeRevision": "b95c8ab0c58c2d9fcfd40508ae8dffbc05ac4f5c",
+    "checkpointName": "small0",
+    "checkpointHost": "https://cloud.cp.jku.at/index.php/s/7ik4RrBKTS273gp",
+    "paper": "Foscarin, Schlueter, Widmer. Beat this! Accurate beat tracking without DBN postprocessing. ISMIR 2024.",
+    "checkpointSha256": "6074be2c4d490c5f6101fcc374a1ec72ae93456e23bb6019783b849f5dc7d47b"
+  },
+  "licence": {
+    "code": {
+      "spdx": "MIT",
+      "holder": "Copyright (c) 2024 Institute of Computational Perception, JKU Linz, Austria",
+      "url": "https://github.com/CPJKU/beat_this/blob/main/LICENSE"
+    },
+    "weights": {
+      "spdx": "MIT",
+      "evidence": "beat_this README, section License: 'The code and the published model weights are released under the MIT license'. The small0..2 checkpoints are published in the same release.",
+      "url": "https://github.com/CPJKU/beat_this#license",
+      "caveat": "The same section notes that some of the training files are fully copyrighted or under limited Creative Commons licences, and that it is up to the user to assess whether this affects their use case. No training audio is redistributed with the weights."
+    },
+    "onnxConversion": {
+      "spdx": "MIT",
+      "evidence": "Model card of the conversion repository declares license: mit and 'MIT, same as the original CPJKU/beat_this'. The repository ships no separate LICENSE file.",
+      "url": "https://huggingface.co/ashudesai/songbird-models"
+    },
+    "notice": "Ship the upstream MIT notice (copyright line and permission text) with the app's third-party licences when the model is bundled."
+  },
+  "onnx": {
+    "irVersion": 7,
+    "opsetImports": [
+      {
+        "domain": "",
+        "version": 14
+      }
+    ],
+    "producer": "pytorch 2.12.0",
+    "parameters": 2099720,
+    "inputs": [
+      {
+        "name": "spectrogram",
+        "dtype": "float32",
+        "shape": [
+          "batch",
+          "time",
+          128
+        ],
+        "meaning": "log-mel spectrogram, frames x 128 mel bins"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "beat",
+        "dtype": "float32",
+        "shape": [
+          "batch",
+          "time"
+        ],
+        "meaning": "beat logits, 50 frames per second"
+      },
+      {
+        "name": "downbeat",
+        "dtype": "float32",
+        "shape": [
+          "batch",
+          "time"
+        ],
+        "meaning": "downbeat logits, 50 frames per second"
+      }
+    ],
+    "notes": "The model card says the input is called input_spectrogram; the real name is 'spectrogram'. The time axis is dynamic: lengths 1, 2, 5, 20, 500 and 1500 frames run (batch 1). Weight provenance: verify_weights.py shows every attention, feed-forward and linear tensor of the ONNX file (87.6 % of the elements) is bit-identical to the upstream small0 checkpoint; the remainder are the four conv kernels and batch-norm statistics (folded together at export) and the rotary frequency constants."
+  },
+  "melFilterbankReference": {
+    "description": "torchaudio MelScale.fb written verbatim (513 x 128 float32 row-major) by the musetric export of the 'final0' model. Used only to cross-check the filterbank computed in beatthis_ref.py; the front end does not depend on it.",
+    "file": "mel-filterbank.bin",
+    "url": "https://huggingface.co/musetric/beat-this-onnx/resolve/a076df6f20345e133a73b6d2068b68b60e48fafb/mel-filterbank.bin",
+    "sizeBytes": 262656,
+    "sha256": "1ee975d96f44ccf2c3bfe37825c1c1f0b089f5703c7a12a84b1f0a3bce004533",
+    "licence": "MIT (https://huggingface.co/musetric/beat-this-onnx)"
+  },
+  "melFrontEndReference": {
+    "description": "ONNX export (torch, opset 18) of the upstream LogMelSpect module (torchaudio MelSpectrogram + log1p, filterbank embedded). Input audio_pcm [1, samples] float32 at 22050 Hz, output mel_spectrogram [1, frames, 128]. Used by validate.py as ground truth for the numpy front end; not shipped in the app.",
+    "file": "mel_spectrogram.onnx",
+    "url": "https://huggingface.co/ashudesai/songbird-models/resolve/345312bf5604913b3c0d05815f93c81c4b114e4d/mel_spectrogram.onnx",
+    "sizeBytes": 302301,
+    "sha256": "f8581e3661590d690a467a1d4ba57d789f45683a289d7280d53a9eec774675b5",
+    "licence": "MIT (https://huggingface.co/ashudesai/songbird-models)"
+  },
+  "checkpointReference": {
+    "description": "The upstream PyTorch Lightning checkpoint 'small0' as published by the Beat This! authors. Used only by verify_weights.py to prove that the ONNX weights are the published ones; not shipped.",
+    "file": "small0.ckpt",
+    "url": "https://cloud.cp.jku.at/public.php/dav/files/7ik4RrBKTS273gp/small0.ckpt",
+    "sizeBytes": 8451101,
+    "sha256": "6074be2c4d490c5f6101fcc374a1ec72ae93456e23bb6019783b849f5dc7d47b",
+    "licence": "MIT (weights published under the beat_this MIT licence, see licence.weights)",
+    "note": "The host is a cloud share, not content addressed: the sha256 is the pin (recorded 2026-10-07)."
+  }
+}

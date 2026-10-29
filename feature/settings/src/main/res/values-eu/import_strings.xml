@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_import_archive">Inportatu artxiboa…</string>
+    <string name="import_title">Inportatu artxiboa</string>
+    <string name="import_cancel">Utzi</string>
+    <string name="import_confirm">Inportatu</string>
+    <string name="import_opening">Artxiboa irekitzen…</string>
+
+    <string name="import_kind_song">Sonorako abestia</string>
+    <string name="import_kind_album">Sonorako albuma · %1$s</string>
+    <string name="import_kind_playlist">Sonorako zerrenda · %1$s</string>
+    <string name="import_kind_selection">Sonoran hautatutako abestiak · %1$s</string>
+    <plurals name="import_song_count">
+        <item quantity="one">Abesti %1$d</item>
+        <item quantity="other">%1$d abesti</item>
+    </plurals>
+    <string name="import_zip_encrypted">Pasahitzez babestutako ZIP artxiboa</string>
+    <string name="import_zip">ZIP artxiboa</string>
+    <string name="import_playlist_note">«%1$s» zerrenda ordena berean sortuko da berriro.</string>
+
+    <string name="import_password_header">Pasahitza</string>
+    <string name="import_password_placeholder">Derrigorrezkoa</string>
+    <string name="import_password_show">Erakutsi pasahitza</string>
+    <string name="import_password_hide">Ezkutatu pasahitza</string>
+    <string name="import_password_hint">Eskatu pasahitza artxiboa bidali dizunari.</string>
+    <string name="import_password_wrong">Pasahitza ez da zuzena. Saiatu berriro.</string>
+    <string name="import_password_again">Sonora itxi egin da inportazioa amaitu aurretik. Idatzi berriro pasahitza.</string>
+
+    <string name="import_destination_header">Gorde hemen</string>
+    <string name="import_choose_folder">Aukeratu karpeta bat…</string>
+    <string name="import_change">Aldatu</string>
+    <string name="import_destination_none">Aukeratu musika non gordeko den. Bihurgailuaren irteera-karpeta ere izango da.</string>
+    <string name="import_destination_in">Abestiak karpeta berri batean gordeko dira hemen, eta zure liburutegian agertuko dira.</string>
+    <string name="import_destination_joins">Karpeta hau ez dago zure liburutegian. Inportatu ondoren, eman baimena haren karpeta berriari, abestiak zure liburutegian ager daitezen.</string>
+
+    <string name="import_working_title">Inportatzen</string>
+    <string name="import_preparing">Prestatzen…</string>
+    <string name="import_progress">%1$d / %2$d · %%%3$d</string>
+    <string name="import_working_note">Orri hau itxi dezakezu: jakinarazpenak aurrerapena erakusten du.</string>
+    <string name="import_stop">Gelditu inportazioa</string>
+    <string name="import_finishing">Abestiak liburutegira gehitzen…</string>
+
+    <string name="import_done_title">Artxiboa inportatuta</string>
+    <string name="import_done_songs">Gehitutako abestiak</string>
+    <plurals name="import_done_playlist">
+        <item quantity="one">«%1$s» zerrenda berriro sortu da, abesti %2$d duela.</item>
+        <item quantity="other">«%1$s» zerrenda berriro sortu da, %2$d abesti dituela.</item>
+    </plurals>
+    <plurals name="import_done_missing">
+        <item quantity="one">Abesti %1$d ez dago oraindik liburutegian; hurrengo eskaneatzean ager daiteke.</item>
+        <item quantity="other">%1$d abesti ez daude oraindik liburutegian; hurrengo eskaneatzean ager daitezke.</item>
+    </plurals>
+    <plurals name="import_done_skipped">
+        <item quantity="one">Fitxategi %1$d kanpoan geratu da: musika bakarrik ateratzen da.</item>
+        <item quantity="other">%1$d fitxategi kanpoan geratu dira: musika bakarrik ateratzen da.</item>
+    </plurals>
+    <string name="import_done_folder_added">Karpeta zure liburutegira gehitu da.</string>
+    <string name="import_done_outside">Abestiak oraindik ez daude zure liburutegian. Sakatu Gehitu liburutegira eta eman baimena haien karpetari.</string>
+    <string name="import_done_wrong_folder">Karpeta hori ez da inportatutako abestiena; beraz, ez da gehitu.</string>
+    <string name="import_add_to_library">Gehitu liburutegira</string>
+    <string name="import_done">Eginda</string>
+    <string name="import_songs_header">Abestiak</string>
+
+    <string name="import_failed_title">Ezin izan da artxiboa inportatu</string>
+    <string name="import_ok">Ados</string>
+    <string name="import_error_damaged">Artxiboa hondatuta dago edo ez da ZIP fitxategi bat.</string>
+    <string name="import_error_no_music">Artxiboan ez dago musikarik.</string>
+    <string name="import_error_no_space">Ez dago leku nahikorik: %1$s behar dira eta %2$s daude libre.</string>
+    <string name="import_error_unreadable">Ezin izan da artxiboa irakurri. Ireki berriro artxiboa duen aplikaziotik.</string>
+    <string name="import_error_unwritable">Ezin izan da aukeratutako karpetan idatzi. Aukeratu berriro edo hautatu beste bat.</string>
+    <string name="import_error_password">Pasahitza ez da zuzena.</string>
+    <string name="import_error_unexpected">Zerbait gaizki atera da. Saiatu berriro.</string>
+</resources>

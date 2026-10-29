@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Send to Watch: the menu item and its banners -->
+    <string name="menu_send_to_watch">Send to Watch</string>
+    <string name="notice_watch_started">Sending “%1$s” to your watch</string>
+    <string name="notice_watch_busy">A transfer to the watch is already running</string>
+    <plurals name="notice_watch_sent">
+        <item quantity="one">%1$d song sent to your watch</item>
+        <item quantity="other">%1$d songs sent to your watch</item>
+    </plurals>
+    <string name="notice_watch_already">Already on your watch</string>
+    <string name="notice_watch_partly">%1$d sent, %2$d failed. Details are in Settings › Watch.</string>
+    <string name="notice_watch_no_watch">No watch with Sonora is connected</string>
+    <string name="notice_watch_incompatible">Update Sonora on your watch</string>
+    <string name="notice_watch_no_space">Not enough room on the watch</string>
+    <string name="notice_watch_connection_lost">Lost the connection to the watch. Send again to carry on</string>
+    <string name="notice_watch_nothing">No songs to send</string>
+    <string name="notice_watch_failed">Couldn’t send to the watch</string>
+</resources>

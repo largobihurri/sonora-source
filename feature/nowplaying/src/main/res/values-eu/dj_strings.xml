@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="now_playing_dj_mode">DJ modua</string>
+    <string name="now_playing_edit_beat_grid">Editatu taupaden sareta</string>
+    <string name="now_playing_reanalyse">Berriz aztertu</string>
+    <string name="dj_chip_waiting">DJ modua: abesti hau aztertzeko zain</string>
+    <!-- %1$s is the share analysed (e.g. "% 42"). -->
+    <string name="dj_chip_analysing">DJ modua: abesti hau aztertzen, %1$s</string>
+    <string name="dj_chip_analysed">DJ modua: abesti hau aztertuta dago</string>
+    <string name="dj_chip_failed">DJ modua: abesti honen azterketak huts egin du</string>
+</resources>

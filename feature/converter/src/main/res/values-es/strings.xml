@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="converter_title">Conversor</string>
+
+    <string name="converter_profile_header">Formato de salida</string>
+    <string name="converter_profile_summary_xdj_700">AIFF de 16 bits, hasta 48 kHz</string>
+
+    <string name="converter_output_header">Carpeta de destino</string>
+    <string name="converter_output_choose">Elegir carpeta</string>
+    <string name="converter_output_change">Cambiar carpeta</string>
+    <string name="converter_output_none_footer">Elige una carpeta del teléfono o de una memoria USB. Sonora crea en ella la carpeta «Convertidos», con una carpeta con fecha por cada lote.</string>
+    <string name="converter_output_footer">Los archivos convertidos van a «Convertidos», dentro de %1$s, con una carpeta con fecha por cada lote.</string>
+    <string name="converter_output_location">%1$s › Convertidos</string>
+
+    <string name="converter_sources_header">Para convertir</string>
+    <string name="converter_add_music">Añadir música…</string>
+    <string name="converter_browse_files">Explorar archivos…</string>
+    <string name="converter_browse_folder">Explorar carpeta…</string>
+    <string name="converter_remove_source">Quitar %1$s</string>
+    <string name="converter_source_folder">Carpeta · todo su contenido</string>
+    <string name="converter_source_file">Archivo</string>
+    <string name="converter_source_song">Canción</string>
+    <string name="converter_sources_footer">Añade canciones, álbumes, carpetas o listas de tu biblioteca. Una canción de la biblioteca solo sustituye a su original si Sonora puede escribir en su carpeta.</string>
+    <string name="converter_browse_footer">También puedes elegir archivos y carpetas de este dispositivo. Los archivos elegidos uno a uno no se pueden sustituir en su sitio; para sustituir originales, elige su carpeta.</string>
+
+    <string name="converter_performance_header">Rendimiento</string>
+    <string name="converter_mode_low">Pocos recursos</string>
+    <string name="converter_mode_normal">Normal</string>
+    <string name="converter_mode_high">Alto rendimiento</string>
+    <string name="converter_mode_low_description">Un archivo cada vez, con pausas. Cuida la batería y la temperatura.</string>
+    <string name="converter_mode_normal_description">Varios archivos a la vez, en segundo plano. Un buen equilibrio.</string>
+    <string name="converter_mode_high_description">Usa casi todo el procesador. Es lo más rápido, pero el teléfono se calienta más.</string>
+    <string name="converter_performance_footer">La calidad es la misma en todos los modos; solo cambian la velocidad y la carga. Sonora va más despacio por sí sola si el teléfono se calienta o si el ahorro de batería está activado.</string>
+
+    <string name="converter_overwrite">Sobrescribir originales</string>
+    <string name="converter_overwrite_footer">Cada original se sustituye por su archivo convertido una vez comprobado. También se te preguntará al terminar el lote.</string>
+
+    <string name="converter_convert">Convertir</string>
+    <string name="converter_starting">Empezando…</string>
+    <string name="converter_history">Historial</string>
+
+    <string name="converter_batch_converting">Convirtiendo</string>
+    <string name="converter_batch_replacing">Sustituyendo originales</string>
+    <string name="converter_batch_preparing">Preparando…</string>
+    <string name="converter_batch_progress">%1$d de %2$d</string>
+    <string name="converter_batch_cancel">Cancelar</string>
+    <string name="converter_batch_done">OK</string>
+    <string name="converter_batch_completed">Conversión terminada</string>
+    <string name="converter_batch_cancelled">Conversión cancelada</string>
+    <string name="converter_batch_timed_out">Conversión detenida</string>
+    <string name="converter_batch_timed_out_detail">Se ha agotado el tiempo que Android permite a las tareas largas. Los archivos que faltaban se han omitido.</string>
+    <string name="converter_batch_failed">No se ha podido hacer la conversión</string>
+    <string name="converter_count_converted">Convertidos</string>
+    <string name="converter_count_failed">Con errores</string>
+    <string name="converter_count_skipped">Omitidos</string>
+    <string name="converter_count_without_tags">Sin etiquetas</string>
+    <string name="converter_replace_originals">Sustituir originales</string>
+    <plurals name="converter_replaced_count">
+        <item quantity="one">%d original sustituido</item>
+        <item quantity="many">%d originales sustituidos</item>
+        <item quantity="other">%d originales sustituidos</item>
+    </plurals>
+    <plurals name="converter_skipped_folders">
+        <item quantity="one">No se ha podido leer %d carpeta, así que sus archivos se han quedado fuera.</item>
+        <item quantity="many">No se han podido leer %d carpetas, así que sus archivos se han quedado fuera.</item>
+        <item quantity="other">No se han podido leer %d carpetas, así que sus archivos se han quedado fuera.</item>
+    </plurals>
+    <string name="converter_show_details">Ver detalles</string>
+    <string name="converter_play_converted">Reproducir lo convertido</string>
+    <string name="converter_play_all">Reproducir todo</string>
+    <string name="converter_item_play">Reproducir</string>
+    <plurals name="converter_missing_files">
+        <item quantity="one">%d archivo ya no está disponible</item>
+        <item quantity="many">%d archivos ya no están disponibles</item>
+        <item quantity="other">%d archivos ya no están disponibles</item>
+    </plurals>
+
+    <string name="converter_replace_before_title">¿Sobrescribir los originales?</string>
+    <string name="converter_replace_after_title">¿Sustituir ahora los originales?</string>
+    <string name="converter_replace_irreversible">No se puede deshacer: los originales eliminados no van a ninguna papelera.</string>
+    <string name="converter_replace_growth">Un archivo con pérdida, como MP3 o AAC, ocupa varias veces más en AIFF, WAV o FLAC.</string>
+    <string name="converter_replace_verified">Un original solo se elimina después de comprobar su archivo convertido.</string>
+    <plurals name="converter_replace_count">
+        <item quantity="one">%d original se sustituirá por su archivo convertido.</item>
+        <item quantity="many">%d originales se sustituirán por sus archivos convertidos.</item>
+        <item quantity="other">%d originales se sustituirán por sus archivos convertidos.</item>
+    </plurals>
+    <string name="converter_replace_confirm_before">Sobrescribir</string>
+    <string name="converter_replace_confirm_after">Sustituir</string>
+    <string name="converter_cancel">Cancelar</string>
+
+    <string name="converter_ok">OK</string>
+    <string name="converter_notice_no_output_title">Elige una carpeta de destino</string>
+    <string name="converter_notice_no_output_message">Elige dónde guarda Sonora los archivos convertidos y vuelve a intentarlo.</string>
+    <string name="converter_notice_no_audio_title">No hay archivos de audio</string>
+    <string name="converter_notice_no_audio_message">Nada de lo que has añadido es un archivo que Sonora pueda convertir (FLAC, ALAC, AAC, MP3, WAV o AIFF).</string>
+    <string name="converter_notice_start_failed_title">No se ha podido empezar</string>
+    <string name="converter_notice_start_failed_message">Sonora no ha podido leer lo que has añadido. Vuelve a añadir los archivos o la carpeta e inténtalo de nuevo.</string>
+    <string name="converter_notice_output_failed_title">No se puede usar la carpeta</string>
+    <string name="converter_notice_output_failed_message">Sonora no puede escribir en esa carpeta. Elige una carpeta del almacenamiento del teléfono o de una memoria USB.</string>
+    <string name="converter_notice_picker_missing_title">No se pueden elegir archivos</string>
+    <string name="converter_notice_picker_missing_message">Este dispositivo no tiene ninguna app para elegir archivos o carpetas.</string>
+    <string name="converter_notice_cancel_failed_title">No se ha podido cancelar</string>
+    <string name="converter_notice_cancel_failed_message">Sonora no ha podido detener la conversión. Vuelve a intentarlo o cancélala desde su notificación.</string>
+    <string name="converter_notice_delete_failed_title">No se ha podido eliminar</string>
+    <string name="converter_notice_delete_failed_message">Sonora no ha podido eliminar esta conversión del historial. Inténtalo más tarde.</string>
+    <string name="converter_notice_play_failed_title">No se ha podido reproducir</string>
+    <string name="converter_notice_play_failed_message">Sonora no ha podido leer los archivos de esta conversión. Inténtalo más tarde.</string>
+
+    <string name="converter_history_empty">Aún no hay conversiones.</string>
+    <string name="converter_section_today">Hoy</string>
+    <string name="converter_section_yesterday">Ayer</string>
+    <string name="converter_section_last_7_days">Últimos 7 días</string>
+    <string name="converter_section_last_30_days">Últimos 30 días</string>
+    <string name="converter_section_older">Anteriores</string>
+    <string name="converter_history_line">%1$s · %2$s</string>
+    <plurals name="converter_converted_count">
+        <item quantity="one">%d convertido</item>
+        <item quantity="many">%d convertidos</item>
+        <item quantity="other">%d convertidos</item>
+    </plurals>
+    <plurals name="converter_failed_count">
+        <item quantity="one">%d con error</item>
+        <item quantity="many">%d con errores</item>
+        <item quantity="other">%d con errores</item>
+    </plurals>
+    <string name="converter_status_queued">En espera</string>
+    <string name="converter_status_running">Convirtiendo</string>
+    <string name="converter_status_completed">Terminada</string>
+    <string name="converter_status_cancelled">Cancelada</string>
+    <string name="converter_status_timed_out">Detenida por límite de tiempo</string>
+    <string name="converter_status_failed">No se ha podido hacer</string>
+
+    <string name="converter_detail_profile">Formato</string>
+    <string name="converter_detail_mode">Rendimiento</string>
+    <string name="converter_detail_folder">Carpeta</string>
+    <string name="converter_detail_status">Estado</string>
+    <string name="converter_detail_files">Archivos</string>
+    <string name="converter_detail_delete">Eliminar del historial</string>
+    <string name="converter_delete_title">¿Eliminar del historial?</string>
+    <string name="converter_delete_message">Solo se elimina el registro. Los archivos convertidos y los originales se quedan donde están.</string>
+    <string name="converter_delete_confirm">Eliminar</string>
+    <string name="converter_item_pending">En espera</string>
+    <string name="converter_item_running">Convirtiendo</string>
+    <string name="converter_item_done">Convertido</string>
+    <string name="converter_item_failed">Error</string>
+    <string name="converter_item_skipped">Omitido</string>
+    <string name="converter_item_replaced">Original sustituido</string>
+    <string name="converter_item_suffixed">Original sustituido, guardado como %1$s</string>
+    <string name="converter_badge_no_tags">Sin etiquetas</string>
+    <string name="converter_badge_no_tags_description">Convertido sin etiquetas</string>
+    <!-- Output formats (batch-wide, per song, per folder). Format names such as FLAC or MP3 are not translated. -->
+    <string name="converter_format_choice_header">Formato</string>
+    <string name="converter_format_batch_footer">Todas las canciones se convierten a este formato salvo las que tengan uno propio. Sonora lo recuerda para el siguiente lote.</string>
+    <string name="converter_format_settings_header">Ajustes</string>
+    <string name="converter_format_bit_depth">Profundidad de bits</string>
+    <string name="converter_format_bits">%1$d bits</string>
+    <string name="converter_format_sample_rate">Frecuencia de muestreo</string>
+    <string name="converter_format_rate_keep">Mantener</string>
+    <string name="converter_format_rate_khz">%1$s kHz</string>
+    <string name="converter_format_rate_footer">Mantener convierte cada canción a su propia frecuencia; un límite solo remuestrea las canciones que lo superan.</string>
+    <string name="converter_format_bitrate">Tasa de bits</string>
+    <string name="converter_format_kbps">%1$d kbps</string>
+    <string name="converter_format_mp3_mode">Modo</string>
+    <string name="converter_format_mp3_cbr">Constante (CBR)</string>
+    <string name="converter_format_mp3_vbr">Variable (VBR)</string>
+    <string name="converter_format_vbr_quality">Calidad</string>
+    <string name="converter_format_vbr_footer">V0 suena mejor; V4 da los archivos más pequeños.</string>
+    <string name="converter_format_xdj_footer">El formato que reproduce el Pioneer XDJ-700: AIFF de 16 bits hasta 48 kHz; las canciones más rápidas se remuestrean a 44,1 kHz.</string>
+    <string name="converter_format_summary_lossless">%1$s · %2$d bits · %3$s</string>
+    <string name="converter_format_summary_rate_keep">Frecuencia original</string>
+    <string name="converter_format_summary_rate_cap">Hasta %1$s kHz</string>
+    <string name="converter_format_summary_bitrate">%1$s · %2$d kbps</string>
+    <string name="converter_format_summary_mp3_cbr">MP3 · %1$d kbps CBR</string>
+    <string name="converter_format_summary_mp3_vbr">MP3 · VBR V%1$d</string>
+    <string name="converter_format_use_batch">Usar el formato general</string>
+    <string name="converter_format_use_folder">Usar el formato de la carpeta</string>
+    <string name="converter_format_follows_batch">Sigue el formato general (%1$s).</string>
+    <string name="converter_format_follows_folder">Sigue el formato de la carpeta (%1$s).</string>
+    <string name="converter_format_manual_batch">Elegido a mano: mantiene este formato aunque cambie el general.</string>
+    <string name="converter_format_manual_folder">Elegido a mano: mantiene este formato aunque cambie el de la carpeta.</string>
+    <string name="converter_format_badge">Propio</string>
+    <plurals name="converter_folder_own_formats">
+        <item quantity="one">%d canción con formato propio</item>
+        <item quantity="many">%d canciones con formato propio</item>
+        <item quantity="other">%d canciones con formato propio</item>
+    </plurals>
+    <string name="converter_format_badge_description">Formato elegido a mano</string>
+    <string name="converter_format_change">Cambiar formato</string>
+    <string name="converter_folder_open">Ver canciones y formato</string>
+    <string name="converter_folder_format_header">Formato de la carpeta</string>
+    <string name="converter_folder_format_footer">Sus canciones se convierten a este formato salvo las que tengan uno propio.</string>
+    <string name="converter_folder_songs_header">Canciones</string>
+    <string name="converter_folder_loading">Buscando canciones…</string>
+    <string name="converter_folder_failed">No se ha podido leer esta carpeta.</string>
+    <string name="converter_folder_retry">Reintentar</string>
+    <string name="converter_folder_empty">No hay archivos de audio en esta carpeta.</string>
+    <string name="converter_formats_mixed">Varios formatos</string>
+    <string name="converter_lossy_title">¿Sustituir originales sin pérdida?</string>
+    <string name="converter_lossy_message">Un original sin pérdida no se puede recuperar una vez sustituido: no hay papelera.</string>
+    <string name="converter_lossy_confirm">Convertir igualmente</string>
+    <!-- %d songs; asked before a batch that overwrites originals starts. -->
+    <plurals name="converter_lossy_count">
+        <item quantity="one">%d canción sustituiría su original sin pérdida por un archivo con pérdida.</item>
+        <item quantity="many">%d canciones sustituirían sus originales sin pérdida por archivos con pérdida.</item>
+        <item quantity="other">%d canciones sustituirían sus originales sin pérdida por archivos con pérdida.</item>
+    </plurals>
+</resources>

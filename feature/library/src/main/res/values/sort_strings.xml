@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sort_menu">Sort</string>
+    <string name="sort_by">Sort By</string>
+    <string name="sort_key_playlist_order">Playlist Order</string>
+    <string name="sort_key_title">Title</string>
+    <string name="sort_key_name">Name</string>
+    <string name="sort_key_artist">Artist</string>
+    <string name="sort_key_album">Album</string>
+    <string name="sort_key_genre">Genre</string>
+    <string name="sort_key_release_date">Release Date</string>
+    <string name="sort_key_date_added">Date Added</string>
+    <string name="sort_key_date_converted">Date Converted</string>
+    <string name="sort_key_duration">Duration</string>
+    <string name="sort_ascending">Ascending</string>
+    <string name="sort_descending">Descending</string>
+    <string name="sort_reorder_hint">To reorder songs, choose Playlist Order in the Sort menu.</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Audio output: the device the sound goes to -->
+    <string name="audio_output_header">Audio output</string>
+    <string name="audio_output_device">Output device</string>
+    <string name="audio_output_none">None</string>
+    <string name="audio_output_footer">Shows where the sound is sent and what that device says it can play. Tap for details.</string>
+    <string name="audio_output_details_title">Output device</string>
+    <string name="audio_output_not_reported">Not reported</string>
+    <string name="audio_output_kind_usb">USB audio</string>
+    <!-- The type in a named title, e.g. "USB: Scarlett 2i2" -->
+    <string name="audio_output_kind_usb_short">USB</string>
+    <string name="audio_output_kind_wired">Wired headphones</string>
+    <string name="audio_output_kind_bluetooth">Bluetooth</string>
+    <string name="audio_output_kind_hdmi">HDMI</string>
+    <string name="audio_output_kind_speaker">Phone speaker</string>
+    <string name="audio_output_kind_other">Other output</string>
+    <!-- A device's title: its type, then its name, e.g. "Bluetooth: Buds Pro" -->
+    <string name="audio_output_title_named">%1$s: %2$s</string>
+    <string name="audio_output_others_header">Other devices</string>
+    <string name="audio_output_row_rates">Sample rates</string>
+    <string name="audio_output_row_depths">Bit depths</string>
+    <string name="audio_output_row_channels">Channels</string>
+    <string name="audio_output_row_bit_perfect">Bit-perfect</string>
+    <string name="audio_output_mixer_header">Mixer formats</string>
+    <string name="audio_output_active_header">In use</string>
+    <string name="audio_output_pcm_8">8-bit</string>
+    <string name="audio_output_pcm_16">16-bit</string>
+    <string name="audio_output_pcm_24">24-bit</string>
+    <string name="audio_output_pcm_32">32-bit</string>
+    <string name="audio_output_pcm_float">32-bit float</string>
+    <!-- A mixer format: sample rate in kHz, bit depth, channel count; e.g. "96 kHz · 24-bit · 2 ch" -->
+    <string name="audio_output_mixer_format">%1$s kHz · %2$s · %3$d ch</string>
+    <string name="audio_output_mixer_bit_perfect">Bit-perfect</string>
+    <string name="audio_output_mixer_default">Default</string>
+    <string name="audio_output_bp_offered">Offered</string>
+    <string name="audio_output_bp_not_offered">Not offered</string>
+    <string name="audio_output_bp_no_usb">No USB device</string>
+    <string name="audio_output_bp_android_old">Needs Android 14</string>
+    <string name="audio_output_bp_footer_offered">This USB device can be set to pass audio through unchanged. Android lists the formats it accepts under Mixer formats.</string>
+    <string name="audio_output_bp_footer_not_offered">This USB device does not offer bit-perfect output on this phone.</string>
+    <string name="audio_output_bp_footer_no_usb">Connect a USB audio device, such as a DAC or an audio interface, to check whether it offers bit-perfect output.</string>
+    <string name="audio_output_bp_footer_android_old">Bit-perfect output needs Android 14 or later.</string>
+    <string name="audio_output_bit_perfect_switch">Bit-perfect USB output</string>
+    <string name="audio_output_bp_switch_off">Sends each song\'s samples to a USB audio device unchanged: no resampling, no volume change and no effects. Needs Android 14 and a USB device that offers it. Set the volume on the device itself.</string>
+    <string name="audio_output_bp_switch_waiting">On. It takes effect when a USB audio device that offers bit-perfect output is connected. Until then, music plays the normal way.</string>
+    <string name="audio_output_bp_switch_active">Active. The USB device receives each song\'s samples unchanged, at the song\'s own sample rate and bit depth. The equalizer, volume normalisation, crossfade, speed, pitch and DJ tempo are off while it is active. Set the volume on the device itself. Songs in a format the device does not offer play the normal way.</string>
+    <string name="playback_locked_footer">Turned off while bit-perfect USB output is active.</string>
+</resources>

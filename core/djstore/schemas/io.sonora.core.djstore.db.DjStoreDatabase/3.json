@@ -1,0 +1,256 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "f79f562fa69a6bd5b3cf9645a169c2dd",
+    "entities": [
+      {
+        "tableName": "analyses",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`audio_id` TEXT NOT NULL, `analyzer_version` INTEGER NOT NULL, `beat_source` INTEGER NOT NULL, `model_id` TEXT, `accelerator` INTEGER, `created_at_ms` INTEGER NOT NULL, `duration_ms` INTEGER NOT NULL, `key_index` INTEGER, `key_strength` REAL, `key_method` TEXT, `grid` BLOB, `waveform` BLOB NOT NULL, `waveform_version` INTEGER NOT NULL, `record_version` INTEGER NOT NULL, PRIMARY KEY(`audio_id`))",
+        "fields": [
+          {
+            "fieldPath": "audioId",
+            "columnName": "audio_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "analyzerVersion",
+            "columnName": "analyzer_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "beatSource",
+            "columnName": "beat_source",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modelId",
+            "columnName": "model_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "accelerator",
+            "columnName": "accelerator",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "createdAtMs",
+            "columnName": "created_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "duration_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "keyIndex",
+            "columnName": "key_index",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "keyStrength",
+            "columnName": "key_strength",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "keyMethod",
+            "columnName": "key_method",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "grid",
+            "columnName": "grid",
+            "affinity": "BLOB"
+          },
+          {
+            "fieldPath": "waveform",
+            "columnName": "waveform",
+            "affinity": "BLOB",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waveformVersion",
+            "columnName": "waveform_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordVersion",
+            "columnName": "record_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "audio_id"
+          ]
+        }
+      },
+      {
+        "tableName": "audio_ids",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uri` TEXT NOT NULL, `size_bytes` INTEGER, `last_modified_ms` INTEGER, `audio_id` TEXT NOT NULL, PRIMARY KEY(`uri`))",
+        "fields": [
+          {
+            "fieldPath": "uri",
+            "columnName": "uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sizeBytes",
+            "columnName": "size_bytes",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "lastModifiedMs",
+            "columnName": "last_modified_ms",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "audioId",
+            "columnName": "audio_id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "uri"
+          ]
+        }
+      },
+      {
+        "tableName": "grid_edits",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`audio_id` TEXT NOT NULL, `bpm_hundredths` INTEGER NOT NULL, `anchor_ms` REAL NOT NULL, `updated_at_ms` INTEGER NOT NULL, `record_version` INTEGER NOT NULL, PRIMARY KEY(`audio_id`))",
+        "fields": [
+          {
+            "fieldPath": "audioId",
+            "columnName": "audio_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bpmHundredths",
+            "columnName": "bpm_hundredths",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "anchorMs",
+            "columnName": "anchor_ms",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtMs",
+            "columnName": "updated_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordVersion",
+            "columnName": "record_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "audio_id"
+          ]
+        }
+      },
+      {
+        "tableName": "cues",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`audio_id` TEXT NOT NULL, `cue_id` TEXT NOT NULL, `kind` INTEGER NOT NULL, `slot` INTEGER, `position_ms` REAL NOT NULL, `loop_end_ms` REAL, `color_index` INTEGER NOT NULL, `color_rgb` INTEGER NOT NULL, `name` TEXT NOT NULL, `updated_at_ms` INTEGER NOT NULL, `record_version` INTEGER NOT NULL, PRIMARY KEY(`audio_id`, `cue_id`))",
+        "fields": [
+          {
+            "fieldPath": "audioId",
+            "columnName": "audio_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cueId",
+            "columnName": "cue_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "slot",
+            "columnName": "slot",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "positionMs",
+            "columnName": "position_ms",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "loopEndMs",
+            "columnName": "loop_end_ms",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "colorIndex",
+            "columnName": "color_index",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorRgb",
+            "columnName": "color_rgb",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtMs",
+            "columnName": "updated_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordVersion",
+            "columnName": "record_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "audio_id",
+            "cue_id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f79f562fa69a6bd5b3cf9645a169c2dd')"
+    ]
+  }
+}

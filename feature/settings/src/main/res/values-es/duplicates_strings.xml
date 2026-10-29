@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The "duplicates piled up" notification, on its own channel -->
+    <string name="duplicates_channel_name">Duplicados</string>
+    <string name="duplicates_channel_description">Te avisa cuando se acumulan muchas canciones duplicadas en tu biblioteca.</string>
+    <string name="duplicates_notification_title">Duplicados en tu biblioteca</string>
+    <plurals name="duplicates_notification_text">
+        <item quantity="one">%1$d canción tiene copias en tu biblioteca. Toca para revisarla.</item>
+        <item quantity="many">%1$d canciones tienen copias en tu biblioteca. Toca para revisarlas.</item>
+        <item quantity="other">%1$d canciones tienen copias en tu biblioteca. Toca para revisarlas.</item>
+    </plurals>
+    <!-- Settings › Duplicates: groups of copies of one song, compared side by side -->
+    <string name="settings_duplicates">Duplicados</string>
+    <string name="duplicates_footer">Canciones que están más de una vez en tu biblioteca: el mismo archivo o la misma canción en archivos distintos. Compara las copias, conserva la mejor y elimina las demás.</string>
+    <string name="duplicates_notify">Avisar cuando se acumulen duplicados</string>
+    <string name="duplicates_notify_footer">Sonora busca duplicados de vez en cuando mientras el teléfono está inactivo y cargando, y te avisa cuando 20 canciones o más tienen copias.</string>
+    <string name="duplicates_scan_again">Volver a buscar duplicados</string>
+    <string name="duplicates_looking">Buscando duplicados…</string>
+    <string name="duplicates_checking">Comparando archivos… %1$s de %2$s</string>
+    <string name="duplicates_failed">No se han podido buscar duplicados. Vuelve a intentarlo.</string>
+    <string name="duplicates_none">No hay duplicados</string>
+    <plurals name="duplicates_found">
+        <item quantity="one">%1$d canción tiene copias</item>
+        <item quantity="many">%1$d canciones tienen copias</item>
+        <item quantity="other">%1$d canciones tienen copias</item>
+    </plurals>
+    <string name="duplicates_line">%1$s · %2$s</string>
+    <plurals name="duplicates_copies">
+        <item quantity="one">%1$d copia</item>
+        <item quantity="many">%1$d copias</item>
+        <item quantity="other">%1$d copias</item>
+    </plurals>
+    <string name="duplicates_kind_identical">Archivos idénticos</string>
+    <string name="duplicates_kind_same_song">Misma canción</string>
+
+    <!-- The comparison panel -->
+    <string name="duplicates_copy">Copia %1$d</string>
+    <string name="duplicates_suggested">Recomendada para conservar</string>
+    <string name="duplicates_delete_this">Eliminar esta copia</string>
+    <string name="duplicates_keep_one">Siempre se conserva una copia.</string>
+    <string name="duplicates_differences_note">Los valores resaltados son distintos entre las copias.</string>
+    <string name="duplicates_field_format">Formato</string>
+    <string name="duplicates_field_bitrate">Tasa de bits</string>
+    <string name="duplicates_field_sample_rate">Frecuencia de muestreo</string>
+    <string name="duplicates_field_bit_depth">Profundidad de bits</string>
+    <string name="duplicates_field_channels">Canales</string>
+    <string name="duplicates_field_duration">Duración</string>
+    <string name="duplicates_field_size">Tamaño</string>
+    <string name="duplicates_field_folder">Carpeta</string>
+    <string name="duplicates_field_file">Archivo</string>
+    <string name="duplicates_field_tags">Etiquetas</string>
+    <string name="duplicates_field_artwork">Portada</string>
+    <string name="duplicates_field_added">Añadida</string>
+    <string name="duplicates_value_unknown">—</string>
+    <string name="duplicates_value_kbps">%1$s kbps</string>
+    <string name="duplicates_value_khz">%1$s kHz</string>
+    <string name="duplicates_value_bits">%1$d bits</string>
+    <string name="duplicates_value_mono">Mono</string>
+    <string name="duplicates_value_stereo">Estéreo</string>
+    <plurals name="duplicates_value_channels">
+        <item quantity="one">%1$d canal</item>
+        <item quantity="many">%1$d canales</item>
+        <item quantity="other">%1$d canales</item>
+    </plurals>
+    <string name="duplicates_value_tags">%1$d de %2$d</string>
+    <string name="duplicates_value_yes">Sí</string>
+    <string name="duplicates_value_no">No</string>
+    <plurals name="duplicates_delete_selected">
+        <item quantity="one">Eliminar %1$d copia del teléfono</item>
+        <item quantity="many">Eliminar %1$d copias del teléfono</item>
+        <item quantity="other">Eliminar %1$d copias del teléfono</item>
+    </plurals>
+    <string name="duplicates_not_duplicate">No es un duplicado</string>
+    <string name="duplicates_not_duplicate_note">No es un duplicado oculta este grupo para siempre. Sus archivos se quedan como están.</string>
+
+    <!-- Deleting copies -->
+    <plurals name="duplicates_delete_title">
+        <item quantity="one">¿Eliminar %1$d copia del teléfono?</item>
+        <item quantity="many">¿Eliminar %1$d copias del teléfono?</item>
+        <item quantity="other">¿Eliminar %1$d copias del teléfono?</item>
+    </plurals>
+    <string name="duplicates_delete_message">No se puede deshacer. Los archivos se eliminan del teléfono. La copia que conservas ocupa su lugar en las listas y se queda con sus favoritos, fijados y reproducciones.</string>
+    <string name="duplicates_delete_confirm">Eliminar</string>
+    <string name="duplicates_cancel">Cancelar</string>
+    <string name="duplicates_ok">Aceptar</string>
+    <string name="duplicates_access_title">Permitir eliminar</string>
+    <string name="duplicates_access_message">Sonora solo puede leer la carpeta «%1$s». Para eliminar estos archivos, vuelve a elegir esa carpeta y permite el acceso.</string>
+    <string name="duplicates_access_wrong_folder">Esa era otra carpeta. Elige «%1$s» para permitir eliminar.</string>
+    <string name="duplicates_access_choose">Elegir carpeta…</string>
+    <string name="duplicates_deleted_title">Copias eliminadas</string>
+    <plurals name="duplicates_deleted_message">
+        <item quantity="one">%1$d copia ya no está en tu teléfono.</item>
+        <item quantity="many">%1$d copias ya no están en tu teléfono.</item>
+        <item quantity="other">%1$d copias ya no están en tu teléfono.</item>
+    </plurals>
+    <string name="duplicates_incomplete_title">No se ha podido eliminar todo</string>
+    <plurals name="duplicates_incomplete_message">
+        <item quantity="one">No se ha podido eliminar %1$d copia y sigue en tu teléfono.</item>
+        <item quantity="many">No se han podido eliminar %1$d copias y siguen en tu teléfono.</item>
+        <item quantity="other">No se han podido eliminar %1$d copias y siguen en tu teléfono.</item>
+    </plurals>
+    <string name="duplicates_refused_title">No se puede eliminar aquí</string>
+    <string name="duplicates_refused_message">El almacenamiento de esta carpeta no permite que Sonora elimine archivos.</string>
+    <string name="duplicates_error_title">Algo ha fallado</string>
+    <string name="duplicates_error_message">Algo ha fallado. Vuelve a intentarlo.</string>
+</resources>

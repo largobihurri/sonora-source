@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Enviar al reloj: el elemento del menú y sus avisos -->
+    <string name="menu_send_to_watch">Enviar al reloj</string>
+    <string name="notice_watch_started">Enviando «%1$s» a tu reloj</string>
+    <string name="notice_watch_busy">Ya hay un envío al reloj en curso</string>
+    <plurals name="notice_watch_sent">
+        <item quantity="one">%1$d canción enviada a tu reloj</item>
+        <item quantity="many">%1$d canciones enviadas a tu reloj</item>
+        <item quantity="other">%1$d canciones enviadas a tu reloj</item>
+    </plurals>
+    <string name="notice_watch_already">Ya están en tu reloj</string>
+    <string name="notice_watch_partly">%1$d enviadas, %2$d con error. Los detalles están en Ajustes › Reloj.</string>
+    <string name="notice_watch_no_watch">No hay ningún reloj con Sonora conectado</string>
+    <string name="notice_watch_incompatible">Actualiza Sonora en tu reloj</string>
+    <string name="notice_watch_no_space">No hay espacio suficiente en el reloj</string>
+    <string name="notice_watch_connection_lost">Se perdió la conexión con el reloj. Vuelve a enviar para continuar</string>
+    <string name="notice_watch_nothing">No hay canciones que enviar</string>
+    <string name="notice_watch_failed">No se ha podido enviar al reloj</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The nightly build of the `full` flavor (the build type's own name would hide the flavor). -->
+    <string name="app_name" translatable="false">Sonora Full Nightly</string>
+</resources>

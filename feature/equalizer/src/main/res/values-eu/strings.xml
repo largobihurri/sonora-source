@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="equalizer_title">Ekualizadorea</string>
+    <plurals name="equalizer_bands">
+        <item quantity="one">%d banda</item>
+        <item quantity="other">%d banda</item>
+    </plurals>
+    <string name="equalizer_sub_bass">Azpibaxuak</string>
+    <string name="equalizer_bass">Baxuak</string>
+    <string name="equalizer_mids">Erdikoak</string>
+    <string name="equalizer_treble">Altuak</string>
+    <string name="equalizer_band_hz">%1$s Hz-ko banda</string>
+    <string name="equalizer_band_khz">%1$s kHz-ko banda</string>
+    <string name="equalizer_gain_db">%1$s dB</string>
+    <string name="equalizer_preamp">Aurreanplifikazioa: %1$s dB</string>
+    <string name="equalizer_limiter">Mugatzailea aktibo</string>
+    <string name="equalizer_automatic_preamp">Aurreanplifikazio automatikoa</string>
+    <string name="equalizer_reset">Berrezarri</string>
+    <string name="equalizer_hint">Arrastatu banda bat gora edo behera. Sakatu birritan 0\u00A0dB-ra itzultzeko.</string>
+</resources>

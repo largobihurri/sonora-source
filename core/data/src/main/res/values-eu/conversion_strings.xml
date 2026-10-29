@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="conversion_channel_name">Bihurketa</string>
+    <string name="conversion_channel_description">Audio-bihurketen aurrerapena eta emaitzak</string>
+    <string name="conversion_progress_title">Audioa bihurtzen</string>
+    <string name="conversion_replace_title">Jatorrizkoak ordezten</string>
+    <string name="conversion_progress_preparing">Prestatzen…</string>
+    <string name="conversion_progress_text">%1$d / %2$d · %3$s</string>
+    <string name="conversion_progress_count">%1$d / %2$d</string>
+    <string name="conversion_progress_chip">%1$d/%2$d</string>
+    <string name="conversion_action_cancel">Utzi</string>
+    <string name="conversion_finished_title">Bihurketa amaitu da</string>
+    <string name="conversion_cancelled_title">Bihurketa bertan behera utzi da</string>
+    <string name="conversion_timed_out_title">Bihurketa gelditu da: denbora-muga agortu da</string>
+    <string name="conversion_failed_title">Ezin izan da bihurketa egin</string>
+    <string name="conversion_replaced_title">Jatorrizkoak ordeztu dira</string>
+    <string name="conversion_summary_text" tools:ignore="PluralsCandidate">Bihurtuta: %1$d · Huts eginda: %2$d</string>
+    <string name="conversion_replaced_text" tools:ignore="PluralsCandidate">Ordeztuta: %1$d · Huts eginda: %2$d</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_library">Liburutegia</string>
+    <string name="tab_search">Bilatu</string>
+    <string name="tab_converter">Bihurgailua</string>
+    <string name="tab_export">Esportatu</string>
+    <string name="tab_bar_expand">Erakutsi fitxak</string>
+
+    <string name="mini_player_play">Erreproduzitu</string>
+    <string name="mini_player_pause">Pausatu</string>
+    <string name="mini_player_next">Hurrengoa</string>
+    <string name="mini_player_next_track">Hurrengo abestia</string>
+    <string name="mini_player_previous_track">Aurreko abestia</string>
+    <string name="mini_player_open">Ireki erreproduzitzen ari dena</string>
+
+    <!-- The first duplicate analysis of a new library: a small closable notice at the top of the shell -->
+    <string name="duplicate_notice_starting">Bikoiztuak aztertzen…</string>
+    <string name="duplicate_notice_running">Bikoiztuak aztertzen… %1$s/%2$s</string>
+    <plurals name="duplicate_notice_finished">
+        <item quantity="one">Bikoiztuen azterketa amaitu da: talde %1$d aurkitu da</item>
+        <item quantity="other">Bikoiztuen azterketa amaitu da: %1$d talde aurkitu dira</item>
+    </plurals>
+    <string name="duplicate_notice_none">Bikoiztuen azterketa amaitu da: ez dago bikoizturik</string>
+    <string name="duplicate_notice_close">Itxi</string>
+</resources>

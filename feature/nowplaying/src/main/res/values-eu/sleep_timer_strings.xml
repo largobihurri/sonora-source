@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sleep_timer_title">Lo-tenporizadorea</string>
+    <string name="sleep_timer_stop_playing">Gelditu erreprodukzioa</string>
+    <plurals name="sleep_timer_minutes">
+        <item quantity="one">%1$d minutu</item>
+        <item quantity="other">%1$d minutu</item>
+    </plurals>
+    <string name="sleep_timer_end_of_song">Abestia amaitzean</string>
+    <string name="sleep_timer_end_of_album">Albuma amaitzean</string>
+    <string name="sleep_timer_custom">Pertsonalizatua</string>
+    <string name="sleep_timer_shorter">Laburrago</string>
+    <string name="sleep_timer_longer">Luzeago</string>
+    <string name="sleep_timer_start">Hasi</string>
+    <string name="sleep_timer_time_left">Geratzen den denbora</string>
+    <plurals name="sleep_timer_extend">
+        <item quantity="one">Gehitu %1$d minutu</item>
+        <item quantity="other">Gehitu %1$d minutu</item>
+    </plurals>
+    <string name="sleep_timer_turn_off">Desaktibatu tenporizadorea</string>
+    <string name="sleep_timer_badge">Lo-tenporizadorea, %1$s falta dira</string>
+</resources>

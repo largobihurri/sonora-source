@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- A DUB pad's state for screen readers: held down by a finger, latched on, or off. -->
+    <string name="dub_pad_held">held</string>
+    <string name="dub_pad_latched">latched</string>
+    <string name="dub_pad_off">off</string>
+    <!-- Screen-reader actions that keep a pad on without holding it, and turn it off. -->
+    <string name="dub_pad_latch">Latch</string>
+    <string name="dub_pad_release">Release</string>
+
+    <!-- XY filter pad edge labels: low-pass on the left, high-pass on the right, resonance upwards. -->
+    <string name="dub_xy_low_pass_edge" translatable="false">LP</string>
+    <string name="dub_xy_high_pass_edge" translatable="false">HP</string>
+    <string name="dub_xy_resonance_edge" translatable="false">RES</string>
+    <!-- The pill that keeps the filter where the finger left it instead of gliding back to the centre; keep it short. -->
+    <string name="dub_xy_lock">LOCK</string>
+    <string name="dub_xy_locked">locked</string>
+    <string name="dub_xy_unlocked">returns to the centre</string>
+    <string name="dub_xy_cutoff">Filter sweep</string>
+    <string name="dub_xy_resonance">Filter resonance</string>
+    <string name="dub_xy_flat">Flat</string>
+    <!-- %1$s is a frequency, "1.2 kHz". -->
+    <string name="dub_xy_low_pass">Low-pass %1$s</string>
+    <!-- %1$s is a frequency, "800 Hz". -->
+    <string name="dub_xy_high_pass">High-pass %1$s</string>
+    <!-- %1$s is the filter's Q, "2.4". -->
+    <string name="dub_xy_q">Q %1$s</string>
+    <string name="dub_xy_centre">Centre</string>
+
+    <string name="dub_beat_leds">Beat</string>
+    <!-- %1$d is the beat in the bar (1 to 4), %2$d the beats in a bar (4). -->
+    <string name="dub_beat_of">Beat %1$d of %2$d</string>
+    <string name="dub_beat_none">No beat</string>
+
+    <string name="dub_peak_meter">Output level</string>
+    <string name="dub_limiter">Limiter</string>
+    <string name="dub_limiter_on">limiting</string>
+    <string name="dub_limiter_off">idle</string>
+    <!-- The limiter LED's short label. -->
+    <string name="dub_limiter_short" translatable="false">LIM</string>
+
+    <!-- Banners saying why DUB passes the audio through untouched. -->
+    <string name="dub_bypass_bit_perfect">DUB is off while bit-perfect output is on</string>
+    <string name="dub_bypass_remote">DUB is off while playing on another device</string>
+    <string name="dub_bypass_channels">DUB works on mono and stereo tracks only</string>
+
+    <!-- The five ways of the DUB preamp, from the lowest band to the highest; shown on narrow strips. -->
+    <string name="dub_way_sub">SUB</string>
+    <string name="dub_way_bass">BASS</string>
+    <string name="dub_way_low_mid">LOW MID</string>
+    <string name="dub_way_high_mid">HIGH MID</string>
+    <string name="dub_way_top">TOP</string>
+    <!-- %1$d is the way's number (1 to 5), %2$s its name, "BASS". -->
+    <string name="dub_way_title">Way %1$d, %2$s</string>
+    <!-- %1$s and %2$s are frequencies ("80 Hz", "Off"), %3$s a level ("0 dB"). -->
+    <string name="dub_way_state">high-pass %1$s, low-pass %2$s, level %3$s</string>
+    <!-- Corner labels on a preamp strip: high-pass and low-pass. -->
+    <string name="dub_corner_high_pass_short" translatable="false">HP</string>
+    <string name="dub_corner_low_pass_short" translatable="false">LP</string>
+    <string name="dub_corner_off">Off</string>
+    <string name="dub_high_pass">High-pass</string>
+    <string name="dub_low_pass">Low-pass</string>
+    <string name="dub_reset_corner">Reset to default</string>
+    <string name="dub_level">Level</string>
+    <string name="dub_reset_level">Reset level to 0 dB</string>
+    <!-- The kill switch that silences one way of the preamp; keep it short. -->
+    <string name="dub_kill">KILL</string>
+    <string name="dub_killed">killed</string>
+    <string name="dub_live">on</string>
+    <string name="dub_kill_action">Kill</string>
+    <string name="dub_unkill_action">Bring back</string>
+    <string name="dub_reset_way">Reset filters and level</string>
+    <string name="dub_kill_row">Preamp kills</string>
+</resources>

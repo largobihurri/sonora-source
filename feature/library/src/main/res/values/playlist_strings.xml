@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Library home and Playlists screen -->
+    <string name="playlists_title">Playlists</string>
+    <string name="playlists_back_library">Library</string>
+    <string name="playlist_new_row">New Playlist…</string>
+    <plurals name="playlist_song_count">
+        <item quantity="one">%1$d song</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+
+    <!-- Playlist detail -->
+    <string name="playlist_play">Play</string>
+    <string name="playlist_shuffle">Shuffle</string>
+    <string name="playlist_edit">Edit</string>
+    <string name="playlist_done">Done</string>
+    <string name="playlist_more">More</string>
+    <string name="playlist_empty">This playlist is empty. To add songs, touch and hold a song, then choose Add to Playlist.</string>
+    <plurals name="playlist_minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="playlist_hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+    <!-- %1$s is the song count ("12 songs"), %2$s the total duration ("45 minutes"). -->
+    <string name="playlist_summary">%1$s, %2$s</string>
+    <!-- %1$s is the hours ("1 hour"), %2$s the minutes ("5 minutes"). -->
+    <string name="playlist_hours_minutes">%1$s, %2$s</string>
+    <!-- Spoken suffix of a song whose file is no longer in the library. -->
+    <string name="playlist_unavailable">Unavailable</string>
+    <!-- %1$s is a song title. -->
+    <string name="playlist_remove_entry">Remove %1$s</string>
+    <string name="playlist_reorder">Reorder</string>
+    <string name="playlist_move_up">Move Up</string>
+    <string name="playlist_move_down">Move Down</string>
+
+    <!-- Playlist menu -->
+    <string name="playlist_edit_details">Edit Name and Description</string>
+    <string name="playlist_delete">Delete Playlist</string>
+    <string name="playlist_delete_title">Delete Playlist?</string>
+    <!-- %1$s is the playlist's name. -->
+    <string name="playlist_delete_message">“%1$s” will be deleted. Its songs stay in your library.</string>
+    <string name="playlist_delete_confirm">Delete</string>
+
+    <!-- New / edit playlist dialog -->
+    <string name="playlist_new_title">New Playlist</string>
+    <string name="playlist_edit_title">Edit Playlist</string>
+    <string name="playlist_name_label">Name</string>
+    <string name="playlist_description_label">Description (optional)</string>
+    <string name="playlist_create">Create</string>
+    <string name="playlist_save">Save</string>
+    <string name="playlist_cancel">Cancel</string>
+
+    <!-- Add to Playlist -->
+    <string name="playlist_add_to">Add to Playlist…</string>
+    <string name="playlist_picker_title">Add to Playlist</string>
+    <!-- Confirmation banner; %1$s is the playlist's name. -->
+    <string name="playlist_added_to">Added to %1$s</string>
+    <string name="playlist_nothing_to_add">No Songs to Add</string>
+    <string name="playlist_add_failed">Couldn’t Add to Playlist</string>
+</resources>

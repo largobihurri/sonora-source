@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Song list -->
+    <string name="wear_tracks_title">Música</string>
+    <string name="wear_now_playing_entry">Reproduciendo</string>
+    <string name="wear_empty_title">Aún no hay música</string>
+    <string name="wear_empty_body">Envía música desde tu móvil con la app Sonora.</string>
+
+    <!-- Now playing -->
+    <string name="wear_play">Reproducir</string>
+    <string name="wear_pause">Pausa</string>
+    <string name="wear_previous">Anterior</string>
+    <string name="wear_next">Siguiente</string>
+    <string name="wear_volume_percent">Volumen %1$d%%</string>
+
+    <!-- Queue -->
+    <string name="wear_queue_title">Cola</string>
+    <string name="wear_queue_empty">La cola está vacía</string>
+    <string name="wear_queue_play_here">Reproducir esta canción</string>
+    <string name="wear_queue_move_up">Subir</string>
+    <string name="wear_queue_move_down">Bajar</string>
+    <string name="wear_queue_remove">Quitar de la cola</string>
+
+    <!-- Headphones prompt -->
+    <string name="wear_headphones_title">Conecta unos auriculares</string>
+    <string name="wear_headphones_body">Sonora suena por auriculares Bluetooth. Conéctalos para escuchar.</string>
+    <string name="wear_headphones_action">Ajustes de Bluetooth</string>
+
+    <!-- Notification channel of the playback service -->
+    <string name="wear_playback_channel_name">Reproducción</string>
+
+    <!-- Notificación de la transferencia de música desde el teléfono -->
+    <string name="wear_sync_channel_name">Transferencia de música</string>
+    <string name="wear_sync_notification_title">Recibiendo música</string>
+
+    <!-- Phone remote -->
+    <string name="wear_phone_entry">Móvil</string>
+    <string name="wear_remote_connecting">Conectando con tu móvil…</string>
+    <string name="wear_remote_no_phone_title">Móvil no disponible</string>
+    <string name="wear_remote_no_phone_body">Acércalo, con el Bluetooth activado y Sonora instalado.</string>
+    <string name="wear_remote_idle_title">No suena nada</string>
+    <string name="wear_remote_idle_body">Empieza a reproducir música en tu móvil.</string>
+    <string name="wear_remote_volume_percent">Volumen del móvil %1$d%%</string>
+    <!-- The name Kora peers see for the watch's only playlist: every song on it. -->
+    <string name="wear_kora_all_songs">Música del reloj</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="speed_pitch_title">Speed &amp; Pitch</string>
+    <string name="speed_pitch_speed">Speed</string>
+    <string name="speed_pitch_pitch">Pitch</string>
+    <string name="speed_pitch_slower">Slower</string>
+    <string name="speed_pitch_faster">Faster</string>
+    <string name="speed_pitch_lower">Lower</string>
+    <string name="speed_pitch_higher">Higher</string>
+    <string name="speed_pitch_reset">Reset</string>
+    <string name="speed_pitch_badge_description">Speed and pitch: %1$s</string>
+    <plurals name="speed_pitch_semitones">
+        <item quantity="one">%1$s semitone</item>
+        <item quantity="other">%1$s semitones</item>
+    </plurals>
+</resources>

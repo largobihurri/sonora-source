@@ -1,0 +1,313 @@
+# Open-source notices shown in Settings > About > Open-Source Licences (format: LicenceIndex.kt).
+#
+# Hand-maintained. LicenceInventoryTest fails when a library of gradle/libs.versions.toml that a shipped module bundles
+# is not covered by an entry here. Transitive libraries are not checked by the test: they were listed from
+#   ./gradlew :app:dependencies --configuration playReleaseRuntimeClasspath   (and fullReleaseRuntimeClasspath)
+# so re-run those after a dependency upgrade and add any new group by hand.
+# Full licence texts live in licences/texts/; the beat model's notice is core/beatmodel's own asset,
+# licences/beatmodel-third-party.txt, and is referenced here rather than copied.
+
+[Sonora]
+licence: GPL-3.0-or-later
+url: https://github.com/largobihurri/sonora-source
+text: texts/GPL-3.0.txt
+covers: sonora
+
+Copyright (C) 2026 Sonora contributors.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+version. It is distributed WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+A PARTICULAR PURPOSE. The complete source code of every release is published at the address above.
+
+[AndroidX and Jetpack Compose]
+licence: Apache-2.0
+url: https://developer.android.com/jetpack/androidx
+text: texts/Apache-2.0.txt
+covers: androidx.*
+
+Copyright The Android Open Source Project.
+
+Includes AndroidX Core, Activity, Lifecycle, Navigation 3, Compose (UI, Foundation, Animation, Material 3),
+Media3 (ExoPlayer, Session, Extractor), Room, SQLite, WorkManager, DataStore, DocumentFile, Palette, Hilt for
+AndroidX and their AndroidX dependencies.
+
+[Dagger and Hilt]
+licence: Apache-2.0
+url: https://github.com/google/dagger
+text: texts/Apache-2.0.txt
+covers: com.google.dagger:*
+
+Copyright The Dagger Authors.
+
+[javax.inject and Jakarta Inject]
+licence: Apache-2.0
+url: https://github.com/jakartaee/inject
+text: texts/Apache-2.0.txt
+covers: javax.inject:*, jakarta.inject:*
+
+Copyright The JSR-330 Expert Group and the Jakarta Dependency Injection contributors.
+
+[Kotlin, kotlinx.coroutines and kotlinx.serialization]
+licence: Apache-2.0
+url: https://github.com/JetBrains/kotlin
+text: texts/Apache-2.0.txt
+covers: org.jetbrains.kotlin.*, org.jetbrains.kotlinx.*, org.jetbrains:annotations
+
+Copyright JetBrains s.r.o. and Kotlin Programming Language contributors.
+
+[Compose Multiplatform runtime]
+licence: Apache-2.0
+url: https://github.com/JetBrains/compose-multiplatform
+text: texts/Apache-2.0.txt
+covers: org.jetbrains.compose.*, org.jetbrains.androidx.*
+
+Copyright JetBrains s.r.o. and respective authors and developers. Pulled in by Coil.
+
+[Coil]
+licence: Apache-2.0
+url: https://github.com/coil-kt/coil
+text: texts/Apache-2.0.txt
+covers: io.coil-kt.coil3:*
+
+Copyright Coil Contributors.
+
+[Okio]
+licence: Apache-2.0
+url: https://github.com/square/okio
+text: texts/Apache-2.0.txt
+covers: com.squareup.okio:*
+
+Copyright Square, Inc.
+
+[Guava and JSR-305 annotations]
+licence: Apache-2.0
+url: https://github.com/google/guava
+text: texts/Apache-2.0.txt
+covers: com.google.guava:*, com.google.code.findbugs:*
+
+Copyright The Guava Authors. JSR-305 annotations: Copyright the FindBugs project.
+
+[Accompanist Drawable Painter]
+licence: Apache-2.0
+url: https://github.com/google/accompanist
+text: texts/Apache-2.0.txt
+covers: com.google.accompanist:*
+
+Copyright The Android Open Source Project.
+
+[JSpecify]
+licence: Apache-2.0
+url: https://jspecify.dev
+text: texts/Apache-2.0.txt
+covers: org.jspecify:*
+
+Copyright The JSpecify Authors.
+
+[Backdrop and Shapes]
+licence: Apache-2.0
+url: https://github.com/Kyant0
+text: texts/Apache-2.0.txt
+covers: io.github.kyant0:*
+
+Copyright Kyant. The translucent surfaces and their shapes are drawn with these libraries.
+
+[zip4j]
+licence: Apache-2.0
+url: https://github.com/srikanth-lingala/zip4j
+text: texts/Apache-2.0.txt
+covers: net.lingala.zip4j:*
+
+Copyright Srikanth Reddy Lingala.
+
+[Material Icons (path data)]
+licence: Apache-2.0
+url: https://github.com/google/material-design-icons
+text: texts/Apache-2.0.txt
+covers: material-icons
+
+Copyright Google LLC. The path data of Sonora's built-in icon set is taken from Material Icons.
+
+[jaudiotagger]
+licence: LGPL-2.1-or-later
+url: https://bitbucket.org/ijabz/jaudiotagger
+text: texts/LGPL-2.1.txt
+covers: net.jthink:*
+
+Copyright Paul Taylor (jthink.net) and the jaudiotagger contributors.
+
+Its license.txt licenses it under the GNU Lesser General Public License, version 2.1 or (at your option) any later
+version; the text of version 2.1 follows. Sonora uses jaudiotagger 3.0.1 unmodified, as a
+separate library; its source is at the address above, and Sonora's own source lets you rebuild the app with a
+changed copy of it.
+
+[ONNX Runtime]
+licence: MIT
+url: https://github.com/microsoft/onnxruntime
+text: beatmodel-third-party.txt
+covers: com.microsoft.onnxruntime:*
+
+Copyright (c) Microsoft Corporation. Runs the beat model on the device. Its MIT licence text is in the beat model's
+notice below. ONNX Runtime carries further third-party notices of its own: ThirdPartyNotices.txt in its upstream
+repository (https://github.com/microsoft/onnxruntime/blob/v1.30.0/ThirdPartyNotices.txt).
+
+[Beat This! (code and model weights)]
+licence: MIT
+url: https://github.com/CPJKU/beat_this
+text: beatmodel-third-party.txt
+covers: beat-this
+
+Copyright (c) 2024 Institute of Computational Perception, JKU Linz, Austria. The "small0" beat-tracking model,
+converted to ONNX; the full notice follows.
+
+[qm-dsp (Mixxx fork)]
+licence: GPL-2.0-or-later
+url: https://github.com/mixxxdj/mixxx/tree/332b8026fbf35509a6e006c9e1eba89a491e8ec3/lib/qm-dsp
+text: texts/GPL-2.0.txt
+covers: qm-dsp
+
+QM DSP Library: Copyright Centre for Digital Music, Queen Mary, University of London, and the authors named in each
+file. Mixxx's fork of https://github.com/c4dm/qm-dsp at commit 332b8026, used for onset detection, tempo, beat,
+downbeat and key analysis. Licensed under the GNU General Public License, version 2 or (at your option) any later
+version; Sonora uses it under version 3.
+
+[LAME]
+licence: LGPL-2.0-or-later
+url: https://lame.sourceforge.io
+text: texts/LGPL-2.0.txt
+covers: lame
+
+LAME MP3 encoder 3.100: Copyright the LAME project and the authors named in each file. Used for MP3 output in the
+converter. Licensed under the GNU Library General Public License, version 2 or (at your option) any later version;
+its text follows. Sonora builds the encoder library unmodified from the official lame-3.100.tar.gz (sha256
+ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e) as a separate shared library, libsonora_mp3.so;
+the copied files are in core/mp3/src/main/cpp/lame of Sonora's source, which lets you rebuild the app with a changed
+copy of it. MP3 technology may be covered by patents in some countries; the relevant patents have expired.
+
+[Mixxx (derived code)]
+licence: GPL-2.0-or-later
+url: https://github.com/mixxxdj/mixxx
+text: texts/GPL-2.0.txt
+covers: mixxx
+
+Copyright (C) Mixxx contributors. Sonora's constant beat grid fitting and parts of its track analyser are derived
+from Mixxx (src/track/beatutils.cpp and src/track/beatfactory.cpp at commit 332b8026), adapted to plain C++ and
+distributed under the GNU General Public License, version 3 or later.
+
+[kissfft]
+licence: BSD-3-Clause
+url: https://github.com/mborgerding/kissfft
+covers: kissfft
+
+Copyright (c) 2003-2010 Mark Borgerding
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    * Neither the author nor the names of any contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+[rekordcrate (empty export templates)]
+licence: MPL-2.0
+url: https://github.com/Holzhaus/rekordcrate
+text: texts/MPL-2.0.txt
+covers: rekordcrate
+
+The empty export.pdb and exportExt.pdb templates used for USB stick exports are copied unchanged from the rekordcrate
+project (commit 14d54ed, data/complete_export/empty/). They stay under the Mozilla Public License 2.0, and their
+source form is the rekordcrate repository at the address above.
+
+[Kora]
+licence: Apache-2.0
+url: https://github.com/largobihurri/kora-public
+text: texts/Apache-2.0.txt
+covers: eus.bihurri.kora:*
+
+Copyright 2026 Bihurri. Kora Android, Core, Contract and MCP 1.2.1, the on-device control layer Sonora offers its
+library and playback through, licensed under the Apache License, Version 2.0; its source is at the address above.
+
+[Google Play services (Cast and Wearable)]
+licence: Android Software Development Kit License
+url: https://developer.android.com/studio/terms
+covers: com.google.android.gms:*
+build: full
+
+Copyright Google LLC. Proprietary: Google Cast (play-services-cast, play-services-cast-framework, pulled in by
+Media3 Cast) and the Wearable Data Layer (play-services-wearable), with play-services-base, -basement, -flags and
+-tasks. Used under the Android Software Development Kit License Agreement at the address above.
+
+[Google Data Transport and Firebase Encoders]
+licence: Apache-2.0
+url: https://github.com/firebase/firebase-android-sdk
+text: texts/Apache-2.0.txt
+covers: com.google.android.datatransport:*, com.google.firebase:*
+build: full
+
+Copyright Google LLC. Pulled in by the Google Cast framework.
+
+
+Third-party notices of the DJ beat model (core:beatmodel)
+=========================================================
+
+1. Beat This! (code and model weights)
+   https://github.com/CPJKU/beat_this
+   Model used: "small0" (2,099,720 parameters), converted to ONNX by the model card of
+   https://huggingface.co/ashudesai/songbird-models (MIT).
+   Paper: Foscarin, Schlueter, Widmer. Beat this! Accurate beat tracking without DBN postprocessing. ISMIR 2024.
+   Licence: MIT. The code and the published model weights are released under the MIT licence (README, section
+   License, https://github.com/CPJKU/beat_this#license). Note from the same section: some of the training files are
+   fully copyrighted or under limited Creative Commons licences. No training audio is part of the weights.
+
+   MIT License
+
+   Copyright (c) 2024 Institute of Computational Perception, JKU Linz, Austria
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+2. ONNX Runtime (onnxruntime-android)
+   https://github.com/microsoft/onnxruntime
+   Licence: MIT
+
+   MIT License
+
+   Copyright (c) Microsoft Corporation
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+ONNX Runtime also carries its own third-party notices inside the library (see its ThirdPartyNotices.txt upstream).

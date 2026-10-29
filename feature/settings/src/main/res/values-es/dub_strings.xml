@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_dub_mode_header">Modo DUB</string>
+    <string name="settings_dub_mode">Modo DUB</string>
+    <string name="settings_dub_mode_footer">El modo DUB convierte «Reproduciendo» en una mesa de dub: un eco sincronizado con el pulso, un filtro de barrido, un preamplificador de cinco vías con cortes y pads para lanzar, cortar, quitar graves, congelar y desbocar el eco. Al activarlo se desactiva el modo DJ; los bucles y los puntos se mantienen. Los efectos no actúan con la salida bit a bit activada ni al reproducir en otro dispositivo. THROW empieza desde lo que oías al tocarlo; los demás controles se oyen unos 0,2 s después del toque. También puedes activarlo desde el menú … de «Reproduciendo».</string>
+    <string name="settings_dub_pads_header">Pads</string>
+    <string name="settings_dub_pads_hold">Mantener; doble toque enclava</string>
+    <string name="settings_dub_pads_toggle">Tocar para alternar</string>
+    <string name="settings_dub_reset">Restablecer los efectos</string>
+    <string name="settings_dub_pads_footer">El restablecimiento devuelve a sus valores predeterminados el tiempo del eco, la realimentación, el retorno, el bloqueo del filtro y todas las frecuencias y niveles del preamplificador.</string>
+</resources>

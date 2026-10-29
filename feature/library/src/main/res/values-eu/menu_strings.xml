@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_add_favourite">Gehitu gogokoetara</string>
+    <string name="menu_remove_favourite">Kendu gogokoetatik</string>
+    <string name="menu_share">Partekatu</string>
+    <string name="menu_export_rekordbox">Esportatu rekordboxera</string>
+    <string name="menu_pin_song">Ainguratu abestia</string>
+    <string name="menu_unpin_song">Desainguratu abestia</string>
+    <string name="menu_pin_album">Ainguratu albuma</string>
+    <string name="menu_unpin_album">Desainguratu albuma</string>
+    <string name="menu_pin_artist">Ainguratu artista</string>
+    <string name="menu_unpin_artist">Desainguratu artista</string>
+    <string name="menu_pin_playlist">Ainguratu zerrenda</string>
+    <string name="menu_unpin_playlist">Desainguratu zerrenda</string>
+    <string name="menu_pin_folder">Ainguratu karpeta</string>
+    <string name="menu_unpin_folder">Desainguratu karpeta</string>
+    <string name="menu_play_last">Erreproduzitu azkenean</string>
+    <string name="menu_go_to_album">Joan albumera</string>
+    <string name="menu_go_to_artist">Joan artistaren orrira</string>
+    <string name="menu_view_info">Ikusi kredituak eta metadatuak</string>
+    <string name="menu_remove">Kendu liburutegitik</string>
+    <string name="menu_album_year">%1$s · %2$s</string>
+    <string name="menu_pinned">Ainguratuta</string>
+    <string name="menu_share_chooser">Partekatu</string>
+
+    <string name="remove_title">«%1$s» kendu?</string>
+    <string name="remove_message">Sonoratik bakarrik ken dezakezu, fitxategiak gordeta, edo fitxategiak telefonotik ezabatu.</string>
+    <string name="remove_message_playlist">Sonoratik bakarrik ken dezakezu, edo zerrenda ezabatu. Abestiak telefonoan geratzen dira.</string>
+    <string name="remove_from_sonora">Kendu Sonoratik</string>
+    <string name="remove_delete_from_phone">Ezabatu telefonotik</string>
+    <string name="remove_delete_playlist">Ezabatu zerrenda</string>
+    <string name="remove_cancel">Utzi</string>
+    <plurals name="delete_title">
+        <item quantity="one">%1$d abesti telefonotik ezabatu?</item>
+        <item quantity="other">%1$d abesti telefonotik ezabatu?</item>
+    </plurals>
+    <string name="delete_message">Ezin da desegin. Fitxategiak telefonoaren memoriatik ezabatuko dira, eta zerrenda guztietatik kenduko dira.</string>
+    <string name="delete_confirm">Ezabatu</string>
+    <string name="delete_access_title">Baimendu ezabatzea</string>
+    <string name="delete_access_message">Sonorak irakurri besterik ezin du egin «%1$s» karpetan. Fitxategi hauek ezabatzeko, aukeratu berriro karpeta hori eta eman sarbidea.</string>
+    <string name="delete_access_wrong_folder">Beste karpeta bat aukeratu duzu. Ezabatzea baimentzeko, aukeratu «%1$s».</string>
+    <string name="delete_access_choose">Aukeratu karpeta…</string>
+
+    <string name="notice_hidden">Sonoratik kendu da. Ezarpenak › Ezkutatutako elementuak ataletik berreskura dezakezu.</string>
+    <string name="notice_playlist_deleted">«%1$s» ezabatu da. Abestiak telefonoan geratzen dira.</string>
+    <plurals name="notice_deleted">
+        <item quantity="one">%1$d abesti ezabatu da</item>
+        <item quantity="other">%1$d abesti ezabatu dira</item>
+    </plurals>
+    <string name="notice_delete_incomplete">Ezabatuta: %1$d. Ezin izan dira ezabatu: %2$d.</string>
+    <string name="notice_storage_refused">Memoria honek ez du uzten fitxategiak ezabatzen.</string>
+    <string name="notice_export_queued">Esportatu fitxara gehitu da, rekordbox zerrenda gisa</string>
+    <string name="notice_no_songs">Ez dago abestirik</string>
+    <string name="notice_failed">Ezin izan dira abestiak irakurri</string>
+    <string name="notice_no_share_app">Ez dago fitxategi hauek parteka ditzakeen aplikaziorik</string>
+
+    <string name="favourites_title">Gogokoak</string>
+    <string name="favourites_empty">Eduki sakatuta abesti, album edo zerrenda bat, eta aukeratu Gehitu gogokoetara.</string>
+</resources>

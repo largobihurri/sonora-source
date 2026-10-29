@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notificación de un envío al reloj -->
+    <string name="watch_sync_channel">Transferencia al reloj</string>
+    <string name="watch_sync_title">Enviando música a tu reloj</string>
+    <string name="watch_sync_connecting">Conectando con el reloj…</string>
+    <string name="watch_sync_encoding">Preparando %1$d de %2$d: %3$s</string>
+    <string name="watch_sync_sending">Enviando %1$d de %2$d: %3$s</string>
+</resources>

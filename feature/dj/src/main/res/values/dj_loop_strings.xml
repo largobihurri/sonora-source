@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_loop_panel_description">Loop controls</string>
+    <!-- The Cues | Loop switch that swaps the pad panel's face. The labels are DJ words; keep them short (5 characters). -->
+    <string name="dj_loop_mode_description">Pad mode</string>
+    <string name="dj_loop_mode_cues">Cues</string>
+    <string name="dj_loop_mode_loop">Loop</string>
+    <!-- The loop buttons, as lettered on a CDJ; keep them short (5 characters, EXIT and RELOOP 8). -->
+    <string name="dj_loop_in">IN</string>
+    <string name="dj_loop_out">OUT</string>
+    <string name="dj_loop_exit">EXIT</string>
+    <string name="dj_loop_reloop">RELOOP</string>
+    <string name="dj_loop_half" translatable="false">½X</string>
+    <string name="dj_loop_double" translatable="false">2X</string>
+    <string name="dj_loop_in_description">Loop In: mark the start of a loop at the point you hear</string>
+    <string name="dj_loop_out_description">Loop Out: close the loop and repeat it</string>
+    <string name="dj_loop_exit_description">Exit the loop and keep playing</string>
+    <string name="dj_loop_reloop_description">Reloop: start the last loop again</string>
+    <string name="dj_loop_half_description">Halve the loop</string>
+    <string name="dj_loop_double_description">Double the loop</string>
+    <string name="dj_loop_state_marking">In marked</string>
+    <string name="dj_loop_state_looping">Looping</string>
+    <string name="dj_loop_state_armed">Waiting for the end of the loop</string>
+    <string name="dj_loop_state_unavailable">Not available with bit-perfect output or with this audio format</string>
+    <!-- The beat-length stepper. %1$s is the length: 1/32 to 1/2, or 1 to 32. -->
+    <string name="dj_loop_beats_unit">beats</string>
+    <string name="dj_loop_beats_description">Beat loop of %1$s beats: tap to start it</string>
+    <string name="dj_loop_beats_smaller">Shorter beat loop</string>
+    <string name="dj_loop_beats_larger">Longer beat loop</string>
+    <string name="dj_loop_beats_needs_grid">Beat loops need a beat grid</string>
+    <string name="dj_loop_beats_smaller_label" translatable="false">‹</string>
+    <string name="dj_loop_beats_larger_label" translatable="false">›</string>
+    <!-- Saves the loop that plays as a memory loop (the "+ Memory" button while a loop plays); keep it short (8 characters). -->
+    <string name="dj_loop_memory_add">+ Loop</string>
+    <string name="dj_loop_memory_add_description">Save the loop as a memory loop</string>
+    <!-- Hot loops: a hot cue pad that holds a loop. %1$s is the pad letter, then the loop's start and end in the track. -->
+    <string name="dj_loop_pad_set">Hot loop %1$s, from %2$s to %3$s</string>
+    <!-- %1$s is the pad letter, %2$s its name, then the loop's start and end. -->
+    <string name="dj_loop_pad_set_named">Hot loop %1$s, %2$s, from %3$s to %4$s</string>
+    <string name="dj_loop_pad_engage_action">Start hot loop %1$s</string>
+    <string name="dj_loop_pad_save_action">Save the loop on hot cue %1$s</string>
+    <string name="dj_loop_edit_title_hot">Hot loop %1$s</string>
+    <string name="dj_loop_edit_title_memory">Memory loop</string>
+    <!-- Spoken with the waveform's state while a loop is set. %1$s and %2$s are the loop's start and end in the track. -->
+    <string name="dj_loop_region_state">Loop from %1$s to %2$s</string>
+</resources>

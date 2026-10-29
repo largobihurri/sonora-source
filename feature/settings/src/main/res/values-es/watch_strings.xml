@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ajustes › Reloj: música en el reloj Wear OS -->
+    <string name="settings_watch_header">Wear OS</string>
+    <string name="settings_watch">Reloj</string>
+    <string name="settings_watch_footer">Pon álbumes y listas en tu reloj para escucharlos allí, sin el teléfono.</string>
+    <string name="watch_refresh">Actualizar</string>
+
+    <string name="watch_link_checking">Comprobando el reloj…</string>
+    <string name="watch_link_connected">Conectado</string>
+    <string name="watch_link_sending">Enviando música</string>
+    <string name="watch_link_no_watch">No se encuentra ningún reloj</string>
+    <string name="watch_link_outdated">Hay que actualizar la app del reloj</string>
+    <string name="watch_link_unreachable">No se puede contactar con el reloj</string>
+    <string name="watch_advice_no_watch">Empareja un reloj Wear OS con este teléfono e instala Sonora en él; después mantenlo cerca.</string>
+    <string name="watch_advice_outdated">Sonora en el reloj y en este teléfono usan versiones distintas. Actualiza la más antigua.</string>
+    <string name="watch_advice_unreachable">Comprueba que el reloj está cerca y con el Bluetooth activado, y actualiza.</string>
+
+    <string name="watch_space_header">Almacenamiento</string>
+    <string name="watch_space_caption">%1$s usados de %2$s</string>
+    <string name="watch_space_free">Libre</string>
+    <string name="watch_space_room">Espacio para canciones</string>
+    <string name="watch_space_songs">Canciones de Sonora</string>
+    <string name="watch_space_footer">El reloj se reserva algo de espacio para sí mismo, así que las canciones pueden usar un poco menos que el espacio libre.</string>
+    <string name="watch_no_songs">Sin canciones</string>
+    <plurals name="watch_song_count">
+        <item quantity="one">%1$d canción</item>
+        <item quantity="many">%1$d canciones</item>
+        <item quantity="other">%1$d canciones</item>
+    </plurals>
+
+    <string name="watch_transfer_header">Envío</string>
+    <string name="watch_connecting">Conectando con el reloj…</string>
+    <string name="watch_song_position">Canción %1$d de %2$d</string>
+    <string name="watch_phase_encoding">Convirtiendo a Opus</string>
+    <string name="watch_phase_sending">Enviando al reloj</string>
+    <string name="watch_overall">En total: %1$s</string>
+    <string name="watch_cancel">Cancelar el envío</string>
+
+    <string name="watch_result_header">Último resultado</string>
+    <plurals name="watch_done_sent">
+        <item quantity="one">%1$d canción enviada</item>
+        <item quantity="many">%1$d canciones enviadas</item>
+        <item quantity="other">%1$d canciones enviadas</item>
+    </plurals>
+    <plurals name="watch_done_already_there">
+        <item quantity="one">%1$d canción ya estaba en el reloj</item>
+        <item quantity="many">%1$d canciones ya estaban en el reloj</item>
+        <item quantity="other">%1$d canciones ya estaban en el reloj</item>
+    </plurals>
+    <plurals name="watch_done_failed">
+        <item quantity="one">%1$d canción ha fallado</item>
+        <item quantity="many">%1$d canciones han fallado</item>
+        <item quantity="other">%1$d canciones han fallado</item>
+    </plurals>
+    <string name="watch_done_nothing">No se ha enviado nada</string>
+    <string name="watch_done_speed">%1$s a %2$s/s</string>
+    <string name="watch_dismiss">Descartar</string>
+    <string name="watch_failed_song">%1$s — %2$s</string>
+    <string name="watch_reason_no_space">no había espacio en el reloj</string>
+    <string name="watch_reason_invalid">el reloj la ha rechazado</string>
+    <string name="watch_reason_damaged">ha llegado dañada</string>
+    <string name="watch_reason_storage">el reloj no ha podido guardarla</string>
+    <string name="watch_reason_encoding">no se ha podido convertir</string>
+    <string name="watch_failure_no_watch">No hay ningún reloj con Sonora conectado.</string>
+    <string name="watch_failure_incompatible">La app del reloj es de otra versión. Actualiza Sonora en el reloj.</string>
+    <string name="watch_failure_no_space">Las canciones necesitan %1$s pero el reloj solo tiene %2$s disponibles.</string>
+    <string name="watch_failure_connection_lost">Se ha perdido la conexión con el reloj. Vuelve a enviar para seguir donde se quedó.</string>
+    <string name="watch_failure_nothing">No hay canciones que enviar.</string>
+    <string name="watch_failure_unexpected">Algo ha fallado al enviar al reloj.</string>
+
+    <string name="watch_songs_header">En el reloj</string>
+    <string name="watch_songs_empty">Aún no hay canciones. Envía un álbum o una lista desde la Biblioteca con su menú.</string>
+    <string name="watch_no_album">Sin álbum</string>
+    <string name="watch_various_artists">Varios artistas</string>
+    <string name="watch_remove_album">Quitar el álbum del reloj</string>
+    <string name="watch_remove_song">Quitar la canción del reloj</string>
+    <plurals name="watch_remove_title">
+        <item quantity="one">¿Quitar %1$d canción del reloj?</item>
+        <item quantity="many">¿Quitar %1$d canciones del reloj?</item>
+        <item quantity="other">¿Quitar %1$d canciones del reloj?</item>
+    </plurals>
+    <string name="watch_remove_message">Las canciones solo se borran del reloj. Tu biblioteca del teléfono no se toca y puedes volver a enviarlas.</string>
+    <string name="watch_remove_confirm">Quitar</string>
+    <string name="watch_cancel_button">Cancelar</string>
+    <string name="watch_ok">Aceptar</string>
+    <plurals name="watch_removed">
+        <item quantity="one">%1$d canción quitada del reloj.</item>
+        <item quantity="many">%1$d canciones quitadas del reloj.</item>
+        <item quantity="other">%1$d canciones quitadas del reloj.</item>
+    </plurals>
+    <string name="watch_removed_partly">Se han quitado %1$d de %2$d canciones. El resto sigue en el reloj.</string>
+    <string name="watch_remove_failed">No se han podido quitar las canciones. Comprueba que el reloj está cerca y vuelve a intentarlo.</string>
+</resources>

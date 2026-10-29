@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- "Convert…" in menus and on album, artist, folder and playlist pages -->
+    <string name="convert_action">Convert…</string>
+    <string name="convert_nothing">No Songs to Convert</string>
+    <string name="convert_failed">Couldn’t Send to the Converter</string>
+
+    <!-- Converter › Add Music: picking songs from the library -->
+    <string name="picker_title">Add Music</string>
+    <string name="picker_cancel">Cancel</string>
+    <string name="picker_back">Back</string>
+    <string name="picker_add">Add</string>
+    <string name="picker_search">Search Your Library</string>
+    <string name="picker_select_all">Select All</string>
+    <string name="picker_deselect_all">Deselect All</string>
+    <string name="picker_songs">Songs</string>
+    <string name="picker_albums">Albums</string>
+    <string name="picker_artists">Artists</string>
+    <string name="picker_folders">Folders</string>
+    <string name="picker_playlists">Playlists</string>
+    <string name="picker_converted">Converted</string>
+    <string name="picker_nothing_here">No songs here.</string>
+    <string name="picker_no_results">No songs match your search.</string>
+    <plurals name="picker_selected">
+        <item quantity="one">%1$d song selected</item>
+        <item quantity="other">%1$d songs selected</item>
+    </plurals>
+    <!-- Spoken state of a song row in the picker. -->
+    <string name="picker_selected_state">Selected</string>
+    <string name="picker_not_selected_state">Not selected</string>
+</resources>

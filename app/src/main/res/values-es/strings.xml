@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_library">Biblioteca</string>
+    <string name="tab_search">Buscar</string>
+    <string name="tab_converter">Conversor</string>
+    <string name="tab_export">Exportar</string>
+    <string name="tab_bar_expand">Mostrar pestañas</string>
+
+    <string name="mini_player_play">Reproducir</string>
+    <string name="mini_player_pause">Pausa</string>
+    <string name="mini_player_next">Siguiente</string>
+    <string name="mini_player_next_track">Canción siguiente</string>
+    <string name="mini_player_previous_track">Canción anterior</string>
+    <string name="mini_player_open">Abrir Reproduciendo</string>
+
+    <!-- The first duplicate analysis of a new library: a small closable notice at the top of the shell -->
+    <string name="duplicate_notice_starting">Analizando duplicados…</string>
+    <string name="duplicate_notice_running">Analizando duplicados… %1$s/%2$s</string>
+    <plurals name="duplicate_notice_finished">
+        <item quantity="one">Análisis de duplicados terminado: %1$d grupo encontrado</item>
+        <item quantity="many">Análisis de duplicados terminado: %1$d grupos encontrados</item>
+        <item quantity="other">Análisis de duplicados terminado: %1$d grupos encontrados</item>
+    </plurals>
+    <string name="duplicate_notice_none">Análisis de duplicados terminado: no hay duplicados</string>
+    <string name="duplicate_notice_close">Cerrar</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_waveform">Uhin-forma</string>
+    <string name="dj_overview">Pistaren ikuspegi orokorra</string>
+    <string name="dj_position_state">%1$s / %2$s</string>
+    <string name="dj_skip_back">Atzera 10 segundo</string>
+    <string name="dj_skip_forward">Aurrera 10 segundo</string>
+    <string name="dj_zoom_in">Hurbildu</string>
+    <string name="dj_zoom_out">Urrundu</string>
+    <plurals name="dj_zoom_state">
+        <item quantity="one">%1$d segundo zabaleran</item>
+        <item quantity="other">%1$d segundo zabaleran</item>
+    </plurals>
+</resources>

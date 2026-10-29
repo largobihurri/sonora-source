@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The scrolling coloured waveform of the DJ screen. -->
+    <string name="dj_waveform">Waveform</string>
+    <!-- The strip with the whole track under the waveform. -->
+    <string name="dj_overview">Track overview</string>
+    <!-- %1$s is the elapsed time ("1:23"), %2$s the track's length ("4:56"). -->
+    <string name="dj_position_state">%1$s of %2$s</string>
+    <string name="dj_skip_back">Back 10 seconds</string>
+    <string name="dj_skip_forward">Forward 10 seconds</string>
+    <string name="dj_zoom_in">Zoom in</string>
+    <string name="dj_zoom_out">Zoom out</string>
+    <!-- %1$d is how many seconds the waveform spans: 4, 8, 16 or 32. -->
+    <plurals name="dj_zoom_state">
+        <item quantity="one">%1$d second across</item>
+        <item quantity="other">%1$d seconds across</item>
+    </plurals>
+</resources>

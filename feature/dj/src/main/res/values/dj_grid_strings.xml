@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Short on purpose: it shares the header with the "Edited" marker and Done. The full name is read out. -->
+    <string name="dj_grid_title">Beat grid</string>
+    <!-- The small marker shown while the user has changed the analysed beat grid. -->
+    <string name="dj_grid_edited">Edited</string>
+    <string name="dj_grid_edited_description">Beat grid edited</string>
+    <string name="dj_grid_done">Done</string>
+    <string name="dj_grid_done_description">Close the beat grid editor</string>
+    <string name="dj_grid_panel_description">Beat grid editor</string>
+    <!-- %1$s is the track's tempo with two decimals, e.g. "128.00". -->
+    <string name="dj_grid_bpm_description">Track tempo %1$s BPM</string>
+    <!-- %1$s is the step in BPM, "0.01" or "1" in the locale's style. -->
+    <string name="dj_grid_bpm_down">Lower the track tempo by %1$s BPM</string>
+    <!-- %1$s is the step in BPM, "0.01" or "1" in the locale's style. -->
+    <string name="dj_grid_bpm_up">Raise the track tempo by %1$s BPM</string>
+    <string name="dj_grid_halve_label" translatable="false">½×</string>
+    <string name="dj_grid_halve">Halve the track tempo</string>
+    <string name="dj_grid_double_label" translatable="false">2×</string>
+    <string name="dj_grid_double">Double the track tempo</string>
+    <!-- The bar is the group of four beats; the button makes the beat nearest the playhead the first of a bar. -->
+    <string name="dj_grid_set_bar_start">Set bar start here</string>
+    <string name="dj_grid_set_bar_start_description">Make the beat nearest the playhead the start of a bar and of a phrase</string>
+    <!-- Moves every bar start one beat earlier; keep it short. -->
+    <string name="dj_grid_beat_earlier">◀ Beat</string>
+    <string name="dj_grid_beat_earlier_description">Move the bar start one beat earlier</string>
+    <!-- Moves every bar start one beat later; keep it short. -->
+    <string name="dj_grid_beat_later">Beat ▶</string>
+    <string name="dj_grid_beat_later_description">Move the bar start one beat later</string>
+    <!-- The phrase is four bars; the caption names what the two buttons beside it move. Keep it short. -->
+    <string name="dj_grid_phrase_start">Phrase start</string>
+    <!-- Moves the start of every phrase one bar earlier, the bar lines stay; keep it short. -->
+    <string name="dj_grid_bar_earlier">◀ Bar</string>
+    <string name="dj_grid_bar_earlier_description">Move the phrase start one bar earlier</string>
+    <!-- Moves the start of every phrase one bar later, the bar lines stay; keep it short. -->
+    <string name="dj_grid_bar_later">Bar ▶</string>
+    <string name="dj_grid_bar_later_description">Move the phrase start one bar later</string>
+    <string name="dj_grid_ms_unit" translatable="false">ms</string>
+    <!-- %1$s is the step in milliseconds, e.g. "10". -->
+    <string name="dj_grid_nudge_earlier">Move the whole grid %1$s ms earlier</string>
+    <!-- %1$s is the step in milliseconds, e.g. "10". -->
+    <string name="dj_grid_nudge_later">Move the whole grid %1$s ms later</string>
+    <string name="dj_grid_reset">Reset</string>
+    <string name="dj_grid_reset_description">Discard the edits and use the analysed beat grid</string>
+    <!-- Tap tempo and typing a tempo. The tempo row of the editor turns into [Cancel] [value] [Set] while either is in use. -->
+    <string name="dj_grid_tap_label">Tap</string>
+    <string name="dj_grid_tap_description">Tap tempo: tap this button on every beat to measure the tempo</string>
+    <!-- Shown in place of the tapped tempo until there are enough taps: %1$d taps so far of %2$d needed. Keep it short. -->
+    <string name="dj_grid_tap_progress">Taps %1$d/%2$d</string>
+    <string name="dj_grid_tap_progress_description">Tap count %1$d of %2$d. Keep tapping on the beat</string>
+    <!-- %1$s is the tapped tempo with two decimals, e.g. "127.84". -->
+    <string name="dj_grid_tap_result_description">Tapped tempo %1$s BPM</string>
+    <!-- Applies the typed or tapped tempo to the track; keep it short. -->
+    <string name="dj_grid_bpm_apply">Set</string>
+    <string name="dj_grid_bpm_apply_entry_description">Set the track tempo to the typed value</string>
+    <string name="dj_grid_bpm_apply_tap_description">Set the track tempo to the tapped one</string>
+    <string name="dj_grid_bpm_cancel">Cancel</string>
+    <string name="dj_grid_bpm_cancel_description">Keep the current tempo</string>
+    <!-- Spoken action of the tempo value, which opens the tempo entry when tapped. -->
+    <string name="dj_grid_bpm_edit_label">Type a tempo</string>
+    <string name="dj_grid_bpm_field_description">Track tempo in BPM, two decimals at most</string>
+    <!-- Why the typed tempo was not applied; they replace the editor title while shown, two short lines at most. -->
+    <string name="dj_grid_bpm_error_empty">Type a tempo in BPM</string>
+    <string name="dj_grid_bpm_error_not_a_number">Digits only, e.g. 128.50</string>
+    <string name="dj_grid_bpm_error_decimals">At most two decimals</string>
+    <!-- %1$s and %2$s are the slowest and the fastest tempo, with two decimals. -->
+    <string name="dj_grid_bpm_error_range">Tempo must be %1$s to %2$s BPM</string>
+</resources>

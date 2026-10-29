@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="speed_pitch_title">Abiadura eta tonua</string>
+    <string name="speed_pitch_speed">Abiadura</string>
+    <string name="speed_pitch_pitch">Tonua</string>
+    <string name="speed_pitch_slower">Motelago</string>
+    <string name="speed_pitch_faster">Azkarrago</string>
+    <string name="speed_pitch_lower">Baxuago</string>
+    <string name="speed_pitch_higher">Altuago</string>
+    <string name="speed_pitch_reset">Berrezarri</string>
+    <string name="speed_pitch_badge_description">Abiadura eta tonua: %1$s</string>
+    <plurals name="speed_pitch_semitones">
+        <item quantity="one">%1$s tonuerdi</item>
+        <item quantity="other">%1$s tonuerdi</item>
+    </plurals>
+</resources>

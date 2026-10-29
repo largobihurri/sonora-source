@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bidali erlojura: menuko elementua eta bere oharrak -->
+    <string name="menu_send_to_watch">Bidali erlojura</string>
+    <string name="notice_watch_started">“%1$s” zure erlojura bidaltzen</string>
+    <string name="notice_watch_busy">Erlojurako transferentzia bat martxan dago jada</string>
+    <plurals name="notice_watch_sent">
+        <item quantity="one">%1$d abesti bidali da zure erlojura</item>
+        <item quantity="other">%1$d abesti bidali dira zure erlojura</item>
+    </plurals>
+    <string name="notice_watch_already">Zure erlojuan daude jada</string>
+    <string name="notice_watch_partly">%1$d bidali dira, %2$d-k huts egin dute. Xehetasunak Ezarpenak › Erlojua atalean daude.</string>
+    <string name="notice_watch_no_watch">Ez dago Sonora duen erlojurik konektatuta</string>
+    <string name="notice_watch_incompatible">Eguneratu Sonora zure erlojuan</string>
+    <string name="notice_watch_no_space">Ez dago toki nahikorik erlojuan</string>
+    <string name="notice_watch_connection_lost">Erlojuarekiko konexioa galdu da. Bidali berriro jarraitzeko</string>
+    <string name="notice_watch_nothing">Ez dago bidaltzeko abestirik</string>
+    <string name="notice_watch_failed">Ezin izan da erlojura bidali</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_recent_title">Azken bilaketak</string>
+    <string name="search_recent_clear">Garbitu</string>
+    <string name="search_recent_clear_description">Garbitu azken bilaketak</string>
+    <string name="search_recent_remove">Kendu «%1$s» azken bilaketetatik</string>
+    <string name="search_cancel">Utzi</string>
+</resources>

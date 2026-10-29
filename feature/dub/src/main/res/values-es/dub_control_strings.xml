@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dub_pad_held">pulsado</string>
+    <string name="dub_pad_latched">enclavado</string>
+    <string name="dub_pad_off">apagado</string>
+    <string name="dub_pad_latch">Enclavar</string>
+    <string name="dub_pad_release">Soltar</string>
+
+    <string name="dub_xy_lock">FIJAR</string>
+    <string name="dub_xy_locked">fijado</string>
+    <string name="dub_xy_unlocked">vuelve al centro</string>
+    <string name="dub_xy_cutoff">Barrido del filtro</string>
+    <string name="dub_xy_resonance">Resonancia del filtro</string>
+    <string name="dub_xy_flat">Plano</string>
+    <string name="dub_xy_low_pass">Paso bajo %1$s</string>
+    <string name="dub_xy_high_pass">Paso alto %1$s</string>
+    <string name="dub_xy_q">Q %1$s</string>
+    <string name="dub_xy_centre">Centrar</string>
+
+    <string name="dub_beat_leds">Pulso</string>
+    <string name="dub_beat_of">Pulso %1$d de %2$d</string>
+    <string name="dub_beat_none">Sin pulso</string>
+
+    <string name="dub_peak_meter">Nivel de salida</string>
+    <string name="dub_limiter">Limitador</string>
+    <string name="dub_limiter_on">limitando</string>
+    <string name="dub_limiter_off">en reposo</string>
+
+    <string name="dub_bypass_bit_perfect">DUB está desactivado mientras la salida bit-perfect esté activa</string>
+    <string name="dub_bypass_remote">DUB está desactivado mientras se reproduce en otro dispositivo</string>
+    <string name="dub_bypass_channels">DUB solo funciona con pistas mono y estéreo</string>
+
+    <string name="dub_way_sub">SUB</string>
+    <string name="dub_way_bass">GRAVES</string>
+    <string name="dub_way_low_mid">MEDIOS BAJOS</string>
+    <string name="dub_way_high_mid">MEDIOS ALTOS</string>
+    <string name="dub_way_top">AGUDOS</string>
+    <string name="dub_way_title">Vía %1$d, %2$s</string>
+    <string name="dub_way_state">paso alto %1$s, paso bajo %2$s, nivel %3$s</string>
+    <string name="dub_corner_off">Desact.</string>
+    <string name="dub_high_pass">Paso alto</string>
+    <string name="dub_low_pass">Paso bajo</string>
+    <string name="dub_reset_corner">Restablecer el valor por defecto</string>
+    <string name="dub_level">Nivel</string>
+    <string name="dub_reset_level">Restablecer el nivel a 0 dB</string>
+    <string name="dub_kill">CORTE</string>
+    <string name="dub_killed">cortada</string>
+    <string name="dub_live">activa</string>
+    <string name="dub_kill_action">Cortar</string>
+    <string name="dub_unkill_action">Recuperar</string>
+    <string name="dub_reset_way">Restablecer filtros y nivel</string>
+    <string name="dub_kill_row">Cortes del previo</string>
+</resources>

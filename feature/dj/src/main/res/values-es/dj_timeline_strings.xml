@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_waveform">Forma de onda</string>
+    <string name="dj_overview">Vista general de la pista</string>
+    <string name="dj_position_state">%1$s de %2$s</string>
+    <string name="dj_skip_back">Retroceder 10 segundos</string>
+    <string name="dj_skip_forward">Avanzar 10 segundos</string>
+    <string name="dj_zoom_in">Acercar</string>
+    <string name="dj_zoom_out">Alejar</string>
+    <plurals name="dj_zoom_state">
+        <item quantity="one">%1$d segundo a lo ancho</item>
+        <item quantity="many">%1$d segundos a lo ancho</item>
+        <item quantity="other">%1$d segundos a lo ancho</item>
+    </plurals>
+</resources>

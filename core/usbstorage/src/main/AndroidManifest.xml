@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- USB OTG is optional: the app installs on phones without host mode and hides the USB tools there. There is
+         deliberately no USB_DEVICE_ATTACHED intent filter, so plugging a stick never launches the app. -->
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+
+</manifest>

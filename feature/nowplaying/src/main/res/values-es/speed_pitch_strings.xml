@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="speed_pitch_title">Velocidad y tono</string>
+    <string name="speed_pitch_speed">Velocidad</string>
+    <string name="speed_pitch_pitch">Tono</string>
+    <string name="speed_pitch_slower">Más lento</string>
+    <string name="speed_pitch_faster">Más rápido</string>
+    <string name="speed_pitch_lower">Más grave</string>
+    <string name="speed_pitch_higher">Más agudo</string>
+    <string name="speed_pitch_reset">Restablecer</string>
+    <string name="speed_pitch_badge_description">Velocidad y tono: %1$s</string>
+    <plurals name="speed_pitch_semitones">
+        <item quantity="one">%1$s semitono</item>
+        <item quantity="many">%1$s semitonos</item>
+        <item quantity="other">%1$s semitonos</item>
+    </plurals>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_cue_panel_description">Cue-ak</string>
+    <string name="dj_cue_pad_empty">%1$s hot cue-a, hutsa</string>
+    <string name="dj_cue_pad_set">%1$s hot cue-a: %2$s</string>
+    <string name="dj_cue_pad_set_named">%1$s hot cue-a, %2$s: %3$s</string>
+    <string name="dj_cue_pad_set_action">Ezarri %1$s hot cue-a uneko posizioan</string>
+    <string name="dj_cue_pad_jump_action">Jauzi %1$s hot cue-ra</string>
+    <string name="dj_cue_pad_edit_action">Editatu %1$s hot cue-a</string>
+    <string name="dj_cue_quantize_description">Quantize: jarri cue-ak hurbilen dagoen taupadan</string>
+    <string name="dj_cue_quantize_on">Aktibatuta</string>
+    <string name="dj_cue_quantize_off">Desaktibatuta</string>
+    <string name="dj_cue_memory_add">+ Memoria</string>
+    <string name="dj_cue_memory_add_description">Gehitu memoria-cue bat uneko posizioan</string>
+    <string name="dj_cue_memory_edit_action">Editatu uneko posizioko memoria-cue-a</string>
+    <string name="dj_cue_memory_previous">Jauzi aurreko memoria-cue-ra</string>
+    <string name="dj_cue_memory_next">Jauzi hurrengo memoria-cue-ra</string>
+    <string name="dj_cue_edit_title_hot">%1$s hot cue-a</string>
+    <string name="dj_cue_edit_title_memory">Memoria-cue-a</string>
+    <string name="dj_cue_name_label">Izena</string>
+    <string name="dj_cue_colour_label">Kolorea</string>
+    <string name="dj_cue_edit_save">Gorde</string>
+    <string name="dj_cue_edit_cancel">Utzi</string>
+    <string name="dj_cue_edit_delete">Ezabatu cue-a</string>
+    <string name="dj_cue_colour_selected">hautatuta</string>
+    <string name="dj_cue_color_1">Arrosa</string>
+    <string name="dj_cue_color_2">Gorria</string>
+    <string name="dj_cue_color_3">Laranja</string>
+    <string name="dj_cue_color_4">Horia</string>
+    <string name="dj_cue_color_5">Lima</string>
+    <string name="dj_cue_color_6">Berdea</string>
+    <string name="dj_cue_color_7">Menta</string>
+    <string name="dj_cue_color_8">Turkesa</string>
+    <string name="dj_cue_color_9">Zeru-urdina</string>
+    <string name="dj_cue_color_10">Urdina</string>
+    <string name="dj_cue_color_11">Indigo</string>
+    <string name="dj_cue_color_12">Morea</string>
+    <string name="dj_cue_color_13">Magenta</string>
+    <string name="dj_cue_color_14">Koral</string>
+    <string name="dj_cue_color_15">Beige</string>
+    <string name="dj_cue_color_16">Zuria</string>
+    <string name="dj_cue_color_custom">Kolore pertsonalizatua</string>
+</resources>

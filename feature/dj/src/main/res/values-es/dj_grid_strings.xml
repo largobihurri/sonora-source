@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_grid_title">Cuadrícula</string>
+    <string name="dj_grid_edited">Editada</string>
+    <string name="dj_grid_edited_description">Cuadrícula de pulsos editada</string>
+    <string name="dj_grid_done">Hecho</string>
+    <string name="dj_grid_done_description">Cerrar el editor de la cuadrícula de pulsos</string>
+    <string name="dj_grid_panel_description">Editor de la cuadrícula de pulsos</string>
+    <string name="dj_grid_bpm_description">Tempo de la pista: %1$s BPM</string>
+    <string name="dj_grid_bpm_down">Bajar el tempo de la pista %1$s BPM</string>
+    <string name="dj_grid_bpm_up">Subir el tempo de la pista %1$s BPM</string>
+    <string name="dj_grid_halve">Reducir el tempo de la pista a la mitad</string>
+    <string name="dj_grid_double">Duplicar el tempo de la pista</string>
+    <string name="dj_grid_set_bar_start">Inicio de compás aquí</string>
+    <string name="dj_grid_set_bar_start_description">Convertir el pulso más cercano al cursor en el inicio de un compás y de una frase</string>
+    <string name="dj_grid_beat_earlier">◀ Pulso</string>
+    <string name="dj_grid_beat_earlier_description">Mover el inicio de compás un pulso antes</string>
+    <string name="dj_grid_beat_later">Pulso ▶</string>
+    <string name="dj_grid_beat_later_description">Mover el inicio de compás un pulso después</string>
+    <string name="dj_grid_phrase_start">Inicio de frase</string>
+    <string name="dj_grid_bar_earlier">◀ Compás</string>
+    <string name="dj_grid_bar_earlier_description">Mover el inicio de frase un compás antes</string>
+    <string name="dj_grid_bar_later">Compás ▶</string>
+    <string name="dj_grid_bar_later_description">Mover el inicio de frase un compás después</string>
+    <string name="dj_grid_nudge_earlier">Adelantar toda la cuadrícula %1$s ms</string>
+    <string name="dj_grid_nudge_later">Retrasar toda la cuadrícula %1$s ms</string>
+    <string name="dj_grid_reset">Restaurar</string>
+    <string name="dj_grid_reset_description">Descartar los cambios y usar la cuadrícula analizada</string>
+    <string name="dj_grid_tap_label">Tap</string>
+    <string name="dj_grid_tap_description">Marcar el tempo: toca este botón en cada pulso para medirlo</string>
+    <string name="dj_grid_tap_progress">Toques %1$d/%2$d</string>
+    <string name="dj_grid_tap_progress_description">Cuenta de toques: %1$d de %2$d. Sigue tocando al ritmo</string>
+    <string name="dj_grid_tap_result_description">Tempo marcado: %1$s BPM</string>
+    <string name="dj_grid_bpm_apply">Aplicar</string>
+    <string name="dj_grid_bpm_apply_entry_description">Aplicar a la pista el tempo escrito</string>
+    <string name="dj_grid_bpm_apply_tap_description">Aplicar a la pista el tempo marcado</string>
+    <string name="dj_grid_bpm_cancel">Cancelar</string>
+    <string name="dj_grid_bpm_cancel_description">Mantener el tempo actual</string>
+    <string name="dj_grid_bpm_edit_label">Escribir un tempo</string>
+    <string name="dj_grid_bpm_field_description">Tempo de la pista en BPM, con dos decimales como máximo</string>
+    <string name="dj_grid_bpm_error_empty">Escribe un tempo en BPM</string>
+    <string name="dj_grid_bpm_error_not_a_number">Solo cifras, p. ej. 128,50</string>
+    <string name="dj_grid_bpm_error_decimals">Dos decimales como máximo</string>
+    <string name="dj_grid_bpm_error_range">El tempo debe estar entre %1$s y %2$s BPM</string>
+</resources>

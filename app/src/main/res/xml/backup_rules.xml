@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android Auto Backup up to Android 11. Everything is backed up except the DJ analysis database: its waveforms
+     are recomputed from the audio, and its grids, keys and edits travel in Sonora's own backup file instead. -->
+<full-backup-content>
+    <exclude domain="database" path="sonora-dj.db" />
+    <exclude domain="database" path="sonora-dj.db-wal" />
+    <exclude domain="database" path="sonora-dj.db-shm" />
+    <exclude domain="database" path="sonora-dj.db-journal" />
+    <!-- What this device's GPU kept up with (TranslucentCeiling): device state, not a setting. -->
+    <exclude domain="sharedpref" path="sonora_glass_load.xml" />
+    <!-- The DUB mode flag (SharedPreferencesDubModeSettings): device state, not a setting. -->
+    <exclude domain="sharedpref" path="sonora_dub_mode.xml" />
+</full-backup-content>

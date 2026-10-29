@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_state_waiting_title">Analisiaren zain</string>
+    <string name="dj_state_waiting_hint">Hemen agertuko dira uhin-forma eta taupaden sareta.</string>
+    <string name="dj_state_analysing_title">Abestia aztertzen</string>
+    <string name="dj_state_analysing_hint">Taupada, tonalitatea eta uhin-forma bilatzen.</string>
+    <string name="dj_state_paused_title">Pausatuta: telefonoa beroegi dago</string>
+    <string name="dj_state_paused_hint">Telefonoa hoztean jarraituko du.</string>
+    <string name="dj_state_waveform_title">Uhin-forma berreraikitzen</string>
+    <string name="dj_state_waveform_pending">Uhin-forma zain</string>
+    <string name="dj_state_waveform_hint">Taupaden sareta prest dago; uhin-forma falta da.</string>
+    <string name="dj_state_progress_description">Azterketaren aurrerapena</string>
+    <string name="dj_state_no_grid_title">Ez dago taupada egonkorrik</string>
+    <string name="dj_state_no_grid_hint">Ohikoa da musika girotuetan eta hitzezkoetan. Erreproduzitu eta cue-ak jar ditzakezu, edo berriz aztertu.</string>
+    <string name="dj_state_analyse_again">Berriz aztertu</string>
+    <string name="dj_state_analyse_again_description">Aztertu abesti hau berriro</string>
+    <string name="dj_state_failed_other">Azterketak huts egin du</string>
+    <string name="dj_state_failed_unreadable">Ezin da fitxategia irakurri</string>
+    <string name="dj_state_failed_unsupported">Formatu hau ezin da aztertu</string>
+    <string name="dj_state_failed_corrupt">Audioa hondatuta dagoela dirudi</string>
+    <string name="dj_state_failed_too_short">Laburregia aztertzeko</string>
+    <string name="dj_state_failed_hint">Abestiak entzuten jarraitzen da. Azterketa berriro saia dezakezu.</string>
+    <string name="dj_state_try_again">Saiatu berriro</string>
+    <string name="dj_state_try_again_description">Saiatu abesti hau berriro aztertzen</string>
+
+    <string name="dj_status_reanalysing">Berriz aztertzen: %1$s</string>
+    <string name="dj_status_reanalysis_paused">Pausatuta: beroa</string>
+    <string name="dj_status_reanalysis_failed">Azterketak huts egin du</string>
+
+    <string name="dj_old_analysis_chip">Azterketa zaharra · Eguneratu</string>
+    <string name="dj_old_analysis_chip_short">Eguneratu</string>
+    <string name="dj_old_analysis_chip_description">Eguneratu azterketa. Abesti hau bertsio zaharrago batekin aztertu zen.</string>
+
+    <string name="dj_reanalyse_title">Berriz aztertu?</string>
+    <string name="dj_reanalyse_message">Zure taupaden sareta editatua eta cue-ak mantentzen dira. Sareta editatuak azterketa berriarena ordezkatzen jarraituko du.</string>
+    <string name="dj_reanalyse_confirm">Berriz aztertu</string>
+    <string name="dj_reanalyse_cancel">Utzi</string>
+</resources>

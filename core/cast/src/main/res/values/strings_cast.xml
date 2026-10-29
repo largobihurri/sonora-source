@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The Cast button's spoken label in each connection state. These names override Media3's own MediaRouteButton
+    descriptions, which ship in English only, so TalkBack reads the button in the app's language.
+-->
+<resources>
+    <string name="media_route_button_disconnected">Cast. Disconnected</string>
+    <string name="media_route_button_connecting">Cast. Connecting</string>
+    <string name="media_route_button_connected">Cast. Connected</string>
+</resources>

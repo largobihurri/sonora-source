@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Long-press context menu (iOS 26 Music). -->
+    <string name="menu_add_favourite">Add to Favourites</string>
+    <string name="menu_remove_favourite">Remove from Favourites</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_export_rekordbox">Export to rekordbox</string>
+    <string name="menu_pin_song">Pin Song</string>
+    <string name="menu_unpin_song">Unpin Song</string>
+    <string name="menu_pin_album">Pin Album</string>
+    <string name="menu_unpin_album">Unpin Album</string>
+    <string name="menu_pin_artist">Pin Artist</string>
+    <string name="menu_unpin_artist">Unpin Artist</string>
+    <string name="menu_pin_playlist">Pin Playlist</string>
+    <string name="menu_unpin_playlist">Unpin Playlist</string>
+    <string name="menu_pin_folder">Pin Folder</string>
+    <string name="menu_unpin_folder">Unpin Folder</string>
+    <string name="menu_play_last">Play Last</string>
+    <string name="menu_go_to_album">Go to Album</string>
+    <string name="menu_go_to_artist">Go to Artist</string>
+    <string name="menu_view_info">View Credits and Metadata</string>
+    <string name="menu_remove">Remove from Library</string>
+    <!-- Preview card line: album · year. -->
+    <string name="menu_album_year">%1$s · %2$s</string>
+    <string name="menu_pinned">Pinned</string>
+    <string name="menu_share_chooser">Share</string>
+
+    <!-- Remove from Library, asked every time. %1$s is the item's name. -->
+    <string name="remove_title">Remove “%1$s”?</string>
+    <string name="remove_message">Remove it from Sonora only and keep the files, or delete the files from your phone.</string>
+    <string name="remove_message_playlist">Remove it from Sonora only, or delete the playlist. Its songs stay on your phone.</string>
+    <string name="remove_from_sonora">Remove from Sonora</string>
+    <string name="remove_delete_from_phone">Delete from Phone</string>
+    <string name="remove_delete_playlist">Delete Playlist</string>
+    <string name="remove_cancel">Cancel</string>
+    <plurals name="delete_title">
+        <item quantity="one">Delete %1$d song from your phone?</item>
+        <item quantity="other">Delete %1$d songs from your phone?</item>
+    </plurals>
+    <string name="delete_message">This can\'t be undone. The files are deleted from your phone\'s storage and leave every playlist.</string>
+    <string name="delete_confirm">Delete</string>
+    <string name="delete_access_title">Allow Deleting</string>
+    <string name="delete_access_message">Sonora can only read the folder “%1$s”. To delete these files, choose that folder again and allow access.</string>
+    <string name="delete_access_wrong_folder">That was a different folder. Choose “%1$s” to allow deleting.</string>
+    <string name="delete_access_choose">Choose Folder…</string>
+
+    <!-- Banners after a menu action. -->
+    <string name="notice_hidden">Removed from Sonora. Restore it in Settings › Hidden Items.</string>
+    <string name="notice_playlist_deleted">Deleted “%1$s”. Its songs stay on your phone.</string>
+    <plurals name="notice_deleted">
+        <item quantity="one">%1$d song deleted</item>
+        <item quantity="other">%1$d songs deleted</item>
+    </plurals>
+    <string name="notice_delete_incomplete">Deleted: %1$d. Could not be deleted: %2$d.</string>
+    <string name="notice_storage_refused">This storage doesn\'t allow deleting files.</string>
+    <string name="notice_export_queued">Added to the Export tab as a rekordbox playlist</string>
+    <string name="notice_no_songs">No songs</string>
+    <string name="notice_failed">Couldn\'t read the songs</string>
+    <string name="notice_no_share_app">No app can share these files</string>
+
+    <!-- Favourites smart playlist. -->
+    <string name="favourites_title">Favourites</string>
+    <string name="favourites_empty">Long-press a song, album or playlist and choose Add to Favourites.</string>
+</resources>

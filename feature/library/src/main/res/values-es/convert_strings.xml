@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="convert_action">Convertir…</string>
+    <string name="convert_nothing">No hay canciones que convertir</string>
+    <string name="convert_failed">No se ha podido enviar al conversor</string>
+
+    <string name="picker_title">Añadir música</string>
+    <string name="picker_cancel">Cancelar</string>
+    <string name="picker_back">Atrás</string>
+    <string name="picker_add">Añadir</string>
+    <string name="picker_search">Buscar en tu biblioteca</string>
+    <string name="picker_select_all">Seleccionar todo</string>
+    <string name="picker_deselect_all">Deseleccionar todo</string>
+    <string name="picker_songs">Canciones</string>
+    <string name="picker_albums">Álbumes</string>
+    <string name="picker_artists">Artistas</string>
+    <string name="picker_folders">Carpetas</string>
+    <string name="picker_playlists">Listas</string>
+    <string name="picker_converted">Convertido</string>
+    <string name="picker_nothing_here">No hay canciones aquí.</string>
+    <string name="picker_no_results">Ninguna canción coincide con tu búsqueda.</string>
+    <plurals name="picker_selected">
+        <item quantity="one">%1$d canción seleccionada</item>
+        <item quantity="many">%1$d canciones seleccionadas</item>
+        <item quantity="other">%1$d canciones seleccionadas</item>
+    </plurals>
+    <string name="picker_selected_state">Seleccionada</string>
+    <string name="picker_not_selected_state">No seleccionada</string>
+</resources>

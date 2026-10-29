@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="archive_channel_name">Archives</string>
+    <string name="archive_channel_description">Progress and results of compressing and extracting archives</string>
+    <string name="archive_compress_title">Compressing</string>
+    <string name="archive_extract_title">Extracting archive</string>
+    <string name="archive_progress_preparing">Preparing…</string>
+    <string name="archive_progress_text">%1$d of %2$d · %3$s</string>
+    <string name="archive_progress_chip">%1$d%%</string>
+    <string name="archive_action_cancel">Cancel</string>
+    <string name="archive_compressed_title">Archive ready</string>
+    <string name="archive_extracted_title">Archive extracted</string>
+    <plurals name="archive_extracted_text">
+        <item quantity="one">%d song added</item>
+        <item quantity="other">%d songs added</item>
+    </plurals>
+    <string name="archive_compress_failed_title">Couldn’t create the archive</string>
+    <string name="archive_extract_failed_title">Couldn’t extract the archive</string>
+    <string name="archive_error_password_required">This archive needs a password.</string>
+    <string name="archive_error_wrong_password">The password is not correct.</string>
+    <string name="archive_error_password_again">Sonora was closed before the job ended. Enter the password again.</string>
+    <string name="archive_error_damaged">The archive is damaged or is not a ZIP file.</string>
+    <string name="archive_error_no_music">There is no music in the archive.</string>
+    <string name="archive_error_no_space">Not enough space: %1$s needed, %2$s free.</string>
+    <string name="archive_error_unreadable">Couldn’t read “%1$s”.</string>
+    <string name="archive_error_unreadable_files">Couldn’t read the songs to compress.</string>
+    <string name="archive_error_unwritable">Couldn’t write to the chosen folder.</string>
+    <string name="archive_error_unexpected">Something went wrong. Try again.</string>
+</resources>

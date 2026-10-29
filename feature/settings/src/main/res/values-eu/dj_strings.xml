@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › DJ Mode -->
+    <string name="settings_dj_mode_header">DJ modua</string>
+    <string name="settings_dj_mode">DJ modua</string>
+    <string name="settings_dj_mode_footer">DJ modua aktibatuta dagoen bitartean, erreproduzitzen ari den abestia eta ilarako hurrengoak atzeko planoan aztertzen dira (taupadak, tempoa, tonalitatea eta uhin-forma). Desaktibatuta dagoenean, ez da ezer aztertzen. «Orain erreproduzitzen» pantailako … menutik ere aktibatu dezakezu.</string>
+
+    <!-- Settings › DJ Mode › Analysis performance (same three modes as the converter) -->
+    <string name="settings_dj_performance_header">Analisiaren errendimendua</string>
+    <string name="settings_dj_performance_low">Baliabide gutxi</string>
+    <string name="settings_dj_performance_normal">Normala</string>
+    <string name="settings_dj_performance_high">Errendimendu handia</string>
+    <string name="settings_dj_performance_low_description">Erreproduzitzen ari den abestia soilik, hari batekin eta lehentasun txikiarekin; telefonoa beroa dagoen bitartean itxaron egiten du. Bateria aurrezten du eta gutxiago berotzen da.</string>
+    <string name="settings_dj_performance_normal_description">Erreproduzitzen ari den abestia eta hurrengo hirurak, bi harirekin atzeko planoan. Oreka ona.</string>
+    <string name="settings_dj_performance_high_description">Erreproduzitzen ari den abestia eta hurrengo bostak, lau harirekin. Azkarrena da, baina telefonoa gehiago berotzen da.</string>
+    <string name="settings_dj_performance_footer">Analisia berbera da modu guztietan; abiadura eta karga baino ez dira aldatzen. Telefonoa berotzen denean edo bateria-aurrezlea aktibatuta dagoenean, Sonorak berak moteltzen du lana.</string>
+</resources>

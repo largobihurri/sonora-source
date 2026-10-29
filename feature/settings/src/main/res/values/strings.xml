@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Settings</string>
+    <!-- Back button label: the screen Settings returns to. -->
+    <string name="settings_back_library">Library</string>
+
+    <!-- Library folders -->
+    <string name="settings_folders_header">Library Folders</string>
+    <string name="settings_add_folder">Add Folder</string>
+    <string name="settings_folders_footer">Sonora shows only the music in these folders. A folder can\'t be inside another library folder.</string>
+    <!-- Spoken label of a folder's remove button; %1$s is the folder's name. -->
+    <string name="settings_remove_folder">Remove %1$s</string>
+    <!-- %1$s is the folder's name. -->
+    <string name="settings_remove_folder_title">Remove “%1$s”?</string>
+    <string name="settings_remove_folder_message">Its songs will be removed from your library. The files stay on your device.</string>
+    <string name="settings_remove">Remove</string>
+    <string name="settings_cancel">Cancel</string>
+    <string name="settings_ok">OK</string>
+
+    <!-- Folder and saving notices -->
+    <string name="settings_add_failed_title">Couldn\'t Add Folder</string>
+    <string name="settings_add_failed_message">Sonora can\'t read that folder. Choose a folder on your device\'s storage.</string>
+    <string name="settings_picker_missing_message">This device has no app for choosing folders.</string>
+    <string name="settings_save_failed_title">Couldn\'t Save Setting</string>
+    <string name="settings_save_failed_message">Sonora couldn\'t save this change. Try again.</string>
+    <string name="settings_already_added_title">Folder Already Added</string>
+    <!-- %1$s is the name of the folder already in the library. -->
+    <string name="settings_already_added_message">“%1$s” is already in your library.</string>
+    <string name="settings_inside_existing_title">Folder Already Included</string>
+    <!-- %1$s is the name of the library folder that contains the chosen one. -->
+    <string name="settings_inside_existing_message">This folder is inside “%1$s”, which is already in your library.</string>
+    <string name="settings_contains_existing_title">Folder Contains a Library Folder</string>
+    <!-- %1$s is the name of the library folder inside the chosen one. -->
+    <string name="settings_contains_existing_message">This folder contains “%1$s”, which is already in your library. Remove “%1$s” first, then add this folder.</string>
+
+    <!-- Scanning -->
+    <string name="settings_scanning_header">Scanning</string>
+    <string name="settings_rescan">Rescan Library</string>
+    <!-- %1$s is the folder being scanned. -->
+    <string name="settings_scanning">Scanning “%1$s”…</string>
+    <!-- %1$s is the folder being scanned, %2$d files scanned so far, %3$d files to scan. -->
+    <string name="settings_scanning_progress">Scanning “%1$s”… %2$d of %3$d</string>
+    <!-- %1$s lists the changes, e.g. "12 added, 1 updated, 2 removed". -->
+    <string name="settings_last_scan_changes">Last scan: %1$s.</string>
+    <!-- %1$s is the number of songs, e.g. "3 songs". -->
+    <string name="settings_last_scan_no_changes">Last scan: no changes, %1$s.</string>
+    <!-- Joins the items of the last scan's change list. -->
+    <string name="settings_list_separator">", "</string>
+    <plurals name="settings_scan_added">
+        <item quantity="one">%d added</item>
+        <item quantity="other">%d added</item>
+    </plurals>
+    <plurals name="settings_scan_updated">
+        <item quantity="one">%d updated</item>
+        <item quantity="other">%d updated</item>
+    </plurals>
+    <plurals name="settings_scan_removed">
+        <item quantity="one">%d removed</item>
+        <item quantity="other">%d removed</item>
+    </plurals>
+    <plurals name="settings_scan_songs">
+        <item quantity="one">%d song</item>
+        <item quantity="other">%d songs</item>
+    </plurals>
+    <plurals name="settings_scan_skipped">
+        <item quantity="one">%d file couldn\'t be read and will be retried next scan.</item>
+        <item quantity="other">%d files couldn\'t be read and will be retried next scan.</item>
+    </plurals>
+    <plurals name="settings_scan_failed_folders">
+        <item quantity="one">%d folder couldn\'t be opened; its songs were kept.</item>
+        <item quantity="other">%d folders couldn\'t be opened; their songs were kept.</item>
+    </plurals>
+
+    <!-- Language -->
+    <string name="settings_language_header">Language</string>
+    <string name="settings_language_footer">Sonora uses Castellano until you choose another language.</string>
+    <!-- Each language is named in itself, the same in every translation. -->
+    <string name="settings_language_spanish" translatable="false">Castellano</string>
+    <string name="settings_language_english" translatable="false">English</string>
+    <string name="settings_language_basque" translatable="false">Euskara</string>
+
+    <!-- Appearance -->
+    <string name="settings_appearance_header">Appearance</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_translucency">Translucency</string>
+    <string name="settings_translucency_footer_liquid">Refraction, blur and a light rim on the tab bar, mini player and buttons. Off uses a flat translucent surface.</string>
+    <string name="settings_translucency_footer_frosted">This Android version blurs the translucent surfaces without refraction. Off uses a flat translucent surface.</string>
+    <string name="settings_translucency_footer_flat">This Android version always uses a flat translucent surface.</string>
+    <string name="settings_translucency_footer_contrast">Android\'s contrast settings ask for more contrast, so the translucent surfaces are flat and more opaque.</string>
+    <string name="settings_translucency_footer_limited_frosted">This phone\'s graphics chip could not keep up with the translucent effect, so it is blurred without refraction. Turn the switch off and on to try again.</string>
+    <string name="settings_translucency_footer_limited_flat">This phone\'s graphics chip could not keep up with the translucent effect, so it uses a flat translucent surface. Turn the switch off and on to try again.</string>
+    <string name="settings_accent_header">Accent Colour</string>
+    <!-- Name of Android's wallpaper-based colour system; usually left in English. -->
+    <string name="settings_accent_material_you">Material You</string>
+    <string name="settings_accent_palette">Colour Palette</string>
+    <string name="settings_accent_artwork">Follow Artwork</string>
+    <string name="settings_accent_material_you_subtitle">Colours from your wallpaper</string>
+    <string name="settings_accent_material_you_unavailable">Needs Android 12; Sonora Pink is used instead</string>
+    <string name="settings_accent_artwork_subtitle">Colours from the song that\'s playing</string>
+    <string name="settings_accent_footer">The accent colour tints buttons, icons, switches and the tab bar, adjusted to stay readable.</string>
+    <!-- Spoken names of the palette colours. -->
+    <string name="settings_preset_red">Red</string>
+    <string name="settings_preset_orange">Orange</string>
+    <string name="settings_preset_amber">Amber</string>
+    <string name="settings_preset_green">Green</string>
+    <string name="settings_preset_teal">Teal</string>
+    <string name="settings_preset_blue">Blue</string>
+    <string name="settings_preset_indigo">Indigo</string>
+    <string name="settings_preset_purple">Purple</string>
+    <string name="settings_preset_pink">Pink</string>
+
+    <!-- Now Playing -->
+    <string name="settings_now_playing_header">Now Playing</string>
+    <string name="settings_show_lyrics_button">Show Lyrics Button</string>
+    <string name="settings_show_file_info_button">Show File Info Button</string>
+    <string name="settings_now_playing_footer">File Info shows where a song is stored and its format, audio details and tags.</string>
+    <string name="settings_rotation_header">When Rotating Now Playing</string>
+    <string name="settings_rotation_now_playing">Now Playing Landscape</string>
+    <string name="settings_rotation_cover_flow">Album Visual Collection</string>
+    <string name="settings_rotation_footer">With auto-rotate on, turning the phone sideways in Now Playing shows its landscape layout or the albums’ Visual Collection, opened on the album playing.</string>
+    <string name="settings_gravity_header">Gravity</string>
+    <string name="settings_gravity">Keep Level as the Phone Tilts</string>
+    <string name="settings_gravity_footer">Now Playing stays upright while its artwork and its controls each turn on their own centre to stay level. Lying flat, they hold still; the landscape choice above does not apply.</string>
+    <string name="settings_hidden_items">Hidden Items</string>
+    <string name="settings_hidden_footer">Items removed from Sonora stay on your phone. Restore one to show it in your library again.</string>
+    <string name="settings_hidden_empty">No Hidden Items</string>
+    <string name="settings_restore">Restore</string>
+    <string name="settings_restore_item">Restore %1$s</string>
+    <string name="settings_hidden_song">Song</string>
+    <string name="settings_hidden_album">Album</string>
+    <string name="settings_hidden_artist">Artist</string>
+    <string name="settings_hidden_playlist">Playlist</string>
+    <string name="settings_hidden_folder">Folder</string>
+    <string name="settings_hidden_line">%1$s · %2$s</string>
+    <string name="settings_external_control_header">External Control</string>
+    <string name="settings_external_control">Allow External Control</string>
+    <string name="settings_external_control_footer">Lets other apps and AI agents control playback and read your library through Sonora\'s external API. The adb shell can use it once this is on; other apps also need the "Control Sonora" permission, which you grant app by app. While off, only Sonora can use it.</string>
+</resources>

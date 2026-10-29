@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="media_route_button_disconnected">Igorri gailu batera. Deskonektatuta</string>
+    <string name="media_route_button_connecting">Igorri gailu batera. Konektatzen</string>
+    <string name="media_route_button_connected">Igorri gailu batera. Konektatuta</string>
+</resources>

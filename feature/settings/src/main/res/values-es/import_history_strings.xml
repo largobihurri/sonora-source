@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_import_history">Historial de importaciones</string>
+    <string name="import_history_footer">Archivos importados con Sonora. Abre uno para ver sus canciones, eliminarlo del teléfono o quitarlo de esta lista.</string>
+    <string name="import_history_empty">Ninguna importación</string>
+    <string name="import_history_line">%1$s · %2$s</string>
+    <string name="import_history_delete_from_phone">Eliminar del teléfono</string>
+    <string name="import_history_remove">Quitar del historial</string>
+    <string name="import_history_remove_note">Quitar del historial solo olvida la importación: sus canciones siguen en tu teléfono y en tu biblioteca.</string>
+
+    <string name="import_history_delete_title">¿Eliminar «%1$s» de tu teléfono?</string>
+    <string name="import_history_delete_message">No se puede deshacer. Se eliminan su carpeta y todos sus archivos, sus canciones salen de tu biblioteca, tus listas y tus favoritos, y se elimina la lista que recreó.</string>
+    <string name="import_history_delete_confirm">Eliminar</string>
+    <string name="import_history_cancel">Cancelar</string>
+    <string name="import_history_access_title">Permitir eliminar</string>
+    <string name="import_history_access_message">Sonora solo puede leer la carpeta «%1$s». Para eliminar estos archivos, vuelve a elegir esa carpeta y permite el acceso.</string>
+    <string name="import_history_access_wrong_folder">Has elegido otra carpeta. Elige «%1$s» para permitir eliminar.</string>
+    <string name="import_history_access_choose">Elegir carpeta…</string>
+
+    <string name="import_history_deleted_title">Importación eliminada</string>
+    <plurals name="import_history_deleted_message">
+        <item quantity="one">Su carpeta ya no está en tu teléfono, y %1$d canción ha salido de tu biblioteca.</item>
+        <item quantity="many">Su carpeta ya no está en tu teléfono, y %1$d canciones han salido de tu biblioteca.</item>
+        <item quantity="other">Su carpeta ya no está en tu teléfono, y %1$d canciones han salido de tu biblioteca.</item>
+    </plurals>
+    <string name="import_history_incomplete_title">No se ha podido eliminar todo</string>
+    <plurals name="import_history_incomplete_songs">
+        <item quantity="one">No se ha podido eliminar %1$d canción. La importación sigue en el historial para que puedas volver a intentarlo.</item>
+        <item quantity="many">No se han podido eliminar %1$d canciones. La importación sigue en el historial para que puedas volver a intentarlo.</item>
+        <item quantity="other">No se han podido eliminar %1$d canciones. La importación sigue en el historial para que puedas volver a intentarlo.</item>
+    </plurals>
+    <string name="import_history_incomplete_folder">No se ha podido eliminar su carpeta. La importación sigue en el historial para que puedas volver a intentarlo.</string>
+    <string name="import_history_refused_title">No se puede eliminar aquí</string>
+    <string name="import_history_refused_message">El almacenamiento de esta carpeta no permite eliminar.</string>
+    <string name="import_history_failed_title">No se ha podido eliminar la importación</string>
+    <string name="import_history_failed_message">Algo ha fallado. Vuelve a intentarlo.</string>
+    <string name="import_history_ok">OK</string>
+</resources>

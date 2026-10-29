@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Album page metadata line: audio quality of a lossless album at CD quality. -->
+    <string name="album_quality_lossless">Lossless</string>
+    <!-- Lossless above CD quality. %1$d is the bit depth (24), %2$s the sample rate in kHz ("96", "44.1"). -->
+    <!-- A bit depth is never 1 (8 to 32), so the plural form is the only one used. -->
+    <string name="album_quality_hires" tools:ignore="PluralsCandidate">%1$d bit/%2$s kHz</string>
+    <!-- Lossy album whose songs share one bitrate. %1$d is the bitrate. -->
+    <string name="album_bitrate">%1$d kbps</string>
+    <!-- Lossy album with varying bitrates: their average. %1$d is the bitrate. -->
+    <string name="album_bitrate_approximate">~%1$d kbps</string>
+    <!-- Section under the album with the artist's other albums. %1$s is the artist. -->
+    <string name="album_more_by">More by %1$s</string>
+    <!-- Artist page: section gathering the artist's one-track releases. -->
+    <string name="artist_singles">Singles</string>
+    <!-- Artist page: last section, with the artist's songs whose album is unknown. -->
+    <string name="artist_other_songs">Other Songs</string>
+</resources>

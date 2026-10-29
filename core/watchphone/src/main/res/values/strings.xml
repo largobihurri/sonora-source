@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notification of a send to the watch -->
+    <string name="watch_sync_channel">Watch transfer</string>
+    <string name="watch_sync_title">Sending music to your watch</string>
+    <string name="watch_sync_connecting">Connecting to the watch…</string>
+    <string name="watch_sync_encoding">Preparing %1$d of %2$d: %3$s</string>
+    <string name="watch_sync_sending">Sending %1$d of %2$d: %3$s</string>
+</resources>

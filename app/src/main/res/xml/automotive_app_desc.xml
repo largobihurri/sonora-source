@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android Auto lists Sonora as a media app: it browses, searches and plays the playback service's library session. -->
+<automotiveApp>
+    <uses name="media" />
+</automotiveApp>

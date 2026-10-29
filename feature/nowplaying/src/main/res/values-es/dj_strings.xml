@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="now_playing_dj_mode">Modo DJ</string>
+    <string name="now_playing_edit_beat_grid">Editar cuadrícula de pulsos</string>
+    <string name="now_playing_reanalyse">Volver a analizar</string>
+    <string name="dj_chip_waiting">Modo DJ: a la espera de analizar esta canción</string>
+    <!-- %1$s is the share analysed (e.g. "42 %"). -->
+    <string name="dj_chip_analysing">Modo DJ: analizando esta canción, %1$s</string>
+    <string name="dj_chip_analysed">Modo DJ: esta canción está analizada</string>
+    <string name="dj_chip_failed">Modo DJ: ha fallado el análisis de esta canción</string>
+</resources>

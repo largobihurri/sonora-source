@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_add_favourite">Añadir a favoritos</string>
+    <string name="menu_remove_favourite">Quitar de favoritos</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_export_rekordbox">Exportar a rekordbox</string>
+    <string name="menu_pin_song">Fijar canción</string>
+    <string name="menu_unpin_song">Dejar de fijar canción</string>
+    <string name="menu_pin_album">Fijar álbum</string>
+    <string name="menu_unpin_album">Dejar de fijar álbum</string>
+    <string name="menu_pin_artist">Fijar artista</string>
+    <string name="menu_unpin_artist">Dejar de fijar artista</string>
+    <string name="menu_pin_playlist">Fijar lista</string>
+    <string name="menu_unpin_playlist">Dejar de fijar lista</string>
+    <string name="menu_pin_folder">Fijar carpeta</string>
+    <string name="menu_unpin_folder">Dejar de fijar carpeta</string>
+    <string name="menu_play_last">Reproducir después</string>
+    <string name="menu_go_to_album">Ir al álbum</string>
+    <string name="menu_go_to_artist">Ir al artista</string>
+    <string name="menu_view_info">Ver créditos y metadatos</string>
+    <string name="menu_remove">Eliminar de la biblioteca</string>
+    <string name="menu_album_year">%1$s · %2$s</string>
+    <string name="menu_pinned">Fijado</string>
+    <string name="menu_share_chooser">Compartir</string>
+
+    <string name="remove_title">¿Quitar «%1$s»?</string>
+    <string name="remove_message">Quítalo solo de Sonora y conserva los archivos, o elimina los archivos de tu teléfono.</string>
+    <string name="remove_message_playlist">Quítala solo de Sonora, o elimina la lista. Sus canciones se quedan en tu teléfono.</string>
+    <string name="remove_from_sonora">Quitar de Sonora</string>
+    <string name="remove_delete_from_phone">Eliminar del teléfono</string>
+    <string name="remove_delete_playlist">Eliminar lista</string>
+    <string name="remove_cancel">Cancelar</string>
+    <plurals name="delete_title">
+        <item quantity="one">¿Eliminar %1$d canción de tu teléfono?</item>
+        <item quantity="many">¿Eliminar %1$d canciones de tu teléfono?</item>
+        <item quantity="other">¿Eliminar %1$d canciones de tu teléfono?</item>
+    </plurals>
+    <string name="delete_message">No se puede deshacer. Los archivos se eliminan del almacenamiento de tu teléfono y salen de todas las listas.</string>
+    <string name="delete_confirm">Eliminar</string>
+    <string name="delete_access_title">Permitir eliminar</string>
+    <string name="delete_access_message">Sonora solo puede leer la carpeta «%1$s». Para eliminar estos archivos, vuelve a elegir esa carpeta y permite el acceso.</string>
+    <string name="delete_access_wrong_folder">Has elegido otra carpeta. Elige «%1$s» para permitir eliminar.</string>
+    <string name="delete_access_choose">Elegir carpeta…</string>
+
+    <string name="notice_hidden">Quitado de Sonora. Puedes recuperarlo en Ajustes › Elementos ocultos.</string>
+    <string name="notice_playlist_deleted">Se ha eliminado «%1$s». Sus canciones siguen en tu teléfono.</string>
+    <plurals name="notice_deleted">
+        <item quantity="one">%1$d canción eliminada</item>
+        <item quantity="many">%1$d canciones eliminadas</item>
+        <item quantity="other">%1$d canciones eliminadas</item>
+    </plurals>
+    <string name="notice_delete_incomplete">Eliminadas: %1$d. No se han podido eliminar: %2$d.</string>
+    <string name="notice_storage_refused">Este almacenamiento no permite eliminar archivos.</string>
+    <string name="notice_export_queued">Añadida a la pestaña Exportar como lista de rekordbox</string>
+    <string name="notice_no_songs">No hay canciones</string>
+    <string name="notice_failed">No se han podido leer las canciones</string>
+    <string name="notice_no_share_app">Ninguna app puede compartir estos archivos</string>
+
+    <string name="favourites_title">Favoritos</string>
+    <string name="favourites_empty">Mantén pulsada una canción, un álbum o una lista y elige Añadir a favoritos.</string>
+</resources>

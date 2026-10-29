@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_grid_title">Sareta</string>
+    <string name="dj_grid_edited">Editatua</string>
+    <string name="dj_grid_edited_description">Taupaden sareta editatua</string>
+    <string name="dj_grid_done">Eginda</string>
+    <string name="dj_grid_done_description">Itxi taupaden saretaren editorea</string>
+    <string name="dj_grid_panel_description">Taupaden saretaren editorea</string>
+    <string name="dj_grid_bpm_description">Pistaren tempoa: %1$s BPM</string>
+    <string name="dj_grid_bpm_down">Jaitsi pistaren tempoa %1$s BPM</string>
+    <string name="dj_grid_bpm_up">Igo pistaren tempoa %1$s BPM</string>
+    <string name="dj_grid_halve">Murriztu pistaren tempoa erdira</string>
+    <string name="dj_grid_double">Bikoiztu pistaren tempoa</string>
+    <string name="dj_grid_set_bar_start">Konpasaren hasiera hemen</string>
+    <string name="dj_grid_set_bar_start_description">Bihurtu kurtsorerik hurbilen dagoen taupada konpas baten eta esaldi baten hasiera</string>
+    <string name="dj_grid_beat_earlier">◀ Taupada</string>
+    <string name="dj_grid_beat_earlier_description">Mugitu konpasaren hasiera taupada bat lehenago</string>
+    <string name="dj_grid_beat_later">Taupada ▶</string>
+    <string name="dj_grid_beat_later_description">Mugitu konpasaren hasiera taupada bat geroago</string>
+    <string name="dj_grid_phrase_start">Esaldiaren hasiera</string>
+    <string name="dj_grid_bar_earlier">◀ Konpasa</string>
+    <string name="dj_grid_bar_earlier_description">Mugitu esaldiaren hasiera konpas bat lehenago</string>
+    <string name="dj_grid_bar_later">Konpasa ▶</string>
+    <string name="dj_grid_bar_later_description">Mugitu esaldiaren hasiera konpas bat geroago</string>
+    <string name="dj_grid_nudge_earlier">Aurreratu sare osoa %1$s ms</string>
+    <string name="dj_grid_nudge_later">Atzeratu sare osoa %1$s ms</string>
+    <string name="dj_grid_reset">Berrezarri</string>
+    <string name="dj_grid_reset_description">Baztertu aldaketak eta erabili aztertutako taupaden sareta</string>
+    <string name="dj_grid_tap_label">Tap</string>
+    <string name="dj_grid_tap_description">Tempoa ukituz neurtu: ukitu botoi hau taupada bakoitzean</string>
+    <string name="dj_grid_tap_progress">Ukituak %1$d/%2$d</string>
+    <string name="dj_grid_tap_progress_description">Ukitu kopurua: %1$d / %2$d. Jarraitu taupadaren erritmoan ukitzen</string>
+    <string name="dj_grid_tap_result_description">Ukitutako tempoa: %1$s BPM</string>
+    <string name="dj_grid_bpm_apply">Ezarri</string>
+    <string name="dj_grid_bpm_apply_entry_description">Ezarri pistan idatzitako tempoa</string>
+    <string name="dj_grid_bpm_apply_tap_description">Ezarri pistan ukitutako tempoa</string>
+    <string name="dj_grid_bpm_cancel">Utzi</string>
+    <string name="dj_grid_bpm_cancel_description">Mantendu uneko tempoa</string>
+    <string name="dj_grid_bpm_edit_label">Idatzi tempo bat</string>
+    <string name="dj_grid_bpm_field_description">Pistaren tempoa BPMtan, gehienez bi hamartarrekin</string>
+    <string name="dj_grid_bpm_error_empty">Idatzi tempo bat BPMtan</string>
+    <string name="dj_grid_bpm_error_not_a_number">Zifrak soilik, adib. 128,50</string>
+    <string name="dj_grid_bpm_error_decimals">Gehienez bi hamartar</string>
+    <string name="dj_grid_bpm_error_range">Tempoak %1$s eta %2$s BPM artekoa izan behar du</string>
+</resources>

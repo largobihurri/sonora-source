@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Now Playing -->
+    <string name="now_playing_not_playing">Not Playing</string>
+    <!-- %1$s is the album's title. -->
+    <string name="now_playing_artwork">Artwork for %1$s</string>
+    <string name="now_playing_no_lyrics">Lyrics aren\'t available for this song.</string>
+    <string name="now_playing_show_lyrics">Show lyrics</string>
+    <string name="now_playing_hide_lyrics">Hide lyrics</string>
+    <string name="now_playing_lyrics_search">Search lyrics online</string>
+    <string name="now_playing_lyrics_search_note">Sends the song\'s title, artist, album and length to LRCLIB.</string>
+    <string name="now_playing_lyrics_searching">Searching lyrics…</string>
+    <string name="now_playing_lyrics_not_found">No lyrics found for this song.</string>
+    <string name="now_playing_lyrics_search_again">Search again</string>
+    <string name="now_playing_lyrics_failed">Couldn\'t reach the lyrics service. Check your connection.</string>
+    <string name="now_playing_lyrics_retry">Try again</string>
+    <string name="now_playing_lyrics_instrumental">Instrumental</string>
+    <string name="now_playing_lyrics_source">Lyrics from LRCLIB</string>
+    <string name="now_playing_lyrics_remove">Remove downloaded lyrics</string>
+    <string name="now_playing_audio_output">Audio output</string>
+    <string name="now_playing_up_next">Up Next</string>
+    <string name="now_playing_hide_up_next">Hide Up Next</string>
+    <string name="now_playing_file_info">File Info</string>
+    <string name="now_playing_more">More options</string>
+    <string name="now_playing_favourite">Favourite</string>
+    <string name="now_playing_add_to_playlist">Add to Playlist</string>
+    <string name="now_playing_share">Share Song</string>
+
+    <!-- Transport controls -->
+    <string name="now_playing_position">Playback position</string>
+    <!-- Spoken position; %1$s elapsed time, %2$s duration (e.g. "1:05 of 3:25"). -->
+    <string name="now_playing_position_state">%1$s of %2$s</string>
+    <string name="now_playing_volume">Volume</string>
+    <string name="now_playing_mute">Mute</string>
+    <string name="now_playing_volume_up">Volume up</string>
+    <!-- Spoken volume level; %1$d is 0 to 100. "percent" reads the same for every number. -->
+    <string name="now_playing_volume_percent" tools:ignore="PluralsCandidate">%1$d percent</string>
+    <string name="now_playing_play">Play</string>
+    <string name="now_playing_pause">Pause</string>
+    <string name="now_playing_previous">Previous</string>
+    <string name="now_playing_next">Next</string>
+    <string name="now_playing_shuffle">Shuffle</string>
+    <string name="now_playing_repeat">Repeat</string>
+    <!-- Spoken state of the shuffle and repeat buttons. -->
+    <string name="now_playing_on">On</string>
+    <string name="now_playing_off">Off</string>
+    <string name="now_playing_repeat_all">All</string>
+    <string name="now_playing_repeat_one">One</string>
+
+    <!-- Up Next sheet -->
+    <string name="queue_clear">Clear</string>
+    <string name="queue_empty">Nothing up next.</string>
+    <string name="queue_now_playing">Now Playing</string>
+    <string name="queue_remove">Remove from Up Next</string>
+    <string name="queue_move_up">Move up</string>
+    <string name="queue_move_down">Move down</string>
+    <string name="queue_play">Play</string>
+    <!-- Spoken label of the repeat toggle in the Up Next sheet. -->
+    <string name="queue_repeat_off">Repeat off</string>
+    <string name="queue_repeat_all">Repeat all</string>
+    <string name="queue_repeat_one">Repeat one</string>
+
+    <!-- File Info sheet -->
+    <string name="file_info_read_failed">Sonora couldn\'t open this file. It may have been moved, deleted or its folder removed.</string>
+    <string name="file_info_tags_unavailable">Tags unavailable for this file.</string>
+    <string name="file_info_no_tags">This file has no tags.</string>
+    <string name="file_info_playback_note">What the player decodes and sends to Android\'s audio system; the device may resample it.</string>
+    <string name="file_info_section_location">Location</string>
+    <string name="file_info_section_file">File</string>
+    <string name="file_info_section_audio">Audio</string>
+    <string name="file_info_section_playback">Playback</string>
+    <string name="file_info_section_metadata">Metadata</string>
+    <string name="file_info_library_folder">Library Folder</string>
+    <string name="file_info_folder">Folder</string>
+    <string name="file_info_file_name">File Name</string>
+    <string name="file_info_uri" translatable="false">URI</string>
+    <string name="file_info_format">Format</string>
+    <string name="file_info_size">Size</string>
+    <string name="file_info_modified">Modified</string>
+    <string name="file_info_codec">Codec</string>
+    <string name="file_info_encoder">Encoder</string>
+    <string name="file_info_sample_rate">Sample Rate</string>
+    <string name="file_info_bit_depth">Bit Depth</string>
+    <string name="file_info_channels">Channels</string>
+    <string name="file_info_bitrate">Bitrate</string>
+    <string name="file_info_duration">Duration</string>
+    <string name="file_info_decoder_input">Decoder Input</string>
+    <string name="file_info_output">Output</string>
+    <string name="file_info_title">Title</string>
+    <string name="file_info_artist">Artist</string>
+    <string name="file_info_album_artist">Album Artist</string>
+    <string name="file_info_album">Album</string>
+    <string name="file_info_disc">Disc</string>
+    <string name="file_info_track">Track</string>
+    <string name="file_info_year">Year</string>
+    <string name="file_info_genre">Genre</string>
+    <string name="file_info_composer">Composer</string>
+    <string name="file_info_comment">Comment</string>
+    <string name="file_info_artwork">Artwork</string>
+    <!-- Values. %1$d is a bit depth such as 24. -->
+    <string name="file_info_bits">%1$d-bit</string>
+    <string name="file_info_bits_float">%1$d-bit float</string>
+    <string name="file_info_bits_integer">%1$d-bit integer</string>
+    <!-- Appended to a PCM encoding stored most significant byte first. -->
+    <string name="file_info_big_endian">%1$s, big-endian</string>
+    <string name="file_info_lossy">Lossy</string>
+    <string name="file_info_mono">Mono</string>
+    <string name="file_info_stereo">Stereo</string>
+    <plurals name="file_info_channel_count">
+        <item quantity="one">%d channel</item>
+        <item quantity="other">%d channels</item>
+    </plurals>
+    <!-- %1$s is a number such as 44.1. -->
+    <string name="file_info_khz">%1$s\u00A0kHz</string>
+    <!-- %1$s is a bitrate number such as 320. -->
+    <string name="file_info_kbps">%1$s\u00A0kbps</string>
+    <!-- %1$s is a bitrate such as "245 kbps"; VBR is the usual abbreviation of variable bitrate. -->
+    <string name="file_info_vbr">%1$s (VBR)</string>
+    <!-- Disc or track number of a total, e.g. "3 of 12". -->
+    <string name="file_info_position">%1$d of %2$d</string>
+    <!-- Tag editor, opened with Edit from File Info. -->
+    <string name="tag_edit_action">Edit</string>
+    <string name="tag_edit_title">Edit Info</string>
+    <string name="tag_edit_cancel">Cancel</string>
+    <string name="tag_edit_save">Save</string>
+    <string name="tag_edit_section_song">Song</string>
+    <string name="tag_edit_section_album">Album</string>
+    <string name="tag_edit_bpm">BPM</string>
+    <!-- Musical key of the song, e.g. Am or 8A. -->
+    <string name="tag_edit_key">Key</string>
+    <!-- Placeholders of the two fields of a track or disc row: its number and the total. -->
+    <string name="tag_edit_number">Number</string>
+    <string name="tag_edit_total">Total</string>
+    <string name="tag_edit_choose_image">Choose Image…</string>
+    <string name="tag_edit_remove_image">Remove Image</string>
+    <!-- A field's error under its group; %1$s is the field name, %2$s the error. -->
+    <string name="tag_edit_field_error">%1$s: %2$s</string>
+    <string name="tag_edit_error_not_a_number">use digits only.</string>
+    <!-- %1$d is the largest number allowed, 999. -->
+    <string name="tag_edit_error_out_of_range">use a number from 1 to %1$d.</string>
+    <string name="tag_edit_error_above_total">can\'t be higher than the total.</string>
+    <string name="tag_edit_error_not_a_year" tools:ignore="TypographyDashes">use a year such as 2024, or a date such as 2024-05-31.</string>
+    <string name="tag_edit_unsupported">Sonora can edit the tags of MP3, FLAC, M4A, WAV and AIFF files. This file\'s format can\'t be edited.</string>
+    <string name="tag_edit_unreadable">Sonora couldn\'t read this file\'s tags. It may have been moved, deleted or damaged.</string>
+    <string name="tag_edit_read_only">This file is in a location Sonora can\'t write to, so its tags can\'t be changed.</string>
+    <string name="tag_edit_no_space">There isn\'t enough free space to save the changes safely. Free up some space and try again.</string>
+    <string name="tag_edit_not_verified">The changes couldn\'t be checked after writing them, so the file was left unchanged.</string>
+    <string name="tag_edit_not_saved">The changes couldn\'t be saved. The file was left unchanged.</string>
+    <string name="tag_edit_interrupted">Saving was interrupted and the file may be damaged.</string>
+    <!-- %1$s is a library folder such as Music/Rock. -->
+    <string name="tag_edit_needs_access">Sonora can only read the folder “%1$s”. To save tags, choose that folder again and allow access.</string>
+    <string name="tag_edit_wrong_folder">That\'s a different folder. Choose “%1$s” to allow changes.</string>
+    <string name="tag_edit_access_refused">This folder doesn\'t allow changes, so its files\' tags can\'t be edited.</string>
+    <string name="tag_edit_choose_folder">Choose Folder…</string>
+    <string name="tag_edit_picture_unusable">That image can\'t be used. Try another one.</string>
+    <string name="tag_edit_no_picker">No app on this device can open the picker.</string>
+    <string name="tag_edit_discard_title">Discard changes?</string>
+    <string name="tag_edit_discard">Discard Changes</string>
+    <string name="tag_edit_keep_editing">Keep Editing</string>
+</resources>

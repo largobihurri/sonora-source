@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Library home -->
+    <string name="library_title">Library</string>
+    <string name="library_settings">Settings</string>
+    <string name="library_songs">Songs</string>
+    <string name="library_albums">Albums</string>
+    <string name="library_artists">Artists</string>
+    <string name="library_folders">Folders</string>
+    <string name="library_converted">Converted</string>
+    <string name="library_recently_added">Recently Added</string>
+    <string name="library_scanning">Scanning your music…</string>
+    <string name="library_no_music">No music found in your library folders.</string>
+    <!-- Back button label of screens pushed from the Library home. -->
+    <string name="library_back_library">Library</string>
+    <!-- Back button label of screens pushed from another list. -->
+    <string name="library_back">Back</string>
+
+    <!-- First run: no library folders yet -->
+    <string name="library_add_folders_title">Add Your Music Folders</string>
+    <string name="library_add_folders_message">Sonora plays the music in the folders you choose. Start with your Music folder.</string>
+    <string name="library_add_folder">Add Folder</string>
+    <string name="library_add_folder_failed_title">Couldn\'t Add Folder</string>
+    <string name="library_add_folder_failed_message">Sonora can\'t read that folder. Choose a folder on your device\'s storage.</string>
+    <string name="library_picker_missing_message">This device has no app for choosing folders.</string>
+    <string name="library_ok">OK</string>
+
+    <!-- Album, folder and Converted pages -->
+    <string name="library_play">Play</string>
+    <string name="library_shuffle">Shuffle</string>
+    <string name="library_folders_empty">Add folders to your library in Settings.</string>
+    <string name="library_folder_empty">This folder has no songs.</string>
+    <string name="library_converted_empty">No converted music yet. Songs you convert in the Converter tab show up here.</string>
+    <string name="library_section_today">Today</string>
+    <string name="library_section_yesterday">Yesterday</string>
+    <string name="library_section_last_7_days">Last 7 Days</string>
+    <string name="library_section_last_30_days">Last 30 Days</string>
+    <string name="library_section_older">Older</string>
+
+    <!-- Search -->
+    <string name="search_title">Search</string>
+    <string name="search_placeholder">Songs, Albums, Artists</string>
+    <string name="search_clear">Clear</string>
+    <!-- %1$s is what the user searched for. -->
+    <string name="search_no_results">No results for \"%1$s\".</string>
+
+    <!-- Long-press queue menu -->
+    <string name="queue_options">Queue options</string>
+    <string name="queue_play_now">Play Now</string>
+    <string name="queue_play_next">Play Next</string>
+    <string name="queue_add_to_end">Add to End of Queue</string>
+    <!-- Confirmation banners -->
+    <string name="queue_playing_next">Playing Next</string>
+    <string name="queue_added_to_queue">Added to Queue</string>
+    <!-- Song count under a folder or playlist name. -->
+    <string name="library_no_songs">No Songs</string>
+    <plurals name="library_song_count">
+        <item quantity="one">%1$s Song</item>
+        <item quantity="other">%1$s Songs</item>
+    </plurals>
+    <!-- Landscape Cover Flow: the info button (flips the centre cover), play/pause, and flipping back. -->
+    <string name="coverflow_info">Info</string>
+    <string name="coverflow_pause">Pause</string>
+    <string name="coverflow_show_cover">Show Cover</string>
+    <string name="coverflow_now_playing">Open Now Playing</string>
+    <string name="coverflow_now_playing_label">Now Playing</string>
+    <!-- Album count under an artist's name in the Cover Flow. -->
+    <plurals name="library_album_count">
+        <item quantity="one">%1$s Album</item>
+        <item quantity="other">%1$s Albums</item>
+    </plurals>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_channel_name">Erreprodukzioa</string>
+    <string name="playback_channel_description">Erreproduzitzen ari den musikaren kontrolak</string>
+    <string name="playback_shuffle_on">Nahastea aktibatuta</string>
+    <string name="playback_shuffle_off">Nahastea desaktibatuta</string>
+    <string name="playback_repeat_off">Errepikatzea desaktibatuta</string>
+    <string name="playback_repeat_all">Errepikatu guztiak</string>
+    <string name="playback_repeat_one">Errepikatu bat</string>
+    <string name="external_control_permission_label">Sonora kontrolatu</string>
+    <string name="external_control_permission_description">Aplikazio honek musika erreproduzitzea, ilara aldatzea eta liburutegia irakurtzea ahalbidetzen du Sonoraren kanpo-kontrolaren bidez. Sonoraren ezarpenetan kanpo-kontrola aktibatuta dagoenean bakarrik funtzionatzen du.</string>
+</resources>

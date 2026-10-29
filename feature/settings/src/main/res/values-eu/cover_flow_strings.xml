@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ezarpenak › Bilduma bisuala: bilduma bisual horizontalak zer album erakusten dituen -->
+    <string name="settings_cover_flow_header">Bilduma bisuala</string>
+    <string name="settings_hide_albums_without_artwork">Ezkutatu azalik gabeko albumak bilduma bisualean</string>
+    <string name="settings_hide_albums_without_artwork_footer">Bilduma bisualak azala duten albumak soilik erakusten ditu, fitxategietan txertatuta edo karpetako irudi gisa. Albumen zerrendak album guztiak erakusten jarraitzen du.</string>
+</resources>

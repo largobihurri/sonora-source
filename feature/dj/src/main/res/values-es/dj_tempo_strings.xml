@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_tempo_fader">Tempo</string>
+    <string name="dj_tempo_reset">Devolver el tempo a 0</string>
+    <string name="dj_tempo_nudge_down">Bajar %1$s BPM</string>
+    <string name="dj_tempo_nudge_up">Subir %1$s BPM</string>
+    <string name="dj_tempo_range">Rango de tempo</string>
+    <string name="dj_tempo_range_wide">Máx</string>
+    <string name="dj_master_tempo">Master Tempo</string>
+    <string name="dj_master_tempo_toggle">Mantener el tono al cambiar el tempo</string>
+    <string name="dj_state_on">Activado</string>
+    <string name="dj_state_off">Desactivado</string>
+    <string name="dj_readout_bpm">%1$s BPM</string>
+    <string name="dj_readout_no_bpm">Sin BPM</string>
+    <string name="dj_readout_key">Tonalidad %1$s</string>
+    <string name="dj_readout_no_key">Tonalidad desconocida</string>
+    <string name="dj_readout_tempo">Tempo %1$s</string>
+</resources>

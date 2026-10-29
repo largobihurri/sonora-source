@@ -1,0 +1,28 @@
+# Text files are stored and checked out with LF on every machine; Windows scripts keep CRLF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files: never normalised or diffed as text.
+*.jar binary
+*.so binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ttf binary
+*.otf binary
+*.keystore binary
+*.jks binary
+*.mp3 binary
+*.m4a binary
+*.flac binary
+*.aiff binary
+*.wav binary
+*.ogg binary
+*.pdb binary
+*.DAT binary
+*.dat binary
+*.EXT binary

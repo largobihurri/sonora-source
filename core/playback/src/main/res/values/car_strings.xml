@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="car_playlists">Playlists</string>
+    <string name="car_albums">Albums</string>
+    <string name="car_artists">Artists</string>
+    <string name="car_songs">Songs</string>
+    <string name="car_favourites">Favourites</string>
+    <string name="car_recently_added">Recently Added</string>
+    <string name="car_all_songs">All Songs</string>
+    <string name="car_no_match">Nothing in your library matches “%1$s”</string>
+    <string name="car_error_empty">Your Sonora library is empty. Add music in Sonora on your phone when it is safe.</string>
+    <string name="car_error_no_access">Sonora can no longer read your music folders. Open Sonora on your phone when it is safe.</string>
+    <string name="car_error_gone">This song is no longer in your library.</string>
+    <string name="car_error_action">Open Sonora</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › About: version, source code, privacy policy, open-source licences -->
+    <string name="settings_about">About</string>
+    <string name="about_version">Version %1$s (%2$d)</string>
+    <string name="about_source_code">Source Code</string>
+    <string name="about_privacy_policy">Privacy Policy</string>
+    <string name="about_licences">Open-Source Licences</string>
+    <string name="about_gpl">Sonora is free software: you can redistribute it and change it under the terms of the GNU General Public License, version 3 or (at your option) any later version. It comes with no warranty. Its complete source code is published at Source Code.</string>
+    <string name="about_not_affiliated">Sonora is not affiliated with, endorsed by or sponsored by Pioneer DJ, AlphaTheta or rekordbox. Product names are trademarks of their owners.</string>
+    <string name="about_link_failed">No app on this phone can open the link.</string>
+    <string name="about_ok">OK</string>
+
+    <!-- Settings › About › Open-Source Licences -->
+    <string name="about_licences_footer">The software built into this version of Sonora, with its licence. Tap one for its notice and the full licence text.</string>
+    <string name="about_licences_full_header">Only in Sonora Full</string>
+    <string name="about_licences_full_footer">The Google Play version of Sonora does not include these components.</string>
+    <string name="about_licence_website">Website</string>
+    <string name="about_licence_text_header">Licence Text</string>
+    <string name="about_licence_text_unavailable">The licence text could not be read.</string>
+</resources>

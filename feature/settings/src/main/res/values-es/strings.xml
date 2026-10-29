@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_back_library">Biblioteca</string>
+
+    <string name="settings_folders_header">Carpetas de la biblioteca</string>
+    <string name="settings_add_folder">Añadir carpeta</string>
+    <string name="settings_folders_footer">Sonora solo muestra la música de estas carpetas. Una carpeta no puede estar dentro de otra carpeta de la biblioteca.</string>
+    <string name="settings_remove_folder">Quitar %1$s</string>
+    <string name="settings_remove_folder_title">¿Quitar «%1$s»?</string>
+    <string name="settings_remove_folder_message">Sus canciones se quitarán de tu biblioteca. Los archivos se quedan en tu dispositivo.</string>
+    <string name="settings_remove">Quitar</string>
+    <string name="settings_cancel">Cancelar</string>
+    <string name="settings_ok">OK</string>
+
+    <string name="settings_add_failed_title">No se ha podido añadir la carpeta</string>
+    <string name="settings_add_failed_message">Sonora no puede leer esa carpeta. Elige una carpeta del almacenamiento de tu dispositivo.</string>
+    <string name="settings_picker_missing_message">Este dispositivo no tiene ninguna app para elegir carpetas.</string>
+    <string name="settings_save_failed_title">No se ha podido guardar el ajuste</string>
+    <string name="settings_save_failed_message">Sonora no ha podido guardar este cambio. Vuelve a intentarlo.</string>
+    <string name="settings_already_added_title">La carpeta ya está añadida</string>
+    <string name="settings_already_added_message">«%1$s» ya está en tu biblioteca.</string>
+    <string name="settings_inside_existing_title">La carpeta ya está incluida</string>
+    <string name="settings_inside_existing_message">Esta carpeta está dentro de «%1$s», que ya está en tu biblioteca.</string>
+    <string name="settings_contains_existing_title">La carpeta contiene una carpeta de la biblioteca</string>
+    <string name="settings_contains_existing_message">Esta carpeta contiene «%1$s», que ya está en tu biblioteca. Quita primero «%1$s» y después añade esta carpeta.</string>
+
+    <string name="settings_scanning_header">Escaneo</string>
+    <string name="settings_rescan">Volver a escanear la biblioteca</string>
+    <string name="settings_scanning">Escaneando «%1$s»…</string>
+    <string name="settings_scanning_progress">Escaneando «%1$s»… %2$d de %3$d</string>
+    <string name="settings_last_scan_changes">Último escaneo: %1$s.</string>
+    <string name="settings_last_scan_no_changes">Último escaneo: sin cambios, %1$s.</string>
+    <string name="settings_list_separator">", "</string>
+    <plurals name="settings_scan_added">
+        <item quantity="one">%d añadida</item>
+        <item quantity="many">%d añadidas</item>
+        <item quantity="other">%d añadidas</item>
+    </plurals>
+    <plurals name="settings_scan_updated">
+        <item quantity="one">%d actualizada</item>
+        <item quantity="many">%d actualizadas</item>
+        <item quantity="other">%d actualizadas</item>
+    </plurals>
+    <plurals name="settings_scan_removed">
+        <item quantity="one">%d eliminada</item>
+        <item quantity="many">%d eliminadas</item>
+        <item quantity="other">%d eliminadas</item>
+    </plurals>
+    <plurals name="settings_scan_songs">
+        <item quantity="one">%d canción</item>
+        <item quantity="many">%d canciones</item>
+        <item quantity="other">%d canciones</item>
+    </plurals>
+    <plurals name="settings_scan_skipped">
+        <item quantity="one">No se ha podido leer %d archivo; se volverá a intentar en el próximo escaneo.</item>
+        <item quantity="many">No se han podido leer %d archivos; se volverá a intentar en el próximo escaneo.</item>
+        <item quantity="other">No se han podido leer %d archivos; se volverá a intentar en el próximo escaneo.</item>
+    </plurals>
+    <plurals name="settings_scan_failed_folders">
+        <item quantity="one">No se ha podido abrir %d carpeta; se han conservado sus canciones.</item>
+        <item quantity="many">No se han podido abrir %d carpetas; se han conservado sus canciones.</item>
+        <item quantity="other">No se han podido abrir %d carpetas; se han conservado sus canciones.</item>
+    </plurals>
+
+    <string name="settings_language_header">Idioma</string>
+    <string name="settings_language_footer">Sonora usa el castellano hasta que elijas otro idioma.</string>
+
+    <string name="settings_appearance_header">Apariencia</string>
+    <string name="settings_theme_system">Sistema</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="settings_theme_dark">Oscuro</string>
+    <string name="settings_translucency">Translúcido</string>
+    <string name="settings_translucency_footer_liquid">Refracción, desenfoque y un borde de luz en la barra de pestañas, el minirreproductor y los botones. Si se desactiva, se usa una superficie translúcida plana.</string>
+    <string name="settings_translucency_footer_frosted">Esta versión de Android desenfoca las superficies translúcidas sin refracción. Si se desactiva, se usa una superficie translúcida plana.</string>
+    <string name="settings_translucency_footer_flat">Esta versión de Android siempre usa una superficie translúcida plana.</string>
+    <string name="settings_translucency_footer_contrast">Los ajustes de contraste de Android piden más contraste, así que las superficies translúcidas son planas y más opacas.</string>
+    <string name="settings_translucency_footer_limited_frosted">El chip gráfico de este móvil no podía con el efecto translúcido, así que se desenfoca sin refracción. Desactiva y vuelve a activar el interruptor para probar de nuevo.</string>
+    <string name="settings_translucency_footer_limited_flat">El chip gráfico de este móvil no podía con el efecto translúcido, así que se usa una superficie translúcida plana. Desactiva y vuelve a activar el interruptor para probar de nuevo.</string>
+    <string name="settings_accent_header">Color de realce</string>
+    <string name="settings_accent_material_you">Material You</string>
+    <string name="settings_accent_palette">Paleta de colores</string>
+    <string name="settings_accent_artwork">Según la portada</string>
+    <string name="settings_accent_material_you_subtitle">Colores de tu fondo de pantalla</string>
+    <string name="settings_accent_material_you_unavailable">Necesita Android 12; se usa el rosa de Sonora</string>
+    <string name="settings_accent_artwork_subtitle">Colores de la canción que está sonando</string>
+    <string name="settings_accent_footer">El color de realce tiñe los botones, los iconos, los interruptores y la barra de pestañas, ajustado para que se lea bien.</string>
+    <string name="settings_preset_red">Rojo</string>
+    <string name="settings_preset_orange">Naranja</string>
+    <string name="settings_preset_amber">Ámbar</string>
+    <string name="settings_preset_green">Verde</string>
+    <string name="settings_preset_teal">Verde azulado</string>
+    <string name="settings_preset_blue">Azul</string>
+    <string name="settings_preset_indigo">Índigo</string>
+    <string name="settings_preset_purple">Morado</string>
+    <string name="settings_preset_pink">Rosa</string>
+
+    <string name="settings_now_playing_header">Reproduciendo</string>
+    <string name="settings_show_lyrics_button">Mostrar botón de letra</string>
+    <string name="settings_show_file_info_button">Mostrar botón de información</string>
+    <string name="settings_now_playing_footer">Información del archivo muestra dónde está guardada una canción y su formato, datos de audio y etiquetas.</string>
+    <string name="settings_rotation_header">Al girar Reproduciendo</string>
+    <string name="settings_rotation_now_playing">Reproduciendo en horizontal</string>
+    <string name="settings_rotation_cover_flow">Colección visual de álbumes</string>
+    <string name="settings_rotation_footer">Con la rotación automática activada, al girar el teléfono en Reproduciendo se muestra su vista horizontal o la colección visual de álbumes, abierta en el álbum que suena.</string>
+    <string name="settings_gravity_header">Gravedad</string>
+    <string name="settings_gravity">Mantener nivelado al inclinar</string>
+    <string name="settings_gravity_footer">Reproduciendo se queda en vertical y la carátula y los controles giran cada uno sobre su centro para seguir nivelados. Sobre una mesa se quedan quietos; la opción horizontal de arriba no se aplica.</string>
+    <string name="settings_hidden_items">Elementos ocultos</string>
+    <string name="settings_hidden_footer">Lo que quitas de Sonora sigue en el teléfono. Restáuralo para que vuelva a aparecer en tu biblioteca.</string>
+    <string name="settings_hidden_empty">No hay elementos ocultos</string>
+    <string name="settings_restore">Restaurar</string>
+    <string name="settings_restore_item">Restaurar %1$s</string>
+    <string name="settings_hidden_song">Canción</string>
+    <string name="settings_hidden_album">Álbum</string>
+    <string name="settings_hidden_artist">Artista</string>
+    <string name="settings_hidden_playlist">Lista</string>
+    <string name="settings_hidden_folder">Carpeta</string>
+    <string name="settings_hidden_line">%1$s · %2$s</string>
+    <string name="settings_external_control_header">Control externo</string>
+    <string name="settings_external_control">Permitir el control externo</string>
+    <string name="settings_external_control_footer">Permite que otras aplicaciones y agentes de IA controlen la reproducción y lean tu biblioteca mediante la API externa de Sonora. La shell de adb puede usarla en cuanto lo activas; las demás aplicaciones necesitan además el permiso «Controlar Sonora», que concedes aplicación por aplicación. Desactivado, solo Sonora puede usarla.</string>
+</resources>

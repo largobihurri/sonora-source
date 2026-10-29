@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The full build only: lyrics search on LRCLIB, only when the user asks for a song's lyrics (Cast declares its
+         own network permissions). The Google Play build stays offline. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_loop_panel_description">Loop kontrolak</string>
+    <string name="dj_loop_mode_description">Pad-en modua</string>
+    <string name="dj_loop_mode_cues">Cues</string>
+    <string name="dj_loop_mode_loop">Loop</string>
+    <string name="dj_loop_in">IN</string>
+    <string name="dj_loop_out">OUT</string>
+    <string name="dj_loop_exit">IRTEN</string>
+    <string name="dj_loop_reloop">RELOOP</string>
+    <string name="dj_loop_in_description">Loop In: markatu begiztaren hasiera entzuten ari zaren puntuan</string>
+    <string name="dj_loop_out_description">Loop Out: itxi begizta eta errepikatu</string>
+    <string name="dj_loop_exit_description">Irten begiztatik eta jarraitu erreproduzitzen</string>
+    <string name="dj_loop_reloop_description">Reloop: aktibatu berriro azken begizta</string>
+    <string name="dj_loop_half_description">Erdiratu begizta</string>
+    <string name="dj_loop_double_description">Bikoiztu begizta</string>
+    <string name="dj_loop_state_marking">In markatuta</string>
+    <string name="dj_loop_state_looping">Begiztan</string>
+    <string name="dj_loop_state_armed">Begiztaren amaiera itxaroten</string>
+    <string name="dj_loop_state_unavailable">Ez dago erabilgarri bit-perfect irteerarekin edo audio-formatu honekin</string>
+    <string name="dj_loop_beats_unit">taupada</string>
+    <string name="dj_loop_beats_description">%1$s taupadako begizta: sakatu hasteko</string>
+    <string name="dj_loop_beats_smaller">Begizta laburragoa</string>
+    <string name="dj_loop_beats_larger">Begizta luzeagoa</string>
+    <string name="dj_loop_beats_needs_grid">Taupadako begiztek taupada-sareta behar dute</string>
+    <string name="dj_loop_memory_add">+ Loop</string>
+    <string name="dj_loop_memory_add_description">Gorde begizta memoria-begizta gisa</string>
+    <string name="dj_loop_pad_set">%1$s hot loop-a: %2$s - %3$s</string>
+    <string name="dj_loop_pad_set_named">%1$s hot loop-a, %2$s: %3$s - %4$s</string>
+    <string name="dj_loop_pad_engage_action">Hasi %1$s hot loop-a</string>
+    <string name="dj_loop_pad_save_action">Gorde begizta %1$s hot cue-an</string>
+    <string name="dj_loop_edit_title_hot">%1$s hot loop-a</string>
+    <string name="dj_loop_edit_title_memory">Memoria-begizta</string>
+    <string name="dj_loop_region_state">Begizta: %1$s - %2$s</string>
+</resources>

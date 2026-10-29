@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_state_waiting_title">Esperando el análisis</string>
+    <string name="dj_state_waiting_hint">Aquí aparecerán la forma de onda y la cuadrícula de pulsos.</string>
+    <string name="dj_state_analysing_title">Analizando esta canción</string>
+    <string name="dj_state_analysing_hint">Buscando el pulso, la tonalidad y la forma de onda.</string>
+    <string name="dj_state_paused_title">En pausa: el teléfono está caliente</string>
+    <string name="dj_state_paused_hint">Continuará cuando el teléfono se enfríe.</string>
+    <string name="dj_state_waveform_title">Rehaciendo la forma de onda</string>
+    <string name="dj_state_waveform_pending">Forma de onda pendiente</string>
+    <string name="dj_state_waveform_hint">La cuadrícula de pulsos está lista; solo falta la forma de onda.</string>
+    <string name="dj_state_progress_description">Progreso del análisis</string>
+    <string name="dj_state_no_grid_title">No hay un pulso estable</string>
+    <string name="dj_state_no_grid_hint">Es habitual en música ambiental o hablada. Puedes reproducirla y poner cues, o analizarla de nuevo.</string>
+    <string name="dj_state_analyse_again">Analizar de nuevo</string>
+    <string name="dj_state_analyse_again_description">Analizar de nuevo esta canción</string>
+    <string name="dj_state_failed_other">El análisis ha fallado</string>
+    <string name="dj_state_failed_unreadable">No se puede leer el archivo</string>
+    <string name="dj_state_failed_unsupported">No se puede analizar este formato</string>
+    <string name="dj_state_failed_corrupt">El audio parece dañado</string>
+    <string name="dj_state_failed_too_short">Demasiado corta para analizarla</string>
+    <string name="dj_state_failed_hint">La canción se sigue reproduciendo. Puedes intentar el análisis otra vez.</string>
+    <string name="dj_state_try_again">Reintentar</string>
+    <string name="dj_state_try_again_description">Intentar analizar de nuevo esta canción</string>
+
+    <string name="dj_status_reanalysing">Reanalizando %1$s</string>
+    <string name="dj_status_reanalysis_paused">En pausa por calor</string>
+    <string name="dj_status_reanalysis_failed">Error al reanalizar</string>
+
+    <string name="dj_old_analysis_chip">Análisis antiguo · Actualizar</string>
+    <string name="dj_old_analysis_chip_short">Actualizar</string>
+    <string name="dj_old_analysis_chip_description">Actualizar el análisis. Esta canción se analizó con una versión anterior.</string>
+
+    <string name="dj_reanalyse_title">¿Volver a analizar?</string>
+    <string name="dj_reanalyse_message">Se conservan tu cuadrícula de pulsos editada y tus cues. La cuadrícula editada seguirá sustituyendo a la del nuevo análisis.</string>
+    <string name="dj_reanalyse_confirm">Volver a analizar</string>
+    <string name="dj_reanalyse_cancel">Cancelar</string>
+</resources>

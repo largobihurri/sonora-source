@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Album page metadata line: audio quality of a lossless album at CD quality. -->
+    <string name="album_quality_lossless">Sin pérdida</string>
+    <!-- Lossless above CD quality. %1$d is the bit depth (24), %2$s the sample rate in kHz ("96", "44.1"). -->
+    <string name="album_quality_hires">%1$d bits/%2$s kHz</string>
+    <!-- Lossy album whose songs share one bitrate. %1$d is the bitrate. -->
+    <string name="album_bitrate">%1$d kbps</string>
+    <!-- Lossy album with varying bitrates: their average. %1$d is the bitrate. -->
+    <string name="album_bitrate_approximate">~%1$d kbps</string>
+    <!-- Section under the album with the artist's other albums. %1$s is the artist. -->
+    <string name="album_more_by">Más de %1$s</string>
+    <!-- Artist page: section gathering the artist's one-track releases. -->
+    <string name="artist_singles">Singles</string>
+    <!-- Artist page: last section, with the artist's songs whose album is unknown. -->
+    <string name="artist_other_songs">Otras canciones</string>
+</resources>

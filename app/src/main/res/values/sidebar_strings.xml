@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Large-screen sidebar. Spoken when it appears. -->
+    <string name="sidebar_title">Sidebar</string>
+    <!-- The button that shows or hides the sidebar (spoken). -->
+    <string name="sidebar_show">Show sidebar</string>
+    <string name="sidebar_hide">Hide sidebar</string>
+    <!-- The Library's pages listed under Library in the sidebar. -->
+    <string name="sidebar_playlists">Playlists</string>
+    <string name="sidebar_songs">Songs</string>
+    <string name="sidebar_albums">Albums</string>
+    <string name="sidebar_artists">Artists</string>
+    <string name="sidebar_folders">Folders</string>
+    <string name="sidebar_converted">Converted</string>
+    <string name="sidebar_statistics">Statistics</string>
+    <string name="sidebar_settings">Settings</string>
+</resources>

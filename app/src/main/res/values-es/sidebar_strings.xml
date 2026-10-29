@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sidebar_title">Barra lateral</string>
+    <string name="sidebar_show">Mostrar barra lateral</string>
+    <string name="sidebar_hide">Ocultar barra lateral</string>
+    <string name="sidebar_playlists">Listas</string>
+    <string name="sidebar_songs">Canciones</string>
+    <string name="sidebar_albums">Álbumes</string>
+    <string name="sidebar_artists">Artistas</string>
+    <string name="sidebar_folders">Carpetas</string>
+    <string name="sidebar_converted">Convertido</string>
+    <string name="sidebar_statistics">Estadísticas</string>
+    <string name="sidebar_settings">Ajustes</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="car_playlists">Listas</string>
+    <string name="car_albums">Álbumes</string>
+    <string name="car_artists">Artistas</string>
+    <string name="car_songs">Canciones</string>
+    <string name="car_favourites">Favoritos</string>
+    <string name="car_recently_added">Añadido recientemente</string>
+    <string name="car_all_songs">Todas las canciones</string>
+    <string name="car_no_match">Nada de tu biblioteca coincide con «%1$s»</string>
+    <string name="car_error_empty">Tu biblioteca de Sonora está vacía. Añade música en Sonora desde el teléfono cuando sea seguro.</string>
+    <string name="car_error_no_access">Sonora ya no puede leer tus carpetas de música. Abre Sonora en el teléfono cuando sea seguro.</string>
+    <string name="car_error_gone">Esta canción ya no está en tu biblioteca.</string>
+    <string name="car_error_action">Abrir Sonora</string>
+</resources>

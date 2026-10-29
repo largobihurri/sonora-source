@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dub_page_effects">Efectos</string>
+    <string name="dub_page_preamp">Preamplificador</string>
+    <string name="dub_feedback">Realimentación</string>
+    <string name="dub_return">Retorno</string>
+    <string name="dub_echo_time">Tiempo del eco</string>
+    <string name="dub_tap_description">Marcar el tempo; mantén pulsado para volver a seguir la rejilla</string>
+    <string name="dub_clock_none">Sin rejilla · %1$s</string>
+    <string name="dub_stop">Parar</string>
+    <string name="dub_stopping">Dejando sonar la cola</string>
+    <string name="dub_play">Reproducir</string>
+    <string name="dub_bypass_format">DUB solo funciona con audio sin comprimir</string>
+</resources>

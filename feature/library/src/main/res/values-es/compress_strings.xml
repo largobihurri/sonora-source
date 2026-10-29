@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="compress_action">Comprimir…</string>
+    <string name="compress_title">Comprimir</string>
+    <string name="compress_cancel">Cancelar</string>
+    <string name="compress_confirm">Comprimir</string>
+    <string name="compress_nothing">No hay canciones para comprimir</string>
+    <string name="compress_read_failed">No se han podido leer las canciones</string>
+
+    <string name="compress_password_header">Contraseña</string>
+    <string name="compress_password_placeholder">Opcional</string>
+    <string name="compress_password_show">Mostrar contraseña</string>
+    <string name="compress_password_hide">Ocultar contraseña</string>
+    <string name="compress_generate">Generar contraseña segura</string>
+    <string name="compress_copy">Copiar contraseña</string>
+    <string name="compress_copied">Contraseña copiada</string>
+    <string name="compress_hint_none">Sin contraseña, cualquiera que tenga el archivo puede abrirlo. Con ella, las canciones se cifran con AES-256: el ZIP se abre entonces con 7-Zip, Keka, WinRAR y la mayoría de gestores de archivos, pero no con el Explorador de Windows ni con la Utilidad de Compresión del Mac.</string>
+    <string name="compress_hint_strong">Contraseña segura.</string>
+    <plurals name="compress_hint_short">
+        <item quantity="one">Contraseña débil: usa al menos %1$d carácter.</item>
+        <item quantity="many">Contraseña débil: usa al menos %1$d caracteres.</item>
+        <item quantity="other">Contraseña débil: usa al menos %1$d caracteres.</item>
+    </plurals>
+    <string name="compress_hint_kinds">Contraseña débil: combina al menos %1$d de estos tipos: minúsculas, mayúsculas, números y símbolos.</string>
+
+    <string name="compress_working_title">Comprimiendo</string>
+    <string name="compress_preparing">Preparando…</string>
+    <string name="compress_progress">%1$d de %2$d · %3$d %%</string>
+    <string name="compress_working_note">Puedes cerrar esta hoja: la notificación muestra el progreso y el archivo aparecerá aquí cuando esté listo.</string>
+    <string name="compress_stop">Detener la compresión</string>
+
+    <string name="compress_ready_title">Archivo listo</string>
+    <string name="compress_name">Nombre</string>
+    <string name="compress_size">Tamaño</string>
+    <string name="compress_songs">Canciones</string>
+    <string name="compress_protection">Contraseña</string>
+    <string name="compress_protection_aes">AES-256</string>
+    <string name="compress_protection_none">Ninguna</string>
+    <string name="compress_share">Compartir…</string>
+    <string name="compress_save">Guardar en…</string>
+    <string name="compress_password_note">Envía la contraseña por otro canal, como un mensaje o una llamada, nunca junto con el archivo.</string>
+    <string name="compress_plain_note">Sin contraseña, cualquiera que tenga el archivo puede abrirlo.</string>
+    <string name="compress_saved">Archivo guardado</string>
+    <string name="compress_save_failed">No se ha podido guardar el archivo</string>
+
+    <string name="compress_failed_title">No se ha podido crear el archivo</string>
+    <string name="compress_ok">Aceptar</string>
+    <string name="compress_error_unreadable">No se ha podido leer «%1$s». Puede que se haya movido o eliminado.</string>
+    <string name="compress_error_no_space">No hay espacio suficiente: se necesitan %1$s y hay %2$s libres.</string>
+    <string name="compress_error_password_again">Sonora se cerró antes de terminar el archivo. Vuelve a comprimirlo.</string>
+    <string name="compress_error_unwritable">No se ha podido escribir el archivo.</string>
+    <string name="compress_error_unexpected">Algo ha fallado. Inténtalo de nuevo.</string>
+</resources>

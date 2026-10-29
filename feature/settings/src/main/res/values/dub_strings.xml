@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_dub_mode_header">DUB Mode</string>
+    <string name="settings_dub_mode">DUB mode</string>
+    <string name="settings_dub_mode_footer">DUB mode turns Now Playing into a dub mixer: an echo locked to the beat, a sweep filter, a five-way preamp with kills, and pads to throw, cut, drop, freeze and run the echo away. Turning it on turns DJ mode off; loops and cues stay. The effects are off while bit-perfect output is on and while playing on another device. THROW starts from what you heard when you touched it; the other controls are heard about 0.2 s after the touch. You can also turn it on from the … menu in Now Playing.</string>
+    <string name="settings_dub_pads_header">Pads</string>
+    <string name="settings_dub_pads_hold">Hold, double-tap latches</string>
+    <string name="settings_dub_pads_toggle">Tap to toggle</string>
+    <string name="settings_dub_reset">Reset effect setup</string>
+    <string name="settings_dub_pads_footer">The reset puts the echo time, feedback, return, the filter lock and every preamp corner and level back to their defaults.</string>
+</resources>

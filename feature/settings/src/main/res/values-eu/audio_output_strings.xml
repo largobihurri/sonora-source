@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Audio output: the device the sound goes to -->
+    <string name="audio_output_header">Audio-irteera</string>
+    <string name="audio_output_device">Irteera-gailua</string>
+    <string name="audio_output_none">Bat ere ez</string>
+    <string name="audio_output_footer">Soinua nora bidaltzen den eta gailu horrek zer erreproduzitu dezakeen dioen erakusten du. Ukitu xehetasunak ikusteko.</string>
+    <string name="audio_output_details_title">Irteera-gailua</string>
+    <string name="audio_output_not_reported">Adierazi gabe</string>
+    <string name="audio_output_kind_usb">USB audioa</string>
+    <!-- The type in a named title, e.g. "USB: Scarlett 2i2" -->
+    <string name="audio_output_kind_usb_short">USB</string>
+    <string name="audio_output_kind_wired">Kablezko aurikularrak</string>
+    <string name="audio_output_kind_bluetooth">Bluetooth</string>
+    <string name="audio_output_kind_hdmi">HDMI</string>
+    <string name="audio_output_kind_speaker">Telefonoaren bozgorailua</string>
+    <string name="audio_output_kind_other">Beste irteera bat</string>
+    <!-- A device's title: its type, then its name, e.g. "Bluetooth: Buds Pro" -->
+    <string name="audio_output_title_named">%1$s: %2$s</string>
+    <string name="audio_output_others_header">Beste gailu batzuk</string>
+    <string name="audio_output_row_rates">Lagin-maiztasunak</string>
+    <string name="audio_output_row_depths">Bit-sakonerak</string>
+    <string name="audio_output_row_channels">Kanalak</string>
+    <string name="audio_output_row_bit_perfect">Bit-perfect</string>
+    <string name="audio_output_mixer_header">Nahaslearen formatuak</string>
+    <string name="audio_output_active_header">Erabiltzen</string>
+    <string name="audio_output_pcm_8">8 bit</string>
+    <string name="audio_output_pcm_16">16 bit</string>
+    <string name="audio_output_pcm_24">24 bit</string>
+    <string name="audio_output_pcm_32">32 bit</string>
+    <string name="audio_output_pcm_float">32 biteko koma higikorra</string>
+    <!-- A mixer format: sample rate in kHz, bit depth, channel count; e.g. "96 kHz · 24 bit · 2 kanal" -->
+    <string name="audio_output_mixer_format">%1$s kHz · %2$s · %3$d kanal</string>
+    <string name="audio_output_mixer_bit_perfect">Bit-perfect</string>
+    <string name="audio_output_mixer_default">Lehenetsia</string>
+    <string name="audio_output_bp_offered">Eskuragarri</string>
+    <string name="audio_output_bp_not_offered">Ez dago eskuragarri</string>
+    <string name="audio_output_bp_no_usb">USB gailurik ez</string>
+    <string name="audio_output_bp_android_old">Android 14 behar du</string>
+    <string name="audio_output_bp_footer_offered">USB gailu hau audioa aldatu gabe jasotzeko ezar daiteke. Androidek onartzen dituen formatuak Nahaslearen formatuak atalean ageri dira.</string>
+    <string name="audio_output_bp_footer_not_offered">USB gailu honek ez du bit-perfect irteerarik eskaintzen telefono honetan.</string>
+    <string name="audio_output_bp_footer_no_usb">Konektatu USB audio-gailu bat, adibidez DAC bat edo audio-interfaze bat, bit-perfect irteera eskaintzen duen egiaztatzeko.</string>
+    <string name="audio_output_bp_footer_android_old">Bit-perfect irteerak Android 14 edo berriagoa behar du.</string>
+    <string name="audio_output_bit_perfect_switch">USB irteera bit-perfect</string>
+    <string name="audio_output_bp_switch_off">Abesti bakoitzaren laginak aldatu gabe bidaltzen ditu USB audio-gailu batera: birlaginketarik gabe, bolumena aldatu gabe eta efekturik gabe. Android 14 eta hori eskaintzen duen USB gailu bat behar ditu. Doitu bolumena gailuan bertan.</string>
+    <string name="audio_output_bp_switch_waiting">Aktibatuta. Bit-perfect irteera eskaintzen duen USB audio-gailu bat konektatzen duzunean izango du eragina.Ordura arte, musika ohiko moduan entzuten da.</string>
+    <string name="audio_output_bp_switch_active">Martxan. USB gailuak abesti bakoitzaren laginak aldatu gabe jasotzen ditu, abestiaren lagin-maiztasun eta bit-sakonera propioekin. Ekualizadorea, bolumenaren normalizazioa, fundido gurutzatua, abiadura, tonua eta DJ tempoa desaktibatuta daude bitartean. Doitu bolumena gailuan bertan. Gailuak eskaintzen ez duen formatuko abestiak ohiko moduan entzuten dira.</string>
+    <string name="playback_locked_footer">Desaktibatuta bit-perfect USB irteera martxan dagoen bitartean.</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="crossfade_title">Crossfade</string>
+    <string name="crossfade_off">Off</string>
+    <string name="crossfade_seconds">%1$d s</string>
+    <string name="crossfade_footer">Each song fades into the next over this time. Tracks of an album played in order stay gapless, and skipping fades quickly.</string>
+</resources>

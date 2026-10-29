@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Library Folders › Import History: every archive imported, newest first -->
+    <string name="settings_import_history">Import History</string>
+    <string name="import_history_footer">Archives imported with Sonora. Open one to see its songs, delete it from your phone or remove it from this list.</string>
+    <string name="import_history_empty">No Imports</string>
+    <string name="import_history_line">%1$s · %2$s</string>
+    <string name="import_history_delete_from_phone">Delete from Phone</string>
+    <string name="import_history_remove">Remove from History</string>
+    <string name="import_history_remove_note">Remove from History forgets the import only: its songs stay on your phone and in your library.</string>
+
+    <!-- Delete from Phone -->
+    <string name="import_history_delete_title">Delete “%1$s” from your phone?</string>
+    <string name="import_history_delete_message">This can’t be undone. Its folder and every file in it are deleted, its songs leave your library, playlists and favourites, and the playlist it recreated is deleted.</string>
+    <string name="import_history_delete_confirm">Delete</string>
+    <string name="import_history_cancel">Cancel</string>
+    <string name="import_history_access_title">Allow Deleting</string>
+    <string name="import_history_access_message">Sonora can only read the folder “%1$s”. To delete these files, choose that folder again and allow access.</string>
+    <string name="import_history_access_wrong_folder">That was a different folder. Choose “%1$s” to allow deleting.</string>
+    <string name="import_history_access_choose">Choose Folder…</string>
+
+    <!-- What a deletion ended with -->
+    <string name="import_history_deleted_title">Import Deleted</string>
+    <plurals name="import_history_deleted_message">
+        <item quantity="one">Its folder is gone from your phone, and %1$d song from your library.</item>
+        <item quantity="other">Its folder is gone from your phone, and %1$d songs from your library.</item>
+    </plurals>
+    <string name="import_history_incomplete_title">Couldn’t Delete Everything</string>
+    <plurals name="import_history_incomplete_songs">
+        <item quantity="one">%1$d song couldn’t be deleted. The import stays in the history so you can try again.</item>
+        <item quantity="other">%1$d songs couldn’t be deleted. The import stays in the history so you can try again.</item>
+    </plurals>
+    <string name="import_history_incomplete_folder">Its folder couldn’t be deleted. The import stays in the history so you can try again.</string>
+    <string name="import_history_refused_title">Can’t Delete Here</string>
+    <string name="import_history_refused_message">The storage of this folder doesn’t allow deleting.</string>
+    <string name="import_history_failed_title">Couldn’t Delete the Import</string>
+    <string name="import_history_failed_message">Something went wrong. Try again.</string>
+    <string name="import_history_ok">OK</string>
+</resources>

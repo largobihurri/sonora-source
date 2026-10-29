@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Back chevron of pushed screens. -->
+    <string name="ds_back">Back</string>
+    <!-- Closes a form sheet (File Info). -->
+    <string name="ds_done">Done</string>
+    <!-- Opens Settings from a tab's top bar. -->
+    <string name="ds_settings">Settings</string>
+    <!-- File sizes under 1 KiB; %1$s is the formatted number. -->
+    <plurals name="ds_file_size_bytes">
+        <item quantity="one">%1$s byte</item>
+        <item quantity="other">%1$s bytes</item>
+    </plurals>
+</resources>

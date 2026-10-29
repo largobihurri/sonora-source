@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dub_pad_held">sakatuta</string>
+    <string name="dub_pad_latched">finkatuta</string>
+    <string name="dub_pad_off">itzalita</string>
+    <string name="dub_pad_latch">Finkatu</string>
+    <string name="dub_pad_release">Askatu</string>
+
+    <string name="dub_xy_lock">BLOKEATU</string>
+    <string name="dub_xy_locked">blokeatuta</string>
+    <string name="dub_xy_unlocked">erdira itzultzen da</string>
+    <string name="dub_xy_cutoff">Iragazkiaren ekorketa</string>
+    <string name="dub_xy_resonance">Iragazkiaren erresonantzia</string>
+    <string name="dub_xy_flat">Laua</string>
+    <string name="dub_xy_low_pass">Behe-pasea %1$s</string>
+    <string name="dub_xy_high_pass">Goi-pasea %1$s</string>
+    <string name="dub_xy_q">Q %1$s</string>
+    <string name="dub_xy_centre">Erdiratu</string>
+
+    <string name="dub_beat_leds">Taupada</string>
+    <string name="dub_beat_of">%1$d. taupada, %2$d-etik</string>
+    <string name="dub_beat_none">Taupadarik ez</string>
+
+    <string name="dub_peak_meter">Irteera-maila</string>
+    <string name="dub_limiter">Mugatzailea</string>
+    <string name="dub_limiter_on">mugatzen</string>
+    <string name="dub_limiter_off">geldirik</string>
+
+    <string name="dub_bypass_bit_perfect">DUB itzalita dago bit-perfect irteera piztuta dagoen bitartean</string>
+    <string name="dub_bypass_remote">DUB itzalita dago beste gailu batean erreproduzitzen den bitartean</string>
+    <string name="dub_bypass_channels">DUB pista mono eta estereoekin bakarrik dabil</string>
+
+    <string name="dub_way_sub">SUB</string>
+    <string name="dub_way_bass">BAXUAK</string>
+    <string name="dub_way_low_mid">ERDI BAXUAK</string>
+    <string name="dub_way_high_mid">ERDI ALTUAK</string>
+    <string name="dub_way_top">ALTUAK</string>
+    <string name="dub_way_title">%1$d. bidea, %2$s</string>
+    <string name="dub_way_state">goi-pasea %1$s, behe-pasea %2$s, maila %3$s</string>
+    <string name="dub_corner_off">Ez</string>
+    <string name="dub_high_pass">Goi-pasea</string>
+    <string name="dub_low_pass">Behe-pasea</string>
+    <string name="dub_reset_corner">Balio lehenetsia berrezarri</string>
+    <string name="dub_level">Maila</string>
+    <string name="dub_reset_level">Maila 0 dB-era berrezarri</string>
+    <string name="dub_kill">ETEN</string>
+    <string name="dub_killed">etenda</string>
+    <string name="dub_live">aktibo</string>
+    <string name="dub_kill_action">Eten</string>
+    <string name="dub_unkill_action">Berreskuratu</string>
+    <string name="dub_reset_way">Iragazkiak eta maila berrezarri</string>
+    <string name="dub_kill_row">Aurreanplifikadorearen etenak</string>
+</resources>

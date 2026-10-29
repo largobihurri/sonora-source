@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Playback: volume normalisation (ReplayGain) -->
+    <string name="playback_header">Reproducción</string>
+    <string name="playback_normalisation_off">Desactivada</string>
+    <string name="playback_normalisation_off_subtitle">Cada canción a su propio volumen</string>
+    <string name="playback_normalisation_track">Por canción</string>
+    <string name="playback_normalisation_track_subtitle">Todas las canciones con la misma sonoridad</string>
+    <string name="playback_normalisation_album">Por álbum</string>
+    <string name="playback_normalisation_album_subtitle">Los álbumes conservan sus canciones suaves y fuertes</string>
+    <string name="playback_normalisation_auto">Automática</string>
+    <string name="playback_normalisation_auto_subtitle">Ganancia de álbum si suena un álbum en orden; si no, de canción</string>
+    <string name="playback_normalisation_footer">La normalización del volumen (ReplayGain) usa la ganancia guardada en las etiquetas de los archivos. Los archivos sin etiquetas suenan sin cambios.</string>
+    <string name="playback_preamp">Preamplificación</string>
+    <!-- A pre-amp value: the signed number of decibels, e.g. "+1,5 dB" -->
+    <string name="playback_preamp_value">%1$s dB</string>
+    <string name="playback_preamp_footer">Se suma a cada ganancia etiquetada. Los picos nunca superan el máximo.</string>
+</resources>

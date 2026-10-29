@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ds_back">Atzera</string>
+    <string name="ds_done">Eginda</string>
+    <string name="ds_settings">Ezarpenak</string>
+    <plurals name="ds_file_size_bytes">
+        <item quantity="one">%1$s byte</item>
+        <item quantity="other">%1$s byte</item>
+    </plurals>
+</resources>

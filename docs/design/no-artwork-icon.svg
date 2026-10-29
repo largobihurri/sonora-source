@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="system-ui, sans-serif">
+  <!-- Proposal for the artwork of a track without a cover: a translucent record. The accent (#8B1A2B here) is the user's
+       own accent colour from the appearance settings; the glow behind the disc and the label follow it. -->
+  <defs>
+    <linearGradient id="tileLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F2F5"/>
+      <stop offset="1" stop-color="#DCD8DE"/>
+    </linearGradient>
+    <linearGradient id="tileDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E2B2F"/>
+      <stop offset="1" stop-color="#141215"/>
+    </linearGradient>
+    <!-- Coloured light behind the translucent disc, so it has something to refract. -->
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#C0304A" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#C0304A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E9A0AE" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#E9A0AE" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="discFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.42"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.26"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="label" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#D4475F" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#8B1A2B" stop-opacity="0.85"/>
+    </radialGradient>
+    <filter id="frost" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <clipPath id="discClip"><circle cx="50" cy="50" r="38"/></clipPath>
+
+    <symbol id="translucentRecord" viewBox="0 0 100 100">
+      <!-- Backdrop light, seen sharp around the disc and frosted through it -->
+      <circle cx="34" cy="64" r="30" fill="url(#glowA)"/>
+      <circle cx="70" cy="30" r="24" fill="url(#glowB)"/>
+      <g clip-path="url(#discClip)">
+        <g filter="url(#frost)">
+          <circle cx="38" cy="60" r="30" fill="url(#glowA)"/>
+          <circle cx="66" cy="34" r="24" fill="url(#glowB)"/>
+        </g>
+      </g>
+      <!-- The translucent disc, on a soft shadow so its edge reads on a light tile too -->
+      <circle cx="51" cy="53" r="38" fill="#000000" fill-opacity="0.16" filter="url(#shadow)"/>
+      <circle cx="50" cy="50" r="38" fill="url(#discFill)"/>
+      <circle cx="50" cy="50" r="38" fill="none" stroke="#000000" stroke-opacity="0.10" stroke-width="0.5"/>
+      <g fill="none" stroke="#FFFFFF" stroke-width="0.6">
+        <circle cx="50" cy="50" r="33.5" stroke-opacity="0.32"/>
+        <circle cx="50" cy="50" r="29.5" stroke-opacity="0.22"/>
+        <circle cx="50" cy="50" r="25.5" stroke-opacity="0.30"/>
+        <circle cx="50" cy="50" r="21.5" stroke-opacity="0.20"/>
+      </g>
+      <circle cx="50" cy="50" r="37.4" fill="none" stroke="url(#rim)" stroke-width="1.2"/>
+      <!-- Specular arcs -->
+      <path d="M22 34 A32 32 0 0 1 44 17" fill="none" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="2.4"
+            stroke-linecap="round"/>
+      <path d="M80 64 A32 32 0 0 1 68 79" fill="none" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.6"
+            stroke-linecap="round"/>
+      <!-- Tinted translucent label and the spindle hole -->
+      <circle cx="50" cy="50" r="13" fill="url(#label)"/>
+      <circle cx="50" cy="50" r="12.6" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="0.6"/>
+      <path d="M41.5 45 A10 10 0 0 1 47 40.6" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1.2"
+            stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="2.4" fill="#FFFFFF" fill-opacity="0.85"/>
+    </symbol>
+
+    <symbol id="tileL" viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="12" fill="url(#tileLight)"/>
+      <use href="#translucentRecord" width="100" height="100"/>
+    </symbol>
+    <symbol id="tileD" viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="12" fill="url(#tileDark)"/>
+      <use href="#translucentRecord" width="100" height="100"/>
+    </symbol>
+  </defs>
+
+  <!-- Light: big tile and the list row -->
+  <rect x="0" y="0" width="380" height="420" fill="#FFFFFF"/>
+  <text x="24" y="36" font-size="18" font-weight="600" fill="#000">Claro</text>
+  <use href="#tileL" x="24" y="56" width="180" height="180"/>
+  <use href="#tileL" x="24" y="268" width="56" height="56"/>
+  <text x="96" y="292" font-size="17" fill="#000">[TTC] 6ejou - DeadSoftware</text>
+  <text x="96" y="314" font-size="15" fill="#8E8E93">Unknown Artist</text>
+  <use href="#tileL" x="24" y="340" width="56" height="56"/>
+  <text x="96" y="364" font-size="17" fill="#000">† 6EJOU - ANALOG SEX †</text>
+  <text x="96" y="386" font-size="15" fill="#8E8E93">Unknown Artist</text>
+
+  <!-- Dark -->
+  <rect x="380" y="0" width="380" height="420" fill="#000000"/>
+  <text x="404" y="36" font-size="18" font-weight="600" fill="#FFF">Oscuro</text>
+  <use href="#tileD" x="404" y="56" width="180" height="180"/>
+  <use href="#tileD" x="404" y="268" width="56" height="56"/>
+  <text x="476" y="292" font-size="17" fill="#FFF">[TTC] 6ejou - DeadSoftware</text>
+  <text x="476" y="314" font-size="15" fill="#8E8E93">Unknown Artist</text>
+  <use href="#tileD" x="404" y="340" width="56" height="56"/>
+  <text x="476" y="364" font-size="17" fill="#FFF">† 6EJOU - ANALOG SEX †</text>
+  <text x="476" y="386" font-size="15" fill="#8E8E93">Unknown Artist</text>
+</svg>

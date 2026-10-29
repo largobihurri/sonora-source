@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_recent_title">Recent Searches</string>
+    <string name="search_recent_clear">Clear</string>
+    <string name="search_recent_clear_description">Clear recent searches</string>
+    <string name="search_recent_remove">Remove “%1$s” from recent searches</string>
+    <string name="search_cancel">Cancel</string>
+</resources>

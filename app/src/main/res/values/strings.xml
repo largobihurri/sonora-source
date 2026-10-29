@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Sonora</string>
+
+    <!-- Tab bar: keep each label short (one word) so it fits its slot. -->
+    <string name="tab_library">Library</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_converter">Converter</string>
+    <string name="tab_export">Export</string>
+    <!-- Spoken action of the collapsed tab bar. -->
+    <string name="tab_bar_expand">Show tabs</string>
+
+    <!-- Mini player -->
+    <string name="mini_player_play">Play</string>
+    <string name="mini_player_pause">Pause</string>
+    <string name="mini_player_next">Next</string>
+    <string name="mini_player_next_track">Next track</string>
+    <string name="mini_player_previous_track">Previous track</string>
+    <string name="mini_player_open">Open Now Playing</string>
+
+    <!-- The first duplicate analysis of a new library: a small closable notice at the top of the shell -->
+    <string name="duplicate_notice_starting">Analysing duplicates…</string>
+    <string name="duplicate_notice_running">Analysing duplicates… %1$s/%2$s</string>
+    <plurals name="duplicate_notice_finished">
+        <item quantity="one">Duplicate analysis finished: %1$d group found</item>
+        <item quantity="other">Duplicate analysis finished: %1$d groups found</item>
+    </plurals>
+    <string name="duplicate_notice_none">Duplicate analysis finished: no duplicates found</string>
+    <string name="duplicate_notice_close">Close</string>
+</resources>

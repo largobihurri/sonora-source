@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The export to a USB stick runs as a foreground service so it goes on when the user leaves the app. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- "Eject stick" opens the first of these storage screens that exists (checked with resolveActivity). -->
+    <queries>
+        <intent>
+            <action android:name="android.provider.action.DOCUMENT_ROOT_SETTINGS" />
+            <data android:mimeType="vnd.android.document/root" />
+        </intent>
+        <intent>
+            <action android:name="android.settings.INTERNAL_STORAGE_SETTINGS" />
+        </intent>
+        <intent>
+            <action android:name="android.settings.MEMORY_CARD_SETTINGS" />
+        </intent>
+    </queries>
+
+    <application>
+        <service
+            android:name="io.sonora.feature.cdjexport.export.ExportService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+    </application>
+
+</manifest>

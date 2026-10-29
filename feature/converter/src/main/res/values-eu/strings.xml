@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="converter_title">Bihurgailua</string>
+
+    <string name="converter_profile_header">Irteera-formatua</string>
+    <string name="converter_profile_summary_xdj_700">AIFF, 16 bit, gehienez 48 kHz</string>
+
+    <string name="converter_output_header">Irteerako karpeta</string>
+    <string name="converter_output_choose">Aukeratu karpeta</string>
+    <string name="converter_output_change">Aldatu karpeta</string>
+    <string name="converter_output_none_footer">Aukeratu telefonoko edo USB memoriako karpeta bat. Sonorak «Convertidos» karpeta sortuko du bertan, eta data duen karpeta bat sorta bakoitzeko.</string>
+    <string name="converter_output_footer">Bihurtutako fitxategiak %1$s karpetako «Convertidos» karpetara doaz, data duen karpeta bat sorta bakoitzeko.</string>
+    <string name="converter_output_location">%1$s › Convertidos</string>
+
+    <string name="converter_sources_header">Bihurtzekoak</string>
+    <string name="converter_add_music">Gehitu musika…</string>
+    <string name="converter_browse_files">Arakatu fitxategiak…</string>
+    <string name="converter_browse_folder">Arakatu karpeta…</string>
+    <string name="converter_remove_source">Kendu %1$s</string>
+    <string name="converter_source_folder">Karpeta · barruko guztia</string>
+    <string name="converter_source_file">Fitxategia</string>
+    <string name="converter_source_song">Abestia</string>
+    <string name="converter_sources_footer">Gehitu liburutegiko abestiak, albumak, karpetak edo zerrendak. Liburutegiko abesti batek bere jatorrizkoa ordeztuko du, Sonorak haren karpetan idatz badezake soilik.</string>
+    <string name="converter_browse_footer">Bestela, aukeratu gailu honetako fitxategiak eta karpetak. Banan-banan aukeratutako fitxategiak ezin dira dauden lekuan ordeztu; jatorrizkoak ordezteko, arakatu haien karpeta.</string>
+
+    <string name="converter_performance_header">Errendimendua</string>
+    <string name="converter_mode_low">Baliabide gutxi</string>
+    <string name="converter_mode_normal">Normala</string>
+    <string name="converter_mode_high">Errendimendu handia</string>
+    <string name="converter_mode_low_description">Fitxategiak banan-banan, etenaldiekin. Bateria aurrezten du eta gutxiago berotzen da.</string>
+    <string name="converter_mode_normal_description">Hainbat fitxategi aldi berean, atzeko planoan. Oreka ona.</string>
+    <string name="converter_mode_high_description">Prozesadorearen ia osoa erabiltzen du. Azkarrena da, baina telefonoa gehiago berotzen da.</string>
+    <string name="converter_performance_footer">Kalitatea berbera da modu guztietan; abiadura eta karga baino ez dira aldatzen. Telefonoa berotzen denean edo bateria-aurrezlea aktibatuta dagoenean, Sonorak berak moteltzen du lana.</string>
+
+    <string name="converter_overwrite">Gainidatzi jatorrizkoak</string>
+    <string name="converter_overwrite_footer">Jatorrizko bakoitza bihurtutako fitxategiarekin ordezten da, hura egiaztatu ondoren. Sorta amaitzean ere galdetuko zaizu.</string>
+
+    <string name="converter_convert">Bihurtu</string>
+    <string name="converter_starting">Abiarazten…</string>
+    <string name="converter_history">Historia</string>
+
+    <string name="converter_batch_converting">Bihurtzen</string>
+    <string name="converter_batch_replacing">Jatorrizkoak ordezten</string>
+    <string name="converter_batch_preparing">Prestatzen…</string>
+    <string name="converter_batch_progress">%1$d / %2$d</string>
+    <string name="converter_batch_cancel">Utzi</string>
+    <string name="converter_batch_done">Eginda</string>
+    <string name="converter_batch_completed">Bihurketa amaitu da</string>
+    <string name="converter_batch_cancelled">Bihurketa bertan behera utzi da</string>
+    <string name="converter_batch_timed_out">Bihurketa gelditu da</string>
+    <string name="converter_batch_timed_out_detail">Android-ek lan luzeei uzten dien denbora agortu da. Bihurtu gabe zeuden fitxategiak saltatu egin dira.</string>
+    <string name="converter_batch_failed">Ezin izan da bihurketa egin</string>
+    <string name="converter_count_converted">Bihurtuta</string>
+    <string name="converter_count_failed">Huts eginda</string>
+    <string name="converter_count_skipped">Saltatuta</string>
+    <string name="converter_count_without_tags">Etiketarik gabe</string>
+    <string name="converter_replace_originals">Ordeztu jatorrizkoak</string>
+    <plurals name="converter_replaced_count">
+        <item quantity="one">%d jatorrizko ordeztuta</item>
+        <item quantity="other">%d jatorrizko ordeztuta</item>
+    </plurals>
+    <plurals name="converter_skipped_folders">
+        <item quantity="one">Ezin izan da %d karpeta irakurri; beraz, bertako fitxategiak kanpoan geratu dira.</item>
+        <item quantity="other">Ezin izan dira %d karpeta irakurri; beraz, bertako fitxategiak kanpoan geratu dira.</item>
+    </plurals>
+    <string name="converter_show_details">Erakutsi xehetasunak</string>
+    <string name="converter_play_converted">Erreproduzitu bihurtutakoak</string>
+    <string name="converter_play_all">Erreproduzitu guztiak</string>
+    <string name="converter_item_play">Erreproduzitu</string>
+    <plurals name="converter_missing_files">
+        <item quantity="one">%d fitxategi ez dago erabilgarri jada</item>
+        <item quantity="other">%d fitxategi ez daude erabilgarri jada</item>
+    </plurals>
+
+    <string name="converter_replace_before_title">Jatorrizkoak gainidatzi?</string>
+    <string name="converter_replace_after_title">Jatorrizkoak orain ordeztu?</string>
+    <string name="converter_replace_irreversible">Ezin da desegin: ezabatutako jatorrizkoak ez dira zakarrontzira joaten.</string>
+    <string name="converter_replace_growth">Galeradun fitxategi bat, MP3 edo AAC adibidez, hainbat aldiz handiagoa da AIFF, WAV edo FLAC formatuan.</string>
+    <string name="converter_replace_verified">Jatorrizko bat ez da ezabatzen, haren fitxategi bihurtua egiaztatu arte.</string>
+    <plurals name="converter_replace_count">
+        <item quantity="one">%d jatorrizko bere fitxategi bihurtuarekin ordeztuko da.</item>
+        <item quantity="other">%d jatorrizko beren fitxategi bihurtuekin ordeztuko dira.</item>
+    </plurals>
+    <string name="converter_replace_confirm_before">Gainidatzi</string>
+    <string name="converter_replace_confirm_after">Ordeztu</string>
+    <string name="converter_cancel">Utzi</string>
+
+    <string name="converter_ok">Ados</string>
+    <string name="converter_notice_no_output_title">Aukeratu irteerako karpeta</string>
+    <string name="converter_notice_no_output_message">Aukeratu non gorde fitxategi bihurtuak, eta saiatu berriro.</string>
+    <string name="converter_notice_no_audio_title">Ez dago audio-fitxategirik</string>
+    <string name="converter_notice_no_audio_message">Gehitu duzunaren artean, ez dago Sonorak bihur dezakeen fitxategirik (FLAC, ALAC, AAC, MP3, WAV edo AIFF).</string>
+    <string name="converter_notice_start_failed_title">Ezin izan da hasi</string>
+    <string name="converter_notice_start_failed_message">Sonorak ezin izan du irakurri gehitu duzuna. Gehitu berriro fitxategiak edo karpeta, eta saiatu berriro.</string>
+    <string name="converter_notice_output_failed_title">Ezin da karpeta erabili</string>
+    <string name="converter_notice_output_failed_message">Sonorak ezin du karpeta horretan idatzi. Aukeratu telefonoaren memoriako edo USB memoriako karpeta bat.</string>
+    <string name="converter_notice_picker_missing_title">Ezin dira fitxategiak aukeratu</string>
+    <string name="converter_notice_picker_missing_message">Gailu honek ez du fitxategiak edo karpetak aukeratzeko aplikaziorik.</string>
+    <string name="converter_notice_cancel_failed_title">Ezin izan da bertan behera utzi</string>
+    <string name="converter_notice_cancel_failed_message">Sonorak ezin izan du bihurketa gelditu. Saiatu berriro, edo utzi bertan behera jakinarazpenetik.</string>
+    <string name="converter_notice_delete_failed_title">Ezin izan da kendu</string>
+    <string name="converter_notice_delete_failed_message">Sonorak ezin izan du bihurketa hau historiatik kendu. Saiatu berriro geroago.</string>
+    <string name="converter_notice_play_failed_title">Ezin izan da erreproduzitu</string>
+    <string name="converter_notice_play_failed_message">Sonorak ezin izan ditu bihurketa honen fitxategiak irakurri. Saiatu berriro geroago.</string>
+
+    <string name="converter_history_empty">Oraindik ez dago bihurketarik.</string>
+    <string name="converter_section_today">Gaur</string>
+    <string name="converter_section_yesterday">Atzo</string>
+    <string name="converter_section_last_7_days">Azken 7 egunak</string>
+    <string name="converter_section_last_30_days">Azken 30 egunak</string>
+    <string name="converter_section_older">Lehenagokoak</string>
+    <string name="converter_history_line">%1$s · %2$s</string>
+    <plurals name="converter_converted_count">
+        <item quantity="one">%d bihurtuta</item>
+        <item quantity="other">%d bihurtuta</item>
+    </plurals>
+    <plurals name="converter_failed_count">
+        <item quantity="one">%d hutsegite</item>
+        <item quantity="other">%d hutsegite</item>
+    </plurals>
+    <string name="converter_status_queued">Zain</string>
+    <string name="converter_status_running">Bihurtzen</string>
+    <string name="converter_status_completed">Amaituta</string>
+    <string name="converter_status_cancelled">Bertan behera utzita</string>
+    <string name="converter_status_timed_out">Denbora-mugagatik geldituta</string>
+    <string name="converter_status_failed">Ezin izan da egin</string>
+
+    <string name="converter_detail_profile">Formatua</string>
+    <string name="converter_detail_mode">Errendimendua</string>
+    <string name="converter_detail_folder">Karpeta</string>
+    <string name="converter_detail_status">Egoera</string>
+    <string name="converter_detail_files">Fitxategiak</string>
+    <string name="converter_detail_delete">Ezabatu historiatik</string>
+    <string name="converter_delete_title">Historiatik ezabatu?</string>
+    <string name="converter_delete_message">Erregistroa baino ez da ezabatzen. Fitxategi bihurtuak eta jatorrizkoak dauden lekuan geratzen dira.</string>
+    <string name="converter_delete_confirm">Ezabatu</string>
+    <string name="converter_item_pending">Zain</string>
+    <string name="converter_item_running">Bihurtzen</string>
+    <string name="converter_item_done">Bihurtuta</string>
+    <string name="converter_item_failed">Huts egin du</string>
+    <string name="converter_item_skipped">Saltatuta</string>
+    <string name="converter_item_replaced">Jatorrizkoa ordeztuta</string>
+    <string name="converter_item_suffixed">Jatorrizkoa ordeztuta; %1$s izenarekin gorde da</string>
+    <string name="converter_badge_no_tags">Etiketarik ez</string>
+    <string name="converter_badge_no_tags_description">Etiketarik gabe bihurtuta</string>
+    <!-- Output formats (batch-wide, per song, per folder). Format names such as FLAC or MP3 are not translated. -->
+    <string name="converter_format_choice_header">Formatua</string>
+    <string name="converter_format_batch_footer">Abesti guztiak formatu honetara bihurtzen dira, berea dutenak izan ezik. Sonorak hurrengo sortarako gogoratzen du.</string>
+    <string name="converter_format_settings_header">Ezarpenak</string>
+    <string name="converter_format_bit_depth">Bit-sakonera</string>
+    <string name="converter_format_bits">%1$d bit</string>
+    <string name="converter_format_sample_rate">Lagin-maiztasuna</string>
+    <string name="converter_format_rate_keep">Mantendu</string>
+    <string name="converter_format_rate_khz">%1$s kHz</string>
+    <string name="converter_format_rate_footer">Mantendu aukerak abesti bakoitza bere maiztasunean bihurtzen du; muga batek hura gainditzen duten abestiak bakarrik birlagintzen ditu.</string>
+    <string name="converter_format_bitrate">Bit-emaria</string>
+    <string name="converter_format_kbps">%1$d kbps</string>
+    <string name="converter_format_mp3_mode">Modua</string>
+    <string name="converter_format_mp3_cbr">Konstantea (CBR)</string>
+    <string name="converter_format_mp3_vbr">Aldakorra (VBR)</string>
+    <string name="converter_format_vbr_quality">Kalitatea</string>
+    <string name="converter_format_vbr_footer">V0k soinu onena du; V4k fitxategi txikienak.</string>
+    <string name="converter_format_xdj_footer">Pioneer XDJ-700ak erreproduzitzen duen formatua: AIFF, 16 bit, gehienez 48 kHz; abesti azkarragoak 44,1 kHz-era birlagintzen dira.</string>
+    <string name="converter_format_summary_lossless">%1$s · %2$d bit · %3$s</string>
+    <string name="converter_format_summary_rate_keep">Jatorrizko maiztasuna</string>
+    <string name="converter_format_summary_rate_cap">Gehienez %1$s kHz</string>
+    <string name="converter_format_summary_bitrate">%1$s · %2$d kbps</string>
+    <string name="converter_format_summary_mp3_cbr">MP3 · %1$d kbps CBR</string>
+    <string name="converter_format_summary_mp3_vbr">MP3 · VBR V%1$d</string>
+    <string name="converter_format_use_batch">Erabili formatu orokorra</string>
+    <string name="converter_format_use_folder">Erabili karpetaren formatua</string>
+    <string name="converter_format_follows_batch">Formatu orokorrari jarraitzen dio (%1$s).</string>
+    <string name="converter_format_follows_folder">Karpetaren formatuari jarraitzen dio (%1$s).</string>
+    <string name="converter_format_manual_batch">Eskuz aukeratua: formatu hau mantentzen du orokorra aldatu arren.</string>
+    <string name="converter_format_manual_folder">Eskuz aukeratua: formatu hau mantentzen du karpetarena aldatu arren.</string>
+    <string name="converter_format_badge">Berezia</string>
+    <plurals name="converter_folder_own_formats">
+        <item quantity="one">Abesti %d formatu bereziarekin</item>
+        <item quantity="other">%d abesti formatu bereziarekin</item>
+    </plurals>
+    <string name="converter_format_badge_description">Eskuz aukeratutako formatua</string>
+    <string name="converter_format_change">Aldatu formatua</string>
+    <string name="converter_folder_open">Ikusi abestiak eta formatua</string>
+    <string name="converter_folder_format_header">Karpetaren formatua</string>
+    <string name="converter_folder_format_footer">Bere abestiak formatu honetara bihurtzen dira, berea dutenak izan ezik.</string>
+    <string name="converter_folder_songs_header">Abestiak</string>
+    <string name="converter_folder_loading">Abestiak bilatzen…</string>
+    <string name="converter_folder_failed">Ezin izan da karpeta hau irakurri.</string>
+    <string name="converter_folder_retry">Saiatu berriro</string>
+    <string name="converter_folder_empty">Ez dago audio-fitxategirik karpeta honetan.</string>
+    <string name="converter_formats_mixed">Hainbat formatu</string>
+    <string name="converter_lossy_title">Galerarik gabeko jatorrizkoak ordeztu?</string>
+    <string name="converter_lossy_message">Galerarik gabeko jatorrizko bat ezin da berreskuratu ordeztu ondoren: ez dago zakarrontzirik.</string>
+    <string name="converter_lossy_confirm">Bihurtu hala ere</string>
+    <!-- %d songs; asked before a batch that overwrites originals starts. -->
+    <plurals name="converter_lossy_count">
+        <item quantity="one">%d abestik bere galerarik gabeko jatorrizkoa galeradun fitxategi batekin ordeztuko luke.</item>
+        <item quantity="other">%d abestik beren galerarik gabeko jatorrizkoak galeradun fitxategiekin ordeztuko lituzke.</item>
+    </plurals>
+</resources>

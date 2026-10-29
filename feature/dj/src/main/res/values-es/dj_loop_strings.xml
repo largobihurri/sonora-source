@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_loop_panel_description">Controles de bucle</string>
+    <string name="dj_loop_mode_description">Modo de los pads</string>
+    <string name="dj_loop_mode_cues">Cues</string>
+    <string name="dj_loop_mode_loop">Loop</string>
+    <string name="dj_loop_in">IN</string>
+    <string name="dj_loop_out">OUT</string>
+    <string name="dj_loop_exit">SALIR</string>
+    <string name="dj_loop_reloop">RELOOP</string>
+    <string name="dj_loop_in_description">Loop In: marcar el inicio de un bucle en el punto que suena</string>
+    <string name="dj_loop_out_description">Loop Out: cerrar el bucle y repetirlo</string>
+    <string name="dj_loop_exit_description">Salir del bucle y seguir reproduciendo</string>
+    <string name="dj_loop_reloop_description">Reloop: volver a activar el último bucle</string>
+    <string name="dj_loop_half_description">Reducir el bucle a la mitad</string>
+    <string name="dj_loop_double_description">Duplicar el bucle</string>
+    <string name="dj_loop_state_marking">In marcado</string>
+    <string name="dj_loop_state_looping">En bucle</string>
+    <string name="dj_loop_state_armed">Esperando el final del bucle</string>
+    <string name="dj_loop_state_unavailable">No disponible con la salida bit-perfect ni con este formato de audio</string>
+    <string name="dj_loop_beats_unit">pulsos</string>
+    <string name="dj_loop_beats_description">Bucle de %1$s pulsos: toca para iniciarlo</string>
+    <string name="dj_loop_beats_smaller">Bucle más corto</string>
+    <string name="dj_loop_beats_larger">Bucle más largo</string>
+    <string name="dj_loop_beats_needs_grid">Los bucles por pulsos necesitan una cuadrícula de pulsos</string>
+    <string name="dj_loop_memory_add">+ Loop</string>
+    <string name="dj_loop_memory_add_description">Guardar el bucle como bucle de memoria</string>
+    <string name="dj_loop_pad_set">Hot loop %1$s, de %2$s a %3$s</string>
+    <string name="dj_loop_pad_set_named">Hot loop %1$s, %2$s, de %3$s a %4$s</string>
+    <string name="dj_loop_pad_engage_action">Iniciar el hot loop %1$s</string>
+    <string name="dj_loop_pad_save_action">Guardar el bucle en el hot cue %1$s</string>
+    <string name="dj_loop_edit_title_hot">Hot loop %1$s</string>
+    <string name="dj_loop_edit_title_memory">Bucle de memoria</string>
+    <string name="dj_loop_region_state">Bucle de %1$s a %2$s</string>
+</resources>

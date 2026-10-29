@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › DJ Mode -->
+    <string name="settings_dj_mode_header">DJ Mode</string>
+    <string name="settings_dj_mode">DJ Mode</string>
+    <string name="settings_dj_mode_footer">While DJ mode is on, the song playing and the next ones in the queue are analysed in the background (beats, tempo, key and waveform). Nothing is analysed while it is off. You can also turn it on from the … menu in Now Playing.</string>
+
+    <!-- Settings › DJ Mode › Analysis performance (same three modes as the converter) -->
+    <string name="settings_dj_performance_header">Analysis performance</string>
+    <string name="settings_dj_performance_low">Low Resources</string>
+    <string name="settings_dj_performance_normal">Normal</string>
+    <string name="settings_dj_performance_high">High Performance</string>
+    <string name="settings_dj_performance_low_description">Only the song playing, with one thread at low priority; it waits while the phone is hot. Gentle on battery and heat.</string>
+    <string name="settings_dj_performance_normal_description">The song playing and the next three, with two threads in the background. A good balance.</string>
+    <string name="settings_dj_performance_high_description">The song playing and the next five, with four threads. Fastest; the phone gets warmer.</string>
+    <string name="settings_dj_performance_footer">The analysis is identical in every mode; only speed and load change. Sonora slows down by itself when the phone gets hot or Battery Saver is on.</string>
+</resources>

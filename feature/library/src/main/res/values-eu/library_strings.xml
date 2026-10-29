@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library_title">Liburutegia</string>
+    <string name="library_settings">Ezarpenak</string>
+    <string name="library_songs">Abestiak</string>
+    <string name="library_albums">Albumak</string>
+    <string name="library_artists">Artistak</string>
+    <string name="library_folders">Karpetak</string>
+    <string name="library_converted">Bihurtutakoak</string>
+    <string name="library_recently_added">Azkenaldian gehitutakoak</string>
+    <string name="library_scanning">Musika bilatzen…</string>
+    <string name="library_no_music">Ez da musikarik aurkitu liburutegiko karpetetan.</string>
+    <string name="library_back_library">Liburutegia</string>
+    <string name="library_back">Atzera</string>
+
+    <string name="library_add_folders_title">Gehitu musika-karpetak</string>
+    <string name="library_add_folders_message">Sonorak zuk aukeratutako karpetetako musika erreproduzitzen du. Hasi Music karpetarekin.</string>
+    <string name="library_add_folder">Gehitu karpeta</string>
+    <string name="library_add_folder_failed_title">Ezin izan da karpeta gehitu</string>
+    <string name="library_add_folder_failed_message">Sonorak ezin du karpeta hori irakurri. Aukeratu gailuaren memoriako karpeta bat.</string>
+    <string name="library_picker_missing_message">Gailu honek ez du karpetak aukeratzeko aplikaziorik.</string>
+    <string name="library_ok">Ados</string>
+
+    <string name="library_play">Erreproduzitu</string>
+    <string name="library_shuffle">Nahastu</string>
+    <string name="library_folders_empty">Gehitu karpetak liburutegira Ezarpenak atalean.</string>
+    <string name="library_folder_empty">Karpeta honetan ez dago abestirik.</string>
+    <string name="library_converted_empty">Oraindik ez dago musika bihurturik. Bihurgailua fitxan bihurtzen dituzun abestiak hemen agertuko dira.</string>
+    <string name="library_section_today">Gaur</string>
+    <string name="library_section_yesterday">Atzo</string>
+    <string name="library_section_last_7_days">Azken 7 egunak</string>
+    <string name="library_section_last_30_days">Azken 30 egunak</string>
+    <string name="library_section_older">Lehenagokoak</string>
+
+    <string name="search_title">Bilatu</string>
+    <string name="search_placeholder">Abestiak, albumak, artistak</string>
+    <string name="search_clear">Garbitu</string>
+    <string name="search_no_results">«%1$s»: ez da emaitzarik aurkitu.</string>
+
+    <string name="queue_options">Ilararen aukerak</string>
+    <string name="queue_play_now">Erreproduzitu orain</string>
+    <string name="queue_play_next">Erreproduzitu hurrena</string>
+    <string name="queue_add_to_end">Gehitu ilararen amaieran</string>
+    <string name="queue_playing_next">Hurrena erreproduzituko da</string>
+    <string name="queue_added_to_queue">Ilarara gehitu da</string>
+    <string name="library_no_songs">Abestirik ez</string>
+    <plurals name="library_song_count">
+        <item quantity="one">%1$s abesti</item>
+        <item quantity="other">%1$s abesti</item>
+    </plurals>
+    <!-- Landscape Cover Flow: the info button (flips the centre cover), play/pause, and flipping back. -->
+    <string name="coverflow_info">Informazioa</string>
+    <string name="coverflow_pause">Pausatu</string>
+    <string name="coverflow_show_cover">Erakutsi azala</string>
+    <string name="coverflow_now_playing">Ireki erreproduzitzen ari dena</string>
+    <string name="coverflow_now_playing_label">Orain erreproduzitzen</string>
+    <!-- Album count under an artist's name in the Cover Flow. -->
+    <plurals name="library_album_count">
+        <item quantity="one">%1$s album</item>
+        <item quantity="other">%1$s album</item>
+    </plurals>
+</resources>

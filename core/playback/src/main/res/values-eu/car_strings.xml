@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="car_playlists">Zerrendak</string>
+    <string name="car_albums">Albumak</string>
+    <string name="car_artists">Artistak</string>
+    <string name="car_songs">Abestiak</string>
+    <string name="car_favourites">Gogokoak</string>
+    <string name="car_recently_added">Azkenaldian gehitutakoak</string>
+    <string name="car_all_songs">Abesti guztiak</string>
+    <string name="car_no_match">Liburutegian ez dago «%1$s» bilaketarekin bat datorren ezer</string>
+    <string name="car_error_empty">Sonorako liburutegia hutsik dago. Gehitu musika telefonoko Sonoran, seguru dagoenean.</string>
+    <string name="car_error_no_access">Sonorak ezin ditu zure musika-karpetak irakurri. Ireki Sonora telefonoan, seguru dagoenean.</string>
+    <string name="car_error_gone">Abesti hau ez dago jada zure liburutegian.</string>
+    <string name="car_error_action">Ireki Sonora</string>
+</resources>

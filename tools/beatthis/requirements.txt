@@ -1,0 +1,5 @@
+# Versions used to produce the committed goldens (Python 3.14). Only numpy and onnxruntime are needed to
+# regenerate them; onnx is needed only by inspect_model.py.
+numpy==2.5.3
+onnxruntime==1.30.0
+onnx==1.23.2

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playlists_title">Listas</string>
+    <string name="playlists_back_library">Biblioteca</string>
+    <string name="playlist_new_row">Nueva lista…</string>
+    <plurals name="playlist_song_count">
+        <item quantity="one">%1$d canción</item>
+        <item quantity="many">%1$d canciones</item>
+        <item quantity="other">%1$d canciones</item>
+    </plurals>
+
+    <string name="playlist_play">Reproducir</string>
+    <string name="playlist_shuffle">Aleatorio</string>
+    <string name="playlist_edit">Editar</string>
+    <string name="playlist_done">OK</string>
+    <string name="playlist_more">Más</string>
+    <string name="playlist_empty">Esta lista está vacía. Para añadir canciones, mantén pulsada una canción y elige Añadir a una lista.</string>
+    <plurals name="playlist_minutes">
+        <item quantity="one">%1$d minuto</item>
+        <item quantity="many">%1$d minutos</item>
+        <item quantity="other">%1$d minutos</item>
+    </plurals>
+    <plurals name="playlist_hours">
+        <item quantity="one">%1$d hora</item>
+        <item quantity="many">%1$d horas</item>
+        <item quantity="other">%1$d horas</item>
+    </plurals>
+    <string name="playlist_summary">%1$s, %2$s</string>
+    <string name="playlist_hours_minutes">%1$s y %2$s</string>
+    <string name="playlist_unavailable">No disponible</string>
+    <string name="playlist_remove_entry">Quitar %1$s</string>
+    <string name="playlist_reorder">Reordenar</string>
+    <string name="playlist_move_up">Subir</string>
+    <string name="playlist_move_down">Bajar</string>
+
+    <string name="playlist_edit_details">Editar nombre y descripción</string>
+    <string name="playlist_delete">Eliminar lista</string>
+    <string name="playlist_delete_title">¿Eliminar la lista?</string>
+    <string name="playlist_delete_message">Se eliminará «%1$s». Sus canciones seguirán en tu biblioteca.</string>
+    <string name="playlist_delete_confirm">Eliminar</string>
+
+    <string name="playlist_new_title">Nueva lista</string>
+    <string name="playlist_edit_title">Editar lista</string>
+    <string name="playlist_name_label">Nombre</string>
+    <string name="playlist_description_label">Descripción (opcional)</string>
+    <string name="playlist_create">Crear</string>
+    <string name="playlist_save">Guardar</string>
+    <string name="playlist_cancel">Cancelar</string>
+
+    <string name="playlist_add_to">Añadir a una lista…</string>
+    <string name="playlist_picker_title">Añadir a una lista</string>
+    <string name="playlist_added_to">Añadido a «%1$s»</string>
+    <string name="playlist_nothing_to_add">No hay canciones que añadir</string>
+    <string name="playlist_add_failed">No se ha podido añadir a la lista</string>
+</resources>

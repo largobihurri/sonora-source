@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The cast server listens on the Wi-Fi address for the Cast receiver's requests. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- The Wi-Fi address the server binds to, and Wi-Fi loss (which ends a cast). -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

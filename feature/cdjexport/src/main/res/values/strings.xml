@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Large title of the Export tab. -->
+    <string name="cdj_title">Export</string>
+
+    <!-- Shared actions and words. -->
+    <string name="cdj_ok">OK</string>
+    <string name="cdj_back">Back</string>
+    <string name="cdj_cancel">Cancel</string>
+    <string name="cdj_cancelling">Cancelling…</string>
+    <string name="cdj_done">Done</string>
+    <string name="cdj_starting">Starting…</string>
+    <string name="cdj_copy_details">Copy technical details</string>
+    <string name="cdj_unknown">Unknown</string>
+    <!-- Under a shortened list: how many lines are not shown. -->
+    <plurals name="cdj_more">
+        <item quantity="one">and %d more</item>
+        <item quantity="other">and %d more</item>
+    </plurals>
+    <!-- A file and why it was left out: "song.flac: the file could not be read". -->
+    <string name="cdj_name_reason">%1$s: %2$s</string>
+    <!-- Sample size: "16-bit". -->
+    <string name="cdj_bits">%1$d-bit</string>
+    <!-- Sample rate; %1$s is the number of kHz ("44.1"). -->
+    <string name="cdj_khz">%1$s kHz</string>
+    <string name="cdj_container_m4a">M4A (AAC or ALAC)</string>
+    <string name="cdj_container_unknown">An unknown format</string>
+
+    <!-- Prepare USB stick section. -->
+    <string name="cdj_prepare_header">Prepare USB stick</string>
+    <string name="cdj_prepare_intro">Formats a stick as FAT32 (MBR), the way Pioneer players such as the XDJ-700 read it. Formatting erases everything on the stick.</string>
+    <string name="cdj_prepare_waiting_permission">Waiting for permission to use %1$s…</string>
+    <string name="cdj_prepare_opening">Opening %1$s…</string>
+    <string name="cdj_no_stick_title">No USB stick connected</string>
+    <string name="cdj_no_stick_message">Connect a USB stick with an OTG adapter. It appears here as soon as it is plugged in.</string>
+    <string name="cdj_device_unnamed">USB storage device</string>
+    <!-- %1$s is the USB vendor and product id: "USB 0781:5581". -->
+    <string name="cdj_device_detail">USB %1$s</string>
+    <string name="cdj_device_unsupported">This device\'s storage protocol is not supported (for example, USB Attached SCSI only).</string>
+    <string name="cdj_permission_title">Permission needed</string>
+    <string name="cdj_permission_message">Sonora needs permission to use %1$s before it can format it.</string>
+    <string name="cdj_try_again">Try again</string>
+    <string name="cdj_detail_usb_device">USB device</string>
+    <string name="cdj_detail_capacity">Capacity</string>
+    <!-- Capacity and exact size: "16.0 GB (16,008,609,792 bytes)". -->
+    <string name="cdj_capacity_value">%1$s (%2$s)</string>
+    <string name="cdj_detail_block_size">Block size</string>
+    <string name="cdj_detail_write_protection">Write protection</string>
+    <string name="cdj_on">On</string>
+    <string name="cdj_off">Off</string>
+    <string name="cdj_label_field">Volume label</string>
+    <string name="cdj_label_hint">Up to 11 characters: English letters, digits, spaces and simple symbols.</string>
+    <string name="cdj_format_blocked_label">Fix the volume label to continue.</string>
+    <string name="cdj_write_protected">This stick is write-protected, so it can\'t be formatted. Slide its lock switch off, or use another stick.</string>
+    <string name="cdj_format_button">Format…</string>
+    <string name="cdj_erase_title">Erase this USB stick?</string>
+    <!-- %1$s names the stick ("SanDisk Cruzer Blade, 16.0 GB"), %2$s is the new volume label. -->
+    <string name="cdj_erase_message">ALL data on \"%1$s\" will be erased. The stick will be formatted as FAT32 (MBR) for Pioneer players, with the label %2$s.</string>
+    <!-- %1$s is the confirmation word, always ERASE. -->
+    <string name="cdj_erase_type_word">Type %1$s to continue.</string>
+    <string name="cdj_erase_confirm">Erase and format</string>
+    <!-- The stick in the confirmation: its name and capacity. -->
+    <string name="cdj_stick_summary">%1$s, %2$s</string>
+    <string name="cdj_formatting_title">Formatting %1$s…</string>
+    <!-- Percentage, bytes written and bytes to write: "25% · 1.0 MB of 4.0 MB". -->
+    <string name="cdj_format_progress">%1$d%% · %2$s of %3$s</string>
+    <string name="cdj_retrying">Retrying…</string>
+    <string name="cdj_formatting_keep">Keep the stick connected. The screen stays on until formatting ends.</string>
+    <string name="cdj_formatting_back_blocked">Formatting can\'t be left with Back. Use Cancel to stop it; the stick then has to be formatted again.</string>
+    <string name="cdj_stick_ready">USB stick ready</string>
+    <string name="cdj_detail_label">Label</string>
+    <string name="cdj_detail_file_system">File system</string>
+    <string name="cdj_detail_size">Size</string>
+    <string name="cdj_replug_hint">If the stick doesn\'t appear in Android, unplug and replug it.</string>
+
+    <!-- Volume label errors. -->
+    <string name="cdj_label_empty" tools:ignore="PluralsCandidate">Enter a label of 1 to %1$d characters.</string>
+    <string name="cdj_label_too_long" tools:ignore="PluralsCandidate">The label has %1$d characters; FAT allows at most %2$d.</string>
+    <string name="cdj_label_invalid_character">\"%1$s\" is not allowed in a FAT label.</string>
+    <string name="cdj_label_non_ascii">\"%1$s\" is not allowed: use English letters, digits, spaces and simple symbols.</string>
+
+    <!-- Why a USB stick could not be used. -->
+    <string name="cdj_usb_permission_denied">Sonora was not allowed to use this USB device.</string>
+    <string name="cdj_usb_disconnected">The USB stick was disconnected.</string>
+    <string name="cdj_usb_disconnected_while_formatting">The USB stick was disconnected while formatting. Plug it in again and format it before using it.</string>
+    <string name="cdj_usb_closed">The USB stick was already released. Select it again.</string>
+    <!-- %1$s is a technical reason, in English. -->
+    <string name="cdj_usb_unsupported">This device can\'t be formatted here: %1$s.</string>
+    <string name="cdj_usb_no_medium">No medium found. Insert a card into the reader, or use another stick.</string>
+    <string name="cdj_usb_write_protected">The stick is write-protected.</string>
+    <string name="cdj_usb_transport">The USB stick stopped responding. Unplug it, plug it in again and retry.</string>
+    <string name="cdj_usb_command_failed">The stick rejected a command (sense key 0x%1$X, ASC 0x%2$02X, ASCQ 0x%3$02X). Try another stick.</string>
+    <!-- %1$s is a technical message, in English. -->
+    <string name="cdj_usb_other">The USB stick could not be used: %1$s.</string>
+
+    <!-- Format results. -->
+    <string name="cdj_too_small_title">Stick too small</string>
+    <string name="cdj_too_small_message">This stick holds %1$s, too little for a FAT32 volume. Nothing was written.</string>
+    <string name="cdj_too_large_title">Stick too large</string>
+    <string name="cdj_too_large_message">This stick holds %1$s, more than the %2$s an MBR partition can describe. Nothing was written.</string>
+    <string name="cdj_block_size_title">Unsupported stick</string>
+    <string name="cdj_block_size_message">This stick uses %1$d-byte blocks; Sonora formats sticks with 512 or 4096-byte blocks. Nothing was written.</string>
+    <string name="cdj_write_protected_title">Stick is write-protected</string>
+    <string name="cdj_write_protected_message">The stick refused to be written. The stick must be formatted again before it can be used.</string>
+    <string name="cdj_write_error_title">Write error</string>
+    <!-- %2$s explains the USB failure. -->
+    <string name="cdj_write_error_at_block">The stick failed at block %1$d. %2$s The stick must be formatted again before it can be used. If this keeps happening, the stick may be faulty.</string>
+    <string name="cdj_write_error_cache">The stick failed while saving its cache. %1$s The stick must be formatted again before it can be used. If this keeps happening, the stick may be faulty.</string>
+    <string name="cdj_verification_title">Verification failed</string>
+    <!-- %1$s names the structure ("boot sector"), %2$d is the block. -->
+    <string name="cdj_verification_message" tools:ignore="PluralsCandidate">The %1$s at block %2$d read back differently from what was written. This stick does not store data reliably (it may be faulty or counterfeit); don\'t use it for music.</string>
+    <string name="cdj_format_cancelled_title">Formatting cancelled</string>
+    <string name="cdj_format_cancelled_message">Formatting stopped before it finished. The stick is not usable until it is formatted again.</string>
+    <string name="cdj_format_failed_title">Formatting failed</string>
+    <string name="cdj_format_failed_message">Something went wrong while formatting. The stick must be formatted again before it can be used.</string>
+    <string name="cdj_structure_partition_table">partition table</string>
+    <string name="cdj_structure_boot_sector">boot sector</string>
+    <string name="cdj_structure_fs_info">FSInfo sector</string>
+    <string name="cdj_structure_backup_boot_sector">backup boot sector</string>
+    <string name="cdj_structure_backup_fs_info">backup FSInfo sector</string>
+    <string name="cdj_structure_fat">first FAT</string>
+    <string name="cdj_structure_backup_fat">second FAT</string>
+    <string name="cdj_structure_root_directory">root directory</string>
+
+    <!-- Export to rekordbox section. %1$s is the player ("XDJ-700"), %2$s what it takes ("AIFF 16-bit up to 48 kHz"). -->
+    <string name="cdj_export_header">Export to rekordbox</string>
+    <string name="cdj_export_intro">Copies tracks to a stick with a rekordbox library, so the %1$s shows their waveforms, beat grids and keys. It takes %2$s; anything else is converted to that on the way.</string>
+    <!-- Shown under the export intro: Sonora is not an official product of the players' makers. -->
+    <string name="cdj_not_affiliated">Sonora is an independent app, not affiliated with, endorsed or sponsored by AlphaTheta or Pioneer DJ. rekordbox, Pioneer DJ and XDJ are trademarks of their respective owners, named here only to describe compatibility.</string>
+    <!-- What a player takes: formats, sample sizes and the highest rate: "AIFF 16-bit up to 48 kHz". -->
+    <string name="cdj_profile_summary">%1$s %2$s up to %3$s kHz</string>
+    <string name="cdj_tracks_title">Tracks</string>
+    <string name="cdj_tracks_empty">Add audio files, or a folder of them.</string>
+    <!-- %2$s is the total size. -->
+    <plurals name="cdj_tracks_ready">
+        <item quantity="one">%1$d ready · %2$s</item>
+        <item quantity="other">%1$d ready · %2$s</item>
+    </plurals>
+    <string name="cdj_remove_track">Remove %1$s</string>
+    <string name="cdj_checking_files">Checking the files…</string>
+    <string name="cdj_add_files">Add files</string>
+    <string name="cdj_add_folder">Add folder</string>
+    <string name="cdj_clear">Clear</string>
+    <plurals name="cdj_rejected_title">
+        <item quantity="one">%d file can\'t be exported</item>
+        <item quantity="other">%d files can\'t be exported</item>
+    </plurals>
+    <!-- %2$s is what the player takes: "AIFF 16-bit up to 48 kHz". -->
+    <plurals name="cdj_will_convert">
+        <item quantity="one">%1$d file will be converted to %2$s on export.</item>
+        <item quantity="other">%1$d files will be converted to %2$s on export.</item>
+    </plurals>
+    <string name="cdj_stick_title">USB stick</string>
+    <string name="cdj_opening_stick">Opening the stick…</string>
+    <string name="cdj_pick_stick_hint">Pick the USB stick itself (prepare it above first). Android asks once for access to it.</string>
+    <string name="cdj_detail_name">Name</string>
+    <string name="cdj_detail_free_space">Free space</string>
+    <string name="cdj_detail_export_needs">Export needs</string>
+    <string name="cdj_about_size">about %1$s</string>
+    <string name="cdj_choose_stick">Choose stick</string>
+    <string name="cdj_choose_another_stick">Choose another stick</string>
+    <!-- %1$s is the connected stick's name and size ("SONORA, 115.0 GB"). -->
+    <string name="cdj_stick_connected">Connected stick: %1$s. Choose it once to give Sonora access; after that it opens by itself.</string>
+    <string name="cdj_sticks_connected">Several storage devices are connected. Choose the USB stick:</string>
+    <!-- Eject: apps cannot unmount a stick, so the user ejects it in Android's settings. %1$s is the stick's name. -->
+    <string name="cdj_eject">Eject stick</string>
+    <string name="cdj_eject_opening">Opening Android\'s storage settings…</string>
+    <string name="cdj_eject_waiting">Eject %1$s in Android\'s settings (Eject or Unmount), then come back. Sonora shows here when it can be unplugged.</string>
+    <string name="cdj_eject_waiting_unnamed">Eject the stick in Android\'s settings (Eject or Unmount), then come back. Sonora shows here when it can be unplugged.</string>
+    <string name="cdj_eject_no_screen">Android\'s storage settings couldn\'t be opened. Eject the stick from its notification or in Settings &gt; Storage; Sonora shows here when it can be unplugged.</string>
+    <string name="cdj_eject_safe_title">Safe to remove</string>
+    <string name="cdj_eject_safe">%1$s can be unplugged now.</string>
+    <string name="cdj_eject_safe_unnamed">The stick can be unplugged now.</string>
+    <string name="cdj_eject_again">Open settings again</string>
+    <string name="cdj_playlist_field">Playlist</string>
+    <string name="cdj_playlist_hint">The exported tracks also go into this playlist; an existing one gets them added. Leave it empty for none.</string>
+    <string name="cdj_space_problem">Not enough space: the export needs about %1$s and the stick has %2$s free.</string>
+    <plurals name="cdj_export_button">
+        <item quantity="one">Export %d track</item>
+        <item quantity="other">Export %d tracks</item>
+    </plurals>
+    <string name="cdj_replace_title">Replace the library on this stick?</string>
+    <string name="cdj_replace_confirm">Replace and export</string>
+    <string name="cdj_exporting_to">Exporting to %1$s…</string>
+    <string name="cdj_export_keep">Keep the stick connected. You can leave Sonora meanwhile; the export goes on.</string>
+    <string name="cdj_skipped">Skipped</string>
+    <string name="cdj_not_exported">Not exported</string>
+
+    <!-- Why a picked file, folder or stick cannot be used, or why Export did nothing. -->
+    <string name="cdj_unreadable_file">Sonora can\'t read this file. It may have been moved or deleted.</string>
+    <string name="cdj_unreadable_folder">Sonora can\'t read this folder. It may have been moved or deleted.</string>
+    <!-- %1$s is the file format, %2$s the player. -->
+    <string name="cdj_undecodable">Sonora can\'t decode this audio (%1$s), so it can\'t convert it for the %2$s.</string>
+    <string name="cdj_stick_no_access">Android didn\'t let Sonora keep access to this storage. Pick the stick again and allow access.</string>
+    <string name="cdj_stick_unusable">This storage can\'t be used. Unplug the stick, plug it in again and pick it once more.</string>
+    <string name="cdj_not_a_stick">Pick the top level of the USB stick (its name, not a folder on it): the player only looks there.</string>
+    <string name="cdj_another_export_running">Another export is still running. Wait for it to finish, then export again.</string>
+
+    <!-- What the stick holds. -->
+    <string name="cdj_library_empty">No rekordbox library yet: the export creates one.</string>
+    <plurals name="cdj_library_sonora">
+        <item quantity="one">Sonora library with %d track: new tracks are added to it.</item>
+        <item quantity="other">Sonora library with %d tracks: new tracks are added to it.</item>
+    </plurals>
+    <string name="cdj_library_foreign">A rekordbox library made by another app. Exporting replaces it.</string>
+    <string name="cdj_library_newer">A library from a newer version of Sonora. Update Sonora, or exporting replaces it.</string>
+    <string name="cdj_library_damaged">Sonora\'s library record on this stick is damaged. Exporting replaces the library.</string>
+    <string name="cdj_replace_warning_foreign">This stick has a rekordbox library that Sonora didn\'t make. Exporting replaces it with a new library holding only the tracks you export now. The other music files stay on the stick, but the player won\'t list them, nor their playlists, cues or analysis.</string>
+    <string name="cdj_replace_warning_unreadable">The library on this stick can\'t be read. Exporting replaces it with a new library holding only the tracks you export now. The other music files stay on the stick, but the player won\'t list them, nor their playlists, cues or analysis.</string>
+
+    <!-- Export progress: %1$d of %2$d, then the file name. -->
+    <string name="cdj_progress_converting">Converting %1$d of %2$d: %3$s</string>
+    <string name="cdj_progress_preparing">Preparing %1$d of %2$d: %3$s</string>
+    <string name="cdj_progress_analysing">Analysing %1$d of %2$d: %3$s</string>
+    <string name="cdj_progress_copying">Copying %1$d of %2$d: %3$s</string>
+    <string name="cdj_progress_writing_library">Writing the rekordbox library…</string>
+
+    <!-- Export notification. -->
+    <string name="cdj_notification_channel">Export to rekordbox</string>
+    <string name="cdj_notification_title">Exporting to %1$s</string>
+    <string name="cdj_notification_title_default">Exporting to rekordbox</string>
+    <string name="cdj_notification_track">Track %1$d of %2$d: %3$s</string>
+    <string name="cdj_notification_writing_library">writing the library</string>
+    <string name="cdj_finishing">Finishing…</string>
+
+    <!-- Why one track was left out of an export. -->
+    <string name="cdj_failure_unreadable">the file could not be read</string>
+    <string name="cdj_failure_not_analysable">no tempo or beat grid was found</string>
+    <string name="cdj_failure_not_convertible">the audio could not be decoded to convert it</string>
+    <string name="cdj_failure_changed">the file changed while it was being exported</string>
+    <string name="cdj_failure_unexpected">something went wrong preparing it</string>
+
+    <!-- Export result. -->
+    <string name="cdj_summary_finished">Export finished</string>
+    <string name="cdj_summary_finished_problems">Export finished with problems</string>
+    <string name="cdj_summary_playlist_added">Playlist added</string>
+    <string name="cdj_summary_playlist_updated">Playlist updated</string>
+    <string name="cdj_summary_library_completed">Library completed</string>
+    <string name="cdj_summary_nothing">Nothing exported</string>
+    <plurals name="cdj_summary_completed_library">
+        <item quantity="one">The stick\'s library was completed. It holds %d track.</item>
+        <item quantity="other">The stick\'s library was completed. It holds %d tracks.</item>
+    </plurals>
+    <!-- %2$s is the playlist name. -->
+    <plurals name="cdj_summary_joined">
+        <item quantity="one">Added %1$d track already on the stick to the playlist \"%2$s\".</item>
+        <item quantity="other">Added %1$d tracks already on the stick to the playlist \"%2$s\".</item>
+    </plurals>
+    <plurals name="cdj_summary_holds">
+        <item quantity="one">The stick\'s library holds %d track.</item>
+        <item quantity="other">The stick\'s library holds %d tracks.</item>
+    </plurals>
+    <plurals name="cdj_summary_added_to_playlist">
+        <item quantity="one">Added %1$d track to the playlist \"%2$s\".</item>
+        <item quantity="other">Added %1$d tracks to the playlist \"%2$s\".</item>
+    </plurals>
+    <plurals name="cdj_summary_added">
+        <item quantity="one">Added %d track.</item>
+        <item quantity="other">Added %d tracks.</item>
+    </plurals>
+    <plurals name="cdj_summary_now_holds">
+        <item quantity="one">The stick\'s library now holds %d track.</item>
+        <item quantity="other">The stick\'s library now holds %d tracks.</item>
+    </plurals>
+    <string name="cdj_summary_eject">Eject the stick in Android before unplugging it.</string>
+    <string name="cdj_summary_nothing_added">No track could be added; the stick was not changed.</string>
+    <string name="cdj_summary_duplicate">%1$s: already on the stick</string>
+    <string name="cdj_summary_no_space_title">Not enough space</string>
+    <string name="cdj_summary_no_space_message">The export needs about %1$s; the stick has %2$s free. Nothing was written.</string>
+    <string name="cdj_summary_needs_confirmation">The library on this stick would be replaced. Start the export again and confirm.</string>
+    <string name="cdj_summary_failed">Export failed</string>
+    <string name="cdj_summary_failed_library_changed">The export stopped while the stick\'s library was being written, so the player may not list everything. Plug the stick in again and export again: that completes the library.</string>
+    <string name="cdj_summary_failed_stick">The stick failed (it may have been unplugged or be full). Its library is as it was before this export.</string>
+    <string name="cdj_summary_failed_unexpected">The export stopped on an unexpected problem (Copy technical details shows it). The stick\'s library is as it was before this export.</string>
+    <string name="cdj_summary_cancelled">Export cancelled</string>
+    <string name="cdj_summary_cancelled_message">The stick\'s library is as it was before; the files this export had copied were removed.</string>
+</resources>

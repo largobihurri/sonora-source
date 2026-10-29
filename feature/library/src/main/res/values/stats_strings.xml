@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Library > Statistics: listening time, plays and the most played artists, albums and songs. -->
+    <string name="stats_title">Statistics</string>
+    <!-- Time range segments: the last 7, 30 and 365 days, and everything recorded. -->
+    <string name="stats_range_week">Week</string>
+    <string name="stats_range_month">Month</string>
+    <string name="stats_range_year">Year</string>
+    <string name="stats_range_all_time">All Time</string>
+    <string name="stats_listening_time">Listening Time</string>
+    <string name="stats_plays">Plays</string>
+    <!-- %1$s is the date listening times started being recorded, such as "4 Oct 2026". -->
+    <string name="stats_since">Since %1$s</string>
+    <string name="stats_all_time_footer">All Time also counts the plays from before then.</string>
+    <string name="stats_nothing_yet">Nothing recorded yet. Statistics start with the next song you play.</string>
+    <string name="stats_nothing_in_range">Nothing played in this period.</string>
+    <string name="stats_top_artists">Top Artists</string>
+    <string name="stats_top_albums">Top Albums</string>
+    <string name="stats_top_songs">Top Songs</string>
+    <!-- A listening time under an hour: %1$s is the minutes. -->
+    <string name="stats_time_minutes">%1$s min</string>
+    <!-- A listening time of an hour or more: %1$s hours and %2$s minutes. -->
+    <string name="stats_time_hours_minutes">%1$s h %2$s min</string>
+    <plurals name="stats_play_count">
+        <item quantity="one">%1$s play</item>
+        <item quantity="other">%1$s plays</item>
+    </plurals>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sonora_accent">#FFFA2D48</color>
+    <color name="sonora_accent_dark">#FFC4122F</color>
+    <color name="sonora_accent_light">#FFFF5E6E</color>
+</resources>

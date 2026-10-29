@@ -1,0 +1,31 @@
+{
+ "schema": "sonora.beatthis.goldens.chunking/1",
+ "model": {
+  "manifest": "../../model.json",
+  "file": "small0.onnx",
+  "sha256": "c462b064a4033050ca6a5354bf866ff4610ab1fd8f1dec1e494b20b22d870aea"
+ },
+ "frontend": "../manifest.json (the mel slices and the filterbank are in the parent directory)",
+ "inference": {
+  "chunkSize": 300,
+  "borderSize": 24,
+  "overlapMode": "keep_first",
+  "avoidShortEnd": true,
+  "fps": 50
+ },
+ "cases": [
+  "click_090",
+  "click_128",
+  "click_174",
+  "ramp_120_124",
+  "click_128_short",
+  "silence"
+ ],
+ "recommendedTolerances": {
+  "logitAbsolute": 0.005
+ },
+ "tools": {
+  "onnxruntime": "1.30.0",
+  "numpy": "2.5.3"
+ }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Smart playlists in Library > Playlists, after Favourites. -->
+    <string name="smart_recently_added_title">Recently Added</string>
+    <string name="smart_most_played_title">Most Played</string>
+    <string name="smart_never_played_title">Never Played</string>
+    <plurals name="smart_recently_added_empty">
+        <item quantity="one">Songs added in the last %1$d day appear here.</item>
+        <item quantity="other">Songs added in the last %1$d days appear here.</item>
+    </plurals>
+    <string name="smart_most_played_empty">The songs you play most appear here.</string>
+    <string name="smart_never_played_empty">Every song has been played.</string>
+</resources>

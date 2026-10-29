@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sidebar_title">Alboko barra</string>
+    <string name="sidebar_show">Erakutsi alboko barra</string>
+    <string name="sidebar_hide">Ezkutatu alboko barra</string>
+    <string name="sidebar_playlists">Zerrendak</string>
+    <string name="sidebar_songs">Abestiak</string>
+    <string name="sidebar_albums">Albumak</string>
+    <string name="sidebar_artists">Artistak</string>
+    <string name="sidebar_folders">Karpetak</string>
+    <string name="sidebar_converted">Bihurtutakoak</string>
+    <string name="sidebar_statistics">Estatistikak</string>
+    <string name="sidebar_settings">Ezarpenak</string>
+</resources>

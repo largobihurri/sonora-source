@@ -1,0 +1,327 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "904d00666fe9e59c063655a0e30560c1",
+    "entities": [
+      {
+        "tableName": "tracks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `document_uri` TEXT NOT NULL, `folder_tree_uri` TEXT NOT NULL, `folder_path` TEXT NOT NULL, `file_name` TEXT NOT NULL, `mime_type` TEXT NOT NULL, `size_bytes` INTEGER NOT NULL, `last_modified_ms` INTEGER NOT NULL, `date_added_sec` INTEGER NOT NULL, `tag_title` TEXT, `tag_artist` TEXT, `tag_album` TEXT, `tag_album_artist` TEXT, `tag_compilation` INTEGER NOT NULL, `genre` TEXT, `year` INTEGER, `track_number` INTEGER, `disc_number` INTEGER, `duration_ms` INTEGER NOT NULL, `sample_rate_hz` INTEGER, `bits_per_sample` INTEGER, `channel_count` INTEGER, `embedded_artwork_uri` TEXT, `folder_image_uri` TEXT, `title` TEXT NOT NULL, `artist` TEXT NOT NULL, `artist_id` INTEGER NOT NULL, `album` TEXT NOT NULL, `album_id` INTEGER NOT NULL, `album_artist` TEXT NOT NULL, `album_artist_id` INTEGER NOT NULL, `is_compilation` INTEGER NOT NULL, `artwork_uri` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documentUri",
+            "columnName": "document_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "folderTreeUri",
+            "columnName": "folder_tree_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "folderPath",
+            "columnName": "folder_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileName",
+            "columnName": "file_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mimeType",
+            "columnName": "mime_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sizeBytes",
+            "columnName": "size_bytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastModifiedMs",
+            "columnName": "last_modified_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateAddedSec",
+            "columnName": "date_added_sec",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tagTitle",
+            "columnName": "tag_title",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "tagArtist",
+            "columnName": "tag_artist",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "tagAlbum",
+            "columnName": "tag_album",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "tagAlbumArtist",
+            "columnName": "tag_album_artist",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "tagCompilation",
+            "columnName": "tag_compilation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "genre",
+            "columnName": "genre",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "year",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "trackNumber",
+            "columnName": "track_number",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "discNumber",
+            "columnName": "disc_number",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "duration_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sampleRateHz",
+            "columnName": "sample_rate_hz",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bitsPerSample",
+            "columnName": "bits_per_sample",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "channelCount",
+            "columnName": "channel_count",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "embeddedArtworkUri",
+            "columnName": "embedded_artwork_uri",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "folderImageUri",
+            "columnName": "folder_image_uri",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artist",
+            "columnName": "artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artistId",
+            "columnName": "artist_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "album",
+            "columnName": "album",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumId",
+            "columnName": "album_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumArtist",
+            "columnName": "album_artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "albumArtistId",
+            "columnName": "album_artist_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isCompilation",
+            "columnName": "is_compilation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artworkUri",
+            "columnName": "artwork_uri",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_tracks_document_uri",
+            "unique": true,
+            "columnNames": [
+              "document_uri"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_tracks_document_uri` ON `${TABLE_NAME}` (`document_uri`)"
+          },
+          {
+            "name": "index_tracks_folder_tree_uri",
+            "unique": false,
+            "columnNames": [
+              "folder_tree_uri"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tracks_folder_tree_uri` ON `${TABLE_NAME}` (`folder_tree_uri`)"
+          },
+          {
+            "name": "index_tracks_album_id",
+            "unique": false,
+            "columnNames": [
+              "album_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tracks_album_id` ON `${TABLE_NAME}` (`album_id`)"
+          },
+          {
+            "name": "index_tracks_artist_id",
+            "unique": false,
+            "columnNames": [
+              "artist_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tracks_artist_id` ON `${TABLE_NAME}` (`artist_id`)"
+          },
+          {
+            "name": "index_tracks_album_artist_id",
+            "unique": false,
+            "columnNames": [
+              "album_artist_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tracks_album_artist_id` ON `${TABLE_NAME}` (`album_artist_id`)"
+          }
+        ]
+      },
+      {
+        "tableName": "library_folders",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`tree_uri` TEXT NOT NULL, `display_name` TEXT NOT NULL, `added_at_ms` INTEGER NOT NULL, PRIMARY KEY(`tree_uri`))",
+        "fields": [
+          {
+            "fieldPath": "treeUri",
+            "columnName": "tree_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "display_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "addedAtMs",
+            "columnName": "added_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "tree_uri"
+          ]
+        }
+      },
+      {
+        "tableName": "tag_read_failures",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`document_uri` TEXT NOT NULL, `folder_tree_uri` TEXT NOT NULL, `failures` INTEGER NOT NULL, PRIMARY KEY(`document_uri`))",
+        "fields": [
+          {
+            "fieldPath": "documentUri",
+            "columnName": "document_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "folderTreeUri",
+            "columnName": "folder_tree_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "failures",
+            "columnName": "failures",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "document_uri"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_tag_read_failures_folder_tree_uri",
+            "unique": false,
+            "columnNames": [
+              "folder_tree_uri"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tag_read_failures_folder_tree_uri` ON `${TABLE_NAME}` (`folder_tree_uri`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '904d00666fe9e59c063655a0e30560c1')"
+    ]
+  }
+}

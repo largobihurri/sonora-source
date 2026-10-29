@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+        What this watch app advertises to the paired phone; Play services read the list.
+        - sonora_watch: the phone app finds this watch through it (see WatchSyncPaths.WATCH_CAPABILITY).
+        - kora_node: this app runs a Kora node. An app with its own list must name it (kora-wear's README); the phone-watch
+          relay itself (the `kora-wear` library) is not part of this app yet.
+    -->
+    <string-array name="android_wear_capabilities" tools:ignore="UnusedResources">
+        <item>sonora_watch</item>
+        <item>kora_node</item>
+    </string-array>
+</resources>

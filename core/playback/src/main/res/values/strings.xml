@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_channel_name">Playback</string>
+    <string name="playback_channel_description">Controls for the music that is playing</string>
+    <string name="playback_shuffle_on">Shuffle on</string>
+    <string name="playback_shuffle_off">Shuffle off</string>
+    <string name="playback_repeat_off">Repeat off</string>
+    <string name="playback_repeat_all">Repeat all</string>
+    <string name="playback_repeat_one">Repeat one</string>
+    <string name="external_control_permission_label">Control Sonora</string>
+    <string name="external_control_permission_description">Lets this app play music, change the queue and read the library through Sonora\'s external control. It only works while External control is turned on in Sonora\'s settings.</string>
+</resources>

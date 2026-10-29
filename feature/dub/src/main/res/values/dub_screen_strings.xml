@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dub_title" translatable="false">DUB</string>
+    <string name="dub_page_effects">Effects</string>
+    <string name="dub_page_preamp">Preamp</string>
+    <string name="dub_feedback">Feedback</string>
+    <string name="dub_return">Return</string>
+    <string name="dub_echo_time">Echo time</string>
+    <string name="dub_pad_throw" translatable="false">THROW</string>
+    <string name="dub_pad_drop" translatable="false">DROP</string>
+    <string name="dub_pad_cut" translatable="false">CUT</string>
+    <string name="dub_pad_freeze" translatable="false">FREEZE</string>
+    <string name="dub_pad_runaway" translatable="false">RUNAWAY</string>
+    <string name="dub_pad_tap" translatable="false">TAP</string>
+    <string name="dub_tap_description">Tap tempo; touch and hold to follow the beat grid again</string>
+    <string name="dub_clock_grid" translatable="false">GRID %1$s</string>
+    <string name="dub_clock_tap" translatable="false">TAP %1$s</string>
+    <string name="dub_clock_none">No grid · %1$s</string>
+    <string name="dub_stop">Stop</string>
+    <string name="dub_stopping">Ringing out</string>
+    <string name="dub_play">Play</string>
+    <string name="dub_bypass_format">DUB works on uncompressed audio only</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Playback: volume normalisation (ReplayGain) -->
+    <string name="playback_header">Erreprodukzioa</string>
+    <string name="playback_normalisation_off">Desaktibatuta</string>
+    <string name="playback_normalisation_off_subtitle">Abesti bakoitza bere bolumenean</string>
+    <string name="playback_normalisation_track">Abestika</string>
+    <string name="playback_normalisation_track_subtitle">Abesti guztiak ozentasun berean</string>
+    <string name="playback_normalisation_album">Albumka</string>
+    <string name="playback_normalisation_album_subtitle">Albumek abesti leun eta ozenak gordetzen dituzte</string>
+    <string name="playback_normalisation_auto">Automatikoa</string>
+    <string name="playback_normalisation_auto_subtitle">Albumaren irabazia albuma ordenan entzuten denean; bestela, abestiarena</string>
+    <string name="playback_normalisation_footer">Bolumenaren normalizazioak (ReplayGain) fitxategien etiketetan gordetako irabazia erabiltzen du. Etiketarik gabeko fitxategiak aldaketarik gabe entzuten dira.</string>
+    <string name="playback_preamp">Aurreanplifikazioa</string>
+    <!-- A pre-amp value: the signed number of decibels, e.g. "+1,5 dB" -->
+    <string name="playback_preamp_value">%1$s dB</string>
+    <string name="playback_preamp_footer">Etiketatutako irabazi bakoitzari gehitzen zaio. Gailurrek ez dute inoiz gehienekoa gainditzen.</string>
+</resources>

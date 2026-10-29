@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="conversion_channel_name">Conversion</string>
+    <string name="conversion_channel_description">Progress and results of audio conversions</string>
+    <string name="conversion_progress_title">Converting audio</string>
+    <string name="conversion_replace_title">Replacing originals</string>
+    <string name="conversion_progress_preparing">Preparing…</string>
+    <!-- %1$d files finished, %2$d files in the batch, %3$s the current file's name. -->
+    <string name="conversion_progress_text">%1$d of %2$d · %3$s</string>
+    <!-- %1$d files finished, %2$d files in the batch. -->
+    <string name="conversion_progress_count">%1$d of %2$d</string>
+    <!-- Short text of the Live Update status chip, e.g. "3/12". -->
+    <string name="conversion_progress_chip">%1$d/%2$d</string>
+    <string name="conversion_action_cancel">Cancel</string>
+    <string name="conversion_finished_title">Conversion finished</string>
+    <string name="conversion_cancelled_title">Conversion cancelled</string>
+    <string name="conversion_timed_out_title">Conversion stopped: time limit reached</string>
+    <string name="conversion_failed_title">Conversion could not run</string>
+    <string name="conversion_replaced_title">Originals replaced</string>
+    <!-- %1$d files converted, %2$d files failed. The participles read the same for one and many. -->
+    <string name="conversion_summary_text" tools:ignore="PluralsCandidate">%1$d converted, %2$d failed</string>
+    <!-- %1$d originals replaced, %2$d files failed. -->
+    <string name="conversion_replaced_text" tools:ignore="PluralsCandidate">%1$d replaced, %2$d failed</string>
+</resources>

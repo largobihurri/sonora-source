@@ -1,0 +1,81 @@
+{
+ "schema": "sonora.beatthis.golden/1",
+ "case": "silence",
+ "generator": {
+  "name": "silence/1",
+  "spec": {
+   "kind": "silence",
+   "duration": 6.0
+  },
+  "sampleRate": 22050,
+  "numSamples": 132300,
+  "clickSampleIndices": [],
+  "clickIsDownbeat": [],
+  "beatTimes": [],
+  "formulaDoc": "synth.py module docstring"
+ },
+ "audio": {
+  "peak": 0.0,
+  "rms": 0.0,
+  "probe": {
+   "start": 0,
+   "values": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "frames": 301,
+ "mel": {
+  "file": "silence.mel.f32",
+  "width": 128,
+  "slices": [
+   {
+    "name": "head",
+    "start": 0,
+    "count": 200
+   },
+   {
+    "name": "tail",
+    "start": 251,
+    "count": 50
+   }
+  ]
+ },
+ "logits": {
+  "file": "silence.logits.f32",
+  "layout": "beat[frames] then downbeat[frames]",
+  "frames": 301
+ },
+ "chunks": {
+  "file": "silence.chunks.f32",
+  "chunkSize": 1500,
+  "border": 6,
+  "starts": [
+   -6
+  ],
+  "lengths": [
+   313
+  ],
+  "layout": "per chunk: beat[length] then downbeat[length], before the border cut"
+ },
+ "postprocess": {
+  "type": "minimal",
+  "beatTimes": [],
+  "downbeatTimes": []
+ }
+}

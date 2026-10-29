@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="compress_action">Konprimitu…</string>
+    <string name="compress_title">Konprimitu</string>
+    <string name="compress_cancel">Utzi</string>
+    <string name="compress_confirm">Konprimitu</string>
+    <string name="compress_nothing">Ez dago konprimitzeko abestirik</string>
+    <string name="compress_read_failed">Ezin izan dira abestiak irakurri</string>
+
+    <string name="compress_password_header">Pasahitza</string>
+    <string name="compress_password_placeholder">Aukerakoa</string>
+    <string name="compress_password_show">Erakutsi pasahitza</string>
+    <string name="compress_password_hide">Ezkutatu pasahitza</string>
+    <string name="compress_generate">Sortu pasahitz sendoa</string>
+    <string name="compress_copy">Kopiatu pasahitza</string>
+    <string name="compress_copied">Pasahitza kopiatuta</string>
+    <string name="compress_hint_none">Pasahitzik gabe, fitxategia duen edonork ireki dezake. Pasahitzarekin, abestiak AES-256 bidez zifratzen dira: orduan ZIPa 7-Zip, Keka, WinRAR eta fitxategi-kudeatzaile gehienekin irekitzen da, baina ez Windowseko arakatzailearekin ez Mac-eko Archive Utility-rekin.</string>
+    <string name="compress_hint_strong">Pasahitz sendoa.</string>
+    <plurals name="compress_hint_short">
+        <item quantity="one">Pasahitz ahula: erabili gutxienez karaktere %1$d.</item>
+        <item quantity="other">Pasahitz ahula: erabili gutxienez %1$d karaktere.</item>
+    </plurals>
+    <string name="compress_hint_kinds">Pasahitz ahula: konbinatu gutxienez %1$d mota hauetatik: minuskulak, maiuskulak, zenbakiak eta ikurrak.</string>
+
+    <string name="compress_working_title">Konprimitzen</string>
+    <string name="compress_preparing">Prestatzen…</string>
+    <string name="compress_progress">%1$d / %2$d · %%%3$d</string>
+    <string name="compress_working_note">Orri hau itxi dezakezu: jakinarazpenak aurrerapena erakusten du, eta artxiboa hemen agertuko da prest dagoenean.</string>
+    <string name="compress_stop">Gelditu konpresioa</string>
+
+    <string name="compress_ready_title">Artxiboa prest</string>
+    <string name="compress_name">Izena</string>
+    <string name="compress_size">Tamaina</string>
+    <string name="compress_songs">Abestiak</string>
+    <string name="compress_protection">Pasahitza</string>
+    <string name="compress_protection_aes">AES-256</string>
+    <string name="compress_protection_none">Bat ere ez</string>
+    <string name="compress_share">Partekatu…</string>
+    <string name="compress_save">Gorde hemen…</string>
+    <string name="compress_password_note">Bidali pasahitza beste bide batetik, mezu edo dei batez adibidez, inoiz ez artxiboarekin batera.</string>
+    <string name="compress_plain_note">Pasahitzik gabe, fitxategia duen edonork ireki dezake.</string>
+    <string name="compress_saved">Artxiboa gordeta</string>
+    <string name="compress_save_failed">Ezin izan da artxiboa gorde</string>
+
+    <string name="compress_failed_title">Ezin izan da artxiboa sortu</string>
+    <string name="compress_ok">Ados</string>
+    <string name="compress_error_unreadable">Ezin izan da «%1$s» irakurri. Baliteke lekuz aldatu edo ezabatu izana.</string>
+    <string name="compress_error_no_space">Ez dago leku nahikorik: %1$s behar dira eta %2$s daude libre.</string>
+    <string name="compress_error_password_again">Sonora itxi egin da artxiboa amaitu aurretik. Konprimitu berriro.</string>
+    <string name="compress_error_unwritable">Ezin izan da artxiboa idatzi.</string>
+    <string name="compress_error_unexpected">Zerbait gaizki atera da. Saiatu berriro.</string>
+</resources>

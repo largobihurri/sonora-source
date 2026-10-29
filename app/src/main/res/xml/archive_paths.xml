@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Only the archives Sonora compresses (cache/archives/<job>/<name>.zip) can be shared, nothing else in the cache. -->
+<paths>
+    <cache-path name="archives" path="archives/" />
+</paths>

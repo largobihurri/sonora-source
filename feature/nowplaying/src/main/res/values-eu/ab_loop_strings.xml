@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="now_playing_ab_loop">A-B begizta</string>
+    <string name="now_playing_ab_loop_set_a">Ezarri begiztaren hasiera (A)</string>
+    <string name="now_playing_ab_loop_set_b">Ezarri begiztaren amaiera (B)</string>
+    <string name="now_playing_ab_loop_clear">Kendu A-B begizta</string>
+</resources>

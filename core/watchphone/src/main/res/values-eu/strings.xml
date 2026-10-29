@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Erlojura bidalketaren jakinarazpena -->
+    <string name="watch_sync_channel">Erlojurako transferentzia</string>
+    <string name="watch_sync_title">Musika zure erlojura bidaltzen</string>
+    <string name="watch_sync_connecting">Erlojuarekin konektatzen…</string>
+    <string name="watch_sync_encoding">%1$d / %2$d prestatzen: %3$s</string>
+    <string name="watch_sync_sending">%1$d / %2$d bidaltzen: %3$s</string>
+</resources>

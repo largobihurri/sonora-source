@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_cue_panel_description">Cues</string>
+    <string name="dj_cue_pad_empty">Hot cue %1$s, vacío</string>
+    <string name="dj_cue_pad_set">Hot cue %1$s en %2$s</string>
+    <string name="dj_cue_pad_set_named">Hot cue %1$s, %2$s, en %3$s</string>
+    <string name="dj_cue_pad_set_action">Fijar el hot cue %1$s en la posición actual</string>
+    <string name="dj_cue_pad_jump_action">Saltar al hot cue %1$s</string>
+    <string name="dj_cue_pad_edit_action">Editar el hot cue %1$s</string>
+    <string name="dj_cue_quantize_description">Quantize: colocar los cues en el pulso más cercano</string>
+    <string name="dj_cue_quantize_on">Activado</string>
+    <string name="dj_cue_quantize_off">Desactivado</string>
+    <string name="dj_cue_memory_add">+ Memoria</string>
+    <string name="dj_cue_memory_add_description">Añadir un cue de memoria en la posición actual</string>
+    <string name="dj_cue_memory_edit_action">Editar el cue de memoria de la posición actual</string>
+    <string name="dj_cue_memory_previous">Saltar al cue de memoria anterior</string>
+    <string name="dj_cue_memory_next">Saltar al cue de memoria siguiente</string>
+    <string name="dj_cue_edit_title_hot">Hot cue %1$s</string>
+    <string name="dj_cue_edit_title_memory">Cue de memoria</string>
+    <string name="dj_cue_name_label">Nombre</string>
+    <string name="dj_cue_colour_label">Color</string>
+    <string name="dj_cue_edit_save">Guardar</string>
+    <string name="dj_cue_edit_cancel">Cancelar</string>
+    <string name="dj_cue_edit_delete">Eliminar cue</string>
+    <string name="dj_cue_colour_selected">seleccionado</string>
+    <string name="dj_cue_color_1">Rosa</string>
+    <string name="dj_cue_color_2">Rojo</string>
+    <string name="dj_cue_color_3">Naranja</string>
+    <string name="dj_cue_color_4">Amarillo</string>
+    <string name="dj_cue_color_5">Lima</string>
+    <string name="dj_cue_color_6">Verde</string>
+    <string name="dj_cue_color_7">Menta</string>
+    <string name="dj_cue_color_8">Turquesa</string>
+    <string name="dj_cue_color_9">Celeste</string>
+    <string name="dj_cue_color_10">Azul</string>
+    <string name="dj_cue_color_11">Índigo</string>
+    <string name="dj_cue_color_12">Morado</string>
+    <string name="dj_cue_color_13">Magenta</string>
+    <string name="dj_cue_color_14">Coral</string>
+    <string name="dj_cue_color_15">Beige</string>
+    <string name="dj_cue_color_16">Blanco</string>
+    <string name="dj_cue_color_custom">Color personalizado</string>
+</resources>

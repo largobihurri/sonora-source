@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Song list -->
+    <string name="wear_tracks_title">Musika</string>
+    <string name="wear_now_playing_entry">Orain entzuten</string>
+    <string name="wear_empty_title">Oraindik ez dago musikarik</string>
+    <string name="wear_empty_body">Bidali musika zure telefonotik Sonora aplikazioarekin.</string>
+
+    <!-- Now playing -->
+    <string name="wear_play">Erreproduzitu</string>
+    <string name="wear_pause">Pausatu</string>
+    <string name="wear_previous">Aurrekoa</string>
+    <string name="wear_next">Hurrengoa</string>
+    <string name="wear_volume_percent">Bolumena %1$d%%</string>
+
+    <!-- Queue -->
+    <string name="wear_queue_title">Ilara</string>
+    <string name="wear_queue_empty">Ilara hutsik dago</string>
+    <string name="wear_queue_play_here">Erreproduzitu abesti hau</string>
+    <string name="wear_queue_move_up">Igo</string>
+    <string name="wear_queue_move_down">Jaitsi</string>
+    <string name="wear_queue_remove">Kendu ilaratik</string>
+
+    <!-- Headphones prompt -->
+    <string name="wear_headphones_title">Konektatu entzungailuak</string>
+    <string name="wear_headphones_body">Sonorak Bluetooth entzungailuekin jotzen du. Konektatu itzazu entzuteko.</string>
+    <string name="wear_headphones_action">Bluetooth ezarpenak</string>
+
+    <!-- Notification channel of the playback service -->
+    <string name="wear_playback_channel_name">Erreprodukzioa</string>
+
+    <!-- Telefonotik musika jasotzearen jakinarazpena -->
+    <string name="wear_sync_channel_name">Musika transferentzia</string>
+    <string name="wear_sync_notification_title">Musika jasotzen</string>
+
+    <!-- Phone remote -->
+    <string name="wear_phone_entry">Telefonoa</string>
+    <string name="wear_remote_connecting">Telefonora konektatzen…</string>
+    <string name="wear_remote_no_phone_title">Telefonoa ez dago eskuragarri</string>
+    <string name="wear_remote_no_phone_body">Ekar ezazu hurbil, Bluetootha aktibatuta eta Sonora instalatuta.</string>
+    <string name="wear_remote_idle_title">Ez da ezer entzuten</string>
+    <string name="wear_remote_idle_body">Hasi musika erreproduzitzen telefonoan.</string>
+    <string name="wear_remote_volume_percent">Telefonoaren bolumena %1$d%%</string>
+    <!-- The name Kora peers see for the watch's only playlist: every song on it. -->
+    <string name="wear_kora_all_songs">Erlojuko musika</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings › Library Folders: opening a ZIP archive (also "Open with Sonora" from other apps) -->
+    <string name="settings_import_archive">Import Archive…</string>
+    <string name="import_title">Import Archive</string>
+    <string name="import_cancel">Cancel</string>
+    <string name="import_confirm">Import</string>
+    <string name="import_opening">Opening the archive…</string>
+
+    <!-- What the archive holds -->
+    <string name="import_kind_song">Sonora song</string>
+    <string name="import_kind_album">Sonora album · %1$s</string>
+    <string name="import_kind_playlist">Sonora playlist · %1$s</string>
+    <string name="import_kind_selection">Songs picked in Sonora · %1$s</string>
+    <plurals name="import_song_count">
+        <item quantity="one">%1$d song</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+    <string name="import_zip_encrypted">Password-protected ZIP archive</string>
+    <string name="import_zip">ZIP archive</string>
+    <string name="import_playlist_note">The playlist “%1$s” will be recreated in the same order.</string>
+
+    <!-- Password -->
+    <string name="import_password_header">Password</string>
+    <string name="import_password_placeholder">Required</string>
+    <string name="import_password_show">Show password</string>
+    <string name="import_password_hide">Hide password</string>
+    <string name="import_password_hint">Ask whoever sent the archive for its password.</string>
+    <string name="import_password_wrong">The password is not correct. Try again.</string>
+    <string name="import_password_again">Sonora was closed before the import ended. Enter the password again.</string>
+
+    <!-- Destination -->
+    <string name="import_destination_header">Save To</string>
+    <string name="import_choose_folder">Choose a Folder…</string>
+    <string name="import_change">Change</string>
+    <string name="import_destination_none">Choose where the music goes. It also becomes the converter’s output folder.</string>
+    <string name="import_destination_in">The songs go into a new folder here and appear in your library.</string>
+    <string name="import_destination_joins">This folder isn’t in your library. After the import, allow its new folder so the songs appear in your library.</string>
+
+    <!-- Progress -->
+    <string name="import_working_title">Importing</string>
+    <string name="import_preparing">Preparing…</string>
+    <string name="import_progress">%1$d of %2$d · %3$d%%</string>
+    <string name="import_working_note">You can close this sheet: the notification shows the progress.</string>
+    <string name="import_stop">Stop Importing</string>
+    <string name="import_finishing">Adding the songs to your library…</string>
+
+    <!-- Result -->
+    <string name="import_done_title">Archive Imported</string>
+    <string name="import_done_songs">Songs Added</string>
+    <plurals name="import_done_playlist">
+        <item quantity="one">The playlist “%1$s” was recreated with %2$d song.</item>
+        <item quantity="other">The playlist “%1$s” was recreated with %2$d songs.</item>
+    </plurals>
+    <plurals name="import_done_missing">
+        <item quantity="one">%1$d song isn’t in your library yet; it may appear after the next scan.</item>
+        <item quantity="other">%1$d songs aren’t in your library yet; they may appear after the next scan.</item>
+    </plurals>
+    <plurals name="import_done_skipped">
+        <item quantity="one">%1$d file was left out: only music is extracted.</item>
+        <item quantity="other">%1$d files were left out: only music is extracted.</item>
+    </plurals>
+    <string name="import_done_folder_added">The folder was added to your library.</string>
+    <string name="import_done_outside">The songs are not in your library yet. Tap Add to Library and allow their folder.</string>
+    <string name="import_done_wrong_folder">That folder isn’t the one with the imported songs, so it wasn’t added.</string>
+    <string name="import_add_to_library">Add to Library</string>
+    <string name="import_done">Done</string>
+    <string name="import_songs_header">Songs</string>
+
+    <!-- Failures -->
+    <string name="import_failed_title">Couldn’t Import the Archive</string>
+    <string name="import_ok">OK</string>
+    <string name="import_error_damaged">The archive is damaged or is not a ZIP file.</string>
+    <string name="import_error_no_music">There is no music in the archive.</string>
+    <string name="import_error_no_space">Not enough space: %1$s needed, %2$s free.</string>
+    <string name="import_error_unreadable">Couldn’t read the archive. Open it again from the app that has it.</string>
+    <string name="import_error_unwritable">Couldn’t write to the chosen folder. Choose it again or pick another one.</string>
+    <string name="import_error_password">The password is not correct.</string>
+    <string name="import_error_unexpected">Something went wrong. Try again.</string>
+</resources>

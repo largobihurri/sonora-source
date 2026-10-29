@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="crossfade_title">Fundido entre canciones</string>
+    <string name="crossfade_off">Desactivado</string>
+    <string name="crossfade_seconds">%1$d s</string>
+    <string name="crossfade_footer">Cada canción se funde con la siguiente durante este tiempo. Las pistas de un álbum reproducido en orden siguen sin pausas, y al saltar el fundido es breve.</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="conversion_channel_name">Conversión</string>
+    <string name="conversion_channel_description">Progreso y resultados de las conversiones de audio</string>
+    <string name="conversion_progress_title">Convirtiendo audio</string>
+    <string name="conversion_replace_title">Sustituyendo originales</string>
+    <string name="conversion_progress_preparing">Preparando…</string>
+    <string name="conversion_progress_text">%1$d de %2$d · %3$s</string>
+    <string name="conversion_progress_count">%1$d de %2$d</string>
+    <string name="conversion_progress_chip">%1$d/%2$d</string>
+    <string name="conversion_action_cancel">Cancelar</string>
+    <string name="conversion_finished_title">Conversión terminada</string>
+    <string name="conversion_cancelled_title">Conversión cancelada</string>
+    <string name="conversion_timed_out_title">Conversión detenida: se ha agotado el tiempo</string>
+    <string name="conversion_failed_title">No se ha podido hacer la conversión</string>
+    <string name="conversion_replaced_title">Originales sustituidos</string>
+    <string name="conversion_summary_text" tools:ignore="PluralsCandidate">Convertidos: %1$d · Con errores: %2$d</string>
+    <string name="conversion_replaced_text" tools:ignore="PluralsCandidate">Sustituidos: %1$d · Con errores: %2$d</string>
+</resources>

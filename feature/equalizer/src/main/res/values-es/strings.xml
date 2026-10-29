@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="equalizer_title">Ecualizador</string>
+    <plurals name="equalizer_bands">
+        <item quantity="one">%d banda</item>
+        <item quantity="many">%d bandas</item>
+        <item quantity="other">%d bandas</item>
+    </plurals>
+    <string name="equalizer_sub_bass">Subgraves</string>
+    <string name="equalizer_bass">Graves</string>
+    <string name="equalizer_mids">Medios</string>
+    <string name="equalizer_treble">Agudos</string>
+    <string name="equalizer_band_hz">Banda de %1$s Hz</string>
+    <string name="equalizer_band_khz">Banda de %1$s kHz</string>
+    <string name="equalizer_gain_db">%1$s dB</string>
+    <string name="equalizer_preamp">Preamplificación: %1$s dB</string>
+    <string name="equalizer_limiter">Limitador activo</string>
+    <string name="equalizer_automatic_preamp">Preamplificación automática</string>
+    <string name="equalizer_reset">Restablecer</string>
+    <string name="equalizer_hint">Arrastra una banda hacia arriba o hacia abajo. Tócala dos veces para devolverla a 0\u00A0dB.</string>
+</resources>

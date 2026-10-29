@@ -1,0 +1,6 @@
+# Downloaded model and scratch output (see fetch_model.py)
+build/
+venv/
+.venv/
+__pycache__/
+*.pyc

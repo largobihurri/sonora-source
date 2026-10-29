@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="media_route_button_disconnected">Enviar a un dispositivo. Desconectado</string>
+    <string name="media_route_button_connecting">Enviar a un dispositivo. Conectando</string>
+    <string name="media_route_button_connected">Enviar a un dispositivo. Conectado</string>
+</resources>

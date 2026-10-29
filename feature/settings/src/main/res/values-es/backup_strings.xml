@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ajustes › Copia de seguridad -->
+    <string name="settings_backup">Copia de seguridad</string>
+    <string name="backup_footer">Una copia de seguridad guarda tus listas, favoritos, elementos fijados, elementos ocultos, reproducciones y ajustes en un solo archivo. No incluye tus archivos de música ni el acceso a las carpetas.</string>
+    <string name="backup_back_up">Hacer copia</string>
+    <string name="backup_restore">Restaurar</string>
+    <string name="backup_last">Última copia: %1$s</string>
+    <string name="backup_never">Aún no hay ninguna copia</string>
+    <string name="backup_working">Un momento…</string>
+
+    <string name="backup_saved">Copia guardada.</string>
+    <string name="backup_write_failed">No se ha podido guardar la copia. Prueba en otro sitio.</string>
+    <string name="backup_unreadable">No se ha podido leer ese archivo.</string>
+    <string name="backup_other_format">Ese archivo no es una copia de seguridad de Sonora.</string>
+    <string name="backup_newer_version">Esta copia se hizo con una versión más reciente de Sonora. Actualiza Sonora para restaurarla.</string>
+    <string name="backup_malformed">Esa copia está dañada y no se puede restaurar.</string>
+    <string name="backup_restore_failed">No se ha podido terminar la restauración. Lo restaurado hasta ahora se queda.</string>
+    <string name="backup_no_picker">Ninguna aplicación de este teléfono puede elegir un archivo.</string>
+    <string name="backup_ok">Aceptar</string>
+
+    <string name="backup_preview_title">¿Restaurar la copia?</string>
+    <string name="backup_preview_summary">%1$s · %2$s · %3$s</string>
+    <plurals name="backup_playlists">
+        <item quantity="one">%1$d lista</item>
+        <item quantity="many">%1$d listas</item>
+        <item quantity="other">%1$d listas</item>
+    </plurals>
+    <plurals name="backup_songs_found">
+        <item quantity="one">%1$d canción encontrada</item>
+        <item quantity="many">%1$d canciones encontradas</item>
+        <item quantity="other">%1$d canciones encontradas</item>
+    </plurals>
+    <plurals name="backup_songs_missing">
+        <item quantity="one">%1$d no encontrada</item>
+        <item quantity="many">%1$d no encontradas</item>
+        <item quantity="other">%1$d no encontradas</item>
+    </plurals>
+    <string name="backup_preview_message">No se borra nada de lo que tienes: las listas, favoritos, elementos fijados, ocultos y reproducciones se añaden a los tuyos, y los ajustes toman los valores de la copia. Una lista con un nombre que ya usas lleva un número.</string>
+    <string name="backup_restore_confirm">Restaurar</string>
+    <string name="backup_cancel">Cancelar</string>
+
+    <string name="backup_restored_title">Copia restaurada</string>
+    <plurals name="backup_playlists_added">
+        <item quantity="one">%1$d lista añadida.</item>
+        <item quantity="many">%1$d listas añadidas.</item>
+        <item quantity="other">%1$d listas añadidas.</item>
+    </plurals>
+    <plurals name="backup_unmatched_header">
+        <item quantity="one">%1$d canción no está en tu biblioteca:</item>
+        <item quantity="many">%1$d canciones no están en tu biblioteca:</item>
+        <item quantity="other">%1$d canciones no están en tu biblioteca:</item>
+    </plurals>
+    <string name="backup_song_line">%1$s — %2$s</string>
+    <string name="backup_unknown_song">Canción desconocida</string>
+</resources>

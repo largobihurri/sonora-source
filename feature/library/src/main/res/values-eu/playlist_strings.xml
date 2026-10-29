@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playlists_title">Zerrendak</string>
+    <string name="playlists_back_library">Liburutegia</string>
+    <string name="playlist_new_row">Zerrenda berria…</string>
+    <plurals name="playlist_song_count">
+        <item quantity="one">%1$d abesti</item>
+        <item quantity="other">%1$d abesti</item>
+    </plurals>
+
+    <string name="playlist_play">Erreproduzitu</string>
+    <string name="playlist_shuffle">Nahastu</string>
+    <string name="playlist_edit">Editatu</string>
+    <string name="playlist_done">Eginda</string>
+    <string name="playlist_more">Gehiago</string>
+    <string name="playlist_empty">Zerrenda hau hutsik dago. Abestiak gehitzeko, eduki sakatuta abesti bat eta aukeratu Gehitu zerrendara.</string>
+    <plurals name="playlist_minutes">
+        <item quantity="one">%1$d minutu</item>
+        <item quantity="other">%1$d minutu</item>
+    </plurals>
+    <plurals name="playlist_hours">
+        <item quantity="one">%1$d ordu</item>
+        <item quantity="other">%1$d ordu</item>
+    </plurals>
+    <string name="playlist_summary">%1$s, %2$s</string>
+    <string name="playlist_hours_minutes">%1$s eta %2$s</string>
+    <string name="playlist_unavailable">Ez dago erabilgarri</string>
+    <string name="playlist_remove_entry">Kendu %1$s</string>
+    <string name="playlist_reorder">Ordenatu berriro</string>
+    <string name="playlist_move_up">Eraman gora</string>
+    <string name="playlist_move_down">Eraman behera</string>
+
+    <string name="playlist_edit_details">Editatu izena eta azalpena</string>
+    <string name="playlist_delete">Ezabatu zerrenda</string>
+    <string name="playlist_delete_title">Zerrenda ezabatu?</string>
+    <string name="playlist_delete_message">«%1$s» ezabatu egingo da. Haren abestiak liburutegian geratuko dira.</string>
+    <string name="playlist_delete_confirm">Ezabatu</string>
+
+    <string name="playlist_new_title">Zerrenda berria</string>
+    <string name="playlist_edit_title">Editatu zerrenda</string>
+    <string name="playlist_name_label">Izena</string>
+    <string name="playlist_description_label">Azalpena (aukerakoa)</string>
+    <string name="playlist_create">Sortu</string>
+    <string name="playlist_save">Gorde</string>
+    <string name="playlist_cancel">Utzi</string>
+
+    <string name="playlist_add_to">Gehitu zerrendara…</string>
+    <string name="playlist_picker_title">Gehitu zerrendara</string>
+    <string name="playlist_added_to">«%1$s» zerrendara gehitu da</string>
+    <string name="playlist_nothing_to_add">Ez dago gehitzeko abestirik</string>
+    <string name="playlist_add_failed">Ezin izan da zerrendara gehitu</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- "Compress…" in the song, album and playlist menus: packs the songs into one ZIP file -->
+    <string name="compress_action">Compress…</string>
+    <string name="compress_title">Compress</string>
+    <string name="compress_cancel">Cancel</string>
+    <string name="compress_confirm">Compress</string>
+    <string name="compress_nothing">No Songs to Compress</string>
+    <string name="compress_read_failed">Couldn’t Read the Songs</string>
+
+    <!-- The password sheet -->
+    <string name="compress_password_header">Password</string>
+    <string name="compress_password_placeholder">Optional</string>
+    <string name="compress_password_show">Show password</string>
+    <string name="compress_password_hide">Hide password</string>
+    <string name="compress_generate">Generate Strong Password</string>
+    <string name="compress_copy">Copy Password</string>
+    <string name="compress_copied">Password Copied</string>
+    <string name="compress_hint_none">Without a password, anyone with the file can open it. With one, the songs are encrypted with AES-256: the ZIP then opens in 7-Zip, Keka, WinRAR and most file managers, but not in Windows Explorer or the Mac’s Archive Utility.</string>
+    <string name="compress_hint_strong">Strong password.</string>
+    <plurals name="compress_hint_short">
+        <item quantity="one">Weak password: use at least %1$d character.</item>
+        <item quantity="other">Weak password: use at least %1$d characters.</item>
+    </plurals>
+    <string name="compress_hint_kinds">Weak password: mix at least %1$d of lowercase letters, uppercase letters, digits and symbols.</string>
+
+    <!-- While the job runs -->
+    <string name="compress_working_title">Compressing</string>
+    <string name="compress_preparing">Preparing…</string>
+    <string name="compress_progress">%1$d of %2$d · %3$d%%</string>
+    <string name="compress_working_note">You can close this sheet: the notification shows the progress, and the archive appears here when it is ready.</string>
+    <string name="compress_stop">Stop Compressing</string>
+
+    <!-- The finished archive -->
+    <string name="compress_ready_title">Archive Ready</string>
+    <string name="compress_name">Name</string>
+    <string name="compress_size">Size</string>
+    <string name="compress_songs">Songs</string>
+    <string name="compress_protection">Password</string>
+    <string name="compress_protection_aes">AES-256</string>
+    <string name="compress_protection_none">None</string>
+    <string name="compress_share">Share…</string>
+    <string name="compress_save">Save to…</string>
+    <string name="compress_password_note">Send the password by another channel, such as a message or a call, never together with the archive.</string>
+    <string name="compress_plain_note">Without a password, anyone with the file can open it.</string>
+    <string name="compress_saved">Archive Saved</string>
+    <string name="compress_save_failed">Couldn’t Save the Archive</string>
+
+    <!-- Failures -->
+    <string name="compress_failed_title">Couldn’t Create the Archive</string>
+    <string name="compress_ok">OK</string>
+    <string name="compress_error_unreadable">Couldn’t read “%1$s”. It may have been moved or deleted.</string>
+    <string name="compress_error_no_space">Not enough space: %1$s needed, %2$s free.</string>
+    <string name="compress_error_password_again">Sonora was closed before the archive was finished. Compress it again.</string>
+    <string name="compress_error_unwritable">Couldn’t write the archive.</string>
+    <string name="compress_error_unexpected">Something went wrong. Try again.</string>
+</resources>

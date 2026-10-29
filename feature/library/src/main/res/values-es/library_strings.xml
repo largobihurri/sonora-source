@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library_title">Biblioteca</string>
+    <string name="library_settings">Ajustes</string>
+    <string name="library_songs">Canciones</string>
+    <string name="library_albums">Álbumes</string>
+    <string name="library_artists">Artistas</string>
+    <string name="library_folders">Carpetas</string>
+    <string name="library_converted">Convertido</string>
+    <string name="library_recently_added">Añadido recientemente</string>
+    <string name="library_scanning">Buscando tu música…</string>
+    <string name="library_no_music">No se ha encontrado música en las carpetas de tu biblioteca.</string>
+    <string name="library_back_library">Biblioteca</string>
+    <string name="library_back">Atrás</string>
+
+    <string name="library_add_folders_title">Añade tus carpetas de música</string>
+    <string name="library_add_folders_message">Sonora reproduce la música de las carpetas que elijas. Empieza por tu carpeta Music.</string>
+    <string name="library_add_folder">Añadir carpeta</string>
+    <string name="library_add_folder_failed_title">No se ha podido añadir la carpeta</string>
+    <string name="library_add_folder_failed_message">Sonora no puede leer esa carpeta. Elige una carpeta del almacenamiento de tu dispositivo.</string>
+    <string name="library_picker_missing_message">Este dispositivo no tiene ninguna app para elegir carpetas.</string>
+    <string name="library_ok">OK</string>
+
+    <string name="library_play">Reproducir</string>
+    <string name="library_shuffle">Aleatorio</string>
+    <string name="library_folders_empty">Añade carpetas a tu biblioteca en Ajustes.</string>
+    <string name="library_folder_empty">Esta carpeta no tiene canciones.</string>
+    <string name="library_converted_empty">Aún no hay música convertida. Las canciones que conviertas en la pestaña Conversor aparecerán aquí.</string>
+    <string name="library_section_today">Hoy</string>
+    <string name="library_section_yesterday">Ayer</string>
+    <string name="library_section_last_7_days">Últimos 7 días</string>
+    <string name="library_section_last_30_days">Últimos 30 días</string>
+    <string name="library_section_older">Anteriores</string>
+
+    <string name="search_title">Buscar</string>
+    <string name="search_placeholder">Canciones, álbumes, artistas</string>
+    <string name="search_clear">Borrar</string>
+    <string name="search_no_results">No hay resultados para «%1$s».</string>
+
+    <string name="queue_options">Opciones de la cola</string>
+    <string name="queue_play_now">Reproducir ahora</string>
+    <string name="queue_play_next">Reproducir a continuación</string>
+    <string name="queue_add_to_end">Añadir al final de la cola</string>
+    <string name="queue_playing_next">A continuación</string>
+    <string name="queue_added_to_queue">Añadido a la cola</string>
+    <string name="library_no_songs">Ninguna canción</string>
+    <plurals name="library_song_count">
+        <item quantity="one">%1$s canción</item>
+        <item quantity="many">%1$s canciones</item>
+        <item quantity="other">%1$s canciones</item>
+    </plurals>
+    <!-- Landscape Cover Flow: the info button (flips the centre cover), play/pause, and flipping back. -->
+    <string name="coverflow_info">Información</string>
+    <string name="coverflow_pause">Pausa</string>
+    <string name="coverflow_show_cover">Mostrar portada</string>
+    <string name="coverflow_now_playing">Abrir Reproduciendo</string>
+    <string name="coverflow_now_playing_label">Reproduciendo</string>
+    <!-- Album count under an artist's name in the Cover Flow. -->
+    <plurals name="library_album_count">
+        <item quantity="one">%1$s álbum</item>
+        <item quantity="many">%1$s álbumes</item>
+        <item quantity="other">%1$s álbumes</item>
+    </plurals>
+</resources>

@@ -1,0 +1,55 @@
+{
+ "schema": "sonora.beatthis.goldens/1",
+ "model": {
+  "manifest": "../model.json",
+  "file": "small0.onnx",
+  "sha256": "c462b064a4033050ca6a5354bf866ff4610ab1fd8f1dec1e494b20b22d870aea"
+ },
+ "frontend": {
+  "sampleRate": 22050,
+  "nFft": 1024,
+  "hop": 441,
+  "melBins": 128,
+  "fMin": 30.0,
+  "fMax": 11000.0,
+  "melScale": "slaney",
+  "melNorm": "none",
+  "power": 1,
+  "normalizedFrameLength": 1024,
+  "logMultiplier": 1000.0,
+  "window": "hann periodic",
+  "center": true,
+  "padMode": "reflect"
+ },
+ "inference": {
+  "chunkSize": 1500,
+  "borderSize": 6,
+  "overlapMode": "keep_first",
+  "avoidShortEnd": true,
+  "fps": 50
+ },
+ "melFilterbank": {
+  "file": "mel_filterbank.f32",
+  "shape": [
+   513,
+   128
+  ]
+ },
+ "cases": [
+  "click_090",
+  "click_128",
+  "click_174",
+  "ramp_120_124",
+  "click_128_short",
+  "silence"
+ ],
+ "recommendedTolerances": {
+  "melAbsolute": 0.0005,
+  "logitAbsolute": 0.005,
+  "note": "The goldens were produced with float64 numpy DSP and onnxruntime 1.30 x86-64 CPU. The reference torch front end differs from them by <= 1.3e-4 on the mel; a different ONNX Runtime build (Android arm64) may differ by about 1e-4 on logits. Compare beat/downbeat times only where the logit is not within the logit tolerance of the decision threshold 0."
+ },
+ "tools": {
+  "onnxruntime": "1.30.0",
+  "numpy": "2.5.3"
+ }
+}

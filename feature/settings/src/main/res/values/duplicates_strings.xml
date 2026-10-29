@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The "duplicates piled up" notification, on its own channel -->
+    <string name="duplicates_channel_name">Duplicates</string>
+    <string name="duplicates_channel_description">Tells you when many duplicate songs have piled up in your library.</string>
+    <string name="duplicates_notification_title">Duplicates in Your Library</string>
+    <plurals name="duplicates_notification_text">
+        <item quantity="one">%1$d song has copies in your library. Tap to review it.</item>
+        <item quantity="other">%1$d songs have copies in your library. Tap to review them.</item>
+    </plurals>
+    <!-- Settings › Duplicates: groups of copies of one song, compared side by side -->
+    <string name="settings_duplicates">Duplicates</string>
+    <string name="duplicates_footer">Songs that are in your library more than once: the very same file, or the same song in different files. Compare the copies, keep the best one and delete the others.</string>
+    <string name="duplicates_notify">Notify When Duplicates Pile Up</string>
+    <string name="duplicates_notify_footer">Sonora looks for duplicates now and then while your phone is idle and charging, and tells you once 20 songs or more have copies.</string>
+    <string name="duplicates_scan_again">Look for Duplicates Again</string>
+    <string name="duplicates_looking">Looking for duplicates…</string>
+    <string name="duplicates_checking">Comparing files… %1$s of %2$s</string>
+    <string name="duplicates_failed">Couldn’t look for duplicates. Try again.</string>
+    <string name="duplicates_none">No Duplicates</string>
+    <plurals name="duplicates_found">
+        <item quantity="one">%1$d song has copies</item>
+        <item quantity="other">%1$d songs have copies</item>
+    </plurals>
+    <string name="duplicates_line">%1$s · %2$s</string>
+    <plurals name="duplicates_copies">
+        <item quantity="one">%1$d copy</item>
+        <item quantity="other">%1$d copies</item>
+    </plurals>
+    <string name="duplicates_kind_identical">Identical files</string>
+    <string name="duplicates_kind_same_song">Same song</string>
+
+    <!-- The comparison panel -->
+    <string name="duplicates_copy">Copy %1$d</string>
+    <string name="duplicates_suggested">Suggested to keep</string>
+    <string name="duplicates_delete_this">Delete this copy</string>
+    <string name="duplicates_keep_one">One copy always stays.</string>
+    <string name="duplicates_differences_note">Highlighted values differ between the copies.</string>
+    <string name="duplicates_field_format">Format</string>
+    <string name="duplicates_field_bitrate">Bitrate</string>
+    <string name="duplicates_field_sample_rate">Sample Rate</string>
+    <string name="duplicates_field_bit_depth">Bit Depth</string>
+    <string name="duplicates_field_channels">Channels</string>
+    <string name="duplicates_field_duration">Duration</string>
+    <string name="duplicates_field_size">Size</string>
+    <string name="duplicates_field_folder">Folder</string>
+    <string name="duplicates_field_file">File</string>
+    <string name="duplicates_field_tags">Tags</string>
+    <string name="duplicates_field_artwork">Artwork</string>
+    <string name="duplicates_field_added">Added</string>
+    <string name="duplicates_value_unknown">—</string>
+    <string name="duplicates_value_kbps">%1$s kbps</string>
+    <string name="duplicates_value_khz">%1$s kHz</string>
+    <string name="duplicates_value_bits">%1$d-bit</string>
+    <string name="duplicates_value_mono">Mono</string>
+    <string name="duplicates_value_stereo">Stereo</string>
+    <plurals name="duplicates_value_channels">
+        <item quantity="one">%1$d channel</item>
+        <item quantity="other">%1$d channels</item>
+    </plurals>
+    <string name="duplicates_value_tags">%1$d of %2$d</string>
+    <string name="duplicates_value_yes">Yes</string>
+    <string name="duplicates_value_no">No</string>
+    <plurals name="duplicates_delete_selected">
+        <item quantity="one">Delete %1$d Copy from Phone</item>
+        <item quantity="other">Delete %1$d Copies from Phone</item>
+    </plurals>
+    <string name="duplicates_not_duplicate">Not a Duplicate</string>
+    <string name="duplicates_not_duplicate_note">Not a Duplicate hides this group for good. Its files stay as they are.</string>
+
+    <!-- Deleting copies -->
+    <plurals name="duplicates_delete_title">
+        <item quantity="one">Delete %1$d copy from your phone?</item>
+        <item quantity="other">Delete %1$d copies from your phone?</item>
+    </plurals>
+    <string name="duplicates_delete_message">This can’t be undone. The files are deleted from your phone. The copy you keep takes their place in playlists and keeps their favourites, pins and play counts.</string>
+    <string name="duplicates_delete_confirm">Delete</string>
+    <string name="duplicates_cancel">Cancel</string>
+    <string name="duplicates_ok">OK</string>
+    <string name="duplicates_access_title">Allow Deleting</string>
+    <string name="duplicates_access_message">Sonora can only read the folder “%1$s”. To delete these files, choose that folder again and allow access.</string>
+    <string name="duplicates_access_wrong_folder">That was a different folder. Choose “%1$s” to allow deleting.</string>
+    <string name="duplicates_access_choose">Choose Folder…</string>
+    <string name="duplicates_deleted_title">Copies Deleted</string>
+    <plurals name="duplicates_deleted_message">
+        <item quantity="one">%1$d copy is gone from your phone.</item>
+        <item quantity="other">%1$d copies are gone from your phone.</item>
+    </plurals>
+    <string name="duplicates_incomplete_title">Couldn’t Delete Everything</string>
+    <plurals name="duplicates_incomplete_message">
+        <item quantity="one">%1$d copy couldn’t be deleted and is still on your phone.</item>
+        <item quantity="other">%1$d copies couldn’t be deleted and are still on your phone.</item>
+    </plurals>
+    <string name="duplicates_refused_title">Can’t Delete Here</string>
+    <string name="duplicates_refused_message">This folder’s storage doesn’t allow Sonora to delete files.</string>
+    <string name="duplicates_error_title">Something Went Wrong</string>
+    <string name="duplicates_error_message">Something went wrong. Try again.</string>
+</resources>

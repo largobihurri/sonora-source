@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Library > Statistics: listening time, plays and the most played artists, albums and songs. -->
+    <string name="stats_title">Estadísticas</string>
+    <!-- Time range segments: the last 7, 30 and 365 days, and everything recorded. -->
+    <string name="stats_range_week">Semana</string>
+    <string name="stats_range_month">Mes</string>
+    <string name="stats_range_year">Año</string>
+    <string name="stats_range_all_time">Todo</string>
+    <string name="stats_listening_time">Tiempo de escucha</string>
+    <string name="stats_plays">Reproducciones</string>
+    <!-- %1$s is the date listening times started being recorded, such as "4 Oct 2026". -->
+    <string name="stats_since">Desde el %1$s</string>
+    <string name="stats_all_time_footer">«Todo» también cuenta las reproducciones anteriores a esa fecha.</string>
+    <string name="stats_nothing_yet">Aún no hay nada registrado. Las estadísticas empiezan con la próxima canción que reproduzcas.</string>
+    <string name="stats_nothing_in_range">No se ha reproducido nada en este periodo.</string>
+    <string name="stats_top_artists">Artistas más escuchados</string>
+    <string name="stats_top_albums">Álbumes más escuchados</string>
+    <string name="stats_top_songs">Canciones más escuchadas</string>
+    <!-- A listening time under an hour: %1$s is the minutes. -->
+    <string name="stats_time_minutes">%1$s min</string>
+    <!-- A listening time of an hour or more: %1$s hours and %2$s minutes. -->
+    <string name="stats_time_hours_minutes">%1$s h %2$s min</string>
+    <plurals name="stats_play_count">
+        <item quantity="one">%1$s reproducción</item>
+        <item quantity="many">%1$s reproducciones</item>
+        <item quantity="other">%1$s reproducciones</item>
+    </plurals>
+</resources>

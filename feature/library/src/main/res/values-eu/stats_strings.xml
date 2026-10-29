@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Library > Statistics: listening time, plays and the most played artists, albums and songs. -->
+    <string name="stats_title">Estatistikak</string>
+    <!-- Time range segments: the last 7, 30 and 365 days, and everything recorded. -->
+    <string name="stats_range_week">Astea</string>
+    <string name="stats_range_month">Hilabetea</string>
+    <string name="stats_range_year">Urtea</string>
+    <string name="stats_range_all_time">Dena</string>
+    <string name="stats_listening_time">Entzuteko denbora</string>
+    <string name="stats_plays">Erreprodukzioak</string>
+    <!-- %1$s is the date listening times started being recorded, such as "4 Oct 2026". -->
+    <string name="stats_since">Noiztik: %1$s</string>
+    <string name="stats_all_time_footer">«Dena» aukerak data horren aurreko erreprodukzioak ere zenbatzen ditu.</string>
+    <string name="stats_nothing_yet">Oraindik ez dago ezer erregistratuta. Erreproduzitzen duzun hurrengo abestiarekin hasiko dira estatistikak.</string>
+    <string name="stats_nothing_in_range">Ez da ezer erreproduzitu aldi honetan.</string>
+    <string name="stats_top_artists">Artista entzunenak</string>
+    <string name="stats_top_albums">Album entzunenak</string>
+    <string name="stats_top_songs">Abesti entzunenak</string>
+    <!-- A listening time under an hour: %1$s is the minutes. -->
+    <string name="stats_time_minutes">%1$s min</string>
+    <!-- A listening time of an hour or more: %1$s hours and %2$s minutes. -->
+    <string name="stats_time_hours_minutes">%1$s h %2$s min</string>
+    <plurals name="stats_play_count">
+        <item quantity="one">%1$s erreprodukzio</item>
+        <item quantity="other">%1$s erreprodukzio</item>
+    </plurals>
+</resources>

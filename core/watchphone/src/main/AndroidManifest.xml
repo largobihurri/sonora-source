@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- A send to the watch runs as a foreground service so it goes on when the user leaves the app. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <application>
+        <service
+            android:name="io.sonora.core.watchphone.WatchSyncService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <!-- Woken by the Data Layer when the user's watch sends a remote message (play, next, volume, queue...). The host
+             checks that the sender is one of the user's watches before it does anything. -->
+        <service
+            android:name="io.sonora.core.watchphone.remote.RemoteListenerService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data
+                    android:scheme="wear"
+                    android:host="*"
+                    android:pathPrefix="/sonora/remote" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cdj_title">Exportar</string>
+
+    <string name="cdj_ok">Aceptar</string>
+    <string name="cdj_back">Atrás</string>
+    <string name="cdj_cancel">Cancelar</string>
+    <string name="cdj_cancelling">Cancelando…</string>
+    <string name="cdj_done">Hecho</string>
+    <string name="cdj_starting">Empezando…</string>
+    <string name="cdj_copy_details">Copiar detalles técnicos</string>
+    <string name="cdj_unknown">Desconocido</string>
+    <plurals name="cdj_more">
+        <item quantity="one">y %d más</item>
+        <item quantity="many">y %d más</item>
+        <item quantity="other">y %d más</item>
+    </plurals>
+    <string name="cdj_name_reason">%1$s: %2$s</string>
+    <string name="cdj_bits">%1$d bits</string>
+    <string name="cdj_khz">%1$s kHz</string>
+    <string name="cdj_container_m4a">M4A (AAC o ALAC)</string>
+    <string name="cdj_container_unknown">Un formato desconocido</string>
+
+    <string name="cdj_prepare_header">Preparar memoria USB</string>
+    <string name="cdj_prepare_intro">Formatea una memoria como FAT32 (MBR), tal como la leen los reproductores Pioneer como el XDJ-700. Al formatear se borra todo lo que hay en la memoria.</string>
+    <string name="cdj_prepare_waiting_permission">Esperando permiso para usar %1$s…</string>
+    <string name="cdj_prepare_opening">Abriendo %1$s…</string>
+    <string name="cdj_no_stick_title">No hay ninguna memoria USB conectada</string>
+    <string name="cdj_no_stick_message">Conecta una memoria USB con un adaptador OTG. Aparecerá aquí en cuanto la conectes.</string>
+    <string name="cdj_device_unnamed">Dispositivo de almacenamiento USB</string>
+    <string name="cdj_device_detail">USB %1$s</string>
+    <string name="cdj_device_unsupported">El protocolo de almacenamiento de este dispositivo no es compatible (por ejemplo, solo USB Attached SCSI).</string>
+    <string name="cdj_permission_title">Se necesita permiso</string>
+    <string name="cdj_permission_message">Sonora necesita permiso para usar %1$s antes de poder formatearla.</string>
+    <string name="cdj_try_again">Reintentar</string>
+    <string name="cdj_detail_usb_device">Dispositivo USB</string>
+    <string name="cdj_detail_capacity">Capacidad</string>
+    <string name="cdj_capacity_value">%1$s (%2$s)</string>
+    <string name="cdj_detail_block_size">Tamaño de bloque</string>
+    <string name="cdj_detail_write_protection">Protección contra escritura</string>
+    <string name="cdj_on">Activada</string>
+    <string name="cdj_off">Desactivada</string>
+    <string name="cdj_label_field">Etiqueta del volumen</string>
+    <string name="cdj_label_hint">Hasta 11 caracteres: letras sin acentos ni eñes, cifras, espacios y símbolos sencillos.</string>
+    <string name="cdj_format_blocked_label">Corrige la etiqueta del volumen para continuar.</string>
+    <string name="cdj_write_protected">Esta memoria está protegida contra escritura, así que no se puede formatear. Desliza su interruptor de bloqueo o usa otra memoria.</string>
+    <string name="cdj_format_button">Formatear…</string>
+    <string name="cdj_erase_title">¿Borrar esta memoria USB?</string>
+    <string name="cdj_erase_message">Se borrarán TODOS los datos de «%1$s». La memoria se formateará como FAT32 (MBR) para reproductores Pioneer, con la etiqueta %2$s.</string>
+    <string name="cdj_erase_type_word">Escribe %1$s para continuar.</string>
+    <string name="cdj_erase_confirm">Borrar y formatear</string>
+    <string name="cdj_stick_summary">%1$s, %2$s</string>
+    <string name="cdj_formatting_title">Formateando %1$s…</string>
+    <string name="cdj_format_progress">%1$d %% · %2$s de %3$s</string>
+    <string name="cdj_retrying">Reintentando…</string>
+    <string name="cdj_formatting_keep">Mantén la memoria conectada. La pantalla seguirá encendida hasta que termine el formateo.</string>
+    <string name="cdj_formatting_back_blocked">No se puede salir del formateo con Atrás. Usa Cancelar para detenerlo; después habrá que volver a formatear la memoria.</string>
+    <string name="cdj_stick_ready">Memoria USB lista</string>
+    <string name="cdj_detail_label">Etiqueta</string>
+    <string name="cdj_detail_file_system">Sistema de archivos</string>
+    <string name="cdj_detail_size">Tamaño</string>
+    <string name="cdj_replug_hint">Si la memoria no aparece en Android, desconéctala y vuelve a conectarla.</string>
+
+    <string name="cdj_label_empty">Escribe una etiqueta de 1 a %1$d caracteres.</string>
+    <string name="cdj_label_too_long">La etiqueta tiene %1$d caracteres; FAT admite como máximo %2$d.</string>
+    <string name="cdj_label_invalid_character">«%1$s» no se admite en una etiqueta FAT.</string>
+    <string name="cdj_label_non_ascii">«%1$s» no se admite: usa letras sin acentos ni eñes, cifras, espacios y símbolos sencillos.</string>
+
+    <string name="cdj_usb_permission_denied">Sonora no tiene permiso para usar este dispositivo USB.</string>
+    <string name="cdj_usb_disconnected">Se ha desconectado la memoria USB.</string>
+    <string name="cdj_usb_disconnected_while_formatting">Se ha desconectado la memoria USB mientras se formateaba. Vuelve a conectarla y formatéala antes de usarla.</string>
+    <string name="cdj_usb_closed">La memoria USB ya se había liberado. Vuelve a seleccionarla.</string>
+    <string name="cdj_usb_unsupported">Este dispositivo no se puede formatear aquí: %1$s.</string>
+    <string name="cdj_usb_no_medium">No hay ningún soporte. Inserta una tarjeta en el lector o usa otra memoria.</string>
+    <string name="cdj_usb_write_protected">La memoria está protegida contra escritura.</string>
+    <string name="cdj_usb_transport">La memoria USB ha dejado de responder. Desconéctala, vuelve a conectarla e inténtalo de nuevo.</string>
+    <string name="cdj_usb_command_failed">La memoria ha rechazado una orden (sense key 0x%1$X, ASC 0x%2$02X, ASCQ 0x%3$02X). Prueba con otra memoria.</string>
+    <string name="cdj_usb_other">No se ha podido usar la memoria USB: %1$s.</string>
+
+    <string name="cdj_too_small_title">Memoria demasiado pequeña</string>
+    <string name="cdj_too_small_message">Esta memoria tiene %1$s, demasiado poco para un volumen FAT32. No se ha escrito nada.</string>
+    <string name="cdj_too_large_title">Memoria demasiado grande</string>
+    <string name="cdj_too_large_message">Esta memoria tiene %1$s, más de los %2$s que puede describir una partición MBR. No se ha escrito nada.</string>
+    <string name="cdj_block_size_title">Memoria no compatible</string>
+    <string name="cdj_block_size_message">Esta memoria usa bloques de %1$d bytes; Sonora formatea memorias con bloques de 512 o 4096 bytes. No se ha escrito nada.</string>
+    <string name="cdj_write_protected_title">Memoria protegida contra escritura</string>
+    <string name="cdj_write_protected_message">La memoria no ha permitido que se escriba en ella. Hay que volver a formatearla antes de poder usarla.</string>
+    <string name="cdj_write_error_title">Error de escritura</string>
+    <string name="cdj_write_error_at_block">La memoria ha fallado en el bloque %1$d. %2$s Hay que volver a formatearla antes de poder usarla. Si sigue pasando, puede que la memoria esté dañada.</string>
+    <string name="cdj_write_error_cache">La memoria ha fallado al guardar su caché. %1$s Hay que volver a formatearla antes de poder usarla. Si sigue pasando, puede que la memoria esté dañada.</string>
+    <string name="cdj_verification_title">La verificación ha fallado</string>
+    <string name="cdj_verification_message">Lo que se ha releído en el bloque %2$d (%1$s) no coincide con lo que se escribió. Esta memoria no guarda los datos de forma fiable (puede estar dañada o ser falsa); no la uses para música.</string>
+    <string name="cdj_format_cancelled_title">Formateo cancelado</string>
+    <string name="cdj_format_cancelled_message">El formateo se detuvo antes de terminar. La memoria no se puede usar hasta que se vuelva a formatear.</string>
+    <string name="cdj_format_failed_title">El formateo ha fallado</string>
+    <string name="cdj_format_failed_message">Algo ha fallado durante el formateo. Hay que volver a formatear la memoria antes de poder usarla.</string>
+    <string name="cdj_structure_partition_table">tabla de particiones</string>
+    <string name="cdj_structure_boot_sector">sector de arranque</string>
+    <string name="cdj_structure_fs_info">sector FSInfo</string>
+    <string name="cdj_structure_backup_boot_sector">sector de arranque de copia</string>
+    <string name="cdj_structure_backup_fs_info">sector FSInfo de copia</string>
+    <string name="cdj_structure_fat">primera FAT</string>
+    <string name="cdj_structure_backup_fat">segunda FAT</string>
+    <string name="cdj_structure_root_directory">directorio raíz</string>
+
+    <string name="cdj_export_header">Exportar a rekordbox</string>
+    <string name="cdj_export_intro">Copia pistas a una memoria con una biblioteca de rekordbox, para que el %1$s muestre sus formas de onda, cuadrículas de tiempo y tonalidades. Admite %2$s; todo lo demás se convierte a ese formato por el camino.</string>
+    <string name="cdj_not_affiliated">Sonora es una app independiente, sin relación con AlphaTheta ni Pioneer DJ, que no la patrocinan ni la respaldan. rekordbox, Pioneer DJ y XDJ son marcas de sus respectivos propietarios, citadas aquí solo para indicar la compatibilidad.</string>
+    <string name="cdj_profile_summary">%1$s de %2$s, hasta %3$s kHz</string>
+    <string name="cdj_tracks_title">Pistas</string>
+    <string name="cdj_tracks_empty">Añade archivos de audio o una carpeta con ellos.</string>
+    <plurals name="cdj_tracks_ready">
+        <item quantity="one">%1$d pista · %2$s</item>
+        <item quantity="many">%1$d pistas · %2$s</item>
+        <item quantity="other">%1$d pistas · %2$s</item>
+    </plurals>
+    <string name="cdj_remove_track">Quitar %1$s</string>
+    <string name="cdj_checking_files">Comprobando los archivos…</string>
+    <string name="cdj_add_files">Añadir archivos</string>
+    <string name="cdj_add_folder">Añadir carpeta</string>
+    <string name="cdj_clear">Vaciar</string>
+    <plurals name="cdj_rejected_title">
+        <item quantity="one">%d archivo no se puede exportar</item>
+        <item quantity="many">%d archivos no se pueden exportar</item>
+        <item quantity="other">%d archivos no se pueden exportar</item>
+    </plurals>
+    <plurals name="cdj_will_convert">
+        <item quantity="one">Al exportar, %1$d archivo se convertirá a %2$s.</item>
+        <item quantity="many">Al exportar, %1$d archivos se convertirán a %2$s.</item>
+        <item quantity="other">Al exportar, %1$d archivos se convertirán a %2$s.</item>
+    </plurals>
+    <string name="cdj_stick_title">Memoria USB</string>
+    <string name="cdj_opening_stick">Abriendo la memoria…</string>
+    <string name="cdj_pick_stick_hint">Elige la propia memoria USB (prepárala antes arriba). Android pide acceso a ella una sola vez.</string>
+    <string name="cdj_detail_name">Nombre</string>
+    <string name="cdj_detail_free_space">Espacio libre</string>
+    <string name="cdj_detail_export_needs">La exportación necesita</string>
+    <string name="cdj_about_size">unos %1$s</string>
+    <string name="cdj_choose_stick">Elegir memoria</string>
+    <string name="cdj_choose_another_stick">Elegir otra memoria</string>
+    <string name="cdj_stick_connected">Memoria conectada: %1$s. Elígela una vez para dar acceso a Sonora; después se abrirá sola.</string>
+    <string name="cdj_sticks_connected">Hay varios almacenamientos conectados. Elige la memoria USB:</string>
+    <string name="cdj_eject">Expulsar memoria</string>
+    <string name="cdj_eject_opening">Abriendo los ajustes de almacenamiento de Android…</string>
+    <string name="cdj_eject_waiting">Expulsa %1$s en los ajustes de Android (Expulsar o Desactivar) y vuelve. Sonora te indicará aquí cuándo se puede desenchufar.</string>
+    <string name="cdj_eject_waiting_unnamed">Expulsa la memoria en los ajustes de Android (Expulsar o Desactivar) y vuelve. Sonora te indicará aquí cuándo se puede desenchufar.</string>
+    <string name="cdj_eject_no_screen">No se han podido abrir los ajustes de almacenamiento de Android. Expulsa la memoria desde su notificación o en Ajustes &gt; Almacenamiento; Sonora te indicará aquí cuándo se puede desenchufar.</string>
+    <string name="cdj_eject_safe_title">Ya se puede quitar</string>
+    <string name="cdj_eject_safe">Ya puedes desenchufar %1$s.</string>
+    <string name="cdj_eject_safe_unnamed">Ya puedes desenchufar la memoria.</string>
+    <string name="cdj_eject_again">Abrir de nuevo los ajustes</string>
+    <string name="cdj_playlist_field">Lista</string>
+    <string name="cdj_playlist_hint">Las pistas exportadas también van a esta lista; si ya existe, se añaden a ella. Déjala vacía para no usar ninguna.</string>
+    <string name="cdj_space_problem">No hay espacio suficiente: la exportación necesita unos %1$s y la memoria tiene %2$s libres.</string>
+    <plurals name="cdj_export_button">
+        <item quantity="one">Exportar %d pista</item>
+        <item quantity="many">Exportar %d pistas</item>
+        <item quantity="other">Exportar %d pistas</item>
+    </plurals>
+    <string name="cdj_replace_title">¿Sustituir la biblioteca de esta memoria?</string>
+    <string name="cdj_replace_confirm">Sustituir y exportar</string>
+    <string name="cdj_exporting_to">Exportando a %1$s…</string>
+    <string name="cdj_export_keep">Mantén la memoria conectada. Mientras tanto puedes salir de Sonora; la exportación sigue.</string>
+    <string name="cdj_skipped">Omitidas</string>
+    <string name="cdj_not_exported">No exportadas</string>
+
+    <string name="cdj_unreadable_file">Sonora no puede leer este archivo. Puede que se haya movido o eliminado.</string>
+    <string name="cdj_unreadable_folder">Sonora no puede leer esta carpeta. Puede que se haya movido o eliminado.</string>
+    <string name="cdj_undecodable">Sonora no puede decodificar este audio (%1$s), así que no puede convertirlo para el %2$s.</string>
+    <string name="cdj_stick_no_access">Android no ha dejado que Sonora conserve el acceso a este almacenamiento. Vuelve a elegir la memoria y permite el acceso.</string>
+    <string name="cdj_stick_unusable">Este almacenamiento no se puede usar. Desconecta la memoria, vuelve a conectarla y elígela otra vez.</string>
+    <string name="cdj_not_a_stick">Elige el nivel superior de la memoria USB (su nombre, no una carpeta de dentro): el reproductor solo busca ahí.</string>
+    <string name="cdj_another_export_running">Todavía hay otra exportación en curso. Espera a que termine y vuelve a exportar.</string>
+
+    <string name="cdj_library_empty">Todavía no hay biblioteca de rekordbox: la exportación creará una.</string>
+    <plurals name="cdj_library_sonora">
+        <item quantity="one">Biblioteca de Sonora con %d pista: las pistas nuevas se añaden a ella.</item>
+        <item quantity="many">Biblioteca de Sonora con %d pistas: las pistas nuevas se añaden a ella.</item>
+        <item quantity="other">Biblioteca de Sonora con %d pistas: las pistas nuevas se añaden a ella.</item>
+    </plurals>
+    <string name="cdj_library_foreign">Una biblioteca de rekordbox creada por otra app. Al exportar se sustituirá.</string>
+    <string name="cdj_library_newer">Una biblioteca de una versión más reciente de Sonora. Actualiza Sonora; si no, al exportar se sustituirá.</string>
+    <string name="cdj_library_damaged">El registro de la biblioteca de Sonora en esta memoria está dañado. Al exportar se sustituirá la biblioteca.</string>
+    <string name="cdj_replace_warning_foreign">Esta memoria tiene una biblioteca de rekordbox que no ha creado Sonora. Al exportar se sustituirá por una biblioteca nueva que solo tendrá las pistas que exportes ahora. Los demás archivos de música se quedan en la memoria, pero el reproductor no los mostrará, ni tampoco sus listas, puntos cue o análisis.</string>
+    <string name="cdj_replace_warning_unreadable">No se puede leer la biblioteca de esta memoria. Al exportar se sustituirá por una biblioteca nueva que solo tendrá las pistas que exportes ahora. Los demás archivos de música se quedan en la memoria, pero el reproductor no los mostrará, ni tampoco sus listas, puntos cue o análisis.</string>
+
+    <string name="cdj_progress_converting">Convirtiendo %1$d de %2$d: %3$s</string>
+    <string name="cdj_progress_preparing">Preparando %1$d de %2$d: %3$s</string>
+    <string name="cdj_progress_analysing">Analizando %1$d de %2$d: %3$s</string>
+    <string name="cdj_progress_copying">Copiando %1$d de %2$d: %3$s</string>
+    <string name="cdj_progress_writing_library">Escribiendo la biblioteca de rekordbox…</string>
+
+    <string name="cdj_notification_channel">Exportar a rekordbox</string>
+    <string name="cdj_notification_title">Exportando a %1$s</string>
+    <string name="cdj_notification_title_default">Exportando a rekordbox</string>
+    <string name="cdj_notification_track">Pista %1$d de %2$d: %3$s</string>
+    <string name="cdj_notification_writing_library">escribiendo la biblioteca</string>
+    <string name="cdj_finishing">Terminando…</string>
+
+    <string name="cdj_failure_unreadable">no se ha podido leer el archivo</string>
+    <string name="cdj_failure_not_analysable">no se ha encontrado tempo ni cuadrícula de tiempo</string>
+    <string name="cdj_failure_not_convertible">no se ha podido decodificar el audio para convertirlo</string>
+    <string name="cdj_failure_changed">el archivo ha cambiado mientras se exportaba</string>
+    <string name="cdj_failure_unexpected">algo ha fallado al prepararlo</string>
+
+    <string name="cdj_summary_finished">Exportación terminada</string>
+    <string name="cdj_summary_finished_problems">Exportación terminada con problemas</string>
+    <string name="cdj_summary_playlist_added">Lista añadida</string>
+    <string name="cdj_summary_playlist_updated">Lista actualizada</string>
+    <string name="cdj_summary_library_completed">Biblioteca completada</string>
+    <string name="cdj_summary_nothing">No se ha exportado nada</string>
+    <plurals name="cdj_summary_completed_library">
+        <item quantity="one">Se ha completado la biblioteca de la memoria. Tiene %d pista.</item>
+        <item quantity="many">Se ha completado la biblioteca de la memoria. Tiene %d pistas.</item>
+        <item quantity="other">Se ha completado la biblioteca de la memoria. Tiene %d pistas.</item>
+    </plurals>
+    <plurals name="cdj_summary_joined">
+        <item quantity="one">Se ha añadido %1$d pista que ya estaba en la memoria a la lista «%2$s».</item>
+        <item quantity="many">Se han añadido %1$d pistas que ya estaban en la memoria a la lista «%2$s».</item>
+        <item quantity="other">Se han añadido %1$d pistas que ya estaban en la memoria a la lista «%2$s».</item>
+    </plurals>
+    <plurals name="cdj_summary_holds">
+        <item quantity="one">La biblioteca de la memoria tiene %d pista.</item>
+        <item quantity="many">La biblioteca de la memoria tiene %d pistas.</item>
+        <item quantity="other">La biblioteca de la memoria tiene %d pistas.</item>
+    </plurals>
+    <plurals name="cdj_summary_added_to_playlist">
+        <item quantity="one">Se ha añadido %1$d pista a la lista «%2$s».</item>
+        <item quantity="many">Se han añadido %1$d pistas a la lista «%2$s».</item>
+        <item quantity="other">Se han añadido %1$d pistas a la lista «%2$s».</item>
+    </plurals>
+    <plurals name="cdj_summary_added">
+        <item quantity="one">Se ha añadido %d pista.</item>
+        <item quantity="many">Se han añadido %d pistas.</item>
+        <item quantity="other">Se han añadido %d pistas.</item>
+    </plurals>
+    <plurals name="cdj_summary_now_holds">
+        <item quantity="one">La biblioteca de la memoria tiene ahora %d pista.</item>
+        <item quantity="many">La biblioteca de la memoria tiene ahora %d pistas.</item>
+        <item quantity="other">La biblioteca de la memoria tiene ahora %d pistas.</item>
+    </plurals>
+    <string name="cdj_summary_eject">Expulsa la memoria en Android antes de desconectarla.</string>
+    <string name="cdj_summary_nothing_added">No se ha podido añadir ninguna pista; la memoria no ha cambiado.</string>
+    <string name="cdj_summary_duplicate">%1$s: ya está en la memoria</string>
+    <string name="cdj_summary_no_space_title">No hay espacio suficiente</string>
+    <string name="cdj_summary_no_space_message">La exportación necesita unos %1$s; la memoria tiene %2$s libres. No se ha escrito nada.</string>
+    <string name="cdj_summary_needs_confirmation">Se sustituiría la biblioteca de esta memoria. Vuelve a empezar la exportación y confírmalo.</string>
+    <string name="cdj_summary_failed">La exportación ha fallado</string>
+    <string name="cdj_summary_failed_library_changed">La exportación se detuvo mientras se escribía la biblioteca de la memoria, así que puede que el reproductor no lo muestre todo. Vuelve a conectar la memoria y exporta de nuevo: así se completa la biblioteca.</string>
+    <string name="cdj_summary_failed_stick">La memoria ha fallado (puede que se haya desconectado o esté llena). Su biblioteca está como antes de esta exportación.</string>
+    <string name="cdj_summary_failed_unexpected">La exportación se detuvo por un problema inesperado (Copiar detalles técnicos lo muestra). La biblioteca de la memoria está como antes de esta exportación.</string>
+    <string name="cdj_summary_cancelled">Exportación cancelada</string>
+    <string name="cdj_summary_cancelled_message">La biblioteca de la memoria está como antes; se han eliminado los archivos que había copiado esta exportación.</string>
+</resources>

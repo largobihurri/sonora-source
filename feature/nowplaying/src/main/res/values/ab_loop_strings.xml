@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="now_playing_ab_loop">A-B Loop</string>
+    <string name="now_playing_ab_loop_set_a">Set loop start (A)</string>
+    <string name="now_playing_ab_loop_set_b">Set loop end (B)</string>
+    <string name="now_playing_ab_loop_clear">Clear A-B loop</string>
+</resources>

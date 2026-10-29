@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cover Flow, when Settings hides albums without artwork and no album has any -->
+    <string name="coverflow_no_albums_with_artwork">No albums have artwork. To see every album here, turn off Hide Albums Without Artwork in Visual Collection in Settings.</string>
+</resources>

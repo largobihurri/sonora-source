@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Converter batches run as a foreground WorkManager job: mediaProcessing on Android 15+ (with its
+         6 h per 24 h limit), dataSync before, where mediaProcessing does not exist. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- Lets the converter's progress notification appear as an Android 16 Live Update. -->
+    <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS" />
+    <!-- Package visibility for the system media output switcher (Now Playing output button). -->
+    <queries>
+        <intent>
+            <action android:name="com.android.settings.panel.action.MEDIA_OUTPUT" />
+        </intent>
+    </queries>
+
+    <!-- Predictive back is the default when targeting API 36 on Android 16; the explicit opt-in also
+         enables in-app gesture progress and system back animations on Android 14 and 15.
+         Lint looks for Android Auto's MediaBrowserService action in this file only; PlaybackService declares it in
+         core/playback's manifest. -->
+    <application
+        android:name=".SonoraApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:enableOnBackInvokedCallback="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sonora"
+        tools:ignore="MissingMediaBrowserServiceIntentFilter"
+        tools:targetApi="33">
+
+        <!-- Rotations (and window resizes) do not recreate the activity: Compose relayouts from the new configuration, and
+             Now Playing turns its artwork and controls itself over a seamless window rotation (see RotationAnimation).
+             Nor do a display size change (density), a split screen or a freeform resize on a tablet, or a keyboard or
+             mouse attached to one (keyboard, navigation). Compose follows density and size through LocalDensity and
+             LocalConfiguration (see ProvideWindowClass). uiMode stays out: a dark or light switch recreates the activity
+             as it always did (its state is saved), which no tablet layout needs to change. -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|density|keyboard|keyboardHidden|navigation"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- "Open with Sonora" and "Share to Sonora" for ZIP archives (see ArchiveImportHost). Only content URIs: a
+                 file:// one would need storage permission. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/zip" />
+                <data android:mimeType="application/x-zip-compressed" />
+                <data android:mimeType="application/x-zip" />
+            </intent-filter>
+            <!-- "Play X on Sonora" from the assistant: played through the playback session (see VoicePlayRequest). -->
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- File managers that type a .zip as a generic binary: matched by its name. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:pathPattern=".*\\.zip" />
+                <data android:pathPattern=".*\\..*\\.zip" />
+                <data android:pathPattern=".*\\..*\\..*\\.zip" />
+                <data android:pathPattern=".*\\.ZIP" />
+            </intent-filter>
+        </activity>
+
+        <!-- WorkManager is initialized on demand with the Hilt worker factory (SonoraApp is a
+             Configuration.Provider), so its App Startup initializer is removed. -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+        <!-- Shares a finished archive with the app the user picks (read grant per share); see AndroidArchiveFiles. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.archives"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/archive_paths" />
+        </provider>
+
+        <!-- Android Auto: Sonora is a media app (PlaybackService's library session); the small icon marks its
+             media notifications in the car. -->
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+        <meta-data
+            android:name="androidx.car.app.TintableAttributionIcon"
+            android:resource="@drawable/ic_stat_sonora" />
+
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync|mediaProcessing"
+            tools:node="merge" />
+    </application>
+
+</manifest>

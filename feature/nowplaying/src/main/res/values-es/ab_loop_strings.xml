@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="now_playing_ab_loop">Bucle A-B</string>
+    <string name="now_playing_ab_loop_set_a">Fijar el inicio del bucle (A)</string>
+    <string name="now_playing_ab_loop_set_b">Fijar el final del bucle (B)</string>
+    <string name="now_playing_ab_loop_clear">Quitar el bucle A-B</string>
+</resources>

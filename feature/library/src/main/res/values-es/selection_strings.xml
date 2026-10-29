@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select_action">Seleccionar</string>
+    <string name="select_done">OK</string>
+    <string name="select_songs">Seleccionar canciones</string>
+</resources>

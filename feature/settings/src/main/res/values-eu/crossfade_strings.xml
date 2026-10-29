@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="crossfade_title">Abestien arteko nahasketa</string>
+    <string name="crossfade_off">Desaktibatuta</string>
+    <string name="crossfade_seconds">%1$d s</string>
+    <string name="crossfade_footer">Abesti bakoitza hurrengoarekin nahasten da denbora horretan. Ordenan entzundako albumetako pistek etenik gabe jarraitzen dute, eta saltatzean nahasketa laburra da.</string>
+</resources>

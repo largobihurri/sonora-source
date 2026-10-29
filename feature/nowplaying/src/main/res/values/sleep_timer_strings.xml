@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Sleep timer: the "…" menu item, the panel and the countdown badge on Now Playing. -->
+    <string name="sleep_timer_title">Sleep Timer</string>
+    <string name="sleep_timer_stop_playing">Stop Playing</string>
+    <plurals name="sleep_timer_minutes">
+        <item quantity="one">%1$d Minute</item>
+        <item quantity="other">%1$d Minutes</item>
+    </plurals>
+    <string name="sleep_timer_end_of_song">End of Current Song</string>
+    <string name="sleep_timer_end_of_album">End of Current Album</string>
+    <string name="sleep_timer_custom">Custom</string>
+    <string name="sleep_timer_shorter">Shorter</string>
+    <string name="sleep_timer_longer">Longer</string>
+    <string name="sleep_timer_start">Start</string>
+    <string name="sleep_timer_time_left">Time Left</string>
+    <plurals name="sleep_timer_extend">
+        <item quantity="one">Add %1$d Minute</item>
+        <item quantity="other">Add %1$d Minutes</item>
+    </plurals>
+    <string name="sleep_timer_turn_off">Turn Off Timer</string>
+    <!-- Spoken by the countdown badge; %1$s is the time left ("12:05"). -->
+    <string name="sleep_timer_badge">Sleep timer, %1$s left</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select_action">Hautatu</string>
+    <string name="select_done">Eginda</string>
+    <string name="select_songs">Hautatu abestiak</string>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_import_archive">Importar archivo…</string>
+    <string name="import_title">Importar archivo</string>
+    <string name="import_cancel">Cancelar</string>
+    <string name="import_confirm">Importar</string>
+    <string name="import_opening">Abriendo el archivo…</string>
+
+    <string name="import_kind_song">Canción de Sonora</string>
+    <string name="import_kind_album">Álbum de Sonora · %1$s</string>
+    <string name="import_kind_playlist">Lista de Sonora · %1$s</string>
+    <string name="import_kind_selection">Canciones elegidas en Sonora · %1$s</string>
+    <plurals name="import_song_count">
+        <item quantity="one">%1$d canción</item>
+        <item quantity="many">%1$d canciones</item>
+        <item quantity="other">%1$d canciones</item>
+    </plurals>
+    <string name="import_zip_encrypted">Archivo ZIP con contraseña</string>
+    <string name="import_zip">Archivo ZIP</string>
+    <string name="import_playlist_note">Se volverá a crear la lista «%1$s» en el mismo orden.</string>
+
+    <string name="import_password_header">Contraseña</string>
+    <string name="import_password_placeholder">Obligatoria</string>
+    <string name="import_password_show">Mostrar contraseña</string>
+    <string name="import_password_hide">Ocultar contraseña</string>
+    <string name="import_password_hint">Pide la contraseña a quien te envió el archivo.</string>
+    <string name="import_password_wrong">La contraseña no es correcta. Inténtalo de nuevo.</string>
+    <string name="import_password_again">Sonora se cerró antes de terminar la importación. Vuelve a escribir la contraseña.</string>
+
+    <string name="import_destination_header">Guardar en</string>
+    <string name="import_choose_folder">Elegir una carpeta…</string>
+    <string name="import_change">Cambiar</string>
+    <string name="import_destination_none">Elige dónde se guarda la música. También será la carpeta de salida del conversor.</string>
+    <string name="import_destination_in">Las canciones se guardan aquí en una carpeta nueva y aparecen en tu biblioteca.</string>
+    <string name="import_destination_joins">Esta carpeta no está en tu biblioteca. Después de importar, permite el acceso a su carpeta nueva para que las canciones aparezcan en tu biblioteca.</string>
+
+    <string name="import_working_title">Importando</string>
+    <string name="import_preparing">Preparando…</string>
+    <string name="import_progress">%1$d de %2$d · %3$d %%</string>
+    <string name="import_working_note">Puedes cerrar esta hoja: la notificación muestra el progreso.</string>
+    <string name="import_stop">Detener la importación</string>
+    <string name="import_finishing">Añadiendo las canciones a tu biblioteca…</string>
+
+    <string name="import_done_title">Archivo importado</string>
+    <string name="import_done_songs">Canciones añadidas</string>
+    <plurals name="import_done_playlist">
+        <item quantity="one">Se ha vuelto a crear la lista «%1$s» con %2$d canción.</item>
+        <item quantity="many">Se ha vuelto a crear la lista «%1$s» con %2$d canciones.</item>
+        <item quantity="other">Se ha vuelto a crear la lista «%1$s» con %2$d canciones.</item>
+    </plurals>
+    <plurals name="import_done_missing">
+        <item quantity="one">%1$d canción aún no está en tu biblioteca; puede aparecer tras el próximo análisis.</item>
+        <item quantity="many">%1$d canciones aún no están en tu biblioteca; pueden aparecer tras el próximo análisis.</item>
+        <item quantity="other">%1$d canciones aún no están en tu biblioteca; pueden aparecer tras el próximo análisis.</item>
+    </plurals>
+    <plurals name="import_done_skipped">
+        <item quantity="one">Se ha omitido %1$d archivo: solo se extrae la música.</item>
+        <item quantity="many">Se han omitido %1$d archivos: solo se extrae la música.</item>
+        <item quantity="other">Se han omitido %1$d archivos: solo se extrae la música.</item>
+    </plurals>
+    <string name="import_done_folder_added">La carpeta se ha añadido a tu biblioteca.</string>
+    <string name="import_done_outside">Las canciones aún no están en tu biblioteca. Toca Añadir a la biblioteca y permite el acceso a su carpeta.</string>
+    <string name="import_done_wrong_folder">Esa carpeta no es la de las canciones importadas, así que no se ha añadido.</string>
+    <string name="import_add_to_library">Añadir a la biblioteca</string>
+    <string name="import_done">OK</string>
+    <string name="import_songs_header">Canciones</string>
+
+    <string name="import_failed_title">No se ha podido importar el archivo</string>
+    <string name="import_ok">Aceptar</string>
+    <string name="import_error_damaged">El archivo está dañado o no es un archivo ZIP.</string>
+    <string name="import_error_no_music">No hay música en el archivo.</string>
+    <string name="import_error_no_space">No hay espacio suficiente: se necesitan %1$s y hay %2$s libres.</string>
+    <string name="import_error_unreadable">No se ha podido leer el archivo. Vuelve a abrirlo desde la app donde está.</string>
+    <string name="import_error_unwritable">No se ha podido escribir en la carpeta elegida. Vuelve a elegirla o escoge otra.</string>
+    <string name="import_error_password">La contraseña no es correcta.</string>
+    <string name="import_error_unexpected">Algo ha fallado. Inténtalo de nuevo.</string>
+</resources>

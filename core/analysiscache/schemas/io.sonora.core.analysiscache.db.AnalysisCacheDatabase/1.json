@@ -1,0 +1,129 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "50b07ee1c815ffbff889d76c52c6bdb9",
+    "entities": [
+      {
+        "tableName": "analyses",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`content_sha256` TEXT NOT NULL, `analyzer_version` TEXT NOT NULL, `bpm` REAL NOT NULL, `first_beat_ms` REAL NOT NULL, `first_beat_in_bar` INTEGER NOT NULL, `beat_count` INTEGER NOT NULL, `key_index` INTEGER, `duration_ms` INTEGER NOT NULL, `waveform_detail` BLOB NOT NULL, `waveform_preview` BLOB NOT NULL, `waveform_tiny_preview` BLOB NOT NULL, `size_bytes` INTEGER NOT NULL, `created_at_ms` INTEGER NOT NULL, `last_used_ms` INTEGER NOT NULL, PRIMARY KEY(`content_sha256`, `analyzer_version`))",
+        "fields": [
+          {
+            "fieldPath": "contentSha256",
+            "columnName": "content_sha256",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "analyzerVersion",
+            "columnName": "analyzer_version",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bpm",
+            "columnName": "bpm",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstBeatMs",
+            "columnName": "first_beat_ms",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstBeatInBar",
+            "columnName": "first_beat_in_bar",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "beatCount",
+            "columnName": "beat_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "keyIndex",
+            "columnName": "key_index",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "duration_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waveformDetail",
+            "columnName": "waveform_detail",
+            "affinity": "BLOB",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waveformPreview",
+            "columnName": "waveform_preview",
+            "affinity": "BLOB",
+            "notNull": true
+          },
+          {
+            "fieldPath": "waveformTinyPreview",
+            "columnName": "waveform_tiny_preview",
+            "affinity": "BLOB",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sizeBytes",
+            "columnName": "size_bytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtMs",
+            "columnName": "created_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastUsedMs",
+            "columnName": "last_used_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "content_sha256",
+            "analyzer_version"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_analyses_last_used_ms",
+            "unique": false,
+            "columnNames": [
+              "last_used_ms"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_analyses_last_used_ms` ON `${TABLE_NAME}` (`last_used_ms`)"
+          },
+          {
+            "name": "index_analyses_analyzer_version",
+            "unique": false,
+            "columnNames": [
+              "analyzer_version"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_analyses_analyzer_version` ON `${TABLE_NAME}` (`analyzer_version`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '50b07ee1c815ffbff889d76c52c6bdb9')"
+    ]
+  }
+}

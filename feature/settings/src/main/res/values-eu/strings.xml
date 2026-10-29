@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Ezarpenak</string>
+    <string name="settings_back_library">Liburutegia</string>
+
+    <string name="settings_folders_header">Liburutegiko karpetak</string>
+    <string name="settings_add_folder">Gehitu karpeta</string>
+    <string name="settings_folders_footer">Sonorak karpeta hauetako musika soilik erakusten du. Karpeta bat ezin da liburutegiko beste karpeta baten barruan egon.</string>
+    <string name="settings_remove_folder">Kendu %1$s</string>
+    <string name="settings_remove_folder_title">«%1$s» kendu?</string>
+    <string name="settings_remove_folder_message">Haren abestiak liburutegitik kenduko dira. Fitxategiak gailuan geratuko dira.</string>
+    <string name="settings_remove">Kendu</string>
+    <string name="settings_cancel">Utzi</string>
+    <string name="settings_ok">Ados</string>
+
+    <string name="settings_add_failed_title">Ezin izan da karpeta gehitu</string>
+    <string name="settings_add_failed_message">Sonorak ezin du karpeta hori irakurri. Aukeratu gailuaren memoriako karpeta bat.</string>
+    <string name="settings_picker_missing_message">Gailu honek ez du karpetak aukeratzeko aplikaziorik.</string>
+    <string name="settings_save_failed_title">Ezin izan da ezarpena gorde</string>
+    <string name="settings_save_failed_message">Sonorak ezin izan du aldaketa hau gorde. Saiatu berriro.</string>
+    <string name="settings_already_added_title">Karpeta gehituta dago jada</string>
+    <string name="settings_already_added_message">«%1$s» liburutegian dago jada.</string>
+    <string name="settings_inside_existing_title">Karpeta sartuta dago jada</string>
+    <string name="settings_inside_existing_message">Karpeta hau «%1$s» karpetaren barruan dago, eta hura liburutegian dago jada.</string>
+    <string name="settings_contains_existing_title">Karpetak liburutegiko karpeta bat dauka</string>
+    <string name="settings_contains_existing_message">Karpeta honek «%1$s» dauka barruan, eta hura liburutegian dago jada. Kendu lehenik «%1$s», eta gehitu gero karpeta hau.</string>
+
+    <string name="settings_scanning_header">Eskaneatzea</string>
+    <string name="settings_rescan">Eskaneatu berriro liburutegia</string>
+    <string name="settings_scanning">«%1$s» eskaneatzen…</string>
+    <string name="settings_scanning_progress">«%1$s» eskaneatzen… %2$d / %3$d</string>
+    <string name="settings_last_scan_changes">Azken eskaneatzea: %1$s.</string>
+    <string name="settings_last_scan_no_changes">Azken eskaneatzea: aldaketarik ez, %1$s.</string>
+    <string name="settings_list_separator">", "</string>
+    <plurals name="settings_scan_added">
+        <item quantity="one">%d gehituta</item>
+        <item quantity="other">%d gehituta</item>
+    </plurals>
+    <plurals name="settings_scan_updated">
+        <item quantity="one">%d eguneratuta</item>
+        <item quantity="other">%d eguneratuta</item>
+    </plurals>
+    <plurals name="settings_scan_removed">
+        <item quantity="one">%d kenduta</item>
+        <item quantity="other">%d kenduta</item>
+    </plurals>
+    <plurals name="settings_scan_songs">
+        <item quantity="one">%d abesti</item>
+        <item quantity="other">%d abesti</item>
+    </plurals>
+    <plurals name="settings_scan_skipped">
+        <item quantity="one">Ezin izan da %d fitxategi irakurri; Sonora berriro saiatuko da hurrengo eskaneatzean.</item>
+        <item quantity="other">Ezin izan dira %d fitxategi irakurri; Sonora berriro saiatuko da hurrengo eskaneatzean.</item>
+    </plurals>
+    <plurals name="settings_scan_failed_folders">
+        <item quantity="one">Ezin izan da %d karpeta ireki; bertako abestiak liburutegian mantendu dira.</item>
+        <item quantity="other">Ezin izan dira %d karpeta ireki; bertako abestiak liburutegian mantendu dira.</item>
+    </plurals>
+
+    <string name="settings_language_header">Hizkuntza</string>
+    <string name="settings_language_footer">Sonorak gaztelania erabiltzen du, beste hizkuntza bat aukeratzen duzun arte.</string>
+
+    <string name="settings_appearance_header">Itxura</string>
+    <string name="settings_theme_system">Sistemakoa</string>
+    <string name="settings_theme_light">Argia</string>
+    <string name="settings_theme_dark">Iluna</string>
+    <string name="settings_translucency">Zeharrargia</string>
+    <string name="settings_translucency_footer_liquid">Errefrakzioa, lausotzea eta argi-ertz bat fitxa-barran, erreproduzigailu txikian eta botoietan. Desaktibatuta, gainazal zeharrargi laua erabiltzen da.</string>
+    <string name="settings_translucency_footer_frosted">Android-en bertsio honek gainazal zeharrargiak lausotzen ditu, errefrakziorik gabe. Desaktibatuta, gainazal zeharrargi laua erabiltzen da.</string>
+    <string name="settings_translucency_footer_flat">Android-en bertsio honek gainazal zeharrargi laua erabiltzen du beti.</string>
+    <string name="settings_translucency_footer_contrast">Android-en kontraste-ezarpenek kontraste handiagoa eskatzen dute; beraz, gainazal zeharrargiak lauak eta opakuagoak dira.</string>
+    <string name="settings_translucency_footer_limited_frosted">Mugikor honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, errefrakziorik gabe lausotzen da. Desaktibatu eta aktibatu berriro etengailua berriz probatzeko.</string>
+    <string name="settings_translucency_footer_limited_flat">Mugikor honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, gainazal zeharrargi laua erabiltzen da. Desaktibatu eta aktibatu berriro etengailua berriz probatzeko.</string>
+    <string name="settings_accent_header">Nabarmentze-kolorea</string>
+    <string name="settings_accent_material_you">Material You</string>
+    <string name="settings_accent_palette">Kolore-paleta</string>
+    <string name="settings_accent_artwork">Azalaren arabera</string>
+    <string name="settings_accent_material_you_subtitle">Horma-paperaren koloreak</string>
+    <string name="settings_accent_material_you_unavailable">Android 12 behar du; Sonoraren arrosa erabiltzen da haren ordez</string>
+    <string name="settings_accent_artwork_subtitle">Erreproduzitzen ari den abestiaren koloreak</string>
+    <string name="settings_accent_footer">Nabarmentze-koloreak botoiak, ikonoak, etengailuak eta fitxa-barra koloreztatzen ditu, eta beti irakurgarri izateko doitzen da.</string>
+    <string name="settings_preset_red">Gorria</string>
+    <string name="settings_preset_orange">Laranja</string>
+    <string name="settings_preset_amber">Anbarra</string>
+    <string name="settings_preset_green">Berdea</string>
+    <string name="settings_preset_teal">Berde urdinxka</string>
+    <string name="settings_preset_blue">Urdina</string>
+    <string name="settings_preset_indigo">Indigoa</string>
+    <string name="settings_preset_purple">Morea</string>
+    <string name="settings_preset_pink">Arrosa</string>
+
+    <string name="settings_now_playing_header">Orain erreproduzitzen</string>
+    <string name="settings_show_lyrics_button">Erakutsi letraren botoia</string>
+    <string name="settings_show_file_info_button">Erakutsi fitxategi-informazioaren botoia</string>
+    <string name="settings_now_playing_footer">Fitxategiaren informazioak erakusten du non dagoen gordeta abesti bat, eta haren formatua, audio-xehetasunak eta etiketak.</string>
+    <string name="settings_rotation_header">Erreproduzitzen dena biratzean</string>
+    <string name="settings_rotation_now_playing">Erreproduzitzen dena horizontalean</string>
+    <string name="settings_rotation_cover_flow">Albumen bilduma bisuala</string>
+    <string name="settings_rotation_footer">Biraketa automatikoa aktibatuta, telefonoa Erreproduzitzen pantailan biratzean, haren ikuspegi horizontala edo albumen bilduma bisuala agertzen da, entzuten ari den albumean irekita.</string>
+    <string name="settings_gravity_header">Grabitatea</string>
+    <string name="settings_gravity">Mantendu zuzen telefonoa makurtzean</string>
+    <string name="settings_gravity_footer">Erreproduzitzen bertikalean geratzen da, eta azala eta kontrolak bakoitza bere erdigunearen inguruan biratzen dira zuzen mantentzeko. Mahai gainean geldi geratzen dira; goiko aukera horizontala ez da aplikatzen.</string>
+    <string name="settings_hidden_items">Ezkutatutako elementuak</string>
+    <string name="settings_hidden_footer">Sonoratik kendutakoak telefonoan geratzen dira. Leheneratu bat liburutegian berriro ager dadin.</string>
+    <string name="settings_hidden_empty">Ez dago ezkutatutako elementurik</string>
+    <string name="settings_restore">Leheneratu</string>
+    <string name="settings_restore_item">Leheneratu: %1$s</string>
+    <string name="settings_hidden_song">Abestia</string>
+    <string name="settings_hidden_album">Albuma</string>
+    <string name="settings_hidden_artist">Artista</string>
+    <string name="settings_hidden_playlist">Zerrenda</string>
+    <string name="settings_hidden_folder">Karpeta</string>
+    <string name="settings_hidden_line">%1$s · %2$s</string>
+    <string name="settings_external_control_header">Kanpo-kontrola</string>
+    <string name="settings_external_control">Onartu kanpo-kontrola</string>
+    <string name="settings_external_control_footer">Beste aplikazioek eta IA agenteek erreprodukzioa kontrolatzea eta zure liburutegia irakurtzea ahalbidetzen du Sonoraren kanpo APIaren bidez. adb shell-ak aktibatu bezain laster erabil dezake; beste aplikazioek «Sonora kontrolatu» baimena ere behar dute, aplikazioz aplikazio ematen duzuna. Desaktibatuta, Sonorak bakarrik erabil dezake.</string>
+</resources>

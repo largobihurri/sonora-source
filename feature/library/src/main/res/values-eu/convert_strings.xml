@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="convert_action">Bihurtu…</string>
+    <string name="convert_nothing">Ez dago bihurtzeko abestirik</string>
+    <string name="convert_failed">Ezin izan da bihurgailura bidali</string>
+
+    <string name="picker_title">Gehitu musika</string>
+    <string name="picker_cancel">Utzi</string>
+    <string name="picker_back">Atzera</string>
+    <string name="picker_add">Gehitu</string>
+    <string name="picker_search">Bilatu liburutegian</string>
+    <string name="picker_select_all">Hautatu guztiak</string>
+    <string name="picker_deselect_all">Desautatu guztiak</string>
+    <string name="picker_songs">Abestiak</string>
+    <string name="picker_albums">Albumak</string>
+    <string name="picker_artists">Artistak</string>
+    <string name="picker_folders">Karpetak</string>
+    <string name="picker_playlists">Zerrendak</string>
+    <string name="picker_converted">Bihurtutakoak</string>
+    <string name="picker_nothing_here">Hemen ez dago abestirik.</string>
+    <string name="picker_no_results">Ez dago bilaketarekin bat datorren abestirik.</string>
+    <plurals name="picker_selected">
+        <item quantity="one">%1$d abesti hautatuta</item>
+        <item quantity="other">%1$d abesti hautatuta</item>
+    </plurals>
+    <string name="picker_selected_state">Hautatuta</string>
+    <string name="picker_not_selected_state">Hautatu gabe</string>
+</resources>

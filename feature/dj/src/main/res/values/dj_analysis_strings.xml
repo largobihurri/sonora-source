@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The card on the DJ waveform while the song has no analysis (D2.11). Title, then a one-line hint. -->
+    <string name="dj_state_waiting_title">Waiting for analysis</string>
+    <string name="dj_state_waiting_hint">The waveform and the beat grid will appear here.</string>
+    <string name="dj_state_analysing_title">Analysing this song</string>
+    <string name="dj_state_analysing_hint">Finding the beat, the key and the waveform.</string>
+    <!-- The analysis stands still because the phone is hot. -->
+    <string name="dj_state_paused_title">Paused: the phone is hot</string>
+    <string name="dj_state_paused_hint">It carries on when the phone cools down.</string>
+    <string name="dj_state_waveform_title">Rebuilding the waveform</string>
+    <string name="dj_state_waveform_pending">Waveform pending</string>
+    <string name="dj_state_waveform_hint">The beat grid is ready; only the waveform is missing.</string>
+    <!-- The progress bar of the card, spoken with its percentage. -->
+    <string name="dj_state_progress_description">Analysis progress</string>
+    <string name="dj_state_no_grid_title">No steady beat found</string>
+    <string name="dj_state_no_grid_hint">Ambient or spoken tracks often have none. You can still play it and set cues, or analyse it again.</string>
+    <string name="dj_state_analyse_again">Analyse again</string>
+    <string name="dj_state_analyse_again_description">Analyse this song again</string>
+    <!-- Why the analysis failed, in one line. -->
+    <string name="dj_state_failed_other">The analysis failed</string>
+    <string name="dj_state_failed_unreadable">Can\'t read this file</string>
+    <string name="dj_state_failed_unsupported">This format can\'t be analysed</string>
+    <string name="dj_state_failed_corrupt">The audio looks damaged</string>
+    <string name="dj_state_failed_too_short">Too short to analyse</string>
+    <string name="dj_state_failed_hint">The song still plays. You can try the analysis again.</string>
+    <string name="dj_state_try_again">Try again</string>
+    <string name="dj_state_try_again_description">Try to analyse this song again</string>
+
+    <!-- The status line in the time row while the song is analysed again; its old analysis stays on screen. %1$s is the progress, e.g. "42%". -->
+    <string name="dj_status_reanalysing">Re-analysing %1$s</string>
+    <string name="dj_status_reanalysis_paused">Paused: phone is hot</string>
+    <string name="dj_status_reanalysis_failed">Re-analysis failed</string>
+
+    <!-- A small chip in the time row when the stored analysis comes from an older version of the analyser. -->
+    <string name="dj_old_analysis_chip">Old analysis · Update</string>
+    <string name="dj_old_analysis_chip_short">Update</string>
+    <string name="dj_old_analysis_chip_description">Update the analysis. This song was analysed by an older version.</string>
+
+    <!-- Confirmation before analysing a song whose beat grid the user edited. -->
+    <string name="dj_reanalyse_title">Analyse again?</string>
+    <string name="dj_reanalyse_message">Your edited beat grid and your cues are kept. The edited grid still replaces the one of the new analysis.</string>
+    <string name="dj_reanalyse_confirm">Analyse again</string>
+    <string name="dj_reanalyse_cancel">Cancel</string>
+</resources>

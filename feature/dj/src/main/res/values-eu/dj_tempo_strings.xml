@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dj_tempo_fader">Tempoa</string>
+    <string name="dj_tempo_reset">Itzuli tempoa 0ra</string>
+    <string name="dj_tempo_nudge_down">Jaitsi %1$s BPM</string>
+    <string name="dj_tempo_nudge_up">Igo %1$s BPM</string>
+    <string name="dj_tempo_range">Tempo-tartea</string>
+    <string name="dj_tempo_range_wide">Max</string>
+    <string name="dj_master_tempo">Master Tempo</string>
+    <string name="dj_master_tempo_toggle">Mantendu tonua tempoa aldatzean</string>
+    <string name="dj_state_on">Aktibatuta</string>
+    <string name="dj_state_off">Desaktibatuta</string>
+    <string name="dj_readout_bpm">%1$s BPM</string>
+    <string name="dj_readout_no_bpm">BPMrik gabe</string>
+    <string name="dj_readout_key">Tonalitatea: %1$s</string>
+    <string name="dj_readout_no_key">Tonalitate ezezaguna</string>
+    <string name="dj_readout_tempo">Tempoa: %1$s</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_channel_name">Reproducción</string>
+    <string name="playback_channel_description">Controles de la música que está sonando</string>
+    <string name="playback_shuffle_on">Aleatorio activado</string>
+    <string name="playback_shuffle_off">Aleatorio desactivado</string>
+    <string name="playback_repeat_off">Repetir desactivado</string>
+    <string name="playback_repeat_all">Repetir todo</string>
+    <string name="playback_repeat_one">Repetir una</string>
+    <string name="external_control_permission_label">Controlar Sonora</string>
+    <string name="external_control_permission_description">Permite que esta aplicación reproduzca música, cambie la cola y lea la biblioteca mediante el control externo de Sonora. Solo funciona mientras el control externo esté activado en los ajustes de Sonora.</string>
+</resources>

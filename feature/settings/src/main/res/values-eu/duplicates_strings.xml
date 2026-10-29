@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The "duplicates piled up" notification, on its own channel -->
+    <string name="duplicates_channel_name">Bikoiztuak</string>
+    <string name="duplicates_channel_description">Liburutegian abesti bikoiztu asko pilatzen direnean jakinarazten dizu.</string>
+    <string name="duplicates_notification_title">Bikoiztuak liburutegian</string>
+    <plurals name="duplicates_notification_text">
+        <item quantity="one">Abesti %1$d kopiak ditu liburutegian. Sakatu berrikusteko.</item>
+        <item quantity="other">%1$d abestik kopiak dituzte liburutegian. Sakatu berrikusteko.</item>
+    </plurals>
+    <!-- Settings › Duplicates: groups of copies of one song, compared side by side -->
+    <string name="settings_duplicates">Bikoiztuak</string>
+    <string name="duplicates_footer">Liburutegian behin baino gehiagotan dauden abestiak: fitxategi bera edo abesti bera fitxategi desberdinetan. Konparatu kopiak, gorde onena eta ezabatu besteak.</string>
+    <string name="duplicates_notify">Jakinarazi bikoiztuak pilatzen direnean</string>
+    <string name="duplicates_notify_footer">Sonorak noizean behin bikoiztuak bilatzen ditu telefonoa geldirik eta kargatzen dagoen bitartean, eta 20 abestik edo gehiagok kopiak dituztenean jakinarazten dizu.</string>
+    <string name="duplicates_scan_again">Bilatu bikoiztuak berriro</string>
+    <string name="duplicates_looking">Bikoiztuak bilatzen…</string>
+    <string name="duplicates_checking">Fitxategiak konparatzen… %1$s / %2$s</string>
+    <string name="duplicates_failed">Ezin izan dira bikoiztuak bilatu. Saiatu berriro.</string>
+    <string name="duplicates_none">Ez dago bikoiztutik</string>
+    <plurals name="duplicates_found">
+        <item quantity="one">Abesti %1$d kopiak ditu</item>
+        <item quantity="other">%1$d abestik kopiak dituzte</item>
+    </plurals>
+    <string name="duplicates_line">%1$s · %2$s</string>
+    <plurals name="duplicates_copies">
+        <item quantity="one">Kopia %1$d</item>
+        <item quantity="other">%1$d kopia</item>
+    </plurals>
+    <string name="duplicates_kind_identical">Fitxategi berdinak</string>
+    <string name="duplicates_kind_same_song">Abesti bera</string>
+
+    <!-- The comparison panel -->
+    <string name="duplicates_copy">%1$d. kopia</string>
+    <string name="duplicates_suggested">Gordetzeko gomendatua</string>
+    <string name="duplicates_delete_this">Ezabatu kopia hau</string>
+    <string name="duplicates_keep_one">Kopia bat beti gordetzen da.</string>
+    <string name="duplicates_differences_note">Nabarmendutako balioak desberdinak dira kopien artean.</string>
+    <string name="duplicates_field_format">Formatua</string>
+    <string name="duplicates_field_bitrate">Bit-tasa</string>
+    <string name="duplicates_field_sample_rate">Lagin-maiztasuna</string>
+    <string name="duplicates_field_bit_depth">Bit-sakonera</string>
+    <string name="duplicates_field_channels">Kanalak</string>
+    <string name="duplicates_field_duration">Iraupena</string>
+    <string name="duplicates_field_size">Tamaina</string>
+    <string name="duplicates_field_folder">Karpeta</string>
+    <string name="duplicates_field_file">Fitxategia</string>
+    <string name="duplicates_field_tags">Etiketak</string>
+    <string name="duplicates_field_artwork">Azala</string>
+    <string name="duplicates_field_added">Gehitua</string>
+    <string name="duplicates_value_unknown">—</string>
+    <string name="duplicates_value_kbps">%1$s kbps</string>
+    <string name="duplicates_value_khz">%1$s kHz</string>
+    <string name="duplicates_value_bits">%1$d bit</string>
+    <string name="duplicates_value_mono">Mono</string>
+    <string name="duplicates_value_stereo">Estereo</string>
+    <plurals name="duplicates_value_channels">
+        <item quantity="one">Kanal %1$d</item>
+        <item quantity="other">%1$d kanal</item>
+    </plurals>
+    <string name="duplicates_value_tags">%1$d / %2$d</string>
+    <string name="duplicates_value_yes">Bai</string>
+    <string name="duplicates_value_no">Ez</string>
+    <plurals name="duplicates_delete_selected">
+        <item quantity="one">Ezabatu kopia %1$d telefonotik</item>
+        <item quantity="other">Ezabatu %1$d kopia telefonotik</item>
+    </plurals>
+    <string name="duplicates_not_duplicate">Ez da bikoiztua</string>
+    <string name="duplicates_not_duplicate_note">Ez da bikoiztua aukerak talde hau betiko ezkutatzen du. Bere fitxategiak dauden bezala geratzen dira.</string>
+
+    <!-- Deleting copies -->
+    <plurals name="duplicates_delete_title">
+        <item quantity="one">Kopia %1$d telefonotik ezabatu?</item>
+        <item quantity="other">%1$d kopia telefonotik ezabatu?</item>
+    </plurals>
+    <string name="duplicates_delete_message">Ezin da desegin. Fitxategiak telefonotik ezabatzen dira. Gordetzen duzun kopiak haien lekua hartzen du zerrendetan, eta haien gogokoak, aingurak eta erreprodukzio kopuruak gordetzen ditu.</string>
+    <string name="duplicates_delete_confirm">Ezabatu</string>
+    <string name="duplicates_cancel">Utzi</string>
+    <string name="duplicates_ok">Ados</string>
+    <string name="duplicates_access_title">Baimendu ezabatzea</string>
+    <string name="duplicates_access_message">Sonorak «%1$s» karpeta irakurri besterik ezin du egin. Fitxategi hauek ezabatzeko, aukeratu karpeta hori berriro eta baimendu sarbidea.</string>
+    <string name="duplicates_access_wrong_folder">Beste karpeta bat zen. Aukeratu «%1$s» ezabatzea baimentzeko.</string>
+    <string name="duplicates_access_choose">Aukeratu karpeta…</string>
+    <string name="duplicates_deleted_title">Kopiak ezabatu dira</string>
+    <plurals name="duplicates_deleted_message">
+        <item quantity="one">Kopia %1$d telefonotik ezabatu da.</item>
+        <item quantity="other">%1$d kopia telefonotik ezabatu dira.</item>
+    </plurals>
+    <string name="duplicates_incomplete_title">Ezin izan da dena ezabatu</string>
+    <plurals name="duplicates_incomplete_message">
+        <item quantity="one">Ezin izan da kopia %1$d ezabatu, eta telefonoan dago oraindik.</item>
+        <item quantity="other">Ezin izan dira %1$d kopia ezabatu, eta telefonoan daude oraindik.</item>
+    </plurals>
+    <string name="duplicates_refused_title">Ezin da hemen ezabatu</string>
+    <string name="duplicates_refused_message">Karpeta honen biltegiak ez dio Sonorari fitxategiak ezabatzen uzten.</string>
+    <string name="duplicates_error_title">Zerbait gaizki joan da</string>
+    <string name="duplicates_error_message">Zerbait gaizki joan da. Saiatu berriro.</string>
+</resources>

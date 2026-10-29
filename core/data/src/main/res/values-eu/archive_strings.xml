@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="archive_channel_name">Artxibo konprimituak</string>
+    <string name="archive_channel_description">Artxiboak konprimitzearen eta erauztearen aurrerapena eta emaitzak</string>
+    <string name="archive_compress_title">Konprimitzen</string>
+    <string name="archive_extract_title">Artxiboa erauzten</string>
+    <string name="archive_progress_preparing">Prestatzen…</string>
+    <string name="archive_progress_text">%1$d / %2$d · %3$s</string>
+    <string name="archive_progress_chip">%% %1$d</string>
+    <string name="archive_action_cancel">Utzi</string>
+    <string name="archive_compressed_title">Artxiboa prest</string>
+    <string name="archive_extracted_title">Artxiboa erauzita</string>
+    <plurals name="archive_extracted_text">
+        <item quantity="one">Abesti %d gehitu da</item>
+        <item quantity="other">%d abesti gehitu dira</item>
+    </plurals>
+    <string name="archive_compress_failed_title">Ezin izan da artxiboa sortu</string>
+    <string name="archive_extract_failed_title">Ezin izan da artxiboa erauzi</string>
+    <string name="archive_error_password_required">Artxibo honek pasahitza behar du.</string>
+    <string name="archive_error_wrong_password">Pasahitza ez da zuzena.</string>
+    <string name="archive_error_password_again">Sonora itxi egin da lana amaitu aurretik. Idatzi berriro pasahitza.</string>
+    <string name="archive_error_damaged">Artxiboa hondatuta dago edo ez da ZIP fitxategi bat.</string>
+    <string name="archive_error_no_music">Artxiboan ez dago musikarik.</string>
+    <string name="archive_error_no_space">Ez dago leku nahikorik: %1$s behar dira eta %2$s daude libre.</string>
+    <string name="archive_error_unreadable">Ezin izan da «%1$s» irakurri.</string>
+    <string name="archive_error_unreadable_files">Ezin izan dira konprimitu beharreko abestiak irakurri.</string>
+    <string name="archive_error_unwritable">Ezin izan da aukeratutako karpetan idatzi.</string>
+    <string name="archive_error_unexpected">Zerbaitek huts egin du. Saiatu berriro.</string>
+</resources>

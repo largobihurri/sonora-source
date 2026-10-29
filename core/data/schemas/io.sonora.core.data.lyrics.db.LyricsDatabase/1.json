@@ -1,0 +1,53 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "ecd10b394b3c0b8d7e9d11981a954cc6",
+    "entities": [
+      {
+        "tableName": "downloaded_lyrics",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`track_uri` TEXT NOT NULL, `found` INTEGER NOT NULL, `synced_lyrics` TEXT, `plain_lyrics` TEXT, `instrumental` INTEGER NOT NULL, PRIMARY KEY(`track_uri`))",
+        "fields": [
+          {
+            "fieldPath": "trackUri",
+            "columnName": "track_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "found",
+            "columnName": "found",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncedLyrics",
+            "columnName": "synced_lyrics",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "plainLyrics",
+            "columnName": "plain_lyrics",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "instrumental",
+            "columnName": "instrumental",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "track_uri"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ecd10b394b3c0b8d7e9d11981a954cc6')"
+    ]
+  }
+}

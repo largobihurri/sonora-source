@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cdj_title">Esportatu</string>
+
+    <string name="cdj_ok">Ados</string>
+    <string name="cdj_back">Atzera</string>
+    <string name="cdj_cancel">Utzi</string>
+    <string name="cdj_cancelling">Bertan behera uzten…</string>
+    <string name="cdj_done">Eginda</string>
+    <string name="cdj_starting">Abiarazten…</string>
+    <string name="cdj_copy_details">Kopiatu xehetasun teknikoak</string>
+    <string name="cdj_unknown">Ezezaguna</string>
+    <plurals name="cdj_more">
+        <item quantity="one">eta beste %d</item>
+        <item quantity="other">eta beste %d</item>
+    </plurals>
+    <string name="cdj_name_reason">%1$s: %2$s</string>
+    <string name="cdj_bits">%1$d bit</string>
+    <string name="cdj_khz">%1$s kHz</string>
+    <string name="cdj_container_m4a">M4A (AAC edo ALAC)</string>
+    <string name="cdj_container_unknown">Formatu ezezaguna</string>
+
+    <string name="cdj_prepare_header">Prestatu USB memoria</string>
+    <string name="cdj_prepare_intro">Memoria FAT32 (MBR) formatuan formateatzen du, XDJ-700 bezalako Pioneer erreproduzigailuek irakurtzen duten moduan. Formateatzean, memoriako guztia ezabatzen da.</string>
+    <string name="cdj_prepare_waiting_permission">%1$s erabiltzeko baimenaren zain…</string>
+    <string name="cdj_prepare_opening">%1$s irekitzen…</string>
+    <string name="cdj_no_stick_title">Ez dago USB memoriarik konektatuta</string>
+    <string name="cdj_no_stick_message">Konektatu USB memoria bat OTG egokigailu batekin. Konektatu bezain laster agertuko da hemen.</string>
+    <string name="cdj_device_unnamed">USB biltegiratze-gailua</string>
+    <string name="cdj_device_detail">USB %1$s</string>
+    <string name="cdj_device_unsupported">Gailu honen biltegiratze-protokoloa ez da onartzen (adibidez, USB Attached SCSI soilik).</string>
+    <string name="cdj_permission_title">Baimena behar da</string>
+    <string name="cdj_permission_message">Sonorak %1$s erabiltzeko baimena behar du formateatu ahal izateko.</string>
+    <string name="cdj_try_again">Saiatu berriro</string>
+    <string name="cdj_detail_usb_device">USB gailua</string>
+    <string name="cdj_detail_capacity">Edukiera</string>
+    <string name="cdj_capacity_value">%1$s (%2$s)</string>
+    <string name="cdj_detail_block_size">Bloke-tamaina</string>
+    <string name="cdj_detail_write_protection">Idazketa-babesa</string>
+    <string name="cdj_on">Aktibatuta</string>
+    <string name="cdj_off">Desaktibatuta</string>
+    <string name="cdj_label_field">Bolumenaren etiketa</string>
+    <string name="cdj_label_hint">Gehienez 11 karaktere: azentu eta eñerik gabeko letrak, zifrak, zuriuneak eta ikur errazak.</string>
+    <string name="cdj_format_blocked_label">Zuzendu bolumenaren etiketa jarraitzeko.</string>
+    <string name="cdj_write_protected">Memoria hau idazketaren aurka babestuta dago, eta ezin da formateatu. Desaktibatu bere blokeo-etengailua, edo erabili beste memoria bat.</string>
+    <string name="cdj_format_button">Formateatu…</string>
+    <string name="cdj_erase_title">USB memoria hau ezabatu nahi duzu?</string>
+    <string name="cdj_erase_message">«%1$s» memoriako datu GUZTIAK ezabatuko dira. Memoria FAT32 (MBR) formatuan formateatuko da Pioneer erreproduzigailuetarako, %2$s etiketarekin.</string>
+    <string name="cdj_erase_type_word">Idatzi %1$s jarraitzeko.</string>
+    <string name="cdj_erase_confirm">Ezabatu eta formateatu</string>
+    <string name="cdj_stick_summary">%1$s, %2$s</string>
+    <string name="cdj_formatting_title">%1$s formateatzen…</string>
+    <string name="cdj_format_progress">%% %1$d · %2$s / %3$s</string>
+    <string name="cdj_retrying">Berriro saiatzen…</string>
+    <string name="cdj_formatting_keep">Eduki memoria konektatuta. Pantaila piztuta egongo da formateatzea amaitu arte.</string>
+    <string name="cdj_formatting_back_blocked">Ezin da formateatzetik irten Atzera sakatuta. Erabili Utzi gelditzeko; ondoren, memoria berriro formateatu beharko da.</string>
+    <string name="cdj_stick_ready">USB memoria prest</string>
+    <string name="cdj_detail_label">Etiketa</string>
+    <string name="cdj_detail_file_system">Fitxategi-sistema</string>
+    <string name="cdj_detail_size">Tamaina</string>
+    <string name="cdj_replug_hint">Memoria Androiden agertzen ez bada, deskonektatu eta konektatu berriro.</string>
+
+    <string name="cdj_label_empty">Idatzi 1 eta %1$d karaktere arteko etiketa bat.</string>
+    <string name="cdj_label_too_long">Etiketak %1$d karaktere ditu; FATek gehienez %2$d onartzen ditu.</string>
+    <string name="cdj_label_invalid_character">«%1$s» ez da onartzen FAT etiketetan.</string>
+    <string name="cdj_label_non_ascii">«%1$s» ez da onartzen: erabili azentu eta eñerik gabeko letrak, zifrak, zuriuneak eta ikur errazak.</string>
+
+    <string name="cdj_usb_permission_denied">Sonorak ez du USB gailu hau erabiltzeko baimenik.</string>
+    <string name="cdj_usb_disconnected">USB memoria deskonektatu da.</string>
+    <string name="cdj_usb_disconnected_while_formatting">USB memoria formateatzen ari zela deskonektatu da. Konektatu berriro eta formateatu erabili aurretik.</string>
+    <string name="cdj_usb_closed">USB memoria askatuta zegoen jada. Hautatu berriro.</string>
+    <string name="cdj_usb_unsupported">Gailu hau ezin da hemen formateatu: %1$s.</string>
+    <string name="cdj_usb_no_medium">Ez da euskarririk aurkitu. Sartu txartel bat irakurgailuan, edo erabili beste memoria bat.</string>
+    <string name="cdj_usb_write_protected">Memoria idazketaren aurka babestuta dago.</string>
+    <string name="cdj_usb_transport">USB memoriak erantzuteari utzi dio. Deskonektatu, konektatu berriro eta saiatu berriro.</string>
+    <string name="cdj_usb_command_failed">Memoriak agindu bat baztertu du (sense key 0x%1$X, ASC 0x%2$02X, ASCQ 0x%3$02X). Probatu beste memoria batekin.</string>
+    <string name="cdj_usb_other">Ezin izan da USB memoria erabili: %1$s.</string>
+
+    <string name="cdj_too_small_title">Memoria txikiegia</string>
+    <string name="cdj_too_small_message">Memoria honek %1$s ditu, gutxiegi FAT32 bolumen baterako. Ez da ezer idatzi.</string>
+    <string name="cdj_too_large_title">Memoria handiegia</string>
+    <string name="cdj_too_large_message">Memoria honek %1$s ditu, MBR partizio batek deskriba ditzakeen %2$s baino gehiago. Ez da ezer idatzi.</string>
+    <string name="cdj_block_size_title">Memoria ez da onartzen</string>
+    <string name="cdj_block_size_message">Memoria honek %1$d byteko blokeak erabiltzen ditu; Sonorak 512 edo 4096 byteko blokeak dituzten memoriak formateatzen ditu. Ez da ezer idatzi.</string>
+    <string name="cdj_write_protected_title">Memoria idazketaren aurka babestuta dago</string>
+    <string name="cdj_write_protected_message">Memoriak ez du bertan idazten utzi. Berriro formateatu behar da erabili ahal izateko.</string>
+    <string name="cdj_write_error_title">Idazketa-errorea</string>
+    <string name="cdj_write_error_at_block">Memoriak huts egin du %1$d. blokean. %2$s Berriro formateatu behar da erabili ahal izateko. Berriro gertatzen bada, baliteke memoria hondatuta egotea.</string>
+    <string name="cdj_write_error_cache">Memoriak huts egin du bere cachea gordetzean. %1$s Berriro formateatu behar da erabili ahal izateko. Berriro gertatzen bada, baliteke memoria hondatuta egotea.</string>
+    <string name="cdj_verification_title">Egiaztatzeak huts egin du</string>
+    <string name="cdj_verification_message">%2$d. blokean berriro irakurritakoa (%1$s) ez dator bat idatzitakoarekin. Memoria honek ez ditu datuak fidagarritasunez gordetzen (hondatuta edo faltsua izan daiteke); ez erabili musikarako.</string>
+    <string name="cdj_format_cancelled_title">Formateatzea bertan behera utzi da</string>
+    <string name="cdj_format_cancelled_message">Formateatzea amaitu aurretik gelditu da. Memoria ezin da erabili berriro formateatu arte.</string>
+    <string name="cdj_format_failed_title">Formateatzeak huts egin du</string>
+    <string name="cdj_format_failed_message">Zerbaitek huts egin du formateatzean. Memoria berriro formateatu behar da erabili ahal izateko.</string>
+    <string name="cdj_structure_partition_table">partizio-taula</string>
+    <string name="cdj_structure_boot_sector">abiarazte-sektorea</string>
+    <string name="cdj_structure_fs_info">FSInfo sektorea</string>
+    <string name="cdj_structure_backup_boot_sector">abiarazte-sektorearen kopia</string>
+    <string name="cdj_structure_backup_fs_info">FSInfo sektorearen kopia</string>
+    <string name="cdj_structure_fat">lehen FATa</string>
+    <string name="cdj_structure_backup_fat">bigarren FATa</string>
+    <string name="cdj_structure_root_directory">erroko direktorioa</string>
+
+    <string name="cdj_export_header">Esportatu rekordboxera</string>
+    <string name="cdj_export_intro">Pistak rekordbox liburutegia duen memoria batera kopiatzen ditu, %1$s gailuak haien uhin-formak, beat-sareak eta tonalitateak erakuts ditzan. %2$s onartzen du; gainerako guztia formatu horretara bihurtzen da bidean.</string>
+    <string name="cdj_not_affiliated">Sonora aplikazio independentea da, eta ez dago AlphaTheta edo Pioneer DJ-rekin lotuta; haiek ez dute babesten ezta onartzen ere. rekordbox, Pioneer DJ eta XDJ beren jabeen markak dira, eta bateragarritasuna adierazteko soilik aipatzen dira hemen.</string>
+    <string name="cdj_profile_summary">%1$s, %2$s, gehienez %3$s kHz</string>
+    <string name="cdj_tracks_title">Pistak</string>
+    <string name="cdj_tracks_empty">Gehitu audio-fitxategiak, edo haiek dituen karpeta bat.</string>
+    <plurals name="cdj_tracks_ready">
+        <item quantity="one">%1$d prest · %2$s</item>
+        <item quantity="other">%1$d prest · %2$s</item>
+    </plurals>
+    <string name="cdj_remove_track">Kendu %1$s</string>
+    <string name="cdj_checking_files">Fitxategiak egiaztatzen…</string>
+    <string name="cdj_add_files">Gehitu fitxategiak</string>
+    <string name="cdj_add_folder">Gehitu karpeta</string>
+    <string name="cdj_clear">Garbitu</string>
+    <plurals name="cdj_rejected_title">
+        <item quantity="one">%d fitxategi ezin da esportatu</item>
+        <item quantity="other">%d fitxategi ezin dira esportatu</item>
+    </plurals>
+    <plurals name="cdj_will_convert">
+        <item quantity="one">Esportatzean, %1$d fitxategi bihurtuko da formatu honetara: %2$s.</item>
+        <item quantity="other">Esportatzean, %1$d fitxategi bihurtuko dira formatu honetara: %2$s.</item>
+    </plurals>
+    <string name="cdj_stick_title">USB memoria</string>
+    <string name="cdj_opening_stick">Memoria irekitzen…</string>
+    <string name="cdj_pick_stick_hint">Aukeratu USB memoria bera (prestatu aurretik goian). Androidek behin bakarrik eskatzen du hartarako sarbidea.</string>
+    <string name="cdj_detail_name">Izena</string>
+    <string name="cdj_detail_free_space">Leku librea</string>
+    <string name="cdj_detail_export_needs">Esportazioak behar du</string>
+    <string name="cdj_about_size">%1$s inguru</string>
+    <string name="cdj_choose_stick">Aukeratu memoria</string>
+    <string name="cdj_choose_another_stick">Aukeratu beste memoria bat</string>
+    <string name="cdj_stick_connected">Konektatutako memoria: %1$s. Aukeratu behin Sonorari sarbidea emateko; gero bere kabuz irekiko da.</string>
+    <string name="cdj_sticks_connected">Hainbat biltegiratze daude konektatuta. Aukeratu USB memoria:</string>
+    <string name="cdj_eject">Atera memoria</string>
+    <string name="cdj_eject_opening">Androiden biltegiratze-ezarpenak irekitzen…</string>
+    <string name="cdj_eject_waiting">Atera %1$s Androiden ezarpenetan (Atera edo Desmuntatu) eta itzuli. Sonorak hemen esango dizu noiz deskonekta daitekeen.</string>
+    <string name="cdj_eject_waiting_unnamed">Atera memoria Androiden ezarpenetan (Atera edo Desmuntatu) eta itzuli. Sonorak hemen esango dizu noiz deskonekta daitekeen.</string>
+    <string name="cdj_eject_no_screen">Ezin izan dira ireki Androiden biltegiratze-ezarpenak. Atera memoria bere jakinarazpenetik edo Ezarpenak &gt; Biltegiratzea atalean; Sonorak hemen esango dizu noiz deskonekta daitekeen.</string>
+    <string name="cdj_eject_safe_title">Kendu daiteke</string>
+    <string name="cdj_eject_safe">Orain deskonekta dezakezu %1$s.</string>
+    <string name="cdj_eject_safe_unnamed">Orain deskonekta dezakezu memoria.</string>
+    <string name="cdj_eject_again">Ireki berriro ezarpenak</string>
+    <string name="cdj_playlist_field">Zerrenda</string>
+    <string name="cdj_playlist_hint">Esportatutako pistak zerrenda honetara ere joaten dira; lehendik badago, bertara gehitzen dira. Utzi hutsik zerrendarik ez erabiltzeko.</string>
+    <string name="cdj_space_problem">Ez dago leku nahikorik: esportazioak %1$s inguru behar ditu, eta memoriak %2$s libre ditu.</string>
+    <plurals name="cdj_export_button">
+        <item quantity="one">Esportatu %d pista</item>
+        <item quantity="other">Esportatu %d pista</item>
+    </plurals>
+    <string name="cdj_replace_title">Memoria honetako liburutegia ordeztu nahi duzu?</string>
+    <string name="cdj_replace_confirm">Ordeztu eta esportatu</string>
+    <string name="cdj_exporting_to">%1$s memoriara esportatzen…</string>
+    <string name="cdj_export_keep">Eduki memoria konektatuta. Bitartean Sonoratik irten zaitezke; esportazioak aurrera jarraituko du.</string>
+    <string name="cdj_skipped">Saltatuak</string>
+    <string name="cdj_not_exported">Esportatu gabeak</string>
+
+    <string name="cdj_unreadable_file">Sonorak ezin du fitxategi hau irakurri. Baliteke lekuz aldatu edo ezabatu izana.</string>
+    <string name="cdj_unreadable_folder">Sonorak ezin du karpeta hau irakurri. Baliteke lekuz aldatu edo ezabatu izana.</string>
+    <string name="cdj_undecodable">Sonorak ezin du audio hau deskodetu (%1$s); beraz, ezin du %2$s gailurako bihurtu.</string>
+    <string name="cdj_stick_no_access">Androidek ez dio Sonorari utzi biltegi honetarako sarbidea gordetzen. Aukeratu berriro memoria eta eman sarbidea.</string>
+    <string name="cdj_stick_unusable">Biltegi hau ezin da erabili. Deskonektatu memoria, konektatu berriro eta aukeratu beste behin.</string>
+    <string name="cdj_not_a_stick">Aukeratu USB memoriaren goiko maila (bere izena, ez barruko karpeta bat): erreproduzigailuak han bakarrik bilatzen du.</string>
+    <string name="cdj_another_export_running">Beste esportazio bat abian dago oraindik. Itxaron amaitu arte, eta esportatu berriro.</string>
+
+    <string name="cdj_library_empty">Oraindik ez dago rekordbox liburutegirik: esportazioak bat sortuko du.</string>
+    <plurals name="cdj_library_sonora">
+        <item quantity="one">Sonora liburutegia, %d pista duena: pista berriak bertara gehitzen dira.</item>
+        <item quantity="other">Sonora liburutegia, %d pista dituena: pista berriak bertara gehitzen dira.</item>
+    </plurals>
+    <string name="cdj_library_foreign">Beste aplikazio batek sortutako rekordbox liburutegia. Esportatzean ordeztu egingo da.</string>
+    <string name="cdj_library_newer">Sonoraren bertsio berriago batek sortutako liburutegia. Eguneratu Sonora; bestela, esportatzean ordeztu egingo da.</string>
+    <string name="cdj_library_damaged">Memoria honetako Sonora liburutegiaren erregistroa hondatuta dago. Esportatzean liburutegia ordeztu egingo da.</string>
+    <string name="cdj_replace_warning_foreign">Memoria honek Sonorak sortu ez duen rekordbox liburutegi bat du. Esportatzean, orain esportatzen dituzun pistak bakarrik dituen liburutegi berri batekin ordeztuko da. Gainerako musika-fitxategiak memorian geratzen dira, baina erreproduzigailuak ez ditu erakutsiko, ezta haien zerrendak, cue puntuak edo analisiak ere.</string>
+    <string name="cdj_replace_warning_unreadable">Ezin da memoria honetako liburutegia irakurri. Esportatzean, orain esportatzen dituzun pistak bakarrik dituen liburutegi berri batekin ordeztuko da. Gainerako musika-fitxategiak memorian geratzen dira, baina erreproduzigailuak ez ditu erakutsiko, ezta haien zerrendak, cue puntuak edo analisiak ere.</string>
+
+    <string name="cdj_progress_converting">%1$d/%2$d bihurtzen: %3$s</string>
+    <string name="cdj_progress_preparing">%1$d/%2$d prestatzen: %3$s</string>
+    <string name="cdj_progress_analysing">%1$d/%2$d aztertzen: %3$s</string>
+    <string name="cdj_progress_copying">%1$d/%2$d kopiatzen: %3$s</string>
+    <string name="cdj_progress_writing_library">rekordbox liburutegia idazten…</string>
+
+    <string name="cdj_notification_channel">Esportatu rekordboxera</string>
+    <string name="cdj_notification_title">%1$s memoriara esportatzen</string>
+    <string name="cdj_notification_title_default">rekordboxera esportatzen</string>
+    <string name="cdj_notification_track">%1$d/%2$d pista: %3$s</string>
+    <string name="cdj_notification_writing_library">liburutegia idazten</string>
+    <string name="cdj_finishing">Amaitzen…</string>
+
+    <string name="cdj_failure_unreadable">ezin izan da fitxategia irakurri</string>
+    <string name="cdj_failure_not_analysable">ez da tempo edo beat-sarerik aurkitu</string>
+    <string name="cdj_failure_not_convertible">ezin izan da audioa deskodetu hura bihurtzeko</string>
+    <string name="cdj_failure_changed">fitxategia aldatu egin da esportatzen ari zen bitartean</string>
+    <string name="cdj_failure_unexpected">zerbaitek huts egin du prestatzean</string>
+
+    <string name="cdj_summary_finished">Esportazioa amaitu da</string>
+    <string name="cdj_summary_finished_problems">Esportazioa arazoekin amaitu da</string>
+    <string name="cdj_summary_playlist_added">Zerrenda gehitu da</string>
+    <string name="cdj_summary_playlist_updated">Zerrenda eguneratu da</string>
+    <string name="cdj_summary_library_completed">Liburutegia osatu da</string>
+    <string name="cdj_summary_nothing">Ez da ezer esportatu</string>
+    <plurals name="cdj_summary_completed_library">
+        <item quantity="one">Memoriako liburutegia osatu da. %d pista du.</item>
+        <item quantity="other">Memoriako liburutegia osatu da. %d pista ditu.</item>
+    </plurals>
+    <plurals name="cdj_summary_joined">
+        <item quantity="one">Memorian zegoen %1$d pista gehitu da «%2$s» zerrendara.</item>
+        <item quantity="other">Memorian zeuden %1$d pista gehitu dira «%2$s» zerrendara.</item>
+    </plurals>
+    <plurals name="cdj_summary_holds">
+        <item quantity="one">Memoriako liburutegiak %d pista du.</item>
+        <item quantity="other">Memoriako liburutegiak %d pista ditu.</item>
+    </plurals>
+    <plurals name="cdj_summary_added_to_playlist">
+        <item quantity="one">%1$d pista gehitu da «%2$s» zerrendara.</item>
+        <item quantity="other">%1$d pista gehitu dira «%2$s» zerrendara.</item>
+    </plurals>
+    <plurals name="cdj_summary_added">
+        <item quantity="one">%d pista gehitu da.</item>
+        <item quantity="other">%d pista gehitu dira.</item>
+    </plurals>
+    <plurals name="cdj_summary_now_holds">
+        <item quantity="one">Memoriako liburutegiak %d pista du orain.</item>
+        <item quantity="other">Memoriako liburutegiak %d pista ditu orain.</item>
+    </plurals>
+    <string name="cdj_summary_eject">Atera memoria Androidetik deskonektatu aurretik.</string>
+    <string name="cdj_summary_nothing_added">Ezin izan da pistarik gehitu; memoria ez da aldatu.</string>
+    <string name="cdj_summary_duplicate">%1$s: memorian dago jada</string>
+    <string name="cdj_summary_no_space_title">Ez dago leku nahikorik</string>
+    <string name="cdj_summary_no_space_message">Esportazioak %1$s inguru behar ditu; memoriak %2$s libre ditu. Ez da ezer idatzi.</string>
+    <string name="cdj_summary_needs_confirmation">Memoria honetako liburutegia ordeztu egingo litzateke. Hasi berriro esportazioa eta berretsi.</string>
+    <string name="cdj_summary_failed">Esportazioak huts egin du</string>
+    <string name="cdj_summary_failed_library_changed">Esportazioa memoriako liburutegia idazten ari zela gelditu da, eta baliteke erreproduzigailuak dena ez erakustea. Konektatu berriro memoria eta esportatu berriro: horrela liburutegia osatuko da.</string>
+    <string name="cdj_summary_failed_stick">Memoriak huts egin du (baliteke deskonektatuta edo beteta egotea). Bere liburutegia esportazio honen aurretik zegoen bezala dago.</string>
+    <string name="cdj_summary_failed_unexpected">Esportazioa ustekabeko arazo batengatik gelditu da (Kopiatu xehetasun teknikoak aukerak erakusten du). Memoriako liburutegia esportazio honen aurretik zegoen bezala dago.</string>
+    <string name="cdj_summary_cancelled">Esportazioa bertan behera utzi da</string>
+    <string name="cdj_summary_cancelled_message">Memoriako liburutegia lehen bezala dago; esportazio honek kopiatutako fitxategiak kendu dira.</string>
+</resources>

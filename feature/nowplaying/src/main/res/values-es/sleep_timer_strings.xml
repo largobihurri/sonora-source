@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sleep_timer_title">Temporizador</string>
+    <string name="sleep_timer_stop_playing">Detener la reproducción</string>
+    <plurals name="sleep_timer_minutes">
+        <item quantity="one">%1$d minuto</item>
+        <item quantity="many">%1$d minutos</item>
+        <item quantity="other">%1$d minutos</item>
+    </plurals>
+    <string name="sleep_timer_end_of_song">Al terminar la canción</string>
+    <string name="sleep_timer_end_of_album">Al terminar el álbum</string>
+    <string name="sleep_timer_custom">Personalizado</string>
+    <string name="sleep_timer_shorter">Menos tiempo</string>
+    <string name="sleep_timer_longer">Más tiempo</string>
+    <string name="sleep_timer_start">Iniciar</string>
+    <string name="sleep_timer_time_left">Tiempo restante</string>
+    <plurals name="sleep_timer_extend">
+        <item quantity="one">Añadir %1$d minuto</item>
+        <item quantity="many">Añadir %1$d minutos</item>
+        <item quantity="other">Añadir %1$d minutos</item>
+    </plurals>
+    <string name="sleep_timer_turn_off">Desactivar temporizador</string>
+    <string name="sleep_timer_badge">Temporizador, quedan %1$s</string>
+</resources>
