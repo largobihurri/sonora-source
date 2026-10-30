@@ -25,6 +25,7 @@ import io.sonora.feature.settings.SwitchRow
  */
 @Composable
 internal fun DubModeSection(viewModel: DubModeSettingsViewModel = hiltViewModel()) {
+    if (!viewModel.offered) return
     val enabled by viewModel.enabled.collectAsStateWithLifecycle()
     val pads by viewModel.padBehaviour.collectAsStateWithLifecycle()
     SectionHeader(stringResource(R.string.settings_dub_mode_header))

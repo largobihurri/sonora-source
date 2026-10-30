@@ -22,6 +22,11 @@ class PlayDistributionTest {
     }
 
     @Test
+    fun `the play build leaves DUB mode out until it is ready`() {
+        assertFalse(PlayDistributionModule.provideDubAvailability().offered)
+    }
+
+    @Test
     fun `the play build keeps the application id Google Play knows`() {
         assertEquals("io.sonora.player", BuildConfig.APPLICATION_ID)
     }

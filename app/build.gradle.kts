@@ -40,7 +40,7 @@ android {
     //   Chromecast, no Wear OS watch link), because the app is GPL-3.0 and carries third-party GPL code (qm-dsp, the
     //   Mixxx-derived analysis).
     // - `full`, for personal installs: Cast and the watch link included. Its own id (`.full`), name ("Sonora Full",
-    //   `src/full/res`) and launcher colours, so it keeps its own library and settings next to the Play build; move
+    //   `src/full/res`), so it keeps its own library and settings next to the Play build; move
     //   them across with Settings > Backup. Distributing it has the same GPL problem.
     flavorDimensions += "distribution"
     productFlavors {

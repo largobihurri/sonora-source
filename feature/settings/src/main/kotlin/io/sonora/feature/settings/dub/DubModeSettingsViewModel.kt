@@ -24,6 +24,9 @@ class DubModeSettingsViewModel @Inject constructor(
     private val setups: DubSetupRepository,
 ) : ViewModel() {
 
+    /** Whether this build offers DUB mode; without it Settings shows no DUB section. */
+    val offered: Boolean = settings.offered
+
     val enabled: StateFlow<Boolean> = settings.enabled
 
     fun setEnabled(enabled: Boolean) = settings.setEnabled(enabled)

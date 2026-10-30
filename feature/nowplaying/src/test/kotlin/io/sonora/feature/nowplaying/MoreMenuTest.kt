@@ -42,6 +42,13 @@ class MoreMenuTest {
     }
 
     @Test
+    fun `a build without DUB mode has no DUB mode row`() {
+        val sections = moreMenuSections(track, MoreMenuActions(onAddToPlaylist = {}, dubOffered = false))
+
+        assertThat(sections.flatten().map { it.label }).doesNotContain(R.string.now_playing_dub_mode)
+    }
+
+    @Test
     fun `the DUB mode row comes after DJ mode, is checked while on and flips the mode`() {
         var flipped = 0
         val off = moreMenuSections(track, MoreMenuActions(onAddToPlaylist = {}, onDubMode = { flipped++ }))

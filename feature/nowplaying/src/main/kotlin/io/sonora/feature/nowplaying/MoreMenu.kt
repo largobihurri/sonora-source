@@ -35,6 +35,7 @@ internal data class MoreMenuActions(
     val onDjMode: () -> Unit = {},
     /** DUB mode is on: its row shows a checkmark. */
     val dubMode: Boolean = false,
+    val dubOffered: Boolean = true,
     val onDubMode: () -> Unit = {},
     /**
      * Opens the beat grid editor, in DJ mode: `null` where there is no editor to open (the DJ arrangement is not the one
@@ -98,8 +99,10 @@ internal fun moreMenuSections(track: Track?, actions: MoreMenuActions): List<Lis
         if (actions.djMode && reanalyse != null) {
             add(MoreMenuEntry(R.string.now_playing_reanalyse, { SonoraIcons.Refresh }, enabled = actions.canReanalyse) { reanalyse() })
         }
-        // DUB mode last, after DJ mode's own rows; turning it on turns DJ mode off.
-        add(MoreMenuEntry(R.string.now_playing_dub_mode, { DjIcon }, checked = actions.dubMode) { actions.onDubMode() })
+        // DUB mode last, after DJ mode's own rows; turning it on turns DJ mode off. A build without it has no row.
+        if (actions.dubOffered) {
+            add(MoreMenuEntry(R.string.now_playing_dub_mode, { DjIcon }, checked = actions.dubMode) { actions.onDubMode() })
+        }
     },
 )
 

@@ -17,6 +17,7 @@ import io.sonora.core.cast.CastSupport
 import io.sonora.core.cast.ui.CastRouteButton
 import io.sonora.core.data.lyrics.lrclib.LrclibSource
 import io.sonora.core.domain.port.OnlineLyricsSource
+import io.sonora.core.dubmodel.DubAvailability
 import io.sonora.core.playback.RoutedPlayer
 import io.sonora.core.playback.SessionRouter
 import io.sonora.feature.nowplaying.CastButton
@@ -24,8 +25,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * What differs between the two builds (see app/build.gradle.kts): the `full` build, with Chromecast, the watch link and
- * the online lyrics search.
+ * What differs between the two builds (see app/build.gradle.kts): the `full` build, with Chromecast, the watch link,
+ * the online lyrics search and DUB mode.
  */
 internal object Distribution {
     /**
@@ -70,4 +71,12 @@ internal object FullLyricsModule {
     @Provides
     @Singleton
     fun provideOnlineLyricsSource(@ApplicationContext context: Context): OnlineLyricsSource = LrclibSource.create(context)
+}
+
+/** DUB mode: `full` only for now, while the Google Play build leaves it out (owner, 2026-10-30). */
+@Module
+@InstallIn(SingletonComponent::class)
+internal object FullDubModule {
+    @Provides
+    fun provideDubAvailability(): DubAvailability = DubAvailability(offered = true)
 }

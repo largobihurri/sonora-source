@@ -270,6 +270,7 @@ fun NowPlayingScreen(
                         djMode = djEnabled,
                         onDjMode = { djMode.setEnabled(!djEnabled) },
                         dubMode = dubEnabled,
+                        dubOffered = dubMode.offered,
                         onDubMode = { dubMode.setEnabled(!dubEnabled) },
                     ),
                     favourite = favourite,

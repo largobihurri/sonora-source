@@ -1,7 +1,9 @@
 package io.sonora.core.dubmodel
 
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 /**
  * Whether DUB mode is on: Now Playing shows the DUB layout and the player hosts the DUB stage. Off until the user turns
@@ -9,9 +11,24 @@ import kotlinx.coroutines.flow.StateFlow
  * on turns the other off, so at most one of the two flags is ever on.
  */
 interface DubModeSettings {
+    /** Whether this build offers DUB mode at all; without it no screen shows the switch ([UnavailableDubMode]). */
+    val offered: Boolean get() = true
+
     val enabled: StateFlow<Boolean>
 
     fun setEnabled(enabled: Boolean)
+}
+
+/** Whether this build offers DUB mode: the Google Play build leaves it out until it is ready, the `full` build keeps it. */
+data class DubAvailability(val offered: Boolean)
+
+/** [DubModeSettings] of a build without DUB mode: never on, whatever was stored before, and turning it on does nothing. */
+object UnavailableDubMode : DubModeSettings {
+    override val offered: Boolean = false
+
+    override val enabled: StateFlow<Boolean> = MutableStateFlow(false).asStateFlow()
+
+    override fun setEnabled(enabled: Boolean) = Unit
 }
 
 /**

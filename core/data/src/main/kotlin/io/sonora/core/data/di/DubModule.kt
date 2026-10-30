@@ -13,8 +13,10 @@ import dagger.hilt.components.SingletonComponent
 import io.sonora.core.data.dub.DataStoreDubSetupRepository
 import io.sonora.core.data.dub.SharedPreferencesDubModeSettings
 import io.sonora.core.djmodel.DjModeSettings
+import io.sonora.core.dubmodel.DubAvailability
 import io.sonora.core.dubmodel.DubModeSettings
 import io.sonora.core.dubmodel.DubSetupRepository
+import io.sonora.core.dubmodel.UnavailableDubMode
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
@@ -31,16 +33,24 @@ object DubModule {
     /**
      * The DUB layout is exclusive with the DJ layout: turning DUB on turns DJ off once DUB is on, so a switch never
      * reads both off (DJ mode's own binding does the reverse). Both found stored on (a crash between the two writes)
-     * resolve to DJ on the first read. [Lazy] breaks the cycle between the two flags.
+     * resolve to DJ on the first read. [Lazy] breaks the cycle between the two flags. A build that does not offer DUB
+     * mode ([DubAvailability], bound by the app's build flavor) gets [UnavailableDubMode], always off.
      */
     @Provides
     @Singleton
-    fun provideDubModeSettings(@ApplicationContext context: Context, dj: Lazy<DjModeSettings>): DubModeSettings =
+    fun provideDubModeSettings(
+        @ApplicationContext context: Context,
+        dj: Lazy<DjModeSettings>,
+        availability: DubAvailability,
+    ): DubModeSettings = if (!availability.offered) {
+        UnavailableDubMode
+    } else {
         SharedPreferencesDubModeSettings(
             context.getSharedPreferences(SharedPreferencesDubModeSettings.FILE_NAME, Context.MODE_PRIVATE),
             otherLayoutOn = { dj.get().enabled.value },
             turnOtherLayoutOff = { dj.get().setEnabled(false) },
         )
+    }
 
     @Provides
     @Singleton
