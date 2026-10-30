@@ -203,7 +203,8 @@ fun SettingsScreen(
                         )
                     }
                 }
-                SectionFooter(stringResource(R.string.settings_language_footer))
+                // The footer explains the default; once another language is chosen it no longer applies.
+                if (current == AppLanguage.SPANISH) SectionFooter(stringResource(R.string.settings_language_footer))
             }
         }
         appearance?.let { look ->
@@ -257,7 +258,7 @@ fun SettingsScreen(
                             title = stringResource(
                                 when (option) {
                                     NowPlayingRotation.NOW_PLAYING_LANDSCAPE -> R.string.settings_rotation_now_playing
-                                    NowPlayingRotation.ALBUM_COVER_FLOW -> R.string.settings_rotation_cover_flow
+                                    NowPlayingRotation.ALBUM_VISUAL_COLLECTION -> R.string.settings_rotation_visual_collection
                                 },
                             ),
                             subtitle = null,
@@ -276,7 +277,7 @@ fun SettingsScreen(
         }
         hideAlbumsWithoutArtwork?.let { hide ->
             item {
-                SectionHeader(stringResource(R.string.settings_cover_flow_header))
+                SectionHeader(stringResource(R.string.settings_visual_collection_header))
                 SettingsGroup {
                     SwitchRow(stringResource(R.string.settings_hide_albums_without_artwork), hide, viewModel::setHideAlbumsWithoutArtwork)
                 }

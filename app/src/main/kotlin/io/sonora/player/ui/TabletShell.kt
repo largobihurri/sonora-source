@@ -16,18 +16,18 @@ internal enum class NavigationChrome {
     /** A large screen with the sidebar hidden: the main sections in a translucent pill centred at the top of the content. */
     TopPill,
 
-    /** A large screen under a Cover Flow that takes the whole window: no navigation. */
+    /** A large screen under a visual collection that takes the whole window: no navigation. */
     None,
 }
 
 /**
  * The navigation for a window of [windowClass]: phones keep the bottom tab bar whatever [sidebarShown] says; a large
- * window shows the sidebar, or the top pill once the user hid it, and none while a Cover Flow is on screen
- * ([coverFlowOnScreen]; a phone's Cover Flow hides its bar through its own gate).
+ * window shows the sidebar, or the top pill once the user hid it, and none while a visual collection is on screen
+ * ([visualCollectionOnScreen]; a phone's visual collection hides its bar through its own gate).
  */
-internal fun navigationChrome(windowClass: WindowClass, sidebarShown: Boolean, coverFlowOnScreen: Boolean): NavigationChrome = when {
+internal fun navigationChrome(windowClass: WindowClass, sidebarShown: Boolean, visualCollectionOnScreen: Boolean): NavigationChrome = when {
     !windowClass.isLarge -> NavigationChrome.BottomTabBar
-    coverFlowOnScreen -> NavigationChrome.None
+    visualCollectionOnScreen -> NavigationChrome.None
     sidebarShown -> NavigationChrome.Sidebar
     else -> NavigationChrome.TopPill
 }
@@ -127,7 +127,7 @@ internal const val TopChromeGap = 8f
 /**
  * How far below the status bar the [chrome] reaches over the pages (dp): the top pill's lower edge (it is [TopPillHeight]
  * tall and rises [TopChromeRise]) plus [TopChromeGap]; zero while nothing floats at the top (a phone, the sidebar, a
- * Cover Flow). Provided to every page as `LocalTopChromeInset`, so the pages clear the pill without knowing about it.
+ * Visual collection). Provided to every page as `LocalTopChromeInset`, so the pages clear the pill without knowing about it.
  */
 internal fun topChromeInset(chrome: NavigationChrome): Float =
     if (chrome == NavigationChrome.TopPill) TopPillHeight + TopChromeRise + TopChromeGap else 0f

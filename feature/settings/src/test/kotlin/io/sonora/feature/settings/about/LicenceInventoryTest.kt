@@ -117,7 +117,7 @@ class LicenceInventoryTest {
 
         assertThat(kora.licence).isEqualTo("Apache-2.0")
         assertThat(kora.text).isEqualTo("texts/Apache-2.0.txt")
-        assertThat(kora.url).isEqualTo("https://github.com/largobihurri/kora")
+        assertThat(kora.url).isEqualTo("https://github.com/largobihurri/kora-public")
         assertThat(kora.fullOnly).isFalse()
     }
 

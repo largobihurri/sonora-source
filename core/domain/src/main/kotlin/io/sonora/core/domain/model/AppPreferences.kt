@@ -95,8 +95,8 @@ enum class NowPlayingRotation {
     /** Now Playing's own landscape layout. */
     NOW_PLAYING_LANDSCAPE,
 
-    /** The albums Cover Flow, opened on the album playing; upright again, Now Playing returns. */
-    ALBUM_COVER_FLOW,
+    /** The albums visual collection, opened on the album playing; upright again, Now Playing returns. */
+    ALBUM_VISUAL_COLLECTION,
 }
 
 /** How the app looks: light or dark, where its accent colour comes from, and how its floating chrome is drawn. */

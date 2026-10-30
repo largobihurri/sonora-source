@@ -33,6 +33,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dagger.hilt.android.lifecycle.HiltViewModel
+import io.sonora.core.designsystem.component.TranslucentBarHeight
 import io.sonora.core.designsystem.component.TranslucentSurface
 import io.sonora.core.designsystem.translucent.LocalTranslucentContentColors
 import io.sonora.core.designsystem.icon.SonoraIcons
@@ -80,6 +81,13 @@ class DuplicateNoticeViewModel @Inject constructor(private val scan: DuplicateSc
 }
 
 /**
+ * How far below the status bar the notice sits, in dp: under the top pill while it shows, otherwise under the
+ * [TranslucentBarHeight] band where every screen keeps its back button and bar buttons, so it never covers them.
+ */
+internal fun duplicateNoticeTop(navigation: NavigationChrome, chromeVisible: Boolean): Float =
+    if (navigation == NavigationChrome.TopPill && chromeVisible) TopPillHeight else TranslucentBarHeight.value
+
+/**
  * A small closable translucent capsule at the top of the shell (clear of the mini player and the tab bar) while the
  * first duplicate analysis of a new library runs: "Analysing duplicates… 340/1,200", then what it found; tapping the
  * finished notice opens Duplicates ([onOpen]) and hides it. Closing hides it; the analysis goes on.
@@ -122,7 +130,7 @@ private fun NoticeCapsule(notice: DuplicateNotice, onOpen: () -> Unit, onClose: 
         }
     }
     val finished = notice is DuplicateNotice.Finished
-    TranslucentSurface(Modifier.semantics { liveRegion = LiveRegionMode.Polite }) {
+    TranslucentSurface(Modifier.semantics { liveRegion = LiveRegionMode.Polite }, overContent = true) {
         val colors = LocalTranslucentContentColors.current
         Row(
             Modifier

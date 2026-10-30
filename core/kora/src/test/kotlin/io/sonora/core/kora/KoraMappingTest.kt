@@ -140,8 +140,27 @@ class KoraMappingTest {
     }
 
     @Test
-    fun `an empty, signed or oversized id is an invalid payload`() {
-        listOf("", " ", "-1", "+1", "1.5", "99999999999999999999").forEach { bad ->
+    fun `every 64-bit id Sonora hands out parses back`() {
+        val big = track(7_636_189_893_023_974_685, albumId = 8_536_412_284_820_588_170)
+        val converted = track(-1, albumId = -1)
+
+        listOf(big, converted, track(Long.MAX_VALUE, albumId = Long.MIN_VALUE)).forEach { song ->
+            val summary = trackSummary(song)
+            assertThat(parseId(summary.id, "track")).isEqualTo(song.id)
+            assertThat(albumIdOfArtwork(summary.artworkId!!)).isEqualTo(song.albumId)
+        }
+        assertThat(parseId("7636189893023974685", "track")).isEqualTo(7_636_189_893_023_974_685)
+        assertThat(albumIdOfArtwork("a:8536412284820588170")).isEqualTo(8_536_412_284_820_588_170)
+        assertThat(parseId("-1", "track")).isEqualTo(-1L)
+    }
+
+    @Test
+    fun `an empty, malformed or oversized id is an invalid payload`() {
+        val malformed = listOf(
+            "", " ", "-", "--1", "+1", "1.5", "1a", "abc", " 1", "1 ", "\t1", "1\n", "- 1",
+            "9223372036854775808", "-9223372036854775809", "99999999999999999999", "0000000000000000000001",
+        )
+        malformed.forEach { bad ->
             val failure = assertThrows(KoraException::class.java) { parseId(bad, "track") }
             assertThat(failure.error.code).isEqualTo(ErrorCode.INVALID_PAYLOAD)
         }

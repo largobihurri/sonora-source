@@ -89,11 +89,11 @@ class DataStorePreferencesRepositoryTest {
         assertThat(withRepository { it.preferences.first() }.nowPlaying.rotation).isEqualTo(NowPlayingRotation.NOW_PLAYING_LANDSCAPE)
 
         withRepository { repository ->
-            repository.update { it.copy(nowPlaying = it.nowPlaying.copy(rotation = NowPlayingRotation.ALBUM_COVER_FLOW)) }
+            repository.update { it.copy(nowPlaying = it.nowPlaying.copy(rotation = NowPlayingRotation.ALBUM_VISUAL_COLLECTION)) }
         }
 
         val reopened = withRepository { it.preferences.first() }.nowPlaying
-        assertThat(reopened).isEqualTo(NowPlayingPreferences(rotation = NowPlayingRotation.ALBUM_COVER_FLOW))
+        assertThat(reopened).isEqualTo(NowPlayingPreferences(rotation = NowPlayingRotation.ALBUM_VISUAL_COLLECTION))
         assertThat(storedKeys()).containsExactly("now_playing.rotation")
     }
 

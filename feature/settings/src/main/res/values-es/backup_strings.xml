@@ -16,7 +16,7 @@
     <string name="backup_newer_version">Esta copia se hizo con una versión más reciente de Sonora. Actualiza Sonora para restaurarla.</string>
     <string name="backup_malformed">Esa copia está dañada y no se puede restaurar.</string>
     <string name="backup_restore_failed">No se ha podido terminar la restauración. Lo restaurado hasta ahora se queda.</string>
-    <string name="backup_no_picker">Ninguna aplicación de este teléfono puede elegir un archivo.</string>
+    <string name="backup_no_picker">Ninguna aplicación de este dispositivo puede elegir un archivo.</string>
     <string name="backup_ok">Aceptar</string>
 
     <string name="backup_preview_title">¿Restaurar la copia?</string>

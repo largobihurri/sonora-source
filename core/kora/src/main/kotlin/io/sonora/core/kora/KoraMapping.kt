@@ -71,13 +71,19 @@ internal fun playbackState(state: PlaybackState, nowMs: Long): KoraPlaybackState
 /** A caller mistake, answered `invalid_payload`. The message never echoes caller input. */
 internal fun invalidPayload(message: String): KoraException = KoraException(KoraError(ErrorCode.INVALID_PAYLOAD, message))
 
-/** Parses a library id: digits only. Anything else (a URI, a path, a sign, a decimal) is an invalid payload. */
+/**
+ * Parses a library id: any 64-bit value as Sonora writes it, digits with an optional leading minus (track and album
+ * ids are hashes that fill all 19 digits, and a converted file that is not in the library is track -1). Anything else
+ * (a URI, a path, a plus sign, whitespace, a decimal, a value past a Long) is an invalid payload.
+ */
 internal fun parseId(value: String, what: String): Long {
-    if (value.isEmpty() || value.length > MAX_ID_DIGITS || !value.all { it in '0'..'9' }) throw invalidPayload("Invalid $what id")
+    val digits = value.removePrefix("-")
+    if (digits.isEmpty() || value.length > MAX_ID_CHARS || !digits.all { it in '0'..'9' }) throw invalidPayload("Invalid $what id")
     return value.toLongOrNull() ?: throw invalidPayload("Invalid $what id")
 }
 
-private const val MAX_ID_DIGITS = 18
+/** The longest id Sonora writes: [Long.MIN_VALUE], a minus and 19 digits. */
+private const val MAX_ID_CHARS = 20
 
 internal fun <T> pageOf(all: List<T>, request: PageRequest): Page<T> =
     Page(all.drop(request.offset).take(minOf(request.limit, MAX_PAGE_SIZE)), total = all.size, offset = request.offset)

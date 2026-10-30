@@ -1,8 +1,5 @@
 package io.sonora.feature.nowplaying
 
-import android.content.ActivityNotFoundException
-import android.content.Context
-import android.content.Intent
 import androidx.activity.compose.PredictiveBackHandler
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -21,6 +18,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
@@ -66,13 +64,16 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.toSize
+import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.sonora.core.designsystem.component.Artwork
+import io.sonora.core.designsystem.component.ConfirmationBanner
 import io.sonora.core.designsystem.component.GlossyGrabber
 import io.sonora.core.designsystem.component.TranslucentSurface
-import io.sonora.core.designsystem.component.coverflow.CoverFlowHandoff
+import io.sonora.core.designsystem.component.rememberBannerState
+import io.sonora.core.designsystem.component.visualcollection.VisualCollectionHandoff
 import io.sonora.core.designsystem.component.translucentGloss
 import io.sonora.core.designsystem.icon.SonoraIcons
 import io.sonora.core.designsystem.layout.LocalWindowClass
@@ -80,6 +81,7 @@ import io.sonora.core.designsystem.motion.SheetBackMotion
 import io.sonora.core.designsystem.motion.SheetPresentation
 import io.sonora.core.designsystem.motion.prefersReducedMotion
 import io.sonora.core.designsystem.motion.sheetPresentFrame
+import io.sonora.core.designsystem.share.shareAudio
 import io.sonora.core.designsystem.theme.CapsuleShape
 import io.sonora.core.designsystem.translucent.LocalTranslucentBackdrop
 import io.sonora.core.designsystem.translucent.LocalTranslucentContentColors
@@ -96,9 +98,6 @@ import io.sonora.feature.equalizer.R as EqualizerR
 import kotlin.coroutines.cancellation.CancellationException
 import kotlinx.coroutines.launch
 
-private const val MEDIA_OUTPUT_ACTION = "com.android.settings.panel.action.MEDIA_OUTPUT"
-private const val MEDIA_OUTPUT_PACKAGE_EXTRA = "com.android.settings.panel.extra.PACKAGE_NAME"
-
 /**
  * Full-screen Apple Music style Now Playing sheet, presented by the app shell through [sheet], which the mini player
  * drives too. Dragging the sheet down moves it with the finger (and up again, freely); the release settles it open or
@@ -110,7 +109,7 @@ private const val MEDIA_OUTPUT_PACKAGE_EXTRA = "com.android.settings.panel.extra
  * instead (see [GravityLevel]), laid out in the phone's own portrait frame whichever way the shell turns the window
  * ([GravityFrameLayout]); each magnetic detent that catches them goes to [onGravityDetent] (a quarter turn 0..3 of the
  * phone's frame), from which the shell latches where a dismissal leads ([GravityDestination]).
- * Opened from a capsule (T67: the Cover Flow's "Now Playing" capsule, or the mini player), it is drawn into [bubble]
+ * Opened from a capsule (T67: the visual collection's "Now Playing" capsule, or the mini player), it is drawn into [bubble]
  * instead of sliding up: the translucent surface grows out of the capsule, the backdrop and then the controls fade in
  * inside it; with [handoff] its artwork is the capsule's shared one, carried into its place (and back) while its own
  * hides (see [ArtworkShare]).
@@ -123,7 +122,7 @@ fun NowPlayingScreen(
     turnsBlocks: Boolean = false,
     onGravityDetent: (Int) -> Unit = {},
     bubble: TranslucentBubble? = null,
-    handoff: CoverFlowHandoff? = null,
+    handoff: VisualCollectionHandoff? = null,
     viewModel: NowPlayingViewModel = hiltViewModel(),
 ) {
     // Without the position (always 0 in it): the player republishes four times a second while it plays and the screen
@@ -164,6 +163,9 @@ fun NowPlayingScreen(
     var showSleepTimer by rememberSaveable { mutableStateOf(false) }
     val back = remember { SheetBackMotion() }
     val context = LocalContext.current
+    val shareChooser = stringResource(R.string.now_playing_share)
+    val noShareApp = stringResource(R.string.now_playing_no_share_app)
+    val banner = rememberBannerState()
     // Only a sheet heading open owns back; while it is being pulled up or is closing, back goes to the screen below.
     val backEnabled = sheet.targetOpen
     PredictiveBackHandler(enabled = backEnabled) { events ->
@@ -256,6 +258,11 @@ fun NowPlayingScreen(
                     onFileInfo = viewModel::showFileInfo,
                     menu = MoreMenuActions(
                         onAddToPlaylist = onAddToPlaylist,
+                        onShare = { track ->
+                            if (!context.shareAudio(listOf(track.uri.toUri()), listOf(track.mimeType), track.title, shareChooser)) {
+                                banner.show(noShareApp, SonoraIcons.Info)
+                            }
+                        },
                         onSleepTimer = { showSleepTimer = true },
                         abLoop = abLoop.enabled,
                         onAbLoop = viewModel::toggleAbLoop,
@@ -280,6 +287,8 @@ fun NowPlayingScreen(
                     onRemoveDownloaded = viewModel::removeDownloadedLyrics,
                 ),
             )
+            // "No app can share this song", over the artwork, sampling the same backdrop as the buttons.
+            ConfirmationBanner(banner, Modifier.align(Alignment.TopCenter).statusBarsPadding().padding(top = 8.dp))
         }
     }
     if (queueAsSheet(style, panels)) {
@@ -659,7 +668,7 @@ internal fun ArtworkOrLyrics(state: PlaybackState, showLyrics: Boolean, lyrics: 
         label = "artworkScale",
     )
     val shape = RoundedCornerShape(ArtworkCorner)
-    // Opened from the Cover Flow, the artwork lands where this one is and hides it while it flies (see ArtworkShare).
+    // Opened from the visual collection, the artwork lands where this one is and hides it while it flies (see ArtworkShare).
     val share = LocalArtworkShare.current
     Artwork(
         model = state.currentTrack?.artworkUri,
@@ -802,12 +811,12 @@ private val HeaderTextGap = 10.dp
 @Composable
 internal fun BottomButtons(row: BottomRow, scale: Float = 1f, side: Dp = bottomButtonSide(scale)) {
     val context = LocalContext.current
-    val outputIntent = remember(context) { mediaOutputIntent(context) }
+    val outputSwitcher = remember(context) { outputSwitcher(context) }
     val castButton = LocalCastButton.current
     val slots = bottomSlotsFor(
         row.djMode,
         lyrics = row.buttons.lyrics,
-        output = outputIntent != null,
+        output = outputSwitcher != OutputSwitcher.NONE,
         fileInfo = row.buttons.fileInfo,
         cast = castButton != null,
     )
@@ -832,11 +841,7 @@ internal fun BottomButtons(row: BottomRow, scale: Float = 1f, side: Dp = bottomB
                         tint = if (row.showLyrics) label else secondary,
                     )
                     BottomSlot.OUTPUT -> GlyphButton(SonoraIcons.AudioOutput, stringResource(R.string.now_playing_audio_output), {
-                        try {
-                            outputIntent?.let(context::startActivity)
-                        } catch (_: ActivityNotFoundException) {
-                            // Resolved earlier but vanished; nothing sensible to do.
-                        }
+                        showOutputSwitcher(context, outputSwitcher)
                     }, BottomGlyph, target, tint = secondary)
                     BottomSlot.CAST -> castButton?.invoke(secondary, target)
                     BottomSlot.UP_NEXT -> GlyphButton(
@@ -903,12 +908,4 @@ private fun RoundButton(icon: ImageVector, contentDescription: String, onClick: 
             modifier.clip(CircleShape).background(Color.White.copy(alpha = 0.15f)).translucentGloss(CircleShape),
         )
     }
-}
-
-/** System media output switcher (Android 11+ settings panel), or null when the device doesn't offer it. */
-private fun mediaOutputIntent(context: Context): Intent? {
-    val intent = Intent(MEDIA_OUTPUT_ACTION)
-        .putExtra(MEDIA_OUTPUT_PACKAGE_EXTRA, context.packageName)
-        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    return intent.takeIf { it.resolveActivity(context.packageManager) != null }
 }

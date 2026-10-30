@@ -8,7 +8,7 @@ import org.junit.Test
 class GravityDestinationTest {
 
     @Test
-    fun `a sideways detent, either way, makes the destination the Cover Flow`() {
+    fun `a sideways detent, either way, makes the destination the visual collection`() {
         assertThat(Upright.after(detent = 1)).isEqualTo(Sideways)
         assertThat(Upright.after(detent = 3)).isEqualTo(Sideways)
         assertThat(Sideways.after(detent = 3)).isEqualTo(Sideways)

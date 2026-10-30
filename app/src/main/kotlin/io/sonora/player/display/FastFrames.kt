@@ -10,7 +10,7 @@ import androidx.compose.runtime.setValue
 
 /**
  * When Sonora asks for the display's fastest refresh rate: while a finger is on the screen and for [TOUCH_TAIL_MS]
- * after it lifts (flings, Cover Flow glides, transitions started by a tap), and for [TURN_MS] after the display turns
+ * after it lifts (flings, visual collection glides, transitions started by a tap), and for [TURN_MS] after the display turns
  * (Now Playing's turn, which moves with no finger down). Otherwise the rate is left to the system, so a still screen
  * goes back to its slower, thriftier rates. Pure, so it is unit-tested; times are in milliseconds on one monotonic
  * clock.
@@ -39,7 +39,7 @@ internal class FastFramePolicy {
     }
 
     companion object {
-        /** Long enough for a fling or a Cover Flow glide to come to rest. */
+        /** Long enough for a fling or a visual collection glide to come to rest. */
         const val TOUCH_TAIL_MS = 2_500L
 
         /** Now Playing's turn (420 ms) with room for the new layout's first frames. */

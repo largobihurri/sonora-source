@@ -4,6 +4,11 @@ plugins {
 
 android {
     namespace = "io.sonora.core.designsystem"
+
+    testOptions.unitTests.all {
+        // Robolectric's SDK 36 runtime reaches into FileDescriptor internals, closed by default since JDK 17.
+        it.jvmArgs("--add-opens=java.base/jdk.internal.access=ALL-UNNAMED")
+    }
 }
 
 dependencies {
@@ -16,4 +21,6 @@ dependencies {
     implementation(libs.kyant.backdrop)
 
     testImplementation(libs.kotlinx.coroutines.test)
+    // The share sheet intent (ShareAudioTest) is built from real Intents.
+    testImplementation(libs.robolectric)
 }

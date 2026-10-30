@@ -69,8 +69,8 @@
     <string name="settings_translucency_footer_frosted">Android-en bertsio honek gainazal zeharrargiak lausotzen ditu, errefrakziorik gabe. Desaktibatuta, gainazal zeharrargi laua erabiltzen da.</string>
     <string name="settings_translucency_footer_flat">Android-en bertsio honek gainazal zeharrargi laua erabiltzen du beti.</string>
     <string name="settings_translucency_footer_contrast">Android-en kontraste-ezarpenek kontraste handiagoa eskatzen dute; beraz, gainazal zeharrargiak lauak eta opakuagoak dira.</string>
-    <string name="settings_translucency_footer_limited_frosted">Mugikor honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, errefrakziorik gabe lausotzen da. Desaktibatu eta aktibatu berriro etengailua berriz probatzeko.</string>
-    <string name="settings_translucency_footer_limited_flat">Mugikor honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, gainazal zeharrargi laua erabiltzen da. Desaktibatu eta aktibatu berriro etengailua berriz probatzeko.</string>
+    <string name="settings_translucency_footer_limited_frosted">Gailu honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, errefrakziorik gabe lausotzen da. Desaktibatu eta aktibatu berriro etengailua berriz probatzeko.</string>
+    <string name="settings_translucency_footer_limited_flat">Gailu honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, gainazal zeharrargi laua erabiltzen da. Desaktibatu eta aktibatu berriro etengailua berriz probatzeko.</string>
     <string name="settings_accent_header">Nabarmentze-kolorea</string>
     <string name="settings_accent_material_you">Material You</string>
     <string name="settings_accent_palette">Kolore-paleta</string>
@@ -95,13 +95,13 @@
     <string name="settings_now_playing_footer">Fitxategiaren informazioak erakusten du non dagoen gordeta abesti bat, eta haren formatua, audio-xehetasunak eta etiketak.</string>
     <string name="settings_rotation_header">Erreproduzitzen dena biratzean</string>
     <string name="settings_rotation_now_playing">Erreproduzitzen dena horizontalean</string>
-    <string name="settings_rotation_cover_flow">Albumen bilduma bisuala</string>
+    <string name="settings_rotation_visual_collection">Albumen bilduma bisuala</string>
     <string name="settings_rotation_footer">Biraketa automatikoa aktibatuta, telefonoa Erreproduzitzen pantailan biratzean, haren ikuspegi horizontala edo albumen bilduma bisuala agertzen da, entzuten ari den albumean irekita.</string>
     <string name="settings_gravity_header">Grabitatea</string>
     <string name="settings_gravity">Mantendu zuzen telefonoa makurtzean</string>
     <string name="settings_gravity_footer">Erreproduzitzen bertikalean geratzen da, eta azala eta kontrolak bakoitza bere erdigunearen inguruan biratzen dira zuzen mantentzeko. Mahai gainean geldi geratzen dira; goiko aukera horizontala ez da aplikatzen.</string>
     <string name="settings_hidden_items">Ezkutatutako elementuak</string>
-    <string name="settings_hidden_footer">Sonoratik kendutakoak telefonoan geratzen dira. Leheneratu bat liburutegian berriro ager dadin.</string>
+    <string name="settings_hidden_footer">Sonoratik kendutakoak gailuan geratzen dira. Leheneratu bat liburutegian berriro ager dadin.</string>
     <string name="settings_hidden_empty">Ez dago ezkutatutako elementurik</string>
     <string name="settings_restore">Leheneratu</string>
     <string name="settings_restore_item">Leheneratu: %1$s</string>

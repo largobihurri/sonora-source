@@ -82,6 +82,20 @@ class ReviewDuplicateBacklogTest {
         assertThat(scan.announced.value).isFalse()
     }
 
+    @Test
+    fun `a few new songs after a scan make its result stale, so the next look analyses again`() = runBlocking<Unit> {
+        firstRun.done = true
+        library.files = songs(2)
+        assertThat(scan.scanNow()).isEmpty()
+        library.files = songs(2) + (1..3).map { copy("new$it", title = "Song s1") }
+        assertThat(review()).isEqualTo(BacklogAction.NONE)
+        scan.scanIfNeeded()
+        val found = withTimeout(5_000) {
+            scan.state.first { it is DuplicateScanState.Found && it.groups.isNotEmpty() }
+        } as DuplicateScanState.Found
+        assertThat(found.groups.single().copies).hasSize(4)
+    }
+
     private object NoFiles : LibraryFileDeleter {
         override suspend fun writeAccessFor(uri: String) = null
 

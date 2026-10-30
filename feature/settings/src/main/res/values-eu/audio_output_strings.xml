@@ -13,7 +13,7 @@
     <string name="audio_output_kind_wired">Kablezko aurikularrak</string>
     <string name="audio_output_kind_bluetooth">Bluetooth</string>
     <string name="audio_output_kind_hdmi">HDMI</string>
-    <string name="audio_output_kind_speaker">Telefonoaren bozgorailua</string>
+    <string name="audio_output_kind_speaker">Gailuaren bozgorailua</string>
     <string name="audio_output_kind_other">Beste irteera bat</string>
     <!-- A device's title: its type, then its name, e.g. "Bluetooth: Buds Pro" -->
     <string name="audio_output_title_named">%1$s: %2$s</string>
@@ -38,7 +38,7 @@
     <string name="audio_output_bp_no_usb">USB gailurik ez</string>
     <string name="audio_output_bp_android_old">Android 14 behar du</string>
     <string name="audio_output_bp_footer_offered">USB gailu hau audioa aldatu gabe jasotzeko ezar daiteke. Androidek onartzen dituen formatuak Nahaslearen formatuak atalean ageri dira.</string>
-    <string name="audio_output_bp_footer_not_offered">USB gailu honek ez du bit-perfect irteerarik eskaintzen telefono honetan.</string>
+    <string name="audio_output_bp_footer_not_offered">USB gailu honek ez du hemen bit-perfect irteerarik eskaintzen.</string>
     <string name="audio_output_bp_footer_no_usb">Konektatu USB audio-gailu bat, adibidez DAC bat edo audio-interfaze bat, bit-perfect irteera eskaintzen duen egiaztatzeko.</string>
     <string name="audio_output_bp_footer_android_old">Bit-perfect irteerak Android 14 edo berriagoa behar du.</string>
     <string name="audio_output_bit_perfect_switch">USB irteera bit-perfect</string>

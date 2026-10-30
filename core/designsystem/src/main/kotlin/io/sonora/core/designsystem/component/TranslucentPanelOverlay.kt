@@ -64,19 +64,23 @@ private val OverlayBlurRadius = 28.dp
  */
 internal fun overlayBlurs(policy: TranslucentPolicy): Boolean = policy.tier != TranslucentTier.FLAT
 
-/** What an overlay does to the app under it: [blurs] it (and dims it by [dimAlpha]), or only dims it. */
-internal data class OverlayStyle(val blurs: Boolean, val dimAlpha: Float)
+/**
+ * What an overlay does to the app under it: [blurs] it (and dims it by [dimAlpha]), or only dims it. [panelBlur] is the
+ * blur the panel's own translucency adds under itself when the app is not blurred but the panel still samples it.
+ */
+internal data class OverlayStyle(val blurs: Boolean, val dimAlpha: Float, val panelBlur: Dp = 0.dp)
 
 /**
  * The treatment under [policy] for a window that is [large] or not: flat translucency only dims the app ([overlayBlurs]),
  * more strongly ([overlayDimAlpha]). A large window never blurs it either (T13): blurring a whole 2880 x 1800 px app means
  * rendering it into a layer of its own and blurring that again on every frame of the overlay's opening and closing, about
  * 30 % janky frames on the Pad 6 against 4 % without the blur; the app is dimmed a little more instead, and the panel's own
- * translucency still blurs what is behind it.
+ * translucency blurs what is behind it as strongly as the app's blur would, on the panel's area only, so no text behind
+ * the panel reads through it (U10; its own light blur alone let "Dancing Queen" read through the Equalizer, F18).
  */
 internal fun overlayStyle(policy: TranslucentPolicy, large: Boolean): OverlayStyle = when {
     !overlayBlurs(policy) -> OverlayStyle(blurs = false, dimAlpha = overlayDimAlpha(blurs = false))
-    large -> OverlayStyle(blurs = false, dimAlpha = LARGE_DIM_ALPHA)
+    large -> OverlayStyle(blurs = false, dimAlpha = LARGE_DIM_ALPHA, panelBlur = OverlayBlurRadius)
     else -> OverlayStyle(blurs = true, dimAlpha = overlayDimAlpha(blurs = true))
 }
 

@@ -186,6 +186,9 @@ data class TranslucentMaterial(val tint: Int, val tintAlpha: Float, val range: T
         /** Flat translucency for high-contrast text. */
         private const val OPAQUE_ALPHA = 0.92f
 
+        /** Flat translucency over scrolling content: nothing blurs it, so any see-through fill lets its text read (F13). */
+        private const val OVER_CONTENT_ALPHA = 1f
+
         /**
          * Sampling translucency: the design's tint, raised when contrast needs more. The liquid tier keeps it thin, so
          * covers and text under it keep their own colour (the label's contrast comes from the range below, not a
@@ -222,10 +225,15 @@ data class TranslucentMaterial(val tint: Int, val tintAlpha: Float, val range: T
          * The material for a [dark] or light theme. [tinted] false makes clear translucency (e.g. over an already dark
          * backdrop): a light white sheen within what the label's contrast allows (at most [SHEEN_ALPHA], at least what
          * a dark label needs), or, when no sheen keeps the label readable, the thinnest theme tint that does.
+         * [overContent] marks a surface over scrolling content (a bar, the mini player): flat, it is opaque in its tint, as
+         * iOS bars are with Reduce Transparency.
          */
-        fun of(dark: Boolean, tier: TranslucentTier, highContrast: Boolean, tinted: Boolean = true): TranslucentMaterial {
+        fun of(dark: Boolean, tier: TranslucentTier, highContrast: Boolean, tinted: Boolean = true, overContent: Boolean = false): TranslucentMaterial {
             val tint = if (dark) DARK_TINT else LIGHT_TINT
             val label = if (dark) DARK_LABEL else LIGHT_LABEL
+            if (overContent && tier == TranslucentTier.FLAT) {
+                return TranslucentMaterial(tint, OVER_CONTENT_ALPHA, TranslucentContrast.BackdropRange.Full, label)
+            }
             val (designAlpha, range) = when {
                 highContrast -> OPAQUE_ALPHA to TranslucentContrast.BackdropRange.Full
                 tier == TranslucentTier.FLAT -> FLAT_ALPHA to TranslucentContrast.BackdropRange.Full

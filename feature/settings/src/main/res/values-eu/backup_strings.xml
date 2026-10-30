@@ -16,7 +16,7 @@
     <string name="backup_newer_version">Babeskopia hau Sonoraren bertsio berriago batekin egin zen. Eguneratu Sonora leheneratzeko.</string>
     <string name="backup_malformed">Babeskopia hori hondatuta dago eta ezin da leheneratu.</string>
     <string name="backup_restore_failed">Ezin izan da leheneratzea amaitu. Orain arte leheneratutakoa geratzen da.</string>
-    <string name="backup_no_picker">Telefono honetako aplikazio batek ere ezin du fitxategirik aukeratu.</string>
+    <string name="backup_no_picker">Gailu honetako aplikazio batek ere ezin du fitxategirik aukeratu.</string>
     <string name="backup_ok">Ados</string>
 
     <string name="backup_preview_title">Babeskopia leheneratu?</string>

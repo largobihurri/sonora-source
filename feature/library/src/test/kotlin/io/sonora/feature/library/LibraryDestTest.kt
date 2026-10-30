@@ -73,8 +73,8 @@ class LibraryDestTest {
     }
 
     @Test
-    fun `the Songs, Albums, Artists and Playlists lists and the album, artist and playlist pages turn into a Cover Flow`() {
-        val coverFlow = listOf(
+    fun `the Songs, Albums, Artists and Playlists lists and the album, artist and playlist pages turn into a visual collection`() {
+        val visualCollection = listOf(
             LibraryDest.Songs,
             LibraryDest.Albums,
             LibraryDest.Artists,
@@ -96,26 +96,26 @@ class LibraryDestTest {
             LibraryDest.Statistics,
         )
 
-        assertThat(coverFlow.all { it.hasCoverFlow }).isTrue()
-        assertThat(upright.none { it.hasCoverFlow }).isTrue()
-        assertThat(upright.map { it.coverFlow }.distinct()).containsExactly(null)
+        assertThat(visualCollection.all { it.hasVisualCollection }).isTrue()
+        assertThat(upright.none { it.hasVisualCollection }).isTrue()
+        assertThat(upright.map { it.visualCollection }.distinct()).containsExactly(null)
     }
 
     @Test
-    fun `a list shows its own Cover Flow from its first cover`() {
+    fun `a list shows its own visual collection from its first cover`() {
         listOf(LibraryDest.Songs, LibraryDest.Albums, LibraryDest.Artists, LibraryDest.Playlists).forEach { list ->
-            assertThat(list.coverFlow).isEqualTo(LibraryCoverFlowView(list, target = null))
+            assertThat(list.visualCollection).isEqualTo(LibraryVisualCollectionView(list, target = null))
         }
     }
 
     @Test
-    fun `a detail page shows the Cover Flow of its kind's list, centred on itself`() {
-        assertThat(LibraryDest.AlbumDetail(5L).coverFlow)
-            .isEqualTo(LibraryCoverFlowView(LibraryDest.Albums, CoverFlowTarget.Album(5L)))
-        assertThat(LibraryDest.ArtistDetail(7L, "Nina").coverFlow)
-            .isEqualTo(LibraryCoverFlowView(LibraryDest.Artists, CoverFlowTarget.Artist(7L, "Nina")))
-        assertThat(LibraryDest.PlaylistDetail(12L).coverFlow)
-            .isEqualTo(LibraryCoverFlowView(LibraryDest.Playlists, CoverFlowTarget.Playlist(12L)))
+    fun `a detail page shows the visual collection of its kind's list, centred on itself`() {
+        assertThat(LibraryDest.AlbumDetail(5L).visualCollection)
+            .isEqualTo(LibraryVisualCollectionView(LibraryDest.Albums, VisualCollectionTarget.Album(5L)))
+        assertThat(LibraryDest.ArtistDetail(7L, "Nina").visualCollection)
+            .isEqualTo(LibraryVisualCollectionView(LibraryDest.Artists, VisualCollectionTarget.Artist(7L, "Nina")))
+        assertThat(LibraryDest.PlaylistDetail(12L).visualCollection)
+            .isEqualTo(LibraryVisualCollectionView(LibraryDest.Playlists, VisualCollectionTarget.Playlist(12L)))
     }
 
     @Test

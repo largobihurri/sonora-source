@@ -24,7 +24,7 @@ class ImportHistoryTextTest {
     @Test
     fun `each end of a deletion has its own words`() {
         assertThat(ImportHistoryText.notice(HistoryNotice.Deleted(3), en))
-            .isEqualTo(NoticeText("Import Deleted", "Its folder is gone from your phone, and 3 songs from your library."))
+            .isEqualTo(NoticeText("Import Deleted", "Its folder is gone from your device, and 3 songs from your library."))
         assertThat(ImportHistoryText.notice(HistoryNotice.Incomplete(deleted = 1, failed = 2), en).message)
             .isEqualTo("2 songs couldn’t be deleted. The import stays in the history so you can try again.")
         assertThat(ImportHistoryText.notice(HistoryNotice.Incomplete(deleted = 3, failed = 0), en).message)

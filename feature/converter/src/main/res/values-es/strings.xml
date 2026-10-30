@@ -8,7 +8,7 @@
     <string name="converter_output_header">Carpeta de destino</string>
     <string name="converter_output_choose">Elegir carpeta</string>
     <string name="converter_output_change">Cambiar carpeta</string>
-    <string name="converter_output_none_footer">Elige una carpeta del teléfono o de una memoria USB. Sonora crea en ella la carpeta «Convertidos», con una carpeta con fecha por cada lote.</string>
+    <string name="converter_output_none_footer">Elige una carpeta del dispositivo o de una memoria USB. Sonora crea en ella la carpeta «Convertidos», con una carpeta con fecha por cada lote.</string>
     <string name="converter_output_footer">Los archivos convertidos van a «Convertidos», dentro de %1$s, con una carpeta con fecha por cada lote.</string>
     <string name="converter_output_location">%1$s › Convertidos</string>
 
@@ -29,8 +29,8 @@
     <string name="converter_mode_high">Alto rendimiento</string>
     <string name="converter_mode_low_description">Un archivo cada vez, con pausas. Cuida la batería y la temperatura.</string>
     <string name="converter_mode_normal_description">Varios archivos a la vez, en segundo plano. Un buen equilibrio.</string>
-    <string name="converter_mode_high_description">Usa casi todo el procesador. Es lo más rápido, pero el teléfono se calienta más.</string>
-    <string name="converter_performance_footer">La calidad es la misma en todos los modos; solo cambian la velocidad y la carga. Sonora va más despacio por sí sola si el teléfono se calienta o si el ahorro de batería está activado.</string>
+    <string name="converter_mode_high_description">Usa casi todo el procesador. Es lo más rápido, pero el dispositivo se calienta más.</string>
+    <string name="converter_performance_footer">La calidad es la misma en todos los modos; solo cambian la velocidad y la carga. Sonora va más despacio por sí sola si el dispositivo se calienta o si el ahorro de batería está activado.</string>
 
     <string name="converter_overwrite">Sobrescribir originales</string>
     <string name="converter_overwrite_footer">Cada original se sustituye por su archivo convertido una vez comprobado. También se te preguntará al terminar el lote.</string>
@@ -97,7 +97,7 @@
     <string name="converter_notice_start_failed_title">No se ha podido empezar</string>
     <string name="converter_notice_start_failed_message">Sonora no ha podido leer lo que has añadido. Vuelve a añadir los archivos o la carpeta e inténtalo de nuevo.</string>
     <string name="converter_notice_output_failed_title">No se puede usar la carpeta</string>
-    <string name="converter_notice_output_failed_message">Sonora no puede escribir en esa carpeta. Elige una carpeta del almacenamiento del teléfono o de una memoria USB.</string>
+    <string name="converter_notice_output_failed_message">Sonora no puede escribir en esa carpeta. Elige una carpeta del almacenamiento del dispositivo o de una memoria USB.</string>
     <string name="converter_notice_picker_missing_title">No se pueden elegir archivos</string>
     <string name="converter_notice_picker_missing_message">Este dispositivo no tiene ninguna app para elegir archivos o carpetas.</string>
     <string name="converter_notice_cancel_failed_title">No se ha podido cancelar</string>

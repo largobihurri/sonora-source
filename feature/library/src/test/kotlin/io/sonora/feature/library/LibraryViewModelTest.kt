@@ -16,7 +16,7 @@ import io.sonora.core.domain.model.ScanProgress
 import io.sonora.core.domain.model.Track
 import io.sonora.core.domain.model.TrackSort
 import io.sonora.core.domain.playback.PlaybackBandLevels
-import io.sonora.core.domain.port.CoverFlowPreferencesRepository
+import io.sonora.core.domain.port.VisualCollectionPreferencesRepository
 import io.sonora.core.domain.port.LibraryFolderRepository
 import io.sonora.core.domain.port.LibraryRepository
 import io.sonora.core.domain.port.LibraryScanner
@@ -71,8 +71,8 @@ class LibraryViewModelTest {
         override fun search(query: String): Flow<List<Track>> = flowOf(emptyList())
     }
 
-    /** The Cover Flow settings, held in memory. */
-    private class FakeCoverFlow : CoverFlowPreferencesRepository {
+    /** The visual collection settings, held in memory. */
+    private class FakeVisualCollection : VisualCollectionPreferencesRepository {
         val stored = MutableStateFlow(false)
         override val hideAlbumsWithoutArtwork: Flow<Boolean> = stored
         override suspend fun setHideAlbumsWithoutArtwork(hide: Boolean) {
@@ -123,13 +123,13 @@ class LibraryViewModelTest {
     private val playback = RecordingPlayback()
     private val sortStore = FakeSortStore()
     private val marks = FakeLibraryMarks()
-    private val coverFlow = FakeCoverFlow()
+    private val visualCollection = FakeVisualCollection()
     private lateinit var viewModel: LibraryViewModel
 
     @Before
     fun setUp() {
         Dispatchers.setMain(UnconfinedTestDispatcher())
-        viewModel = LibraryViewModel(FakeLibrary(mapOf(5L to albumTracks)), folders, IdleScanner, playback, testSorting(sortStore), marks, coverFlow, NoBandLevels)
+        viewModel = LibraryViewModel(FakeLibrary(mapOf(5L to albumTracks)), folders, IdleScanner, playback, testSorting(sortStore), marks, visualCollection, NoBandLevels)
     }
 
     @After
@@ -200,7 +200,7 @@ class LibraryViewModelTest {
             albums = listOf(album(1, "Zed", added = 5), album(2, "Abc", added = 1)),
             artists = listOf(Artist(1, "Queen", 1, 1, dateAddedSec = 1), Artist(2, "Abba", 1, 1, dateAddedSec = 9)),
         )
-        val sorted = LibraryViewModel(library, folders, IdleScanner, playback, testSorting(sortStore), marks, coverFlow, NoBandLevels)
+        val sorted = LibraryViewModel(library, folders, IdleScanner, playback, testSorting(sortStore), marks, visualCollection, NoBandLevels)
         backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { sorted.uiState.collect {} }
         return sorted
     }
@@ -280,11 +280,11 @@ class LibraryViewModelTest {
     }
 
     @Test
-    fun `the Cover Flow artwork setting reaches the state while the Albums list keeps every album`() = runTest {
+    fun `the visual collection artwork setting reaches the state while the Albums list keeps every album`() = runTest {
         val library = sortedLibrary()
         assertThat(library.uiState.value.hideAlbumsWithoutArtwork).isFalse()
 
-        coverFlow.stored.value = true
+        visualCollection.stored.value = true
 
         val state = library.uiState.value
         assertThat(state.hideAlbumsWithoutArtwork).isTrue()
@@ -292,7 +292,7 @@ class LibraryViewModelTest {
     }
 }
 
-/** Band levels that never have any: the view model only hands them to the Cover Flow. */
+/** Band levels that never have any: the view model only hands them to the visual collection. */
 private object NoBandLevels : PlaybackBandLevels {
     override fun watch() = AutoCloseable {}
 

@@ -13,7 +13,7 @@
     <string name="audio_output_kind_wired">Wired headphones</string>
     <string name="audio_output_kind_bluetooth">Bluetooth</string>
     <string name="audio_output_kind_hdmi">HDMI</string>
-    <string name="audio_output_kind_speaker">Phone speaker</string>
+    <string name="audio_output_kind_speaker">Device speaker</string>
     <string name="audio_output_kind_other">Other output</string>
     <!-- A device's title: its type, then its name, e.g. "Bluetooth: Buds Pro" -->
     <string name="audio_output_title_named">%1$s: %2$s</string>
@@ -38,7 +38,7 @@
     <string name="audio_output_bp_no_usb">No USB device</string>
     <string name="audio_output_bp_android_old">Needs Android 14</string>
     <string name="audio_output_bp_footer_offered">This USB device can be set to pass audio through unchanged. Android lists the formats it accepts under Mixer formats.</string>
-    <string name="audio_output_bp_footer_not_offered">This USB device does not offer bit-perfect output on this phone.</string>
+    <string name="audio_output_bp_footer_not_offered">This USB device does not offer bit-perfect output here.</string>
     <string name="audio_output_bp_footer_no_usb">Connect a USB audio device, such as a DAC or an audio interface, to check whether it offers bit-perfect output.</string>
     <string name="audio_output_bp_footer_android_old">Bit-perfect output needs Android 14 or later.</string>
     <string name="audio_output_bit_perfect_switch">Bit-perfect USB output</string>

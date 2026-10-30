@@ -80,9 +80,11 @@ private var lightShaderUsable = Build.VERSION.SDK_INT >= TranslucentPolicy.REFRA
  * the edge the content stays within a readable range ([TranslucentContrast]); [tinted] false makes it clear
  * translucency (only the tint contrast needs); [wash] lays a colour over the surface, read at draw time (e.g. the album
  * tint of [io.sonora.core.designsystem.theme.LocalChromeTint]). Without a backdrop, with Translucency off, on Android
- * 10-11 or with high-contrast text it is a flat translucent fill. Either way the content gets
+ * 10-11 or with high-contrast text it is a flat translucent fill, opaque when [overContent] (a bar or the mini player over
+ * scrolling content, whose text would otherwise read through). Either way the content gets
  * [LocalTranslucentContentColors] that keep WCAG AA contrast over very bright and very dark content. A sampling surface
- * also draws [reflection] (the content [TranslucentPill] marks) under itself.
+ * also draws [reflection] (the content [TranslucentPill] marks) under itself, and blurs what it samples by at least
+ * [minimumBlur] (an overlay's panel where the app under it is not blurred).
  */
 @Composable
 fun TranslucentSurface(
@@ -95,13 +97,15 @@ fun TranslucentSurface(
     tinted: Boolean = true,
     wash: () -> Color = NoWash,
     reflection: TranslucentReflection? = null,
+    overContent: Boolean = false,
+    minimumBlur: Dp = 0.dp,
     content: @Composable BoxScope.() -> Unit,
 ) {
     val policy = LocalTranslucentPolicy.current
     val layer = backdrop?.layer?.takeIf { policy.samplesBackdrop }
     val tier = if (layer == null) TranslucentTier.FLAT else policy.tier
-    val material = remember(darkTheme, tier, policy.highContrast, tinted) {
-        TranslucentMaterial.of(darkTheme, tier, policy.highContrast, tinted)
+    val material = remember(darkTheme, tier, policy.highContrast, tinted, overContent) {
+        TranslucentMaterial.of(darkTheme, tier, policy.highContrast, tinted, overContent)
     }
     val optics = remember(tier, material, policy.highContrast) { TranslucentOptics.of(tier, material, policy.highContrast) }
     val accent = if (darkTheme) SonoraTheme.accentOnDark else MaterialTheme.colorScheme.primary
@@ -111,8 +115,8 @@ fun TranslucentSurface(
     val latestShift by rememberUpdatedState(lightShift)
     val latestWash by rememberUpdatedState(wash)
     val translucent = if (layer != null) {
-        remember(layer, shape, tier, material, optics, elevation, policy.specularMotion, reflection) {
-            Modifier.translucency(layer, shape, tier, material, optics, elevation, { TranslucentPolicy.specularAngle(latestShift(), policy.specularMotion) }, { latestWash() }, reflection)
+        remember(layer, shape, tier, material, optics, elevation, policy.specularMotion, reflection, minimumBlur) {
+            Modifier.translucency(layer, shape, tier, material, optics, elevation, { TranslucentPolicy.specularAngle(latestShift(), policy.specularMotion) }, { latestWash() }, reflection, minimumBlur)
         }
     } else {
         Modifier.flatTranslucent(shape, elevation, material, optics) { latestWash() }
@@ -137,6 +141,7 @@ private fun Modifier.translucency(
     lightAngle: () -> Float,
     wash: () -> Color,
     reflection: TranslucentReflection?,
+    minimumBlur: Dp,
 ): Modifier {
     val range = rangeFilter(material.range)
     val tint = Color(material.tint).copy(alpha = material.tintAlpha)
@@ -151,7 +156,7 @@ private fun Modifier.translucency(
                 vibrancy()
                 colorFilter(range)
             }
-            blur(optics.blurDp.dp.toPx())
+            blur(maxOf(optics.blurDp.dp, minimumBlur).toPx())
             if (refracts && size.isSpecified) {
                 val height = minOf(optics.refractionHeightDp.dp.toPx(), size.minDimension * MAX_REFRACTION_FRACTION)
                 lens(height, optics.refractionAmountDp.dp.toPx(), true, optics.dispersion)

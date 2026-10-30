@@ -2,7 +2,6 @@ package io.sonora.core.designsystem.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
@@ -34,11 +34,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.sonora.core.designsystem.translucent.TranslucentBackdrop
+import io.sonora.core.designsystem.icon.SonoraIcons
+import io.sonora.core.designsystem.layout.LocalWindowClass
+import io.sonora.core.designsystem.theme.SonoraTheme
 import io.sonora.core.designsystem.translucent.LocalTranslucentContentColors
 import io.sonora.core.designsystem.translucent.LocalTranslucentPolicy
-import io.sonora.core.designsystem.icon.SonoraIcons
-import io.sonora.core.designsystem.theme.SonoraTheme
+import io.sonora.core.designsystem.translucent.TranslucentBackdrop
 
 /**
  * One context menu entry; [destructive] ones are red (Remove from Library). A row that toggles a mode says whether it
@@ -76,9 +77,11 @@ private const val DISABLED_ALPHA = 0.38f
  */
 @Composable
 internal fun ContextMenuTranslucent(translucent: TranslucentBackdrop, lightShift: () -> Float, content: @Composable () -> Unit) {
-    val backing = overlayPanelBacking(LocalTranslucentPolicy.current, SonoraTheme.isDark)
+    val policy = LocalTranslucentPolicy.current
+    val backing = overlayPanelBacking(policy, SonoraTheme.isDark)
+    val blur = overlayStyle(policy, LocalWindowClass.current.isLarge).panelBlur
     Box(if (backing != null) Modifier.background(backing, MenuShape) else Modifier) {
-        TranslucentSurface(shape = MenuShape, elevation = 16.dp, backdrop = translucent, lightShift = lightShift) {
+        TranslucentSurface(shape = MenuShape, elevation = 16.dp, backdrop = translucent, lightShift = lightShift, minimumBlur = blur) {
             Box(Modifier.clip(MenuShape)) { content() }
         }
     }

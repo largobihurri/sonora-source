@@ -14,14 +14,14 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import io.sonora.core.data.preferences.DataStoreCoverFlowPreferencesRepository
+import io.sonora.core.data.preferences.DataStoreVisualCollectionPreferencesRepository
 import io.sonora.core.data.preferences.DataStorePreferencesRepository
 import io.sonora.core.data.preferences.DataStoreEqualizerRepository
 import io.sonora.core.data.preferences.DataStoreSearchHistoryRepository
 import io.sonora.core.data.preferences.DataStorePlaybackTempoRepository
 import io.sonora.core.data.preferences.DataStoreSortPreferencesRepository
 import io.sonora.core.domain.playback.PlaybackTempoRepository
-import io.sonora.core.domain.port.CoverFlowPreferencesRepository
+import io.sonora.core.domain.port.VisualCollectionPreferencesRepository
 import io.sonora.core.domain.port.EqualizerRepository
 import io.sonora.core.domain.port.PreferencesRepository
 import io.sonora.core.domain.port.SearchHistoryRepository
@@ -34,7 +34,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 
-/** The app settings, list sort, equalizer, search history, speed/pitch and Cover Flow stores: one preferences DataStore per file and process (DataStore forbids two). */
+/** The app settings, list sort, equalizer, search history, speed/pitch and visual collection stores: one preferences DataStore per file and process (DataStore forbids two). */
 @Module
 @InstallIn(SingletonComponent::class)
 object PreferencesModule {
@@ -44,7 +44,7 @@ object PreferencesModule {
     internal const val EQUALIZER_FILE_NAME = "sonora_equalizer"
     private const val SEARCH_HISTORY_FILE_NAME = "sonora_search_history"
     internal const val TEMPO_FILE_NAME = "sonora_playback_tempo"
-    internal const val COVER_FLOW_FILE_NAME = "sonora_cover_flow"
+    internal const val VISUAL_COLLECTION_FILE_NAME = "sonora_cover_flow"
 
     @Provides
     @Singleton
@@ -93,17 +93,17 @@ object PreferencesModule {
     fun providePlaybackTempo(@PlaybackTempoSettingsStore store: DataStore<Preferences>): PlaybackTempoRepository =
         DataStorePlaybackTempoRepository(store)
 
-    /** The Cover Flow's own settings, in a file of their own as well. */
+    /** The visual collection's own settings, in a file of their own as well. */
     @Provides
     @Singleton
-    @CoverFlowSettingsStore
-    fun provideCoverFlowDataStore(@ApplicationContext context: Context): DataStore<Preferences> =
-        createSettingsDataStore { context.preferencesDataStoreFile(COVER_FLOW_FILE_NAME) }
+    @VisualCollectionSettingsStore
+    fun provideVisualCollectionDataStore(@ApplicationContext context: Context): DataStore<Preferences> =
+        createSettingsDataStore { context.preferencesDataStoreFile(VISUAL_COLLECTION_FILE_NAME) }
 
     @Provides
     @Singleton
-    fun provideCoverFlowPreferences(@CoverFlowSettingsStore store: DataStore<Preferences>): CoverFlowPreferencesRepository =
-        DataStoreCoverFlowPreferencesRepository(store)
+    fun provideVisualCollectionPreferences(@VisualCollectionSettingsStore store: DataStore<Preferences>): VisualCollectionPreferencesRepository =
+        DataStoreVisualCollectionPreferencesRepository(store)
 
     @Provides
     fun provideListSorting(store: SortPreferencesRepository, preferences: PreferencesRepository) = ListSorting(store, preferences)
@@ -140,10 +140,10 @@ annotation class EqualizerSettingsStore
 @Retention(AnnotationRetention.BINARY)
 annotation class PlaybackTempoSettingsStore
 
-/** The Cover Flow settings' DataStore. */
+/** The visual collection settings' DataStore. */
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
-annotation class CoverFlowSettingsStore
+annotation class VisualCollectionSettingsStore
 
 @Module
 @InstallIn(SingletonComponent::class)

@@ -13,7 +13,7 @@ import io.sonora.core.domain.model.NowPlayingPreferences
 import io.sonora.core.domain.model.NowPlayingRotation
 import io.sonora.core.domain.model.ScanProgress
 import io.sonora.core.domain.model.ThemeMode
-import io.sonora.core.domain.port.CoverFlowPreferencesRepository
+import io.sonora.core.domain.port.VisualCollectionPreferencesRepository
 import io.sonora.core.domain.port.LibraryFolderRepository
 import io.sonora.core.domain.port.LibraryScanner
 import io.sonora.core.domain.port.PreferencesRepository
@@ -62,8 +62,8 @@ class SettingsViewModelTest {
         }
     }
 
-    /** In-memory Cover Flow settings; every save fails with [failure] when set. */
-    private class FakeCoverFlow : CoverFlowPreferencesRepository {
+    /** In-memory visual collection settings; every save fails with [failure] when set. */
+    private class FakeVisualCollection : VisualCollectionPreferencesRepository {
         val stored = MutableStateFlow(false)
         var failure: Exception? = null
         override val hideAlbumsWithoutArtwork: Flow<Boolean> = stored
@@ -75,13 +75,13 @@ class SettingsViewModelTest {
 
     private val folders = FakeFolders(AddFolderResult.Added(music))
     private val preferences = FakePreferences()
-    private val coverFlow = FakeCoverFlow()
+    private val visualCollection = FakeVisualCollection()
     private lateinit var viewModel: SettingsViewModel
 
     @Before
     fun setUp() {
         Dispatchers.setMain(UnconfinedTestDispatcher())
-        viewModel = SettingsViewModel(folders, scanner, preferences, coverFlow, UnavailableWatchSync)
+        viewModel = SettingsViewModel(folders, scanner, preferences, visualCollection, UnavailableWatchSync)
     }
 
     @After
@@ -130,10 +130,10 @@ class SettingsViewModelTest {
     @Test
     fun `the Now Playing rotation choice is stored and keeps the switches`() {
         viewModel.setShowLyricsButton(true)
-        viewModel.setNowPlayingRotation(NowPlayingRotation.ALBUM_COVER_FLOW)
+        viewModel.setNowPlayingRotation(NowPlayingRotation.ALBUM_VISUAL_COLLECTION)
 
         assertThat(preferences.stored.value.nowPlaying)
-            .isEqualTo(NowPlayingPreferences(showLyricsButton = true, rotation = NowPlayingRotation.ALBUM_COVER_FLOW))
+            .isEqualTo(NowPlayingPreferences(showLyricsButton = true, rotation = NowPlayingRotation.ALBUM_VISUAL_COLLECTION))
     }
 
     @Test
@@ -259,7 +259,7 @@ class SettingsViewModelTest {
     }
 
     @Test
-    fun `the Cover Flow artwork switch is off by default and turning it on stores only that choice`() =
+    fun `the visual collection artwork switch is off by default and turning it on stores only that choice`() =
         runTest(UnconfinedTestDispatcher()) {
             backgroundScope.launch { viewModel.hideAlbumsWithoutArtwork.collect {} } // as the screen does
             assertThat(viewModel.hideAlbumsWithoutArtwork.value).isFalse()
@@ -267,15 +267,15 @@ class SettingsViewModelTest {
             viewModel.setHideAlbumsWithoutArtwork(true)
 
             assertThat(viewModel.hideAlbumsWithoutArtwork.value).isTrue()
-            assertThat(coverFlow.stored.value).isTrue()
+            assertThat(visualCollection.stored.value).isTrue()
             assertThat(preferences.stored.value).isEqualTo(AppPreferences())
         }
 
     @Test
-    fun `a Cover Flow artwork switch that cannot be saved keeps the stored value and explains`() =
+    fun `a visual collection artwork switch that cannot be saved keeps the stored value and explains`() =
         runTest(UnconfinedTestDispatcher()) {
             backgroundScope.launch { viewModel.hideAlbumsWithoutArtwork.collect {} }
-            coverFlow.failure = IOException("disk full")
+            visualCollection.failure = IOException("disk full")
 
             viewModel.setHideAlbumsWithoutArtwork(true)
 

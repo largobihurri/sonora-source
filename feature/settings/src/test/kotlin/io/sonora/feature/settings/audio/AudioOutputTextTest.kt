@@ -45,8 +45,8 @@ class AudioOutputTextTest {
 
     @Test
     fun `the phone speaker and wired headphones are titled by type, never by the phone's model name`() {
-        assertThat(AudioOutputText.title(device(OutputDeviceKind.SPEAKER, name = "RMX5011"), en)).isEqualTo("Phone speaker")
-        assertThat(AudioOutputText.title(device(OutputDeviceKind.SPEAKER, name = "RMX5011"), es)).isEqualTo("Altavoz del teléfono")
+        assertThat(AudioOutputText.title(device(OutputDeviceKind.SPEAKER, name = "RMX5011"), en)).isEqualTo("Device speaker")
+        assertThat(AudioOutputText.title(device(OutputDeviceKind.SPEAKER, name = "RMX5011"), es)).isEqualTo("Altavoz del dispositivo")
         assertThat(AudioOutputText.title(device(OutputDeviceKind.WIRED, name = "RMX5011"), en)).isEqualTo("Wired headphones")
         assertThat(AudioOutputText.title(device(OutputDeviceKind.WIRED, name = ""), es)).isEqualTo("Auriculares con cable")
     }

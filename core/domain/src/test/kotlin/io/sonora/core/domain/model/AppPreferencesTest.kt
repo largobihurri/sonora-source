@@ -17,7 +17,7 @@ class AppPreferencesTest {
     fun `a fresh install shows the landscape Now Playing when Now Playing is turned sideways`() {
         assertThat(AppPreferences().nowPlaying.rotation).isEqualTo(NowPlayingRotation.NOW_PLAYING_LANDSCAPE)
         assertThat(NowPlayingRotation.entries)
-            .containsExactly(NowPlayingRotation.NOW_PLAYING_LANDSCAPE, NowPlayingRotation.ALBUM_COVER_FLOW).inOrder()
+            .containsExactly(NowPlayingRotation.NOW_PLAYING_LANDSCAPE, NowPlayingRotation.ALBUM_VISUAL_COLLECTION).inOrder()
     }
 
     @Test

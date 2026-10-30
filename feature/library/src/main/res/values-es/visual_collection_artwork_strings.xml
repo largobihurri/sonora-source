@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Visual collection, cuando Ajustes oculta los álbumes sin carátula y ninguno la tiene -->
+    <string name="visualcollection_no_albums_with_artwork">Ningún álbum tiene carátula. Para ver aquí todos los álbumes, desactiva «Ocultar en la colección visual los álbumes sin carátula» en Ajustes.</string>
+</resources>

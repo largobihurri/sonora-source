@@ -21,17 +21,22 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -263,6 +268,14 @@ internal fun PlaylistDetailsDialog(
 ) {
     var name by rememberSaveable { mutableStateOf(initialName) }
     var description by rememberSaveable { mutableStateOf(initialDescription) }
+    // The name is what the dialog asks for: the cursor and the keyboard start there.
+    val nameFocus = remember { FocusRequester() }
+    val keyboard = LocalSoftwareKeyboardController.current
+    LaunchedEffect(Unit) {
+        // The dialog's window attaches after the first composition: wait a frame, then focus and raise the keyboard.
+        withFrameNanos { }
+        if (runCatching { nameFocus.requestFocus() }.isSuccess) keyboard?.show()
+    }
     TranslucentAlert(
         title = title,
         onDismiss = onDismiss,
@@ -273,6 +286,7 @@ internal fun PlaylistDetailsDialog(
             value = name,
             onValueChange = { name = it },
             label = stringResource(R.string.playlist_name_label),
+            modifier = Modifier.focusRequester(nameFocus),
         )
         TranslucentAlertTextField(
             value = description,

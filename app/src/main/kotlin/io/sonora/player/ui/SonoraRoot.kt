@@ -57,10 +57,10 @@ import io.sonora.core.designsystem.component.ContextMenuHost
 import io.sonora.core.designsystem.component.LocalBottomChrome
 import io.sonora.core.designsystem.component.LocalScrollToTop
 import io.sonora.core.designsystem.component.ScrollToTop
-import io.sonora.core.designsystem.component.coverflow.CoverFlowHandoff
-import io.sonora.core.designsystem.component.coverflow.LocalCoverFlowHandoff
-import io.sonora.core.designsystem.component.coverflow.PrefetchSharedArtwork
-import io.sonora.core.designsystem.component.coverflow.SharedArtworkFlight
+import io.sonora.core.designsystem.component.visualcollection.VisualCollectionHandoff
+import io.sonora.core.designsystem.component.visualcollection.LocalVisualCollectionHandoff
+import io.sonora.core.designsystem.component.visualcollection.PrefetchSharedArtwork
+import io.sonora.core.designsystem.component.visualcollection.SharedArtworkFlight
 import io.sonora.core.designsystem.translucent.TranslucentBubble
 import io.sonora.core.designsystem.translucent.TranslucentBubbleSurface
 import io.sonora.core.designsystem.translucent.LocalTranslucentBackdrop
@@ -82,7 +82,7 @@ import io.sonora.core.domain.model.Track
 import io.sonora.feature.cdjexport.ExportScreen
 import io.sonora.feature.converter.ConverterScreen
 import io.sonora.feature.library.AddToPlaylistOverlay
-import io.sonora.feature.library.AlbumsCoverFlow
+import io.sonora.feature.library.AlbumsVisualCollection
 import io.sonora.feature.library.LibraryLink
 import io.sonora.feature.library.LibraryPage
 import io.sonora.feature.library.LibraryPicker
@@ -159,11 +159,11 @@ fun SonoraRoot(
         atTopLevel = true, // every root destination is a tab; inner stacks live inside the tab screens
     )
     LaunchedEffect(shell) { gestureLog?.invoke("shell $shell at progress ${sheet.progress.value}") }
-    // A settled Now Playing turns sideways when the rotation lock allows it, the Library's Cover Flow lists whenever the
+    // A settled Now Playing turns sideways when the rotation lock allows it, the Library's visual collection lists whenever the
     // phone is held sideways; the rest stays upright (see screenOrientation). Saved, so an activity recreated by another
     // configuration change (theme, language) asks for the same orientation from its first frame (the Library reports
     // its list only after composing). Rotations themselves do not recreate it.
-    var libraryCoverFlow by rememberSaveable { mutableStateOf(false) }
+    var libraryVisualCollection by rememberSaveable { mutableStateOf(false) }
     val activity = LocalActivity.current
     // Phone or tablet, upright or sideways (provided once in MainActivity).
     val windowClass = LocalWindowClass.current
@@ -171,16 +171,16 @@ fun SonoraRoot(
     // Where the sheet is headed, not where it is: a finger dragging Now Playing down must not turn the phone mid-gesture
     // (it would relayout under the finger with the sheet still open, and turn sideways again).
     val nowPlayingOpen = hasTrack && sheet.targetOpen
-    // Dismissing a sideways Now Playing holds the app upright, except over a Cover Flow list, which shows its Cover Flow
+    // Dismissing a sideways Now Playing holds the app upright, except over a visual collection list, which shows its visual collection
     // (see UprightHold). wasOpen starts from the restored sheet, so a recreated activity starts no hold on its own.
     var uprightHold by rememberSaveable { mutableStateOf(false) }
     val holdWatch = remember { UprightHoldWatch(wasOpen = nowPlayingOpen) }
     val landscapeNow by rememberUpdatedState(landscape)
     val nowPlayingOpenNow by rememberUpdatedState(nowPlayingOpen)
-    val coverFlowListNow by rememberUpdatedState(coverFlowList(currentTab, libraryCoverFlow))
+    val visualCollectionListNow by rememberUpdatedState(visualCollectionList(currentTab, libraryVisualCollection))
     val largeNow by rememberUpdatedState(windowClass.isLarge)
     // Gravity mode (Settings): an open Now Playing hangs its groups level instead of turning, and its magnetic detents
-    // latch where a dismissal leads (T63.8): sideways, the window turns beneath it (unseen) so the Cover Flow is there
+    // latch where a dismissal leads (T63.8): sideways, the window turns beneath it (unseen) so the visual collection is there
     // to reveal; upright (or upside down), the portrait screen. Null while closed: it starts from the window's side.
     // Tablets (large windows) never use it, whatever Settings says; they also get no orientation lock (see screenOrientation).
     val gravitySetting by playerViewModel.gravity.collectAsStateWithLifecycle()
@@ -192,7 +192,7 @@ fun SonoraRoot(
     LaunchedEffect(nowPlayingOpen) {
         val gravityUpright = closesGravityUpright(gravityNow, destinationNow)
         // The upright hold is a phone rule (a large window is never locked), so a tablet starts none.
-        if (holdWatch.onChange(nowPlayingOpen, landscapeNow, coverFlowListNow, gravityUpright) && !largeNow) uprightHold = true
+        if (holdWatch.onChange(nowPlayingOpen, landscapeNow, visualCollectionListNow, gravityUpright) && !largeNow) uprightHold = true
         gravityDestination = if (nowPlayingOpen) gravityDestination ?: GravityDestination.opening(landscapeNow) else null
     }
     UprightHoldRelease(uprightHold) { uprightHold = false }
@@ -200,39 +200,39 @@ fun SonoraRoot(
     val latchedSideways = gravity && nowPlayingOpen && destination == GravityDestination.Sideways
     val windowSide = remember { GravityWindowSide() }
     val windowSideways = windowSide.sideways(latchedSideways, sheet.dragging)
-    val orientation = screenOrientation(nowPlayingOpen, currentTab, libraryCoverFlow, uprightHold, gravity, windowSideways, windowClass)
-    // Sideways, the Library shows its fullscreen Cover Flow, already beneath a sideways Now Playing (so dragging it down
-    // reveals the Cover Flow): no tab bar or mini player over it.
-    // A large screen shows the Cover Flow only when a Library page asks for it (see LibraryScreen's coverFlowOpen).
-    var libraryCoverFlowRequested by rememberSaveable { mutableStateOf(false) }
-    LaunchedEffect(currentTab) { if (currentTab != TopLevelRoute.Library) libraryCoverFlowRequested = false }
-    val coverFlowMode = libraryCoverFlowMode(landscape, currentTab, libraryCoverFlow, nowPlayingOpen, windowClass, libraryCoverFlowRequested)
+    val orientation = screenOrientation(nowPlayingOpen, currentTab, libraryVisualCollection, uprightHold, gravity, windowSideways, windowClass)
+    // Sideways, the Library shows its fullscreen visual collection, already beneath a sideways Now Playing (so dragging it down
+    // reveals the visual collection): no tab bar or mini player over it.
+    // A large screen shows the visual collection only when a Library page asks for it (see LibraryScreen's visualCollectionOpen).
+    var libraryVisualCollectionRequested by rememberSaveable { mutableStateOf(false) }
+    LaunchedEffect(currentTab) { if (currentTab != TopLevelRoute.Library) libraryVisualCollectionRequested = false }
+    val visualCollectionMode = libraryVisualCollectionMode(landscape, currentTab, libraryVisualCollection, nowPlayingOpen, windowClass, libraryVisualCollectionRequested)
     // Now Playing grows out of a capsule as a translucent bubble, the capsule's artwork carried inside it to Now
-    // Playing's, and closing shrinks it back (T67, see nowPlayingBubble): the Cover Flow's "Now Playing" capsule when it
+    // Playing's, and closing shrinks it back (T67, see nowPlayingBubble): the visual collection's "Now Playing" capsule when it
     // opened from there (saved, so a recreated activity keeps it until Now Playing closes), else the mini player above
     // the tab bar. With "Remove animations" (taken when it opens or closes, as the sheet settles without motion then)
     // Now Playing cross-fades in and out at full screen instead, what lies beneath left as it is.
     var bubbleOpened by rememberSaveable { mutableStateOf(false) }
     var bubbleFades by rememberSaveable { mutableStateOf(false) }
     val reducedMotion = remember(sheet.targetOpen) { context.prefersReducedMotion() }
-    val coverFlowHandoff = remember { CoverFlowHandoff().apply { progress = { sheet.progress.value } } }
-    val miniPlayerHandoff = remember { CoverFlowHandoff().apply { progress = { sheet.progress.value } } }
-    // As from the Cover Flow, Now Playing grows out of the mini player only when its capsule is placed as it heads open;
+    val visualCollectionHandoff = remember { VisualCollectionHandoff().apply { progress = { sheet.progress.value } } }
+    val miniPlayerHandoff = remember { VisualCollectionHandoff().apply { progress = { sheet.progress.value } } }
+    // As from the visual collection, Now Playing grows out of the mini player only when its capsule is placed as it heads open;
     // else it opens plainly. Taken only on opening: a capsule that leaves while Now Playing rests open is still met on
     // the way back (TranslucentBubble.frames).
     val miniPlayerPlaced = remember(sheet.targetOpen) { !sheet.targetOpen || miniPlayerHandoff.capsule != null }
-    val bubbleKind = nowPlayingBubble(bubbleOpened, coverFlowMode, gravity).let { kind ->
+    val bubbleKind = nowPlayingBubble(bubbleOpened, visualCollectionMode, gravity).let { kind ->
         if (kind == NowPlayingBubble.MiniPlayer && !miniPlayerPlaced) NowPlayingBubble.None else kind
     }
     val fades = when (bubbleKind) {
-        NowPlayingBubble.CoverFlow -> bubbleFades
+        NowPlayingBubble.VisualCollection -> bubbleFades
         NowPlayingBubble.MiniPlayer -> reducedMotion
         NowPlayingBubble.None -> false
     }
     val bubbled = bubbleKind != NowPlayingBubble.None
     val morphs = bubbled && !fades
     val fadesNow by rememberUpdatedState(fades)
-    val handoff = if (bubbleKind == NowPlayingBubble.CoverFlow) coverFlowHandoff else miniPlayerHandoff
+    val handoff = if (bubbleKind == NowPlayingBubble.VisualCollection) visualCollectionHandoff else miniPlayerHandoff
     val handoffNow by rememberUpdatedState(handoff)
     val shellFrame = remember { ShellFrame() }
     // Dismissed, the bubble starts as a card with the sheet's own rounded corners (T67.6).
@@ -243,7 +243,7 @@ fun SonoraRoot(
         }, screenRadius = { with(density) { NowPlayingSheetRadius.toPx() } }, liquidLimit = if (windowClass.isLarge) TranslucentBubble.LARGE_LIQUID_LIMIT else 1f).also { bubble ->
             // The artwork is carried inside the bubble, so the two move as one (T67.4).
             val frames = { bubble.frames(shellFrame.size)?.translate(shellFrame.origin) }
-            coverFlowHandoff.bubble = frames
+            visualCollectionHandoff.bubble = frames
             miniPlayerHandoff.bubble = frames
         }
     }
@@ -252,12 +252,12 @@ fun SonoraRoot(
     val liquidTranslucentShown by remember(bubble) { derivedStateOf { bubble.liquidAlpha(shellFrame.size) > 0f } }
     val flatTranslucentShown by remember(bubble) { derivedStateOf { bubble.flatAlpha(shellFrame.size) > 0f } }
     SideEffect {
-        coverFlowHandoff.active = morphs && bubbleKind == NowPlayingBubble.CoverFlow
+        visualCollectionHandoff.active = morphs && bubbleKind == NowPlayingBubble.VisualCollection
         miniPlayerHandoff.active = morphs && bubbleKind == NowPlayingBubble.MiniPlayer
     }
     // The playing artwork waits in memory at the flight's size, so a bubble's first frame already carries it; asked
-    // again as a Cover Flow shows and as Now Playing heads open or closed, in case the cache let it go meanwhile.
-    PrefetchSharedArtwork(playback.currentTrack?.artworkUri, refresh = coverFlowMode to sheet.targetOpen)
+    // again as a visual collection shows and as Now Playing heads open or closed, in case the cache let it go meanwhile.
+    PrefetchSharedArtwork(playback.currentTrack?.artworkUri, refresh = visualCollectionMode to sheet.targetOpen)
     // Its backdrop colours too, so the opening does not start from the fallback ones and blend to the cover's.
     WarmBackdropPalette(playback.currentTrack?.artworkUri)
     val crossFade = remember { Animatable(if (sheet.targetOpen) 1f else 0f) }
@@ -269,20 +269,20 @@ fun SonoraRoot(
     // A cross-fading Now Playing stays on screen until it has faded out (the sheet itself closed at once).
     val fadingOut = fades && crossFade.value > 0f
     LaunchedEffect(activity, orientation) { activity?.requestedOrientation = orientation }
-    // Settings may cover a sideways Now Playing with the albums Cover Flow. Its Now Playing button (and the Library
-    // Cover Flow's, which opens Now Playing) asks for the landscape Now Playing instead until the phone is upright
+    // Settings may cover a sideways Now Playing with the albums visual collection. Its Now Playing button (and the Library
+    // Visual collection's, which opens Now Playing) asks for the landscape Now Playing instead until the phone is upright
     // again or Now Playing closes.
     val rotation by playerViewModel.rotation.collectAsStateWithLifecycle()
     // Saved: another configuration change (theme, locale) while sideways must not bring the overlay back.
-    var albumCoverFlowDismissed by rememberSaveable { mutableStateOf(false) }
-    LaunchedEffect(landscape, shell.nowPlaying) { if (!landscape || !shell.nowPlaying) albumCoverFlowDismissed = false }
-    // Gravity mode never covers its level Now Playing with the albums Cover Flow (Settings says the rotation choice does
+    var albumVisualCollectionDismissed by rememberSaveable { mutableStateOf(false) }
+    LaunchedEffect(landscape, shell.nowPlaying) { if (!landscape || !shell.nowPlaying) albumVisualCollectionDismissed = false }
+    // Gravity mode never covers its level Now Playing with the albums visual collection (Settings says the rotation choice does
     // not apply there); a sideways dismissal follows the landscape flow instead (T63.8).
-    val albumCoverFlow = showsAlbumCoverFlow(rotation, landscape, nowPlayingOpen = shell.nowPlaying && !shell.chrome, albumCoverFlowDismissed, gravity)
+    val albumVisualCollection = showsAlbumVisualCollection(rotation, landscape, nowPlayingOpen = shell.nowPlaying && !shell.chrome, albumVisualCollectionDismissed, gravity)
     // The activity handles rotations itself (manifest configChanges): an open Now Playing turns its two blocks into the
     // new layout over a seamless window rotation; everything else keeps the system's rotation animation.
-    val nowPlayingTurns = nowPlayingTurnsBlocks(nowPlayingOpen, rotation, albumCoverFlowDismissed, gravity)
-    WindowRotationAnimation(windowRotationAnimation(nowPlayingRotatesSeamlessly(nowPlayingOpen, rotation, albumCoverFlowDismissed, gravity)))
+    val nowPlayingTurns = nowPlayingTurnsBlocks(nowPlayingOpen, rotation, albumVisualCollectionDismissed, gravity)
+    WindowRotationAnimation(windowRotationAnimation(nowPlayingRotatesSeamlessly(nowPlayingOpen, rotation, albumVisualCollectionDismissed, gravity)))
     // A saved request must not outlive its track (e.g. after process death or when the queue empties).
     LaunchedEffect(hasTrack) { if (!hasTrack) sheet.closeNow() }
     // A restored queue reaches a connected player a moment later; if none does, the request goes with this launch
@@ -357,8 +357,8 @@ fun SonoraRoot(
     // device). Back hides the sidebar when nothing above it takes the back; it is registered here, before any screen's
     // callback, so it ranks below all of them. A phone keeps its bottom tab bar.
     val sidebarChoice by navigationViewModel.sidebarShown.collectAsStateWithLifecycle()
-    val navigation = navigationChrome(windowClass, sidebarChoice ?: true, coverFlowOnScreen = coverFlowMode != LibraryCoverFlowMode.None)
-    val chromeVisible = shell.chrome && coverFlowMode == LibraryCoverFlowMode.None
+    val navigation = navigationChrome(windowClass, sidebarChoice ?: true, visualCollectionOnScreen = visualCollectionMode != LibraryVisualCollectionMode.None)
+    val chromeVisible = shell.chrome && visualCollectionMode == LibraryVisualCollectionMode.None
     val sidebarReveal = rememberSidebarReveal(sidebarRevealTarget(navigation), known = sidebarChoice != null)
     BackHandler(enabled = backHidesSidebar(navigation, chromeVisible)) { navigationViewModel.setSidebarShown(false) }
     // The Library page on top, which the sidebar highlights.
@@ -426,7 +426,7 @@ fun SonoraRoot(
                 modifier = Modifier
                     .fillMaxSize()
                     .onSizeChanged { sheet.heightPx = it.height.toFloat() }
-                    // The Cover Flow reports its capsule in the root; the bubble is drawn from here.
+                    // The visual collection reports its capsule in the root; the bubble is drawn from here.
                     .onGloballyPositioned {
                         shellFrame.origin = it.positionInRoot()
                         shellFrame.size = it.size.toSize()
@@ -454,7 +454,7 @@ fun SonoraRoot(
                     ) {
                         when (route) {
                             // The open Now Playing sheet owns back; the library stack waits underneath.
-                            TopLevelRoute.Library -> CompositionLocalProvider(LocalCoverFlowHandoff provides coverFlowHandoff) {
+                            TopLevelRoute.Library -> CompositionLocalProvider(LocalVisualCollectionHandoff provides visualCollectionHandoff) {
                                 LibraryScreen(
                                     settings = { onBack ->
                                         SettingsScreen(onBack, openPage = settingsPage, onPageOpened = { settingsPage = null })
@@ -464,17 +464,17 @@ fun SonoraRoot(
                                     fileInfo = fileInfo,
                                     openLink = libraryLink,
                                     onLinkOpened = { libraryLink = null },
-                                    // Until Now Playing heads closed, its Cover Flow waits beneath without taking the bars or back.
-                                    coverFlowCovered = coverFlowMode != LibraryCoverFlowMode.Shown,
-                                    onCoverFlowChange = { libraryCoverFlow = it },
+                                    // Until Now Playing heads closed, its visual collection waits beneath without taking the bars or back.
+                                    visualCollectionCovered = visualCollectionMode != LibraryVisualCollectionMode.Shown,
+                                    onVisualCollectionChange = { libraryVisualCollection = it },
                                     onPageChange = { libraryPage = it },
-                                    coverFlowOpen = libraryCoverFlowRequested,
-                                    onCoverFlowOpenChange = { libraryCoverFlowRequested = it },
+                                    visualCollectionOpen = libraryVisualCollectionRequested,
+                                    onVisualCollectionOpenChange = { libraryVisualCollectionRequested = it },
                                     onOpenNowPlaying = {
                                         if (hasTrack) {
-                                            albumCoverFlowDismissed = true
-                                            // From the Cover Flow on screen, Now Playing grows out of its capsule (T67).
-                                            bubbleOpened = coverFlowMode == LibraryCoverFlowMode.Shown && coverFlowHandoff.capsule != null
+                                            albumVisualCollectionDismissed = true
+                                            // From the visual collection on screen, Now Playing grows out of its capsule (T67).
+                                            bubbleOpened = visualCollectionMode == LibraryVisualCollectionMode.Shown && visualCollectionHandoff.capsule != null
                                             bubbleFades = context.prefersReducedMotion()
                                             sheet.open()
                                         }
@@ -583,7 +583,7 @@ fun SonoraRoot(
                 LaunchedEffect(shell.nowPlaying, fadingOut) { if (!shell.nowPlaying && !fadingOut) bubbleOpened = false }
                 if (shell.nowPlaying || fadingOut) {
                     // The bubble's translucent surface, over what it samples and under Now Playing growing in it: the capsule's
-                    // own, the Cover Flow's clear dark one or the mini player's tinted one. Drawn over the capsule, it
+                    // own, the visual collection's clear dark one or the mini player's tinted one. Drawn over the capsule, it
                     // cross-fades with it near the capsule (TranslucentBubble.translucentAlpha), so landing it shows the real capsule.
                     if (morphs) {
                         val miniPlayerTranslucent = bubbleKind == NowPlayingBubble.MiniPlayer
@@ -629,8 +629,8 @@ fun SonoraRoot(
                     if (!takesTouch) TouchShield(Modifier.fillMaxSize())
                 }
                 val playingAlbumId = playback.currentTrack?.albumId
-                if (albumCoverFlow && playingAlbumId != null) {
-                    AlbumsCoverFlow(playingAlbumId, onShowNowPlaying = { albumCoverFlowDismissed = true }, modifier = Modifier.fillMaxSize())
+                if (albumVisualCollection && playingAlbumId != null) {
+                    AlbumsVisualCollection(playingAlbumId, onShowNowPlaying = { albumVisualCollectionDismissed = true }, modifier = Modifier.fillMaxSize())
                 }
                 // Over Now Playing: the playlist picker sheet and its "Added to …" banner.
                 AddToPlaylistOverlay(
@@ -646,8 +646,8 @@ fun SonoraRoot(
                         DuplicateNoticeHost(
                             onOpen = showDuplicates,
                             modifier = Modifier.align(Alignment.TopCenter).statusBarsPadding().padding(horizontal = 16.dp, vertical = 8.dp)
-                                // Under the top pill, when the sidebar is hidden.
-                                .padding(top = if (navigation == NavigationChrome.TopPill && chromeVisible) TopPillHeight.dp else 0.dp),
+                                // Under the page bar (its back button) or the top pill, whichever is in the way.
+                                .padding(top = duplicateNoticeTop(navigation, chromeVisible).dp),
                         )
                     }
                 }
@@ -734,16 +734,16 @@ internal fun nowPlayingRequest(requested: Boolean, connected: Boolean, hasTrack:
  */
 internal class UprightHoldWatch(private var wasOpen: Boolean) {
     /** Now Playing is now [isOpen]; returns whether this change starts the hold (see [UprightHold.startsOnClose]). */
-    fun onChange(isOpen: Boolean, landscape: Boolean, coverFlowList: Boolean, gravityUpright: Boolean = false): Boolean =
-        UprightHold.startsOnClose(wasOpen, isOpen, landscape, coverFlowList, gravityUpright).also { wasOpen = isOpen }
+    fun onChange(isOpen: Boolean, landscape: Boolean, visualCollectionList: Boolean, gravityUpright: Boolean = false): Boolean =
+        UprightHold.startsOnClose(wasOpen, isOpen, landscape, visualCollectionList, gravityUpright).also { wasOpen = isOpen }
 }
 
-/** Whether the Library's fullscreen Cover Flow is there, and whether it is what the user sees. */
-internal enum class LibraryCoverFlowMode {
-    /** No Cover Flow: upright, another tab, or a Library screen without one. */
+/** Whether the Library's fullscreen visual collection is there, and whether it is what the user sees. */
+internal enum class LibraryVisualCollectionMode {
+    /** No visual collection: upright, another tab, or a Library screen without one. */
     None,
 
-    /** Composed beneath a sideways Now Playing (open or being dragged), so dragging it down reveals the Cover Flow. */
+    /** Composed beneath a sideways Now Playing (open or being dragged), so dragging it down reveals the visual collection. */
     Covered,
 
     /** On screen, fullscreen with the system bars hidden. */
@@ -751,24 +751,24 @@ internal enum class LibraryCoverFlowMode {
 }
 
 /**
- * The Library's Cover Flow, sideways ([landscape]) on a Cover Flow list ([coverFlowList]): beneath Now Playing while it
+ * The Library's visual collection, sideways ([landscape]) on a visual collection list ([visualCollectionList]): beneath Now Playing while it
  * is headed open ([nowPlayingOpen], so also during a drag), on screen once it heads closed. On a large [windowClass] it
- * is there only while [coverFlowRequested], in either orientation.
+ * is there only while [visualCollectionRequested], in either orientation.
  */
-internal fun libraryCoverFlowMode(
+internal fun libraryVisualCollectionMode(
     landscape: Boolean,
     tab: TopLevelRoute,
-    libraryCoverFlow: Boolean,
+    libraryVisualCollection: Boolean,
     nowPlayingOpen: Boolean,
     windowClass: WindowClass = WindowClass.Phone,
-    coverFlowRequested: Boolean = false,
-): LibraryCoverFlowMode {
-    // A large screen never turns into a Cover Flow by being turned sideways: it shows one only when asked for.
-    val wanted = if (windowClass.isLarge) coverFlowRequested else landscape
+    visualCollectionRequested: Boolean = false,
+): LibraryVisualCollectionMode {
+    // A large screen never turns into a visual collection by being turned sideways: it shows one only when asked for.
+    val wanted = if (windowClass.isLarge) visualCollectionRequested else landscape
     return when {
-        !wanted || !coverFlowList(tab, libraryCoverFlow) -> LibraryCoverFlowMode.None
-        nowPlayingOpen -> LibraryCoverFlowMode.Covered
-        else -> LibraryCoverFlowMode.Shown
+        !wanted || !visualCollectionList(tab, libraryVisualCollection) -> LibraryVisualCollectionMode.None
+        nowPlayingOpen -> LibraryVisualCollectionMode.Covered
+        else -> LibraryVisualCollectionMode.Shown
     }
 }
 

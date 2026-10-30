@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.dp
 /**
  * How far below the status bar the shell's top chrome reaches over the content (the top pill of a large screen whose
  * sidebar is hidden), plus a small gap: a page's first content starts at least this far down. Zero on a phone, with the
- * sidebar shown and under a Cover Flow, where nothing floats over the top of the content. The page bars share the pill's
+ * sidebar shown and under a visual collection, where nothing floats over the top of the content. The page bars share the pill's
  * row and stay beside it; only what sits under them (a large title, a header) must clear it.
  */
 val LocalTopChromeInset = staticCompositionLocalOf { 0.dp }

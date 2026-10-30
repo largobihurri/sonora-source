@@ -1,5 +1,6 @@
 package io.sonora.core.designsystem.component
 
+import androidx.compose.ui.unit.dp
 import com.google.common.truth.Truth.assertThat
 import io.sonora.core.designsystem.translucent.TranslucentPolicy
 import io.sonora.core.designsystem.translucent.TranslucentTier
@@ -33,5 +34,13 @@ class TranslucentOverlayStyleTest {
 
         assertThat(dim).isGreaterThan(overlayStyle(policy(TranslucentTier.LIQUID), large = false).dimAlpha)
         assertThat(dim).isLessThan(overlayStyle(policy(TranslucentTier.FLAT), large = false).dimAlpha)
+    }
+
+    @Test
+    fun `a large window with sampling translucency blurs under the panel itself, so no text behind it reads`() {
+        assertThat(overlayStyle(policy(TranslucentTier.LIQUID), large = true).panelBlur).isEqualTo(28.dp)
+        assertThat(overlayStyle(policy(TranslucentTier.FROSTED), large = true).panelBlur).isEqualTo(28.dp)
+        assertThat(overlayStyle(policy(TranslucentTier.FLAT), large = true).panelBlur).isEqualTo(0.dp)
+        for (tier in TranslucentTier.entries) assertThat(overlayStyle(policy(tier), large = false).panelBlur).isEqualTo(0.dp)
     }
 }

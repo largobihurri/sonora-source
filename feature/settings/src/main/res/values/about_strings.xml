@@ -8,7 +8,7 @@
     <string name="about_licences">Open-Source Licences</string>
     <string name="about_gpl">Sonora is free software: you can redistribute it and change it under the terms of the GNU General Public License, version 3 or (at your option) any later version. It comes with no warranty. Its complete source code is published at Source Code.</string>
     <string name="about_not_affiliated">Sonora is not affiliated with, endorsed by or sponsored by Pioneer DJ, AlphaTheta or rekordbox. Product names are trademarks of their owners.</string>
-    <string name="about_link_failed">No app on this phone can open the link.</string>
+    <string name="about_link_failed">No app on this device can open the link.</string>
     <string name="about_ok">OK</string>
 
     <!-- Settings › About › Open-Source Licences -->

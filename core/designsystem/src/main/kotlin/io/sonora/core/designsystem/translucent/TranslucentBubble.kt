@@ -29,7 +29,7 @@ import io.sonora.core.designsystem.component.TranslucentSurface
 import kotlin.math.roundToInt
 
 /**
- * A full-screen surface opened as a translucent bubble out of a capsule (T67: Now Playing out of the Cover Flow's "Now
+ * A full-screen surface opened as a translucent bubble out of a capsule (T67: Now Playing out of the visual collection's "Now
  * Playing" capsule), driven by the surface's own [progress] (0 the capsule .. 1 the full screen) so a finger dragging it
  * moves the bubble one to one. [capsule] is where it grows from, in the host's coordinates (null: no capsule, no
  * bubble). The bubble takes the [MorphRoute] its last rest calls for ([TranslucentMorph]): it opens straight out of the
@@ -161,7 +161,7 @@ private data class BubbleClip(val rect: Rect, val radius: Float) : Shape {
 
 /**
  * The translucent surface of [bubble] over [backdrop] (the content it grows over): the capsule's own translucency ([darkTheme] and
- * [tinted] as the capsule draws it: the Cover Flow's clear dark translucency by default, the mini player's tinted one),
+ * [tinted] as the capsule draws it: the visual collection's clear dark translucency by default, the mini player's tinted one),
  * refraction and blur included, laid out at the bubble's frame each frame, so it grows and moves with it. Fill the host
  * with [modifier]; it fades with [TranslucentBubble.translucentAlpha], handing over to the capsule near it and not drawn once the
  * bubble is fully open (the surface's own backdrop covers it then), and takes no touch. With [flat] it is the tint of the

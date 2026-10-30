@@ -50,6 +50,10 @@ class DuplicateScan(
     private val running = Mutex()
     private var job: Job? = null
 
+    /** The library changed after the last result was found, so it may miss copies ([markStale]). */
+    @Volatile
+    private var stale = false
+
     /** Starts a scan unless one runs; [announce] marks it as the first analysis. */
     fun scan(announce: Boolean = false) {
         synchronized(this) {
@@ -59,21 +63,29 @@ class DuplicateScan(
         }
     }
 
-    /** Starts a scan unless there is a result or one runs. */
+    /** Starts a scan unless there is an up-to-date result or one runs. */
     fun scanIfNeeded() {
         val now = _state.value
-        if (now is DuplicateScanState.NotScanned || now is DuplicateScanState.Failed) scan()
+        if (stale || now is DuplicateScanState.NotScanned || now is DuplicateScanState.Failed) scan()
+    }
+
+    /** Songs were added or changed since the last result: the next [scanIfNeeded] scans again. */
+    fun markStale() {
+        stale = true
     }
 
     /** Scans now, after any running scan; the groups, or `null` when the scan failed. */
     suspend fun scanNow(): List<DuplicateGroup>? = running.withLock {
         val before = _state.value
+        val wasStale = stale
+        stale = false
         _state.value = DuplicateScanState.Scanning(0, 0)
         try {
             find { checked, total -> _state.value = DuplicateScanState.Scanning(checked, total) }
                 .also { _state.value = DuplicateScanState.Found(it) }
         } catch (e: CancellationException) {
             _state.value = before
+            if (wasStale) stale = true
             throw e
         } catch (_: Exception) {
             _state.value = DuplicateScanState.Failed

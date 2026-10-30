@@ -2,7 +2,7 @@ package io.sonora.feature.nowplaying
 
 /**
  * Where dismissing Now Playing leads in gravity mode (T63.8), latched by the level's magnetic detents
- * ([GravityLevel.detent]): a sideways detent (either way) makes it [Sideways], the landscape flow's Cover Flow; the
+ * ([GravityLevel.detent]): a sideways detent (either way) makes it [Sideways], the landscape flow's visual collection; the
  * upright detent, and upside down too, makes it [Upright], the portrait screen Now Playing was opened over. Tilting
  * between detents changes nothing. The shell turns the window to match (beneath the open Now Playing, so a drag reveals
  * the destination) and closes into it.
@@ -20,7 +20,7 @@ enum class GravityDestination {
     }
 
     companion object {
-        /** Before any detent: where the window already is when Now Playing opens ([landscape]: over a Cover Flow). */
+        /** Before any detent: where the window already is when Now Playing opens ([landscape]: over a visual collection). */
         fun opening(landscape: Boolean): GravityDestination = if (landscape) Sideways else Upright
 
         /**

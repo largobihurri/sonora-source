@@ -98,4 +98,11 @@ class XyMappingTest {
         assertThat(half.x).isGreaterThan(0.25f)
         assertThat(half.x).isLessThan(0.5f)
     }
+
+    @Test
+    fun `the edge labels show only on a pad large enough to keep them off the centre`() {
+        assertThat(XyMapping.showsEdgeLabels(side = 48, minSide = 120)).isFalse()
+        assertThat(XyMapping.showsEdgeLabels(side = 119, minSide = 120)).isFalse()
+        assertThat(XyMapping.showsEdgeLabels(side = 120, minSide = 120)).isTrue()
+    }
 }

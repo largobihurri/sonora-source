@@ -9,16 +9,16 @@ import io.sonora.core.domain.model.NowPlayingRotation
 /**
  * Whether turning the phone turns Now Playing's artwork and controls as two blocks (see NowPlayingScreen's turnsBlocks):
  * while it is open ([nowPlayingOpen], where the sheet is headed) and a rotation shows its other layout, not the albums
- * Cover Flow of the [NowPlayingRotation.ALBUM_COVER_FLOW] choice (unless that Cover Flow's button asked for the landscape
- * Now Playing, [albumCoverFlowDismissed]). Never in gravity mode ([gravity]): the window stays portrait and the groups
+ * Visual collection of the [NowPlayingRotation.ALBUM_VISUAL_COLLECTION] choice (unless that visual collection's button asked for the landscape
+ * Now Playing, [albumVisualCollectionDismissed]). Never in gravity mode ([gravity]): the window stays portrait and the groups
  * hang level themselves.
  */
 internal fun nowPlayingTurnsBlocks(
     nowPlayingOpen: Boolean,
     rotation: NowPlayingRotation,
-    albumCoverFlowDismissed: Boolean,
+    albumVisualCollectionDismissed: Boolean,
     gravity: Boolean = false,
-): Boolean = nowPlayingOpen && !gravity && (rotation == NowPlayingRotation.NOW_PLAYING_LANDSCAPE || albumCoverFlowDismissed)
+): Boolean = nowPlayingOpen && !gravity && (rotation == NowPlayingRotation.NOW_PLAYING_LANDSCAPE || albumVisualCollectionDismissed)
 
 /**
  * Whether the window turns seamlessly: while the blocks turn themselves ([nowPlayingTurnsBlocks]), and while gravity
@@ -28,14 +28,14 @@ internal fun nowPlayingTurnsBlocks(
 internal fun nowPlayingRotatesSeamlessly(
     nowPlayingOpen: Boolean,
     rotation: NowPlayingRotation,
-    albumCoverFlowDismissed: Boolean,
+    albumVisualCollectionDismissed: Boolean,
     gravity: Boolean,
-): Boolean = nowPlayingTurnsBlocks(nowPlayingOpen, rotation, albumCoverFlowDismissed, gravity) || (nowPlayingOpen && gravity)
+): Boolean = nowPlayingTurnsBlocks(nowPlayingOpen, rotation, albumVisualCollectionDismissed, gravity) || (nowPlayingOpen && gravity)
 
 /**
  * The window's rotation animation: seamless while the blocks turn themselves (the system shows the new layout straight
  * away instead of rotating a snapshot; it falls back when a seamless turn is not possible), the system's own rotation
- * everywhere else (Cover Flow, the upright hold).
+ * everywhere else (Visual collection, the upright hold).
  */
 internal fun windowRotationAnimation(blocksTurn: Boolean): Int =
     if (blocksTurn) LayoutParams.ROTATION_ANIMATION_SEAMLESS else LayoutParams.ROTATION_ANIMATION_ROTATE

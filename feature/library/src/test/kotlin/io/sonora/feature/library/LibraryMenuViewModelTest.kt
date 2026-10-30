@@ -154,6 +154,16 @@ class LibraryMenuViewModelTest {
     }
 
     @Test
+    fun `sharing one song names it for the share sheet, sharing several does not`() = runTest {
+        val vm = viewModel()
+        val events = mutableListOf<MenuEvent>()
+        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { vm.events.collect { events += it } }
+        vm.share(MenuTarget.Song(one))
+        vm.share(albumTarget)
+        assertThat(events.map { (it as MenuEvent.Share).title }).containsExactly(one.title, null).inOrder()
+    }
+
+    @Test
     fun `queue items play the target's songs and confirm the quiet ones`() = runTest {
         val vm = viewModel()
         val events = mutableListOf<MenuEvent>()

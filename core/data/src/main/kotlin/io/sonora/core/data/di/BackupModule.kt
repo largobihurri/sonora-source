@@ -75,7 +75,7 @@ object BackupModule {
         @PlaybackTempoSettingsStore tempo: DataStore<Preferences>,
         @ReplayGainSettingsStore replayGain: DataStore<Preferences>,
         @CrossfadeSettingsStore crossfade: DataStore<Preferences>,
-        @CoverFlowSettingsStore coverFlow: DataStore<Preferences>,
+        @VisualCollectionSettingsStore visualCollection: DataStore<Preferences>,
     ): SettingsBackupStore = DataStoreSettingsBackup(
         mapOf(
             PreferencesModule.FILE_NAME to settings,
@@ -84,7 +84,7 @@ object BackupModule {
             PreferencesModule.TEMPO_FILE_NAME to tempo,
             ReplayGainModule.FILE_NAME to replayGain,
             CrossfadeModule.FILE_NAME to crossfade,
-            PreferencesModule.COVER_FLOW_FILE_NAME to coverFlow,
+            PreferencesModule.VISUAL_COLLECTION_FILE_NAME to visualCollection,
         ),
     )
 

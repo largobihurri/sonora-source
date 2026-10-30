@@ -202,7 +202,10 @@ class DubController @Inject constructor(
             cancelStop()
             return
         }
-        player?.play()
+        val player = player ?: return
+        // A queue restored after a restart waits idle until it is prepared, as the other play paths do.
+        if (player.playbackState == Player.STATE_IDLE) player.prepare()
+        player.play()
     }
 
     override fun releaseAll() {

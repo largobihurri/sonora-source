@@ -289,9 +289,9 @@ class NowPlayingViewModelTest {
     fun `the rotation choice follows the preferences, the landscape Now Playing by default`() {
         assertThat(viewModel.rotation.value).isEqualTo(NowPlayingRotation.NOW_PLAYING_LANDSCAPE)
 
-        preferences.stored.value = AppPreferences(NowPlayingPreferences(rotation = NowPlayingRotation.ALBUM_COVER_FLOW))
+        preferences.stored.value = AppPreferences(NowPlayingPreferences(rotation = NowPlayingRotation.ALBUM_VISUAL_COLLECTION))
 
-        assertThat(viewModel.rotation.value).isEqualTo(NowPlayingRotation.ALBUM_COVER_FLOW)
+        assertThat(viewModel.rotation.value).isEqualTo(NowPlayingRotation.ALBUM_VISUAL_COLLECTION)
     }
 
     @Test

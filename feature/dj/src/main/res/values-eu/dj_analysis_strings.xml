@@ -4,8 +4,8 @@
     <string name="dj_state_waiting_hint">Hemen agertuko dira uhin-forma eta taupaden sareta.</string>
     <string name="dj_state_analysing_title">Abestia aztertzen</string>
     <string name="dj_state_analysing_hint">Taupada, tonalitatea eta uhin-forma bilatzen.</string>
-    <string name="dj_state_paused_title">Pausatuta: telefonoa beroegi dago</string>
-    <string name="dj_state_paused_hint">Telefonoa hoztean jarraituko du.</string>
+    <string name="dj_state_paused_title">Pausatuta: gailua beroegi dago</string>
+    <string name="dj_state_paused_hint">Gailua hoztean jarraituko du.</string>
     <string name="dj_state_waveform_title">Uhin-forma berreraikitzen</string>
     <string name="dj_state_waveform_pending">Uhin-forma zain</string>
     <string name="dj_state_waveform_hint">Taupaden sareta prest dago; uhin-forma falta da.</string>

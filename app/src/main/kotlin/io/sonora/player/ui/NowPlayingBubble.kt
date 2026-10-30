@@ -5,21 +5,21 @@ internal enum class NowPlayingBubble {
     /** None: Now Playing slides up and down as the ordinary sheet. */
     None,
 
-    /** The Cover Flow's "Now Playing" capsule, with the shared artwork carried inside the bubble (T67.1, T67.4). */
-    CoverFlow,
+    /** The visual collection's "Now Playing" capsule, with the shared artwork carried inside the bubble (T67.1, T67.4). */
+    VisualCollection,
 
     /** The mini player above the tab bar, its thumbnail carried inside the bubble (T67.2). */
     MiniPlayer,
 }
 
 /**
- * Where Now Playing grows from: the Cover Flow's capsule when it was [openedFromCoverFlow] and that Cover Flow is still
- * there ([coverFlowMode]); otherwise, with no Cover Flow at all, the mini player, except in [gravity] mode, whose sheet
- * slides toward the floor instead; over a Cover Flow it did not come from, the ordinary sheet.
+ * Where Now Playing grows from: the visual collection's capsule when it was [openedFromVisualCollection] and that visual collection is still
+ * there ([visualCollectionMode]); otherwise, with no visual collection at all, the mini player, except in [gravity] mode, whose sheet
+ * slides toward the floor instead; over a visual collection it did not come from, the ordinary sheet.
  */
-internal fun nowPlayingBubble(openedFromCoverFlow: Boolean, coverFlowMode: LibraryCoverFlowMode, gravity: Boolean): NowPlayingBubble =
+internal fun nowPlayingBubble(openedFromVisualCollection: Boolean, visualCollectionMode: LibraryVisualCollectionMode, gravity: Boolean): NowPlayingBubble =
     when {
-        coverFlowMode != LibraryCoverFlowMode.None -> if (openedFromCoverFlow) NowPlayingBubble.CoverFlow else NowPlayingBubble.None
+        visualCollectionMode != LibraryVisualCollectionMode.None -> if (openedFromVisualCollection) NowPlayingBubble.VisualCollection else NowPlayingBubble.None
         gravity -> NowPlayingBubble.None
         else -> NowPlayingBubble.MiniPlayer
     }

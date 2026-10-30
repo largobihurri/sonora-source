@@ -8,30 +8,30 @@ import org.junit.Test
 class NowPlayingBubbleTest {
 
     @Test
-    fun `opened from the Cover Flow's capsule, Now Playing grows out of that capsule while the Cover Flow is there`() {
-        for (mode in listOf(LibraryCoverFlowMode.Covered, LibraryCoverFlowMode.Shown)) {
-            assertEquals(NowPlayingBubble.CoverFlow, nowPlayingBubble(openedFromCoverFlow = true, mode, gravity = false))
+    fun `opened from the visual collection's capsule, Now Playing grows out of that capsule while the visual collection is there`() {
+        for (mode in listOf(LibraryVisualCollectionMode.Covered, LibraryVisualCollectionMode.Shown)) {
+            assertEquals(NowPlayingBubble.VisualCollection, nowPlayingBubble(openedFromVisualCollection = true, mode, gravity = false))
         }
     }
 
     @Test
-    fun `without a Cover Flow, Now Playing grows out of the mini player`() {
-        assertEquals(NowPlayingBubble.MiniPlayer, nowPlayingBubble(openedFromCoverFlow = false, LibraryCoverFlowMode.None, gravity = false))
-        // Opened from the Cover Flow and then turned upright: it shrinks back into the mini player that is there now.
-        assertEquals(NowPlayingBubble.MiniPlayer, nowPlayingBubble(openedFromCoverFlow = true, LibraryCoverFlowMode.None, gravity = false))
+    fun `without a visual collection, Now Playing grows out of the mini player`() {
+        assertEquals(NowPlayingBubble.MiniPlayer, nowPlayingBubble(openedFromVisualCollection = false, LibraryVisualCollectionMode.None, gravity = false))
+        // Opened from the visual collection and then turned upright: it shrinks back into the mini player that is there now.
+        assertEquals(NowPlayingBubble.MiniPlayer, nowPlayingBubble(openedFromVisualCollection = true, LibraryVisualCollectionMode.None, gravity = false))
     }
 
     @Test
-    fun `over a Cover Flow it did not come from, Now Playing is the ordinary sheet`() {
-        for (mode in listOf(LibraryCoverFlowMode.Covered, LibraryCoverFlowMode.Shown)) {
-            assertEquals(NowPlayingBubble.None, nowPlayingBubble(openedFromCoverFlow = false, mode, gravity = false))
+    fun `over a visual collection it did not come from, Now Playing is the ordinary sheet`() {
+        for (mode in listOf(LibraryVisualCollectionMode.Covered, LibraryVisualCollectionMode.Shown)) {
+            assertEquals(NowPlayingBubble.None, nowPlayingBubble(openedFromVisualCollection = false, mode, gravity = false))
         }
     }
 
     @Test
     fun `in gravity mode the sheet keeps sliding toward the floor instead of growing out of the mini player`() {
-        assertEquals(NowPlayingBubble.None, nowPlayingBubble(openedFromCoverFlow = false, LibraryCoverFlowMode.None, gravity = true))
-        assertEquals(NowPlayingBubble.CoverFlow, nowPlayingBubble(openedFromCoverFlow = true, LibraryCoverFlowMode.Shown, gravity = true))
+        assertEquals(NowPlayingBubble.None, nowPlayingBubble(openedFromVisualCollection = false, LibraryVisualCollectionMode.None, gravity = true))
+        assertEquals(NowPlayingBubble.VisualCollection, nowPlayingBubble(openedFromVisualCollection = true, LibraryVisualCollectionMode.Shown, gravity = true))
     }
 
     @Test

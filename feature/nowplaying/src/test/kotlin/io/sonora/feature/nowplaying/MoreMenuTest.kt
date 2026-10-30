@@ -152,8 +152,19 @@ class MoreMenuTest {
     }
 
     @Test
-    fun `share song is listed but not available yet`() {
-        val sections = moreMenuSections(track, MoreMenuActions(onAddToPlaylist = {}))
+    fun `share song shares the song playing`() {
+        val shared = mutableListOf<Track>()
+        val sections = moreMenuSections(track, MoreMenuActions(onAddToPlaylist = {}, onShare = { shared += it }))
+
+        val share = sections.flatten().single { it.label == R.string.now_playing_share }
+        assertThat(share.enabled).isTrue()
+        share.onClick()
+        assertThat(shared).containsExactly(track)
+    }
+
+    @Test
+    fun `share song is dimmed with nothing playing`() {
+        val sections = moreMenuSections(null, MoreMenuActions(onAddToPlaylist = {}, onShare = {}))
 
         assertThat(sections.flatten().single { it.label == R.string.now_playing_share }.enabled).isFalse()
     }

@@ -11,22 +11,22 @@ class RotationAnimationTest {
 
     @Test
     fun `an open Now Playing that turns into its landscape layout turns its blocks itself`() {
-        assertTrue(nowPlayingTurnsBlocks(nowPlayingOpen = true, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumCoverFlowDismissed = false))
+        assertTrue(nowPlayingTurnsBlocks(nowPlayingOpen = true, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumVisualCollectionDismissed = false))
     }
 
     @Test
     fun `a closed Now Playing leaves the turn to the system`() {
-        assertFalse(nowPlayingTurnsBlocks(nowPlayingOpen = false, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumCoverFlowDismissed = false))
+        assertFalse(nowPlayingTurnsBlocks(nowPlayingOpen = false, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumVisualCollectionDismissed = false))
     }
 
     @Test
-    fun `with the Album Cover Flow choice the system turns the screen into the Cover Flow`() {
-        assertFalse(nowPlayingTurnsBlocks(nowPlayingOpen = true, NowPlayingRotation.ALBUM_COVER_FLOW, albumCoverFlowDismissed = false))
+    fun `with the Album visual collection choice the system turns the screen into the visual collection`() {
+        assertFalse(nowPlayingTurnsBlocks(nowPlayingOpen = true, NowPlayingRotation.ALBUM_VISUAL_COLLECTION, albumVisualCollectionDismissed = false))
     }
 
     @Test
-    fun `once the Cover Flow asked for the landscape Now Playing, its blocks turn again`() {
-        assertTrue(nowPlayingTurnsBlocks(nowPlayingOpen = true, NowPlayingRotation.ALBUM_COVER_FLOW, albumCoverFlowDismissed = true))
+    fun `once the visual collection asked for the landscape Now Playing, its blocks turn again`() {
+        assertTrue(nowPlayingTurnsBlocks(nowPlayingOpen = true, NowPlayingRotation.ALBUM_VISUAL_COLLECTION, albumVisualCollectionDismissed = true))
     }
 
     @Test
@@ -46,9 +46,9 @@ class RotationAnimationTest {
 
     @Test
     fun `gravity mode's open Now Playing rotates the window seamlessly, its frame turning against it`() {
-        assertTrue(nowPlayingRotatesSeamlessly(nowPlayingOpen = true, NowPlayingRotation.ALBUM_COVER_FLOW, albumCoverFlowDismissed = false, gravity = true))
-        assertTrue(nowPlayingRotatesSeamlessly(nowPlayingOpen = true, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumCoverFlowDismissed = false, gravity = false))
-        assertFalse(nowPlayingRotatesSeamlessly(nowPlayingOpen = false, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumCoverFlowDismissed = false, gravity = true))
-        assertFalse(nowPlayingRotatesSeamlessly(nowPlayingOpen = true, NowPlayingRotation.ALBUM_COVER_FLOW, albumCoverFlowDismissed = false, gravity = false))
+        assertTrue(nowPlayingRotatesSeamlessly(nowPlayingOpen = true, NowPlayingRotation.ALBUM_VISUAL_COLLECTION, albumVisualCollectionDismissed = false, gravity = true))
+        assertTrue(nowPlayingRotatesSeamlessly(nowPlayingOpen = true, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumVisualCollectionDismissed = false, gravity = false))
+        assertFalse(nowPlayingRotatesSeamlessly(nowPlayingOpen = false, NowPlayingRotation.NOW_PLAYING_LANDSCAPE, albumVisualCollectionDismissed = false, gravity = true))
+        assertFalse(nowPlayingRotatesSeamlessly(nowPlayingOpen = true, NowPlayingRotation.ALBUM_VISUAL_COLLECTION, albumVisualCollectionDismissed = false, gravity = false))
     }
 }

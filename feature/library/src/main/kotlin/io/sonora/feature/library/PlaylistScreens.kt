@@ -67,7 +67,7 @@ import io.sonora.core.domain.playlist.PlaylistItem
 import io.sonora.core.domain.playlist.ResolvedPlaylist
 import io.sonora.core.domain.sort.SortList
 import io.sonora.core.domain.sort.SortOrder
-import io.sonora.feature.library.ui.CoverFlowButton
+import io.sonora.feature.library.ui.VisualCollectionButton
 import io.sonora.feature.library.ui.DeletePlaylistDialog
 import io.sonora.feature.library.ui.DetailHeaderLayout
 import io.sonora.feature.library.ui.SideHeader
@@ -103,14 +103,14 @@ internal fun PlaylistsScreen(
     onMenu: (ResolvedPlaylist) -> Unit = {},
     onFavourites: () -> Unit = {},
     onSmart: (SmartPlaylist) -> Unit = {},
-    onCoverFlow: (() -> Unit)? = null,
+    onVisualCollection: (() -> Unit)? = null,
 ) {
     val listState = rememberLazyListState()
     ScrollToTopEffect(listState)
     TranslucentBarPage(
         bar = {
             TranslucentTopBar(backLabel = stringResource(R.string.playlists_back_library), onBack = onBack) {
-                if (onCoverFlow != null) CoverFlowButton(onCoverFlow)
+                if (onVisualCollection != null) VisualCollectionButton(onVisualCollection)
             }
         },
     ) {

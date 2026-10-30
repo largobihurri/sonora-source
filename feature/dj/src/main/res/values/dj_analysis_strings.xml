@@ -6,8 +6,8 @@
     <string name="dj_state_analysing_title">Analysing this song</string>
     <string name="dj_state_analysing_hint">Finding the beat, the key and the waveform.</string>
     <!-- The analysis stands still because the phone is hot. -->
-    <string name="dj_state_paused_title">Paused: the phone is hot</string>
-    <string name="dj_state_paused_hint">It carries on when the phone cools down.</string>
+    <string name="dj_state_paused_title">Paused: the device is hot</string>
+    <string name="dj_state_paused_hint">It carries on when the device cools down.</string>
     <string name="dj_state_waveform_title">Rebuilding the waveform</string>
     <string name="dj_state_waveform_pending">Waveform pending</string>
     <string name="dj_state_waveform_hint">The beat grid is ready; only the waveform is missing.</string>
@@ -29,7 +29,7 @@
 
     <!-- The status line in the time row while the song is analysed again; its old analysis stays on screen. %1$s is the progress, e.g. "42%". -->
     <string name="dj_status_reanalysing">Re-analysing %1$s</string>
-    <string name="dj_status_reanalysis_paused">Paused: phone is hot</string>
+    <string name="dj_status_reanalysis_paused">Paused: device is hot</string>
     <string name="dj_status_reanalysis_failed">Re-analysis failed</string>
 
     <!-- A small chip in the time row when the stored analysis comes from an older version of the analyser. -->

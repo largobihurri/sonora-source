@@ -8,7 +8,7 @@
     <string name="converter_output_header">Irteerako karpeta</string>
     <string name="converter_output_choose">Aukeratu karpeta</string>
     <string name="converter_output_change">Aldatu karpeta</string>
-    <string name="converter_output_none_footer">Aukeratu telefonoko edo USB memoriako karpeta bat. Sonorak «Convertidos» karpeta sortuko du bertan, eta data duen karpeta bat sorta bakoitzeko.</string>
+    <string name="converter_output_none_footer">Aukeratu gailuko edo USB memoriako karpeta bat. Sonorak «Convertidos» karpeta sortuko du bertan, eta data duen karpeta bat sorta bakoitzeko.</string>
     <string name="converter_output_footer">Bihurtutako fitxategiak %1$s karpetako «Convertidos» karpetara doaz, data duen karpeta bat sorta bakoitzeko.</string>
     <string name="converter_output_location">%1$s › Convertidos</string>
 
@@ -29,8 +29,8 @@
     <string name="converter_mode_high">Errendimendu handia</string>
     <string name="converter_mode_low_description">Fitxategiak banan-banan, etenaldiekin. Bateria aurrezten du eta gutxiago berotzen da.</string>
     <string name="converter_mode_normal_description">Hainbat fitxategi aldi berean, atzeko planoan. Oreka ona.</string>
-    <string name="converter_mode_high_description">Prozesadorearen ia osoa erabiltzen du. Azkarrena da, baina telefonoa gehiago berotzen da.</string>
-    <string name="converter_performance_footer">Kalitatea berbera da modu guztietan; abiadura eta karga baino ez dira aldatzen. Telefonoa berotzen denean edo bateria-aurrezlea aktibatuta dagoenean, Sonorak berak moteltzen du lana.</string>
+    <string name="converter_mode_high_description">Prozesadorearen ia osoa erabiltzen du. Azkarrena da, baina gailua gehiago berotzen da.</string>
+    <string name="converter_performance_footer">Kalitatea berbera da modu guztietan; abiadura eta karga baino ez dira aldatzen. Gailua berotzen denean edo bateria-aurrezlea aktibatuta dagoenean, Sonorak berak moteltzen du lana.</string>
 
     <string name="converter_overwrite">Gainidatzi jatorrizkoak</string>
     <string name="converter_overwrite_footer">Jatorrizko bakoitza bihurtutako fitxategiarekin ordezten da, hura egiaztatu ondoren. Sorta amaitzean ere galdetuko zaizu.</string>
@@ -93,7 +93,7 @@
     <string name="converter_notice_start_failed_title">Ezin izan da hasi</string>
     <string name="converter_notice_start_failed_message">Sonorak ezin izan du irakurri gehitu duzuna. Gehitu berriro fitxategiak edo karpeta, eta saiatu berriro.</string>
     <string name="converter_notice_output_failed_title">Ezin da karpeta erabili</string>
-    <string name="converter_notice_output_failed_message">Sonorak ezin du karpeta horretan idatzi. Aukeratu telefonoaren memoriako edo USB memoriako karpeta bat.</string>
+    <string name="converter_notice_output_failed_message">Sonorak ezin du karpeta horretan idatzi. Aukeratu gailuaren memoriako edo USB memoriako karpeta bat.</string>
     <string name="converter_notice_picker_missing_title">Ezin dira fitxategiak aukeratu</string>
     <string name="converter_notice_picker_missing_message">Gailu honek ez du fitxategiak edo karpetak aukeratzeko aplikaziorik.</string>
     <string name="converter_notice_cancel_failed_title">Ezin izan da bertan behera utzi</string>

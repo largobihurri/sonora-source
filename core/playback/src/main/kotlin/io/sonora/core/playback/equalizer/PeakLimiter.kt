@@ -84,11 +84,12 @@ class PeakLimiter {
 
     /**
      * Takes the frame at [input] from [inputOffset] and writes the frame that came in [latencyFrames] earlier, limited,
-     * to [output] from [outputOffset]. [output] may be [input], at the same offset.
+     * to [output] from [outputOffset]. [output] may be [input], at the same offset. A frame taken with [limit] false
+     * asks for no gain reduction: once the gain is back at unity such frames come out bit-identical, only delayed.
      */
-    fun process(input: FloatArray, inputOffset: Int, output: FloatArray, outputOffset: Int) {
+    fun process(input: FloatArray, inputOffset: Int, output: FloatArray, outputOffset: Int, limit: Boolean = true) {
         var peak = 0f
-        for (ch in 0 until channels) peak = max(peak, abs(input[inputOffset + ch]))
+        if (limit) for (ch in 0 until channels) peak = max(peak, abs(input[inputOffset + ch]))
         val needed = if (peak > CEILING) CEILING / peak.toDouble() else 1.0
 
         // Hold: the lowest needed gain of the window (the frame that left it first, then the higher ones it hides).

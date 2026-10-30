@@ -49,13 +49,13 @@
         <item quantity="many">%1$s canciones</item>
         <item quantity="other">%1$s canciones</item>
     </plurals>
-    <!-- Landscape Cover Flow: the info button (flips the centre cover), play/pause, and flipping back. -->
-    <string name="coverflow_info">Información</string>
-    <string name="coverflow_pause">Pausa</string>
-    <string name="coverflow_show_cover">Mostrar portada</string>
-    <string name="coverflow_now_playing">Abrir Reproduciendo</string>
-    <string name="coverflow_now_playing_label">Reproduciendo</string>
-    <!-- Album count under an artist's name in the Cover Flow. -->
+    <!-- Landscape visual collection: the info button (flips the centre cover), play/pause, and flipping back. -->
+    <string name="visualcollection_info">Información</string>
+    <string name="visualcollection_pause">Pausa</string>
+    <string name="visualcollection_show_cover">Mostrar portada</string>
+    <string name="visualcollection_now_playing">Abrir Reproduciendo</string>
+    <string name="visualcollection_now_playing_label">Reproduciendo</string>
+    <!-- Album count under an artist's name in the visual collection. -->
     <plurals name="library_album_count">
         <item quantity="one">%1$s álbum</item>
         <item quantity="many">%1$s álbumes</item>

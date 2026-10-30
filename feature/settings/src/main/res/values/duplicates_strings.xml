@@ -12,7 +12,7 @@
     <string name="settings_duplicates">Duplicates</string>
     <string name="duplicates_footer">Songs that are in your library more than once: the very same file, or the same song in different files. Compare the copies, keep the best one and delete the others.</string>
     <string name="duplicates_notify">Notify When Duplicates Pile Up</string>
-    <string name="duplicates_notify_footer">Sonora looks for duplicates now and then while your phone is idle and charging, and tells you once 20 songs or more have copies.</string>
+    <string name="duplicates_notify_footer">Sonora looks for duplicates now and then while your device is idle and charging, and tells you once 20 songs or more have copies.</string>
     <string name="duplicates_scan_again">Look for Duplicates Again</string>
     <string name="duplicates_looking">Looking for duplicates…</string>
     <string name="duplicates_checking">Comparing files… %1$s of %2$s</string>
@@ -62,18 +62,18 @@
     <string name="duplicates_value_yes">Yes</string>
     <string name="duplicates_value_no">No</string>
     <plurals name="duplicates_delete_selected">
-        <item quantity="one">Delete %1$d Copy from Phone</item>
-        <item quantity="other">Delete %1$d Copies from Phone</item>
+        <item quantity="one">Delete %1$d Copy from Device</item>
+        <item quantity="other">Delete %1$d Copies from Device</item>
     </plurals>
     <string name="duplicates_not_duplicate">Not a Duplicate</string>
     <string name="duplicates_not_duplicate_note">Not a Duplicate hides this group for good. Its files stay as they are.</string>
 
     <!-- Deleting copies -->
     <plurals name="duplicates_delete_title">
-        <item quantity="one">Delete %1$d copy from your phone?</item>
-        <item quantity="other">Delete %1$d copies from your phone?</item>
+        <item quantity="one">Delete %1$d copy from your device?</item>
+        <item quantity="other">Delete %1$d copies from your device?</item>
     </plurals>
-    <string name="duplicates_delete_message">This can’t be undone. The files are deleted from your phone. The copy you keep takes their place in playlists and keeps their favourites, pins and play counts.</string>
+    <string name="duplicates_delete_message">This can’t be undone. The files are deleted from your device. The copy you keep takes their place in playlists and keeps their favourites, pins and play counts.</string>
     <string name="duplicates_delete_confirm">Delete</string>
     <string name="duplicates_cancel">Cancel</string>
     <string name="duplicates_ok">OK</string>
@@ -83,13 +83,13 @@
     <string name="duplicates_access_choose">Choose Folder…</string>
     <string name="duplicates_deleted_title">Copies Deleted</string>
     <plurals name="duplicates_deleted_message">
-        <item quantity="one">%1$d copy is gone from your phone.</item>
-        <item quantity="other">%1$d copies are gone from your phone.</item>
+        <item quantity="one">%1$d copy is gone from your device.</item>
+        <item quantity="other">%1$d copies are gone from your device.</item>
     </plurals>
     <string name="duplicates_incomplete_title">Couldn’t Delete Everything</string>
     <plurals name="duplicates_incomplete_message">
-        <item quantity="one">%1$d copy couldn’t be deleted and is still on your phone.</item>
-        <item quantity="other">%1$d copies couldn’t be deleted and are still on your phone.</item>
+        <item quantity="one">%1$d copy couldn’t be deleted and is still on your device.</item>
+        <item quantity="other">%1$d copies couldn’t be deleted and are still on your device.</item>
     </plurals>
     <string name="duplicates_refused_title">Can’t Delete Here</string>
     <string name="duplicates_refused_message">This folder’s storage doesn’t allow Sonora to delete files.</string>

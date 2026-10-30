@@ -80,6 +80,10 @@ class DubEngine {
     var isIdle: Boolean = true
         private set
 
+    /** True when any block of the last [process] call was shaped, not copied through: its output needs limiting. */
+    var shaped: Boolean = false
+        private set
+
     /** The loudest sample of the last [process] call, after the stage. */
     var blockPeak: Float = 0f
         private set
@@ -230,12 +234,16 @@ class DubEngine {
         check(channelCount > 0) { "prepare first" }
         var peak = 0f
         var done = 0
+        var anyShaped = false
         while (done < frames) {
             val n = minOf(BLOCK_FRAMES, frames - done)
             val start = offset + done * channelCount
-            peak = maxOf(peak, if (needsProcessing()) processBlock(buffer, start, n) else copyBlock(buffer, start, n))
+            val work = needsProcessing()
+            anyShaped = anyShaped || work
+            peak = maxOf(peak, if (work) processBlock(buffer, start, n) else copyBlock(buffer, start, n))
             done += n
         }
+        shaped = anyShaped
         blockPeak = peak
     }
 

@@ -75,8 +75,8 @@
     <string name="settings_translucency_footer_frosted">Esta versión de Android desenfoca las superficies translúcidas sin refracción. Si se desactiva, se usa una superficie translúcida plana.</string>
     <string name="settings_translucency_footer_flat">Esta versión de Android siempre usa una superficie translúcida plana.</string>
     <string name="settings_translucency_footer_contrast">Los ajustes de contraste de Android piden más contraste, así que las superficies translúcidas son planas y más opacas.</string>
-    <string name="settings_translucency_footer_limited_frosted">El chip gráfico de este móvil no podía con el efecto translúcido, así que se desenfoca sin refracción. Desactiva y vuelve a activar el interruptor para probar de nuevo.</string>
-    <string name="settings_translucency_footer_limited_flat">El chip gráfico de este móvil no podía con el efecto translúcido, así que se usa una superficie translúcida plana. Desactiva y vuelve a activar el interruptor para probar de nuevo.</string>
+    <string name="settings_translucency_footer_limited_frosted">El chip gráfico de este dispositivo no podía con el efecto translúcido, así que se desenfoca sin refracción. Desactiva y vuelve a activar el interruptor para probar de nuevo.</string>
+    <string name="settings_translucency_footer_limited_flat">El chip gráfico de este dispositivo no podía con el efecto translúcido, así que se usa una superficie translúcida plana. Desactiva y vuelve a activar el interruptor para probar de nuevo.</string>
     <string name="settings_accent_header">Color de realce</string>
     <string name="settings_accent_material_you">Material You</string>
     <string name="settings_accent_palette">Paleta de colores</string>
@@ -101,13 +101,13 @@
     <string name="settings_now_playing_footer">Información del archivo muestra dónde está guardada una canción y su formato, datos de audio y etiquetas.</string>
     <string name="settings_rotation_header">Al girar Reproduciendo</string>
     <string name="settings_rotation_now_playing">Reproduciendo en horizontal</string>
-    <string name="settings_rotation_cover_flow">Colección visual de álbumes</string>
+    <string name="settings_rotation_visual_collection">Colección visual de álbumes</string>
     <string name="settings_rotation_footer">Con la rotación automática activada, al girar el teléfono en Reproduciendo se muestra su vista horizontal o la colección visual de álbumes, abierta en el álbum que suena.</string>
     <string name="settings_gravity_header">Gravedad</string>
     <string name="settings_gravity">Mantener nivelado al inclinar</string>
     <string name="settings_gravity_footer">Reproduciendo se queda en vertical y la carátula y los controles giran cada uno sobre su centro para seguir nivelados. Sobre una mesa se quedan quietos; la opción horizontal de arriba no se aplica.</string>
     <string name="settings_hidden_items">Elementos ocultos</string>
-    <string name="settings_hidden_footer">Lo que quitas de Sonora sigue en el teléfono. Restáuralo para que vuelva a aparecer en tu biblioteca.</string>
+    <string name="settings_hidden_footer">Lo que quitas de Sonora sigue en el dispositivo. Restáuralo para que vuelva a aparecer en tu biblioteca.</string>
     <string name="settings_hidden_empty">No hay elementos ocultos</string>
     <string name="settings_restore">Restaurar</string>
     <string name="settings_restore_item">Restaurar %1$s</string>

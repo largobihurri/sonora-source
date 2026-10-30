@@ -127,6 +127,56 @@ class DubAudioSinkTest {
         for (f in latency until frames) assertThat(below.floats[2 * f]).isEqualTo(expected[f - latency])
     }
 
+    /** [frames] stereo frames of a full-scale square (16-bit ±32767, 50-frame half periods): a loud master's peaks. */
+    private fun fullScale16(frames: Int): ByteBuffer {
+        val buffer = ByteBuffer.allocateDirect(frames * 4).order(ByteOrder.LITTLE_ENDIAN)
+        for (f in 0 until frames) {
+            val v: Short = if ((f / 50) % 2 == 0) 32_767 else -32_767
+            buffer.putShort(v)
+            buffer.putShort(v)
+        }
+        buffer.flip()
+        return buffer
+    }
+
+    @Test
+    fun `with nothing engaged a full-scale stream goes on bit for bit, only delayed`() {
+        hub.enabled = true
+        configure()
+        val frames = 4_096
+        val input = fullScale16(frames)
+        val expected = FloatArray(frames) { input.getShort(it * 4) / 32_768f }
+        assertThat(sink.handleBuffer(input, 0, 1)).isTrue()
+        val latency = (PeakLimiter.LOOKAHEAD_SECONDS * RATE).roundToInt()
+        for (f in latency until frames) assertThat(below.floats[2 * f]).isEqualTo(expected[f - latency])
+        assertThat(hub.gainReductionDb).isEqualTo(0f)
+    }
+
+    @Test
+    fun `with a throw in flight the stage's output stays under the limiter's ceiling`() {
+        hub.enabled = true
+        configure()
+        hub.post(DubEvent(DubPadKind.THROW, engaged = true, uptimeNanos = 0))
+        repeat(8) { assertThat(sink.handleBuffer(fullScale16(4_096), 0, 1)).isTrue() }
+        assertThat(below.floats.maxOf { kotlin.math.abs(it) }).isAtMost(PeakLimiter.CEILING)
+    }
+
+    @Test
+    fun `a buffer in which the stage settles back to idle is still limited`() {
+        hub.enabled = true
+        configure()
+        // A resonant high-pass on a loud master: its edges ring over full scale.
+        hub.filterX = 1f
+        hub.filterY = 1f
+        repeat(2) { assertThat(sink.handleBuffer(fullScale16(16_384), 0, 1)).isTrue() }
+        // Back to the centre: the filter fades into its bypass part-way through one of these long buffers.
+        hub.filterX = 0f
+        repeat(4) { assertThat(sink.handleBuffer(fullScale16(16_384), 0, 1)).isTrue() }
+        // Nothing the stage shaped gets past the limiter: no sample is louder than the master's own peak (once idle
+        // again the master's peaks come back on the limiter's release, up to their untouched value).
+        assertThat(below.floats.maxOf { kotlin.math.abs(it) }).isAtMost(32_767 / 32_768f)
+    }
+
     @Test
     fun `bit-perfect output, a remote receiver and more than two channels bypass the stage and say why`() {
         hub.enabled = true

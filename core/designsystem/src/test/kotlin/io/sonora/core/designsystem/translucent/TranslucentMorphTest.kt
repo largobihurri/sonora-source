@@ -10,7 +10,7 @@ import org.junit.Test
 
 class TranslucentMorphTest {
 
-    // A landscape screen with the Cover Flow's "Now Playing" capsule in its top-right corner.
+    // A landscape screen with the visual collection's "Now Playing" capsule in its top-right corner.
     private val screen = MorphFrame(Rect(0f, 0f, 2400f, 1080f), radius = 0f)
     private val capsule = MorphFrame.capsule(Rect(2000f, 60f, 2340f, 204f))
     private val push = 1080f * TranslucentMorph.ARC_PUSH_FRACTION

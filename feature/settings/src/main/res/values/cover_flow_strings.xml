@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Settings › Visual Collection: which albums the landscape Visual Collection lists -->
-    <string name="settings_cover_flow_header">Visual Collection</string>
-    <string name="settings_hide_albums_without_artwork">Hide Albums Without Artwork in Visual Collection</string>
-    <string name="settings_hide_albums_without_artwork_footer">Visual Collection shows only albums with artwork, embedded in their files or as an image in their folder. The Albums list still shows every album.</string>
-</resources>

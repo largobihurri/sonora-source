@@ -115,19 +115,19 @@ class SettingsTextTest {
     @Test
     fun `on a device whose GPU did not keep up, the Translucency footer says so and how to try again`() {
         assertThat(SettingsText.translucencyFooter(36, highContrast = false, en, limitedTo = TranslucentTier.FROSTED)).isEqualTo(
-            "This phone's graphics chip could not keep up with the translucent effect, so it is blurred without refraction. " +
+            "This device's graphics chip could not keep up with the translucent effect, so it is blurred without refraction. " +
                 "Turn the switch off and on to try again.",
         )
         assertThat(SettingsText.translucencyFooter(36, highContrast = false, en, limitedTo = TranslucentTier.FLAT)).isEqualTo(
-            "This phone's graphics chip could not keep up with the translucent effect, so it uses a flat translucent " +
+            "This device's graphics chip could not keep up with the translucent effect, so it uses a flat translucent " +
                 "surface. Turn the switch off and on to try again.",
         )
         assertThat(SettingsText.translucencyFooter(36, highContrast = false, XmlStrings.of("-es"), limitedTo = TranslucentTier.FLAT)).isEqualTo(
-            "El chip gráfico de este móvil no podía con el efecto translúcido, así que se usa una superficie translúcida " +
+            "El chip gráfico de este dispositivo no podía con el efecto translúcido, así que se usa una superficie translúcida " +
                 "plana. Desactiva y vuelve a activar el interruptor para probar de nuevo.",
         )
         assertThat(SettingsText.translucencyFooter(36, highContrast = false, XmlStrings.of("-eu"), limitedTo = TranslucentTier.FROSTED)).isEqualTo(
-            "Mugikor honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, errefrakziorik gabe lausotzen " +
+            "Gailu honen txip grafikoak ezin izan dio efektu zeharrargiari eutsi; beraz, errefrakziorik gabe lausotzen " +
                 "da. Desaktibatu eta aktibatu berriro etengailua berriz probatzeko.",
         )
         // More contrast is still the reason when it is asked for, and no limit keeps the usual footer.

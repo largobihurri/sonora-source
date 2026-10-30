@@ -23,6 +23,7 @@
     <string name="now_playing_favourite">Gogokoa</string>
     <string name="now_playing_add_to_playlist">Gehitu zerrendara</string>
     <string name="now_playing_share">Partekatu abestia</string>
+    <string name="now_playing_no_share_app">Ez dago abesti hau parteka dezakeen aplikaziorik</string>
 
     <string name="now_playing_position">Erreprodukzioaren posizioa</string>
     <string name="now_playing_position_state">%1$s, guztira %2$s</string>

@@ -49,9 +49,9 @@ import androidx.compose.ui.unit.dp
 import io.sonora.core.designsystem.component.Artwork
 import io.sonora.core.designsystem.component.TranslucentSurface
 import io.sonora.core.designsystem.component.pillLeadingInset
-import io.sonora.core.designsystem.component.coverflow.CoverFlowHandoff
-import io.sonora.core.designsystem.component.coverflow.handoffCapsule
-import io.sonora.core.designsystem.component.coverflow.handoffThumbnail
+import io.sonora.core.designsystem.component.visualcollection.VisualCollectionHandoff
+import io.sonora.core.designsystem.component.visualcollection.handoffCapsule
+import io.sonora.core.designsystem.component.visualcollection.handoffThumbnail
 import io.sonora.core.designsystem.translucent.LocalTranslucentContentColors
 import io.sonora.core.designsystem.icon.SonoraIcons
 import io.sonora.core.designsystem.motion.SheetPresentation
@@ -98,10 +98,10 @@ fun MiniPlayer(
     collapse: () -> Float,
     collapsed: Boolean,
     modifier: Modifier = Modifier,
-    handoff: CoverFlowHandoff? = null,
+    handoff: VisualCollectionHandoff? = null,
 ) {
     val wash by chromeWash()
-    TranslucentSurface(modifier = modifier.handoffCapsule(handoff), shape = CapsuleShape, wash = { wash }) {
+    TranslucentSurface(modifier = modifier.handoffCapsule(handoff), shape = CapsuleShape, wash = { wash }, overContent = true) {
         Row(
             modifier = Modifier.fillMaxSize().padding(end = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -147,7 +147,7 @@ private fun SwipeableTrack(
     sheet: SheetPresentation,
     onNext: () -> Unit,
     onPrevious: () -> Unit,
-    handoff: CoverFlowHandoff?,
+    handoff: VisualCollectionHandoff?,
     modifier: Modifier = Modifier,
 ) {
     val scope = rememberCoroutineScope()

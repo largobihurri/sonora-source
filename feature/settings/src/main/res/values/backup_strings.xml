@@ -17,7 +17,7 @@
     <string name="backup_newer_version">This backup was made by a newer version of Sonora. Update Sonora to restore it.</string>
     <string name="backup_malformed">That backup is damaged and can’t be restored.</string>
     <string name="backup_restore_failed">Couldn’t finish the restore. What was restored so far stays.</string>
-    <string name="backup_no_picker">No app on this phone can pick a file.</string>
+    <string name="backup_no_picker">No app on this device can pick a file.</string>
     <string name="backup_ok">OK</string>
 
     <!-- The preview before a restore -->

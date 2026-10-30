@@ -46,6 +46,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.LineBreak
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -246,8 +247,12 @@ private const val SweepMs = 1_600
 
 private val PercentStyle = TextStyle(fontSize = 32.sp, fontWeight = FontWeight.Light, fontFeatureSettings = "tnum")
 private val CompactPercentStyle = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Light, fontFeatureSettings = "tnum")
-private val TitleStyle = TextStyle(fontSize = 16.sp, lineHeight = 20.sp, fontWeight = FontWeight.SemiBold, color = Color.White)
-private val HintStyle = TextStyle(fontSize = 12.sp, lineHeight = 16.sp, color = Color.White.copy(alpha = 0.6f))
+
+/** Lines of balanced length, so a wrapped title or hint never leaves one word alone ("…la forma de / onda."). */
+private val BalancedLines = LineBreak(LineBreak.Strategy.Balanced, LineBreak.Strictness.Normal, LineBreak.WordBreak.Default)
+private val TitleStyle =
+    TextStyle(fontSize = 16.sp, lineHeight = 20.sp, fontWeight = FontWeight.SemiBold, color = Color.White, lineBreak = BalancedLines)
+private val HintStyle = TextStyle(fontSize = 12.sp, lineHeight = 16.sp, color = Color.White.copy(alpha = 0.6f), lineBreak = BalancedLines)
 private val ButtonStyle = TextStyle(fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = Color.White)
 
 /** The percent as the locale writes it ("42%", "42 %", Basque "% 42"). */

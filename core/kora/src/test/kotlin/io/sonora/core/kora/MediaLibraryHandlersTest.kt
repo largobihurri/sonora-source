@@ -80,6 +80,15 @@ class MediaLibraryHandlersTest {
     }
 
     @Test
+    fun `a 64-bit playlist id is found`() = runBlocking<Unit> {
+        playlists.all = playlists.all + playlist(9_000_000_000_000_000_001, "Big", songs[2])
+
+        val page = node.call(MediaLibrary.GetPlaylistTracks, PlaylistTracksRequest("9000000000000000001"))
+
+        assertThat(page.items.map { it.id }).containsExactly("3")
+    }
+
+    @Test
     fun `a playlist id that is not a number is an invalid payload`() = runBlocking<Unit> {
         val failure = koraFailure { node.call(MediaLibrary.GetPlaylistTracks, PlaylistTracksRequest("../x")) }
 

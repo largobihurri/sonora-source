@@ -89,8 +89,19 @@ class MediaArtworkHandlersTest {
     }
 
     @Test
+    fun `64-bit and negative album keys answer their cover`() = runBlocking<Unit> {
+        library.all = songs +
+            track(5, albumId = 8_536_412_284_820_588_170, artworkUri = "file:///cache/art/40.jpg") +
+            track(-1, albumId = -1, artworkUri = "file:///cache/art/40.jpg")
+
+        assertThat(artwork("a:8536412284820588170").mimeType).isEqualTo(ArtworkMimeType.JPEG)
+        assertThat(artwork("a:-1").mimeType).isEqualTo(ArtworkMimeType.JPEG)
+        assertThat(covers.opened).hasSize(2)
+    }
+
+    @Test
     fun `keys that are not album keys are invalid payloads and never reach the cover source`() = runBlocking<Unit> {
-        listOf("t:1", "40", "a:", "a:-1", "a:4x", "content://media/art/1", "/sdcard/cover.jpg", "a:99999999999999999999").forEach { id ->
+        listOf("t:1", "40", "a:", "a:-", "a:+1", "a: 1", "a:4x", "content://media/art/1", "/sdcard/cover.jpg", "a:99999999999999999999").forEach { id ->
             assertThat(koraFailure { artwork(id) }.error.code).isEqualTo(ErrorCode.INVALID_PAYLOAD)
         }
         assertThat(covers.opened).isEmpty()

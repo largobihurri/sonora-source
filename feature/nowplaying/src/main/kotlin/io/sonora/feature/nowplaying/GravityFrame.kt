@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.IntSize
 
 /*
  * Gravity mode's frame (T63.8): Now Playing's level groups are laid out in the phone's own portrait frame, whichever way
- * the window is turned, and that frame turns against the window, so a window rotation (to show the Cover Flow beneath a
+ * the window is turned, and that frame turns against the window, so a window rotation (to show the visual collection beneath a
  * sideways Now Playing, or back) moves nothing on the display. The level is measured in the same frame.
  */
 

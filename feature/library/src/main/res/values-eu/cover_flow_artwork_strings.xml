@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Cover Flow, Ezarpenek azalik gabeko albumak ezkutatzen dituztenean eta bakar batek ere ez duenean -->
-    <string name="coverflow_no_albums_with_artwork">Albumek ez dute azalik. Album guztiak hemen ikusteko, desaktibatu «Ezkutatu azalik gabeko albumak bilduma bisualean» Ezarpenetan.</string>
-</resources>

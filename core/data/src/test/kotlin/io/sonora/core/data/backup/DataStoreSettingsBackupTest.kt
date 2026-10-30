@@ -13,7 +13,7 @@ import androidx.datastore.preferences.core.stringSetPreferencesKey
 import com.google.common.truth.Truth.assertThat
 import io.sonora.core.data.di.BackupModule
 import io.sonora.core.data.di.createSettingsDataStore
-import io.sonora.core.data.preferences.DataStoreCoverFlowPreferencesRepository
+import io.sonora.core.data.preferences.DataStoreVisualCollectionPreferencesRepository
 import io.sonora.core.data.preferences.DataStoreCrossfadeRepository
 import io.sonora.core.data.preferences.DataStorePlaybackTempoRepository
 import io.sonora.core.data.preferences.DataStoreReplayGainRepository
@@ -139,12 +139,12 @@ class DataStoreSettingsBackupTest {
             tempo = files.getValue("sonora_playback_tempo"),
             replayGain = files.getValue("sonora_replay_gain"),
             crossfade = files.getValue("sonora_crossfade"),
-            coverFlow = files.getValue("sonora_cover_flow"),
+            visualCollection = files.getValue("sonora_cover_flow"),
         )
         val tempo get() = DataStorePlaybackTempoRepository(files.getValue("sonora_playback_tempo"))
         val replayGain get() = DataStoreReplayGainRepository(files.getValue("sonora_replay_gain"))
         val crossfade get() = DataStoreCrossfadeRepository(files.getValue("sonora_crossfade"))
-        val coverFlow get() = DataStoreCoverFlowPreferencesRepository(files.getValue("sonora_cover_flow"))
+        val visualCollection get() = DataStoreVisualCollectionPreferencesRepository(files.getValue("sonora_cover_flow"))
     }
 
     /** The app's settings files twice, in two folders: the device a backup is made on and the one it is restored to. */
@@ -223,12 +223,12 @@ class DataStoreSettingsBackupTest {
     }
 
     @Test
-    fun `the Cover Flow settings survive a backup and restore`() = withAppStores { source, target ->
-        source.coverFlow.setHideAlbumsWithoutArtwork(true)
+    fun `the visual collection settings survive a backup and restore`() = withAppStores { source, target ->
+        source.visualCollection.setHideAlbumsWithoutArtwork(true)
 
         backUpAndRestore(source, target)
 
-        assertThat(target.coverFlow.hideAlbumsWithoutArtwork.first()).isTrue()
+        assertThat(target.visualCollection.hideAlbumsWithoutArtwork.first()).isTrue()
     }
 
     @Test
@@ -236,7 +236,7 @@ class DataStoreSettingsBackupTest {
         target.tempo.update { PlaybackTempo.ofPercent(90, 1) }
         target.replayGain.update { ReplayGainSettings(ReplayGainMode.TRACK, preampDb = -2f) }
         target.crossfade.setSeconds(4)
-        target.coverFlow.setHideAlbumsWithoutArtwork(true)
+        target.visualCollection.setHideAlbumsWithoutArtwork(true)
         val older = """
             {"format":"sonora-backup","version":1,"createdAtMs":1,
              "settings":[{"name":"sonora_settings","values":[{"key":"appearance.theme","type":"string","value":"DARK"}]},
@@ -249,7 +249,7 @@ class DataStoreSettingsBackupTest {
         assertThat(target.tempo.tempo.first()).isEqualTo(PlaybackTempo.ofPercent(90, 1))
         assertThat(target.replayGain.settings.first()).isEqualTo(ReplayGainSettings(ReplayGainMode.TRACK, preampDb = -2f))
         assertThat(target.crossfade.seconds.first()).isEqualTo(4)
-        assertThat(target.coverFlow.hideAlbumsWithoutArtwork.first()).isTrue()
+        assertThat(target.visualCollection.hideAlbumsWithoutArtwork.first()).isTrue()
     }
 
     private companion object {

@@ -8,14 +8,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -30,6 +28,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.platform.LocalConfiguration
@@ -48,6 +47,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.sonora.core.designsystem.component.CapsuleSlider
 import io.sonora.core.designsystem.component.SegmentedControl
 import io.sonora.core.designsystem.component.TranslucentSurface
+import io.sonora.core.designsystem.layout.LocalWindowClass
 import io.sonora.core.designsystem.translucent.LocalTranslucentContentColors
 import io.sonora.core.dubmodel.DubBypass
 import io.sonora.core.dubmodel.DubClockSource
@@ -213,15 +213,20 @@ private fun StatusRow(stage: DubStageState, meters: DubMeters, beatLed: Int?, re
             stringResource(R.string.dub_title),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
-            color = LocalTranslucentContentColors.current.label,
+            color = StageLabel,
         )
-        Text(clock, style = MaterialTheme.typography.labelMedium, color = LocalTranslucentContentColors.current.label.copy(alpha = SecondaryAlpha))
+        Text(clock, style = MaterialTheme.typography.labelMedium, color = StageLabel.copy(alpha = SecondaryAlpha))
         BeatLeds(lit = beatLed, reducedMotion = reducedMotion)
         Box(Modifier.weight(1f)) { PeakMeter(peak = { meters.peak }, modifier = Modifier.fillMaxWidth()) }
         LimiterLed(lit = DubIndicators.limiterLit(meters.gainReductionDb))
     }
 }
 
+/**
+ * The effects page next to the preamp: the XY pad centred in the room the fixed rows leave above them, or, on a large
+ * screen where that room is too short ([EffectsFit]), a square beside the rows (the pad on the left, the rows on the
+ * right, both centred in the height).
+ */
 @Composable
 private fun EffectsPage(
     viewModel: DubViewModel,
@@ -232,17 +237,45 @@ private fun EffectsPage(
     compact: Boolean,
     modifier: Modifier,
 ) {
-    Column(modifier, verticalArrangement = Arrangement.spacedBy(Gap)) {
-        Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
-            XyPad(
-                viewModel,
-                setup,
-                performance,
-                enabled,
-                Modifier.fillMaxHeight().aspectRatio(1f, matchHeightConstraintsFirst = true).widthIn(max = XyMaxSize),
-            )
+    val besideAllowed = LocalWindowClass.current.isLarge
+    val controlsMinWidth = maxOf(ControlsMinWidth, (if (compact) CompactPad else ComfortablePad) * 3 + Gap * 2)
+    Layout(
+        contents = listOf(
+            { XyPad(viewModel, setup, performance, enabled, Modifier) },
+            { EffectsControls(viewModel, setup, stage, performance, enabled, compact) },
+        ),
+        modifier = modifier,
+    ) { (padMeasurables, controlsMeasurables), constraints ->
+        val width = constraints.maxWidth
+        val height = constraints.maxHeight
+        val gap = Gap.roundToPx()
+        val controls = controlsMeasurables.first()
+        // Only a wide area can move the pad aside: there the rows' height is asked first and they are measured once,
+        // at the width the fit gives them; elsewhere they are measured at full width, as before.
+        val probe = besideAllowed && width > height
+        val stacked = if (probe) null else controls.measure(Constraints(minWidth = width, maxWidth = width, maxHeight = height))
+        val fit = EffectsFit.of(
+            width = width,
+            height = height,
+            controlsHeight = stacked?.height ?: controls.maxIntrinsicHeight(width),
+            gap = gap,
+            minPad = XyBesideBelow.roundToPx(),
+            maxPad = XyMaxSize.roundToPx(),
+            controlsMinWidth = controlsMinWidth.roundToPx(),
+            besideAllowed = besideAllowed,
+        )
+        val rows = stacked ?: controls.measure(Constraints(minWidth = fit.controlsWidth, maxWidth = fit.controlsWidth, maxHeight = height))
+        val pad = padMeasurables.map { it.measure(Constraints.fixed(fit.pad, fit.pad)) }
+        layout(width, height) {
+            if (fit.beside) {
+                pad.forEach { it.place(0, (height - fit.pad) / 2) }
+                rows.place(fit.pad + gap, ((height - rows.height) / 2).coerceAtLeast(0))
+            } else {
+                val band = (height - rows.height - gap).coerceAtLeast(0)
+                pad.forEach { it.place((width - fit.pad) / 2, (band - fit.pad) / 2) }
+                rows.place(0, band + gap)
+            }
         }
-        EffectsControls(viewModel, setup, stage, performance, enabled, compact)
     }
 }
 
@@ -306,7 +339,7 @@ private fun EffectsControls(
 private fun RowScope.LabelledSlider(label: String, value: Float, onChange: (Float, Boolean) -> Unit, enabled: Boolean) {
     val percent = "${(value * 100).toInt()} %"
     Column(Modifier.weight(1f)) {
-        Text(label, style = MaterialTheme.typography.labelMedium, color = LocalTranslucentContentColors.current.label.copy(alpha = SecondaryAlpha))
+        Text(label, style = MaterialTheme.typography.labelMedium, color = StageLabel.copy(alpha = SecondaryAlpha))
         CapsuleSlider(
             value = value,
             onValueChange = { if (enabled) onChange(it, false) },
@@ -376,6 +409,7 @@ private fun TapPad(viewModel: DubViewModel, enabled: Boolean, modifier: Modifier
                 )
             },
         shape = RoundedCornerShape(PadCorner),
+        darkTheme = true,
     ) {
         Text(
             label,
@@ -409,6 +443,7 @@ private fun TransportButton(text: String, onClick: () -> Unit, modifier: Modifie
             }
             .pointerInput(onClick) { detectTapGestures(onTap = { onClick() }) },
         shape = RoundedCornerShape(PadCorner),
+        darkTheme = true,
     ) {
         Text(
             text,
@@ -468,9 +503,14 @@ private val ComfortablePad = 96.dp
 private val PadCorner = 20.dp
 private val XyMaxSize = 420.dp
 private val XyMinSize = 160.dp
+private val XyBesideBelow = 200.dp
+private val ControlsMinWidth = 260.dp
 private val StripWidth = 64.dp
 private val StripMinHeight = 240.dp
 private val SIDE_BY_SIDE_MIN_WIDTH = 840.dp
 private val COMPACT_BELOW_HEIGHT = 760.dp
 private const val DisabledAlpha = 0.45f
 private const val SecondaryAlpha = 0.7f
+
+/** Text drawn straight on the stage, which is always dark (outside a translucent surface, whose content colours apply). */
+private val StageLabel = Color.White

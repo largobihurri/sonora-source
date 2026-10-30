@@ -96,7 +96,7 @@ fun ConfirmationBanner(
         exit = scaleOut(targetScale = 0.9f) + fadeOut(),
     ) {
         val shown = state.lastShown ?: return@AnimatedVisibility
-        TranslucentSurface(Modifier.semantics { liveRegion = LiveRegionMode.Polite }, backdrop = backdrop) {
+        TranslucentSurface(Modifier.semantics { liveRegion = LiveRegionMode.Polite }, backdrop = backdrop, overContent = true) {
             val colors = LocalTranslucentContentColors.current
             Row(Modifier.padding(horizontal = 18.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
                 Icon(shown.icon, contentDescription = null, tint = colors.accent, modifier = Modifier.size(20.dp))

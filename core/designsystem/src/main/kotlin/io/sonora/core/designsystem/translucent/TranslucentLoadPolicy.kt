@@ -5,9 +5,11 @@ package io.sonora.core.designsystem.translucent
  * frame (FrameMetrics.GPU_DURATION, which every sampling tier has: they need Android 12). Two signs make the tier
  * step down (see [TranslucentTier.stepDown]): [SEVERE_FRAMES] frames of at least [SEVERE_MS] within the last
  * [WINDOW_FRAMES], the driver stalling (a OnePlus 7 Pro drew full translucency at a GPU p90 near 5 s, with context
- * timeouts); or, once the window is full, [HEAVY_SHARE] of it heavy, more than twice the frame budget and never under
- * [HEAVY_FLOOR_MS]. The first [SETTLE_FRAMES] after a start or a step down are not judged: they record layers and
- * compile shaders. Pure, so it is unit-tested.
+ * timeouts); or, once the window is full, [HEAVY_SHARE] of it heavy, more than twice the frame budget and more than
+ * [HEAVY_FLOOR_MS] (two missed 60 Hz frames), so a fast screen whose animations only jank (a 144 Hz tablet at 16-30 ms
+ * of GPU opening a panel) keeps its translucency. [frame] names the rule that fired ([StepDownRule]). The first
+ * [SETTLE_FRAMES] after a start or a step down are not judged: they record layers and compile shaders. Pure, so it is
+ * unit-tested.
  */
 class TranslucentLoadPolicy {
     private val heavy = BooleanArray(WINDOW_FRAMES)
@@ -28,13 +30,14 @@ class TranslucentLoadPolicy {
     }
 
     /**
-     * One frame that took [gpuMs] of GPU time with a frame budget of [budgetMs] (1000 / refresh rate). True means
-     * the tier should step down now; the policy then starts over for the frames of the lower tier.
+     * One frame that took [gpuMs] of GPU time with a frame budget of [budgetMs] (1000 / refresh rate). A rule means
+     * the tier should step down now, for that reason (a stall wins when both fire); the policy then starts over for
+     * the frames of the lower tier. Null keeps the tier.
      */
-    fun frame(gpuMs: Double, budgetMs: Double): Boolean {
+    fun frame(gpuMs: Double, budgetMs: Double): StepDownRule? {
         if (settling > 0) {
             settling--
-            return false
+            return null
         }
         val slot = seen % WINDOW_FRAMES
         if (heavy[slot]) heavyCount--
@@ -44,9 +47,12 @@ class TranslucentLoadPolicy {
         if (heavy[slot]) heavyCount++
         if (severe[slot]) severeCount++
         seen++
-        val stepDown = severeCount >= SEVERE_FRAMES ||
-            (seen >= WINDOW_FRAMES && heavyCount >= WINDOW_FRAMES * HEAVY_SHARE)
-        if (stepDown) restart()
+        val stepDown = when {
+            severeCount >= SEVERE_FRAMES -> StepDownRule.SEVERE
+            seen >= WINDOW_FRAMES && heavyCount >= WINDOW_FRAMES * HEAVY_SHARE -> StepDownRule.HEAVY
+            else -> null
+        }
+        if (stepDown != null) restart()
         return stepDown
     }
 
@@ -66,7 +72,19 @@ class TranslucentLoadPolicy {
         /** The share of heavy frames in a full window that steps down. */
         const val HEAVY_SHARE = 0.25
 
-        /** Heavy never means less GPU time than this, so a 120 Hz screen is not held to an 8 ms budget. */
-        const val HEAVY_FLOOR_MS = 20.0
+        /**
+         * Heavy always means more GPU time than this, two 60 Hz frames, whatever the refresh rate: a 120 or 144 Hz
+         * screen is not held to its 8 or 7 ms budget, since a frame under it misses at most one 60 Hz frame.
+         */
+        const val HEAVY_FLOOR_MS = 2 * 1000.0 / 60
     }
+}
+
+/** Why [TranslucentLoadPolicy.frame] stepped the tier down, named in the log line. */
+enum class StepDownRule {
+    /** [TranslucentLoadPolicy.HEAVY_SHARE] of a full window was heavy. */
+    HEAVY,
+
+    /** [TranslucentLoadPolicy.SEVERE_FRAMES] stalls within the window. */
+    SEVERE,
 }

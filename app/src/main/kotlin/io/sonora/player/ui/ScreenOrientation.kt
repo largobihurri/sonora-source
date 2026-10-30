@@ -11,13 +11,13 @@ import io.sonora.player.navigation.TopLevelRoute
  * The orientation the app asks for:
  * - Now Playing turns with the phone only while the user's rotation lock allows it ([ActivityInfo.SCREEN_ORIENTATION_FULL_USER]):
  *   with auto-rotate off it stays upright.
- * - On the Library tab, a list with a Cover Flow ([libraryCoverFlow]) follows the physical sensor even with auto-rotate
- *   off ([ActivityInfo.SCREEN_ORIENTATION_SENSOR]), so holding the phone sideways always shows the Cover Flow and holding
+ * - On the Library tab, a list with a visual collection ([libraryVisualCollection]) follows the physical sensor even with auto-rotate
+ *   off ([ActivityInfo.SCREEN_ORIENTATION_SENSOR]), so holding the phone sideways always shows the visual collection and holding
  *   it upright returns to the list. SENSOR (unlike FULL_SENSOR) keeps the device's own rule for upside-down portrait.
  * - With gravity mode on ([gravity], Settings), an open Now Playing hangs its groups level in the phone's own frame, so
  *   the window turns beneath it unseen: sideways ([ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE], whichever side the
- *   phone is on, even with the rotation lock) while its destination is the Cover Flow ([gravitySideways], see
- *   GravityDestination), so the Library composes its Cover Flow beneath and a drag reveals it; otherwise in its natural
+ *   phone is on, even with the rotation lock) while its destination is the visual collection ([gravitySideways], see
+ *   GravityDestination), so the Library composes its visual collection beneath and a drag reveals it; otherwise in its natural
  *   portrait ([ActivityInfo.SCREEN_ORIENTATION_PORTRAIT], not even upside down).
  * - Every other screen stays upright, and so does everything while [uprightHold] (see [UprightHold]).
  * - A large screen ([WindowClass.isLarge], a tablet) is never locked: whatever the screen, the upright hold or gravity
@@ -29,7 +29,7 @@ import io.sonora.player.navigation.TopLevelRoute
 internal fun screenOrientation(
     nowPlayingOpen: Boolean,
     tab: TopLevelRoute,
-    libraryCoverFlow: Boolean,
+    libraryVisualCollection: Boolean,
     uprightHold: Boolean = false,
     gravity: Boolean = false,
     gravitySideways: Boolean = false,
@@ -40,7 +40,7 @@ internal fun screenOrientation(
     nowPlayingOpen && gravity && gravitySideways -> ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
     nowPlayingOpen && gravity -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     nowPlayingOpen -> ActivityInfo.SCREEN_ORIENTATION_FULL_USER
-    coverFlowList(tab, libraryCoverFlow) -> ActivityInfo.SCREEN_ORIENTATION_SENSOR
+    visualCollectionList(tab, libraryVisualCollection) -> ActivityInfo.SCREEN_ORIENTATION_SENSOR
     else -> ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT
 }
 
@@ -51,9 +51,9 @@ internal fun screenOrientation(
  */
 internal fun gravityEnabled(setting: Boolean, windowClass: WindowClass): Boolean = setting && !windowClass.isLarge
 
-/** Whether the screen shown is a Library list (songs, albums, artists, playlists) that turns into a Cover Flow sideways. */
-internal fun coverFlowList(tab: TopLevelRoute, libraryCoverFlow: Boolean): Boolean =
-    tab == TopLevelRoute.Library && libraryCoverFlow
+/** Whether the screen shown is a Library list (songs, albums, artists, playlists) that turns into a visual collection sideways. */
+internal fun visualCollectionList(tab: TopLevelRoute, libraryVisualCollection: Boolean): Boolean =
+    tab == TopLevelRoute.Library && libraryVisualCollection
 
 /**
  * Gravity mode's window side ([screenOrientation]'s gravitySideways): the latched destination's, but only between

@@ -11,7 +11,7 @@
     <string name="converter_output_header">Output Folder</string>
     <string name="converter_output_choose">Choose Folder</string>
     <string name="converter_output_change">Change Folder</string>
-    <string name="converter_output_none_footer">Choose a folder on your phone or USB drive. Sonora creates a “Convertidos” folder in it, with one dated folder per batch.</string>
+    <string name="converter_output_none_footer">Choose a folder on your device or USB drive. Sonora creates a “Convertidos” folder in it, with one dated folder per batch.</string>
     <!-- %1$s is the name of the chosen folder. -->
     <string name="converter_output_footer">Converted files go to “Convertidos” in %1$s, one dated folder per batch.</string>
     <!-- Spoken label of the output folder row; %1$s is the folder's name. -->
@@ -37,8 +37,8 @@
     <string name="converter_mode_high">High Performance</string>
     <string name="converter_mode_low_description">One file at a time, with pauses. Gentle on battery and heat.</string>
     <string name="converter_mode_normal_description">Several files at once, in the background. A good balance.</string>
-    <string name="converter_mode_high_description">Uses most of the processor. Fastest; the phone gets warmer.</string>
-    <string name="converter_performance_footer">Quality is identical in every mode; only speed and load change. Sonora slows down by itself when the phone gets hot or Battery Saver is on.</string>
+    <string name="converter_mode_high_description">Uses most of the processor. Fastest; the device gets warmer.</string>
+    <string name="converter_performance_footer">Quality is identical in every mode; only speed and load change. Sonora slows down by itself when the device gets hot or Battery Saver is on.</string>
 
     <!-- Overwrite originals -->
     <string name="converter_overwrite">Overwrite Originals</string>
@@ -107,7 +107,7 @@
     <string name="converter_notice_start_failed_title">Couldn’t Start</string>
     <string name="converter_notice_start_failed_message">Sonora couldn’t read what you added. Add the files or folder again and retry.</string>
     <string name="converter_notice_output_failed_title">Couldn’t Use Folder</string>
-    <string name="converter_notice_output_failed_message">Sonora can’t write to that folder. Choose a folder on your phone’s storage or a USB drive.</string>
+    <string name="converter_notice_output_failed_message">Sonora can’t write to that folder. Choose a folder on your device’s storage or a USB drive.</string>
     <string name="converter_notice_picker_missing_title">Can’t Choose Files</string>
     <string name="converter_notice_picker_missing_message">This device has no app for choosing files or folders.</string>
     <string name="converter_notice_cancel_failed_title">Couldn’t Cancel</string>

@@ -24,18 +24,18 @@
     <string name="menu_share_chooser">Compartir</string>
 
     <string name="remove_title">¿Quitar «%1$s»?</string>
-    <string name="remove_message">Quítalo solo de Sonora y conserva los archivos, o elimina los archivos de tu teléfono.</string>
-    <string name="remove_message_playlist">Quítala solo de Sonora, o elimina la lista. Sus canciones se quedan en tu teléfono.</string>
+    <string name="remove_message">Quítalo solo de Sonora y conserva los archivos, o elimina los archivos de tu dispositivo.</string>
+    <string name="remove_message_playlist">Quítala solo de Sonora, o elimina la lista. Sus canciones se quedan en tu dispositivo.</string>
     <string name="remove_from_sonora">Quitar de Sonora</string>
-    <string name="remove_delete_from_phone">Eliminar del teléfono</string>
+    <string name="remove_delete_from_phone">Eliminar del dispositivo</string>
     <string name="remove_delete_playlist">Eliminar lista</string>
     <string name="remove_cancel">Cancelar</string>
     <plurals name="delete_title">
-        <item quantity="one">¿Eliminar %1$d canción de tu teléfono?</item>
-        <item quantity="many">¿Eliminar %1$d canciones de tu teléfono?</item>
-        <item quantity="other">¿Eliminar %1$d canciones de tu teléfono?</item>
+        <item quantity="one">¿Eliminar %1$d canción de tu dispositivo?</item>
+        <item quantity="many">¿Eliminar %1$d canciones de tu dispositivo?</item>
+        <item quantity="other">¿Eliminar %1$d canciones de tu dispositivo?</item>
     </plurals>
-    <string name="delete_message">No se puede deshacer. Los archivos se eliminan del almacenamiento de tu teléfono y salen de todas las listas.</string>
+    <string name="delete_message">No se puede deshacer. Los archivos se eliminan del almacenamiento de tu dispositivo y salen de todas las listas.</string>
     <string name="delete_confirm">Eliminar</string>
     <string name="delete_access_title">Permitir eliminar</string>
     <string name="delete_access_message">Sonora solo puede leer la carpeta «%1$s». Para eliminar estos archivos, vuelve a elegir esa carpeta y permite el acceso.</string>
@@ -43,7 +43,7 @@
     <string name="delete_access_choose">Elegir carpeta…</string>
 
     <string name="notice_hidden">Quitado de Sonora. Puedes recuperarlo en Ajustes › Elementos ocultos.</string>
-    <string name="notice_playlist_deleted">Se ha eliminado «%1$s». Sus canciones siguen en tu teléfono.</string>
+    <string name="notice_playlist_deleted">Se ha eliminado «%1$s». Sus canciones siguen en tu dispositivo.</string>
     <plurals name="notice_deleted">
         <item quantity="one">%1$d canción eliminada</item>
         <item quantity="many">%1$d canciones eliminadas</item>

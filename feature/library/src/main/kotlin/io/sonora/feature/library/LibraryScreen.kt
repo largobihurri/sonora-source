@@ -99,7 +99,7 @@ import io.sonora.core.domain.model.Artist
 import io.sonora.core.domain.model.Track
 import io.sonora.core.domain.sort.SortList
 import io.sonora.feature.library.ui.AlbumTile
-import io.sonora.feature.library.ui.CoverFlowButton
+import io.sonora.feature.library.ui.VisualCollectionButton
 import io.sonora.feature.library.ui.EmptyMessage
 import io.sonora.feature.library.ui.NavigationRow
 import io.sonora.feature.library.ui.PinnedGlyph
@@ -158,17 +158,17 @@ sealed interface LibraryLink {
  * action. "Convert…" sends songs to the Converter's sources, then [onOpenConverter] shows the Converter tab.
  * [backEnabled] lets the shell keep back for an overlay (Now Playing) shown above the tab. Long-pressing an item opens
  * the iOS context menu; its "View Credits and Metadata" shows [fileInfo] (another feature) for the song. [openLink]
- * pushes a page asked for by another tab, then [onLinkOpened]. [onCoverFlowChange] tells the shell whether the list on
- * top has a Cover Flow (so the phone may turn sideways); turned sideways it shows one. While [coverFlowCovered] (an
- * overlay such as Now Playing covers the tab) the Cover Flow is already there underneath, so dragging the overlay away
+ * pushes a page asked for by another tab, then [onLinkOpened]. [onVisualCollectionChange] tells the shell whether the list on
+ * top has a visual collection (so the phone may turn sideways); turned sideways it shows one. While [visualCollectionCovered] (an
+ * overlay such as Now Playing covers the tab) the visual collection is already there underneath, so dragging the overlay away
  * reveals it, but it neither hides the system bars nor takes back; its Now Playing button calls [onOpenNowPlaying].
  * [onPageChange] reports the page on top (null at the Library's home) for the sidebar to highlight.
  *
- * On a large screen the Cover Flow never takes the screen over by turning sideways: it shows only while [coverFlowOpen],
- * which a page asks for through [LocalCoverFlowRequest] ([onCoverFlowOpenChange] carries the change to the shell, which
+ * On a large screen the visual collection never takes the screen over by turning sideways: it shows only while [visualCollectionOpen],
+ * which a page asks for through [LocalVisualCollectionRequest] ([onVisualCollectionOpenChange] carries the change to the shell, which
  * hides its navigation meanwhile) and which the system back closes.
- * On a large screen Albums, Artists and Playlists also show a Cover Flow button in their bar, which asks for the
- * Cover Flow through [LocalCoverFlowRequest].
+ * On a large screen Albums, Artists and Playlists also show a visual collection button in their bar, which asks for the
+ * Visual collection through [LocalVisualCollectionRequest].
  */
 @Composable
 fun LibraryScreen(
@@ -179,12 +179,12 @@ fun LibraryScreen(
     fileInfo: (@Composable (track: Track, onClose: () -> Unit) -> Unit)? = null,
     openLink: LibraryLink? = null,
     onLinkOpened: () -> Unit = {},
-    coverFlowCovered: Boolean = false,
-    onCoverFlowChange: (Boolean) -> Unit = {},
+    visualCollectionCovered: Boolean = false,
+    onVisualCollectionChange: (Boolean) -> Unit = {},
     onOpenNowPlaying: (() -> Unit)? = null,
     onPageChange: (LibraryPage?) -> Unit = {},
-    coverFlowOpen: Boolean = false,
-    onCoverFlowOpenChange: (Boolean) -> Unit = {},
+    visualCollectionOpen: Boolean = false,
+    onVisualCollectionOpenChange: (Boolean) -> Unit = {},
     viewModel: LibraryViewModel = hiltViewModel(),
     folderViewModel: FolderViewModel = hiltViewModel(),
     playlistsViewModel: PlaylistsViewModel = hiltViewModel(),
@@ -237,23 +237,23 @@ fun LibraryScreen(
     }
 
     val top = stack.last()
-    val latestCoverFlowChange by rememberUpdatedState(onCoverFlowChange)
-    val latestCoverFlowOpenChange by rememberUpdatedState(onCoverFlowOpenChange)
-    LaunchedEffect(top.hasCoverFlow) {
-        latestCoverFlowChange(top.hasCoverFlow)
-        // A page without a Cover Flow cannot keep one asked for.
-        if (!top.hasCoverFlow) latestCoverFlowOpenChange(false)
+    val latestVisualCollectionChange by rememberUpdatedState(onVisualCollectionChange)
+    val latestVisualCollectionOpenChange by rememberUpdatedState(onVisualCollectionOpenChange)
+    LaunchedEffect(top.hasVisualCollection) {
+        latestVisualCollectionChange(top.hasVisualCollection)
+        // A page without a visual collection cannot keep one asked for.
+        if (!top.hasVisualCollection) latestVisualCollectionOpenChange(false)
     }
     val latestPageChange by rememberUpdatedState(onPageChange)
     LaunchedEffect(top.page) { latestPageChange(top.page) }
     val landscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
     val large = LocalWindowClass.current.isLarge
-    val coverFlowShown = coverFlowOnScreen(large, landscape, requested = coverFlowOpen)
-    val coverFlowRequest = remember(large, coverFlowOpen) {
-        if (large) CoverFlowRequest(coverFlowOpen, onOpen = { latestCoverFlowOpenChange(true) }, onClose = { latestCoverFlowOpenChange(false) }) else null
+    val visualCollectionShown = visualCollectionOnScreen(large, landscape, requested = visualCollectionOpen)
+    val visualCollectionRequest = remember(large, visualCollectionOpen) {
+        if (large) VisualCollectionRequest(visualCollectionOpen, onOpen = { latestVisualCollectionOpenChange(true) }, onClose = { latestVisualCollectionOpenChange(false) }) else null
     }
-    // Kept above the landscape check: upright, the Cover Flow is gone and its own saved state with it.
-    var coverFlowPlaces by rememberSaveable(stateSaver = CoverFlowPlaces.Saver) { mutableStateOf(CoverFlowPlaces()) }
+    // Kept above the landscape check: upright, the visual collection is gone and its own saved state with it.
+    var visualCollectionPlaces by rememberSaveable(stateSaver = VisualCollectionPlaces.Saver) { mutableStateOf(VisualCollectionPlaces()) }
 
     val selectionActions = remember(menuViewModel, compressViewModel) {
         SelectionActions(
@@ -268,7 +268,7 @@ fun LibraryScreen(
     // The banner's translucency samples the library while it is on screen.
     val translucent = rememberTranslucentBackdrop()
     Box(modifier) {
-        CompositionLocalProvider(LocalSelectionActions provides selectionActions, LocalCoverFlowRequest provides coverFlowRequest) {
+        CompositionLocalProvider(LocalSelectionActions provides selectionActions, LocalVisualCollectionRequest provides visualCollectionRequest) {
             PredictiveBackStack(
                 stack,
                 onPop = pop,
@@ -276,9 +276,9 @@ fun LibraryScreen(
                     .fillMaxSize()
                     .translucentBackdropSource(translucent, enabled = banner.onScreen)
                     .background(MaterialTheme.colorScheme.background)
-                    // The Cover Flow covers the pages on a large screen: TalkBack lists only what is on top.
+                    // The visual collection covers the pages on a large screen: TalkBack lists only what is on top.
                     .then(
-                        if (listHiddenBehindCoverFlow(large, coverFlowShown && top.coverFlow != null)) Modifier.clearAndSetSemantics {} else Modifier,
+                        if (listHiddenBehindVisualCollection(large, visualCollectionShown && top.visualCollection != null)) Modifier.clearAndSetSemantics {} else Modifier,
                     ),
                 backEnabled = backEnabled,
                 onPush = push,
@@ -299,22 +299,22 @@ fun LibraryScreen(
                 }
             }
         }
-        val coverFlow = top.coverFlow
-        if (coverFlowShown && coverFlow != null) {
+        val visualCollection = top.visualCollection
+        if (visualCollectionShown && visualCollection != null) {
             val shown = @Composable {
-                CompositionLocalProvider(LocalCoverFlowRequest provides coverFlowRequest) {
-                    LibraryCoverFlow(
-                        coverFlow.list, state, viewModel, playlistsViewModel, Modifier.fillMaxSize(), onOpenNowPlaying,
-                        initialTarget = coverFlow.target,
-                        initialIndex = coverFlowPlaces.of(coverFlow.list),
-                        onCentreChange = { coverFlowPlaces = coverFlowPlaces.left(coverFlow, it) },
+                CompositionLocalProvider(LocalVisualCollectionRequest provides visualCollectionRequest) {
+                    LibraryVisualCollection(
+                        visualCollection.list, state, viewModel, playlistsViewModel, Modifier.fillMaxSize(), onOpenNowPlaying,
+                        initialTarget = visualCollection.target,
+                        initialIndex = visualCollectionPlaces.of(visualCollection.list),
+                        onCentreChange = { visualCollectionPlaces = visualCollectionPlaces.left(visualCollection, it) },
                     )
                 }
             }
-            // A page's Cover Flow saves nothing, so each turn opens on that page, never on a cover restored from an
+            // A page's visual collection saves nothing, so each turn opens on that page, never on a cover restored from an
             // earlier appearance (an activity recreated by a theme or language change re-saves unconsumed restored values).
-            InertWhile(coverFlowCovered) {
-                if (coverFlow.target == null) shown() else CompositionLocalProvider(LocalSaveableStateRegistry provides null, shown)
+            InertWhile(visualCollectionCovered) {
+                if (visualCollection.target == null) shown() else CompositionLocalProvider(LocalSaveableStateRegistry provides null, shown)
             }
         }
         ConfirmationBanner(
@@ -324,8 +324,8 @@ fun LibraryScreen(
         )
     }
 
-    // After the page stack's own back callback, so it takes back first: a Cover Flow asked for closes before a page pops.
-    BackHandler(enabled = large && coverFlowOpen && !coverFlowCovered) { onCoverFlowOpenChange(false) }
+    // After the page stack's own back callback, so it takes back first: a visual collection asked for closes before a page pops.
+    BackHandler(enabled = large && visualCollectionOpen && !visualCollectionCovered) { onVisualCollectionOpenChange(false) }
 
     LibraryMenuEffects(menuViewModel, banner)
     CompressHost(compressViewModel, banner)
@@ -385,9 +385,9 @@ private fun LibraryDestination(
     onSendPlaylistToWatch: ((playlistId: Long, name: String) -> Unit)?,
 ) {
     val openAlbum: (Album) -> Unit = { push(LibraryDest.AlbumDetail(it.id)) }
-    // The one place the Cover Flow button is decided: its action on a page that has the button on this window, else null.
-    val coverFlowButton: (() -> Unit)? =
-        LocalCoverFlowRequest.current?.onOpen?.takeIf { dest.hasCoverFlowButton(LocalWindowClass.current) }
+    // The one place the visual collection button is decided: its action on a page that has the button on this window, else null.
+    val visualCollectionButton: (() -> Unit)? =
+        LocalVisualCollectionRequest.current?.onOpen?.takeIf { dest.hasVisualCollectionButton(LocalWindowClass.current) }
     fun albumMenu(place: MenuPlace): (Album) -> Unit = { menu.open(MenuTarget.AlbumItem(it), place) }
     fun songMenu(place: MenuPlace): (Track) -> Unit = { menu.open(MenuTarget.Song(it), place) }
     when (dest) {
@@ -401,12 +401,12 @@ private fun LibraryDestination(
             stringResource(R.string.library_albums), state.albums, pop, openAlbum, albumMenu(MenuPlace(PinContext.ALBUMS)),
             pinned = state.pinnedAlbums,
             sort = SortControl(SortList.ALBUMS, state.albumsSort) { viewModel.setSort(SortList.ALBUMS, it) },
-            onCoverFlow = coverFlowButton,
+            onVisualCollection = visualCollectionButton,
         )
         LibraryDest.Artists -> ArtistsList(
             state.artists, state.pinnedArtists, pop, SortControl(SortList.ARTISTS, state.artistsSort) { viewModel.setSort(SortList.ARTISTS, it) },
             onMenu = { menu.open(MenuTarget.ArtistItem(it.id, it.name, it.artworkUris.firstOrNull()), MenuPlace(PinContext.ARTISTS)) },
-            onCoverFlow = coverFlowButton,
+            onVisualCollection = visualCollectionButton,
         ) { push(LibraryDest.ArtistDetail(it.id, it.name)) }
         is LibraryDest.AlbumDetail -> {
             val tracks by remember(dest.albumId) { viewModel.albumTracks(dest.albumId) }
@@ -462,7 +462,7 @@ private fun LibraryDestination(
                 onMenu = { menu.open(MenuTarget.PlaylistItem(it), MenuPlace(PinContext.PLAYLISTS)) },
                 onFavourites = { push(LibraryDest.Favourites) },
                 onSmart = { push(LibraryDest.Smart(it)) },
-                onCoverFlow = coverFlowButton,
+                onVisualCollection = visualCollectionButton,
             )
         }
         LibraryDest.Favourites -> FavouritesScreen(
@@ -683,13 +683,13 @@ private fun AlbumsGrid(
     onMore: (() -> Unit)? = null,
     sort: SortControl? = null,
     pinned: Set<String> = emptySet(),
-    onCoverFlow: (() -> Unit)? = null,
+    onVisualCollection: (() -> Unit)? = null,
 ) {
     val grid = rememberLazyGridState()
     ScrollToTopEffect(grid)
     // A phone keeps two columns; a large window fits as many tiles of at least 170 dp as its width allows.
     val minTile = AdaptiveGrid.minTileDpFor(LocalWindowClass.current)
-    TranslucentBarPage(bar = { BackBar(stringResource(R.string.library_back_library), onBack, onMore, sort, onCoverFlow = onCoverFlow) }) {
+    TranslucentBarPage(bar = { BackBar(stringResource(R.string.library_back_library), onBack, onMore, sort, onVisualCollection = onVisualCollection) }) {
         LazyVerticalGrid(
             columns = if (minTile != null) GridCells.Adaptive(minTile.dp) else GridCells.Fixed(AdaptiveGrid.PHONE_COLUMNS),
             state = grid,
@@ -719,12 +719,12 @@ private fun ArtistsList(
     onBack: () -> Unit,
     sort: SortControl,
     onMenu: (Artist) -> Unit,
-    onCoverFlow: (() -> Unit)? = null,
+    onVisualCollection: (() -> Unit)? = null,
     onOpen: (Artist) -> Unit,
 ) {
     val list = rememberLazyListState()
     ScrollToTopEffect(list)
-    TranslucentBarPage(bar = { BackBar(stringResource(R.string.library_back_library), onBack, onMore = null, sort = sort, onCoverFlow = onCoverFlow) }) {
+    TranslucentBarPage(bar = { BackBar(stringResource(R.string.library_back_library), onBack, onMore = null, sort = sort, onVisualCollection = onVisualCollection) }) {
         ContentWidthLazyColumn(Modifier.fillMaxSize(), state = list, contentPadding = PaddingValues(bottom = BottomChromePadding)) {
             item {
                 TranslucentTopBarSpace()
@@ -767,8 +767,8 @@ private val FastScrollTop = TranslucentTopBarHeight
 private val ArtistStackWidth = 60.dp
 
 /**
- * A [TranslucentBarPage]'s floating bar: the back button with, at the trailing edge, an optional Cover Flow button
- * ([onCoverFlow], large screens), an optional Select button ([onSelect]), an optional Sort menu ([sort]) and an optional
+ * A [TranslucentBarPage]'s floating bar: the back button with, at the trailing edge, an optional visual collection button
+ * ([onVisualCollection], large screens), an optional Select button ([onSelect]), an optional Sort menu ([sort]) and an optional
  * "…" menu button (Add to Playlist and the like), all translucent.
  */
 @Composable
@@ -778,10 +778,10 @@ internal fun BackBar(
     onMore: (() -> Unit)?,
     sort: SortControl? = null,
     onSelect: (() -> Unit)? = null,
-    onCoverFlow: (() -> Unit)? = null,
+    onVisualCollection: (() -> Unit)? = null,
 ) {
     TranslucentTopBar(backLabel = label, onBack = onBack) {
-        if (onCoverFlow != null) CoverFlowButton(onCoverFlow)
+        if (onVisualCollection != null) VisualCollectionButton(onVisualCollection)
         if (onSelect != null) SelectButton(onSelect)
         if (sort != null) SortButton(sort)
         if (onMore != null) TranslucentBarCircle(SonoraIcons.More, stringResource(R.string.playlist_more), onMore)

@@ -29,7 +29,8 @@ import kotlin.math.log10
  *   which is bit-transparent, until the next configure hands the stream on untouched again.
  * - **Per buffer**: the settings snapshot ([DubHub.params]), the filter, the kills, the stop gate and the pad edges are
  *   read once, then the buffer is decoded to float, run through the engine and the [PeakLimiter] (ceiling 0.966, 4 ms
- *   look-ahead), metered, and handed on. Pad edges map their touch time to the heard source frame through a
+ *   look-ahead; it only reduces what the engine shapes, so an idle stage leaves the stream's own peaks alone), metered,
+ *   and handed on. Pad edges map their touch time to the heard source frame through a
  *   [PresentationClock] fed with the position the sink below reports.
  * - **Pending-buffer rule**: once a buffer is processed, the same output goes back to the sink below until it has
  *   taken all of it, so the stage's state never advances twice for one buffer.
@@ -196,10 +197,15 @@ internal class DubAudioSink(
 
     // --- Per buffer -------------------------------------------------------------------------------------------------
 
-    /** Runs [frames] frames of [samples] through the stage and the limiter, meters them, and encodes them for the sink below. */
+    /**
+     * Runs [frames] frames of [samples] through the stage and the limiter, meters them, and encodes them for the sink
+     * below. The limiter only catches what the stage adds: a buffer the stage copied through whole (nothing engaged)
+     * keeps the stream's own peaks and goes on bit for bit, only delayed, as with DUB mode off; a buffer with any shaped
+     * block, the one in which the stage settles back to idle included, is limited whole.
+     */
     private fun render(frames: Int, channels: Int): ByteBuffer {
         engine.process(samples, 0, frames)
-        limitAndMeter(frames, channels)
+        limitAndMeter(frames, channels, limit = engine.shaped)
         val count = frames * channels
         val out = outputFor(count * FLOAT_BYTES)
         PcmFloat.encodeFloat(samples, count, out)
@@ -318,12 +324,12 @@ internal class DubAudioSink(
         }
     }
 
-    private fun limitAndMeter(frames: Int, channels: Int) {
+    private fun limitAndMeter(frames: Int, channels: Int, limit: Boolean) {
         var peak = 0f
         var minGain = 1.0
         var i = 0
         for (f in 0 until frames) {
-            limiter.process(samples, i, samples, i)
+            limiter.process(samples, i, samples, i, limit)
             if (limiter.gain < minGain) minGain = limiter.gain
             for (c in 0 until channels) {
                 val a = samples[i + c]

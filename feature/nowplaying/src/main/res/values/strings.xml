@@ -25,6 +25,7 @@
     <string name="now_playing_favourite">Favourite</string>
     <string name="now_playing_add_to_playlist">Add to Playlist</string>
     <string name="now_playing_share">Share Song</string>
+    <string name="now_playing_no_share_app">No app can share this song</string>
 
     <!-- Transport controls -->
     <string name="now_playing_position">Playback position</string>

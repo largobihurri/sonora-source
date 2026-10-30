@@ -101,6 +101,9 @@ object XyMapping {
         return XyPosition(from.x + (to.x - from.x) * eased, from.y + (to.y - from.y) * eased)
     }
 
+    /** Whether the edge labels (LP, HP, RES) fit a pad [side] wide without covering its centre and the LOCK pill. */
+    fun showsEdgeLabels(side: Int, minSide: Int): Boolean = side >= minSide
+
     /** How far [x] is from the detent towards its edge, 0..1. */
     private fun side(x: Float): Float = (kotlin.math.abs(x - 0.5f) / 0.5f).coerceIn(0f, 1f)
 

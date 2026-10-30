@@ -15,7 +15,7 @@ import io.sonora.core.domain.model.NowPlayingPreferences
 import io.sonora.core.domain.model.NowPlayingRotation
 import io.sonora.core.domain.model.ScanProgress
 import io.sonora.core.domain.model.ThemeMode
-import io.sonora.core.domain.port.CoverFlowPreferencesRepository
+import io.sonora.core.domain.port.VisualCollectionPreferencesRepository
 import io.sonora.core.domain.port.LibraryFolderRepository
 import io.sonora.core.domain.port.LibraryScanner
 import io.sonora.core.domain.port.PreferencesRepository
@@ -46,7 +46,7 @@ class SettingsViewModel @Inject constructor(
     private val folderRepository: LibraryFolderRepository,
     private val scanner: LibraryScanner,
     private val preferences: PreferencesRepository,
-    private val coverFlow: CoverFlowPreferencesRepository,
+    private val visualCollection: VisualCollectionPreferencesRepository,
     private val watch: WatchSyncController,
 ) : ViewModel() {
 
@@ -71,8 +71,8 @@ class SettingsViewModel @Inject constructor(
         .map { it.language }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
-    /** Whether Cover Flow hides albums without artwork; `null` until the stored value is read. */
-    val hideAlbumsWithoutArtwork: StateFlow<Boolean?> = coverFlow.hideAlbumsWithoutArtwork
+    /** Whether visual collection hides albums without artwork; `null` until the stored value is read. */
+    val hideAlbumsWithoutArtwork: StateFlow<Boolean?> = visualCollection.hideAlbumsWithoutArtwork
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
     /** Whether other apps and the adb shell may control Sonora (see `core:api`); `null` until the stored value is read. */
@@ -121,8 +121,8 @@ class SettingsViewModel @Inject constructor(
     /** Gravity mode: Now Playing stays upright and its groups hang level (see [NowPlayingPreferences.gravity]). */
     fun setGravity(enabled: Boolean) = updateNowPlaying { it.copy(gravity = enabled) }
 
-    /** Cover Flow lists only albums with artwork while on; the Albums list is unchanged. */
-    fun setHideAlbumsWithoutArtwork(hide: Boolean) = save { coverFlow.setHideAlbumsWithoutArtwork(hide) }
+    /** Visual collection lists only albums with artwork while on; the Albums list is unchanged. */
+    fun setHideAlbumsWithoutArtwork(hide: Boolean) = save { visualCollection.setHideAlbumsWithoutArtwork(hide) }
 
     fun setTheme(theme: ThemeMode) = updateAppearance { it.copy(theme = theme) }
 

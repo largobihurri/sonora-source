@@ -347,6 +347,16 @@ class DubControllerTest {
     }
 
     @Test
+    fun `PLAY on an idle player, a queue restored after a restart, prepares it first`() = runTest {
+        val dub = hostedController()
+        fake.playWhenReady = false
+        fake.state = Player.STATE_IDLE
+        dub.play()
+        assertThat(fake.calls).containsExactly("prepare", "play").inOrder()
+        dub.detach()
+    }
+
+    @Test
     fun `DUB STOP during a held loop lets the loop go first`() = runTest {
         val dub = hostedController()
         loops.loop.value = DjLoopState(inMs = 1_000.0, outMs = 3_000.0, looping = true)

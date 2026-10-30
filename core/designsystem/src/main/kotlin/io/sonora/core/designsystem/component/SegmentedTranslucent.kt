@@ -94,9 +94,13 @@ class SegmentThumbState {
  * slide re-lays out the thumb without recomposing. Placement is relative, so the thumb mirrors in right-to-left.
  */
 internal fun Modifier.segmentThumb(state: SegmentThumbState): Modifier = layout { measurable, constraints ->
-    val width = state.width.roundToInt().coerceIn(0, constraints.maxWidth)
-    val placeable = measurable.measure(Constraints.fixed(width, constraints.maxHeight))
-    layout(constraints.maxWidth, constraints.maxHeight) {
+    // An intrinsic query (a parent asking the control's height first) comes unbounded: the thumb, a decoration of the
+    // track, then adds nothing instead of asking for an infinite size.
+    val trackWidth = if (constraints.hasBoundedWidth) constraints.maxWidth else constraints.minWidth
+    val trackHeight = if (constraints.hasBoundedHeight) constraints.maxHeight else constraints.minHeight
+    val width = state.width.roundToInt().coerceIn(0, trackWidth)
+    val placeable = measurable.measure(Constraints.fixed(width, trackHeight))
+    layout(trackWidth, trackHeight) {
         placeable.placeRelative(state.offset.roundToInt(), 0)
     }
 }

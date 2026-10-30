@@ -24,17 +24,17 @@
     <string name="menu_share_chooser">Partekatu</string>
 
     <string name="remove_title">«%1$s» kendu?</string>
-    <string name="remove_message">Sonoratik bakarrik ken dezakezu, fitxategiak gordeta, edo fitxategiak telefonotik ezabatu.</string>
-    <string name="remove_message_playlist">Sonoratik bakarrik ken dezakezu, edo zerrenda ezabatu. Abestiak telefonoan geratzen dira.</string>
+    <string name="remove_message">Sonoratik bakarrik ken dezakezu, fitxategiak gordeta, edo fitxategiak gailutik ezabatu.</string>
+    <string name="remove_message_playlist">Sonoratik bakarrik ken dezakezu, edo zerrenda ezabatu. Abestiak gailuan geratzen dira.</string>
     <string name="remove_from_sonora">Kendu Sonoratik</string>
-    <string name="remove_delete_from_phone">Ezabatu telefonotik</string>
+    <string name="remove_delete_from_phone">Ezabatu gailutik</string>
     <string name="remove_delete_playlist">Ezabatu zerrenda</string>
     <string name="remove_cancel">Utzi</string>
     <plurals name="delete_title">
-        <item quantity="one">%1$d abesti telefonotik ezabatu?</item>
-        <item quantity="other">%1$d abesti telefonotik ezabatu?</item>
+        <item quantity="one">%1$d abesti gailutik ezabatu?</item>
+        <item quantity="other">%1$d abesti gailutik ezabatu?</item>
     </plurals>
-    <string name="delete_message">Ezin da desegin. Fitxategiak telefonoaren memoriatik ezabatuko dira, eta zerrenda guztietatik kenduko dira.</string>
+    <string name="delete_message">Ezin da desegin. Fitxategiak gailuaren memoriatik ezabatuko dira, eta zerrenda guztietatik kenduko dira.</string>
     <string name="delete_confirm">Ezabatu</string>
     <string name="delete_access_title">Baimendu ezabatzea</string>
     <string name="delete_access_message">Sonorak irakurri besterik ezin du egin «%1$s» karpetan. Fitxategi hauek ezabatzeko, aukeratu berriro karpeta hori eta eman sarbidea.</string>
@@ -42,7 +42,7 @@
     <string name="delete_access_choose">Aukeratu karpeta…</string>
 
     <string name="notice_hidden">Sonoratik kendu da. Ezarpenak › Ezkutatutako elementuak ataletik berreskura dezakezu.</string>
-    <string name="notice_playlist_deleted">«%1$s» ezabatu da. Abestiak telefonoan geratzen dira.</string>
+    <string name="notice_playlist_deleted">«%1$s» ezabatu da. Abestiak gailuan geratzen dira.</string>
     <plurals name="notice_deleted">
         <item quantity="one">%1$d abesti ezabatu da</item>
         <item quantity="other">%1$d abesti ezabatu dira</item>

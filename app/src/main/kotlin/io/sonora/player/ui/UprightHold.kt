@@ -12,24 +12,24 @@ import io.sonora.feature.nowplaying.GravityDestination
 /**
  * After the user swipes a sideways Now Playing away, the app stays upright until the phone is held upright again:
  * turning back to landscape straight away would reopen what was just dismissed, in a loop. Over a Library list with a
- * Cover Flow ([coverFlowList]) there is nothing to hold: the phone is sideways, so the Cover Flow shows at once. In
+ * Visual collection ([visualCollectionList]) there is nothing to hold: the phone is sideways, so the visual collection shows at once. In
  * gravity mode a Now Playing headed upright ([gravityUpright], its destination latched upright) closes into the portrait
- * screen it covered, held there even over a Cover Flow list until the phone reads upright, whatever its tilt between
+ * screen it covered, held there even over a visual collection list until the phone reads upright, whatever its tilt between
  * detents.
  */
 internal object UprightHold {
 
     /**
      * Whether Now Playing just closed ([wasOpen] to not [isOpen]) while the screen was [landscape], over a screen that is
-     * not a Cover Flow list ([coverFlowList]); or, in gravity mode headed upright ([gravityUpright]), over one that is.
+     * not a visual collection list ([visualCollectionList]); or, in gravity mode headed upright ([gravityUpright]), over one that is.
      */
     fun startsOnClose(
         wasOpen: Boolean,
         isOpen: Boolean,
         landscape: Boolean,
-        coverFlowList: Boolean,
+        visualCollectionList: Boolean,
         gravityUpright: Boolean = false,
-    ): Boolean = wasOpen && !isOpen && (if (coverFlowList) gravityUpright else landscape)
+    ): Boolean = wasOpen && !isOpen && (if (visualCollectionList) gravityUpright else landscape)
 
     /** Whether the phone, at [degrees] from its natural upright position, reads upright (not sideways or unknown). */
     fun isUpright(degrees: Int): Boolean =

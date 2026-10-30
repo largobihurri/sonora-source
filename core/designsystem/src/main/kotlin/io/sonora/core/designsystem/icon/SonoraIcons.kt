@@ -287,8 +287,8 @@ object SonoraIcons {
     /** Arrow into a tray: save a file somewhere. */
     val SaveTo: ImageVector by lazy { icon("SaveTo", "M19,9h-4V3H9v6H5l7,7 7,-7zM5,18v2h14v-2H5z") }
 
-    /** Three covers side by side, the middle one in front: the Cover Flow view of a list. */
-    val CoverFlow: ImageVector by lazy { icon("CoverFlow", "M2,7h4v10H2V7zM7,19h10V5H7v14zM18,7h4v10h-4V7z") }
+    /** Three covers side by side, the middle one in front: the visual collection view of a list. */
+    val VisualCollection: ImageVector by lazy { icon("VisualCollection", "M2,7h4v10H2V7zM7,19h10V5H7v14zM18,7h4v10h-4V7z") }
 
     /** A round watch face with its straps and the hands in it: the Wear OS watch. */
     val Watch: ImageVector by lazy {

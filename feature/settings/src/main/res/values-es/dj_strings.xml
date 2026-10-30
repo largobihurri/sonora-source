@@ -10,8 +10,8 @@
     <string name="settings_dj_performance_low">Pocos recursos</string>
     <string name="settings_dj_performance_normal">Normal</string>
     <string name="settings_dj_performance_high">Alto rendimiento</string>
-    <string name="settings_dj_performance_low_description">Solo la canción que suena, con un hilo y baja prioridad; espera mientras el teléfono está caliente. Cuida la batería y la temperatura.</string>
+    <string name="settings_dj_performance_low_description">Solo la canción que suena, con un hilo y baja prioridad; espera mientras el dispositivo está caliente. Cuida la batería y la temperatura.</string>
     <string name="settings_dj_performance_normal_description">La canción que suena y las tres siguientes, con dos hilos en segundo plano. Un buen equilibrio.</string>
-    <string name="settings_dj_performance_high_description">La canción que suena y las cinco siguientes, con cuatro hilos. Es lo más rápido, pero el teléfono se calienta más.</string>
-    <string name="settings_dj_performance_footer">El análisis es el mismo en todos los modos; solo cambian la velocidad y la carga. Sonora va más despacio por sí sola si el teléfono se calienta o si el ahorro de batería está activado.</string>
+    <string name="settings_dj_performance_high_description">La canción que suena y las cinco siguientes, con cuatro hilos. Es lo más rápido, pero el dispositivo se calienta más.</string>
+    <string name="settings_dj_performance_footer">El análisis es el mismo en todos los modos; solo cambian la velocidad y la carga. Sonora va más despacio por sí sola si el dispositivo se calienta o si el ahorro de batería está activado.</string>
 </resources>

@@ -63,32 +63,32 @@ private val LibraryPage.dest: LibraryDest
         LibraryPage.Settings -> LibraryDest.Settings
     }
 
-/** What a page shows when the phone turns sideways: the Cover Flow of [list], opened on [target] (the first cover when null). */
-internal data class LibraryCoverFlowView(val list: LibraryDest, val target: CoverFlowTarget?)
+/** What a page shows when the phone turns sideways: the visual collection of [list], opened on [target] (the first cover when null). */
+internal data class LibraryVisualCollectionView(val list: LibraryDest, val target: VisualCollectionTarget?)
 
 /**
- * The Cover Flow a page turns into sideways: a list its own, an album, artist or playlist page the Cover Flow of its
+ * The visual collection a page turns into sideways: a list its own, an album, artist or playlist page the visual collection of its
  * kind's list centred on itself (wherever the page was opened from); `null` for the pages that stay upright (Home,
  * Settings, folders, converted music, the smart playlists (Favourites too), Statistics).
  */
-internal val LibraryDest.coverFlow: LibraryCoverFlowView?
+internal val LibraryDest.visualCollection: LibraryVisualCollectionView?
     get() = when (this) {
-        LibraryDest.Songs, LibraryDest.Albums, LibraryDest.Artists, LibraryDest.Playlists -> LibraryCoverFlowView(this, null)
-        is LibraryDest.AlbumDetail -> LibraryCoverFlowView(LibraryDest.Albums, CoverFlowTarget.Album(albumId))
-        is LibraryDest.ArtistDetail -> LibraryCoverFlowView(LibraryDest.Artists, CoverFlowTarget.Artist(artistId, name))
-        is LibraryDest.PlaylistDetail -> LibraryCoverFlowView(LibraryDest.Playlists, CoverFlowTarget.Playlist(playlistId))
+        LibraryDest.Songs, LibraryDest.Albums, LibraryDest.Artists, LibraryDest.Playlists -> LibraryVisualCollectionView(this, null)
+        is LibraryDest.AlbumDetail -> LibraryVisualCollectionView(LibraryDest.Albums, VisualCollectionTarget.Album(albumId))
+        is LibraryDest.ArtistDetail -> LibraryVisualCollectionView(LibraryDest.Artists, VisualCollectionTarget.Artist(artistId, name))
+        is LibraryDest.PlaylistDetail -> LibraryVisualCollectionView(LibraryDest.Playlists, VisualCollectionTarget.Playlist(playlistId))
         else -> null
     }
 
-/** The pages shown as a Cover Flow when the phone turns sideways (see [coverFlow]). */
-internal val LibraryDest.hasCoverFlow: Boolean
-    get() = coverFlow != null
+/** The pages shown as a visual collection when the phone turns sideways (see [visualCollection]). */
+internal val LibraryDest.hasVisualCollection: Boolean
+    get() = visualCollection != null
 
 /**
- * Whether this page offers the Cover Flow button on [windowClass]: Albums, Artists and Playlists on a large screen, where the
- * Cover Flow is no longer a takeover of the sideways turn but a view opened from the page (a phone keeps the turn).
+ * Whether this page offers the visual collection button on [windowClass]: Albums, Artists and Playlists on a large screen, where the
+ * Visual collection is no longer a takeover of the sideways turn but a view opened from the page (a phone keeps the turn).
  */
-internal fun LibraryDest.hasCoverFlowButton(windowClass: WindowClass): Boolean =
+internal fun LibraryDest.hasVisualCollectionButton(windowClass: WindowClass): Boolean =
     windowClass.isLarge && (this == LibraryDest.Albums || this == LibraryDest.Artists || this == LibraryDest.Playlists)
 
 private const val ALBUM = "album:"

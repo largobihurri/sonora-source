@@ -11,20 +11,20 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import io.sonora.core.designsystem.component.coverflow.ArtworkPose
-import io.sonora.core.designsystem.component.coverflow.CoverFlowHandoff
+import io.sonora.core.designsystem.component.visualcollection.ArtworkPose
+import io.sonora.core.designsystem.component.visualcollection.VisualCollectionHandoff
 
 /** The corners of Now Playing's artwork. */
 internal val ArtworkCorner = 12.dp
 
 /**
- * Now Playing's side of a [CoverFlowHandoff] (T67): its artwork is the flight's target, and hides while the shared
- * artwork flies (the Cover Flow's cover becoming it, or turning back into the cover). [origin] is where Now Playing is
+ * Now Playing's side of a [VisualCollectionHandoff] (T67): its artwork is the flight's target, and hides while the shared
+ * artwork flies (the visual collection's cover becoming it, or turning back into the cover). [origin] is where Now Playing is
  * laid out in the root (outside the bubble's layer); the artwork reports its pause shrink as [scale], so the flight
  * lands exactly on it.
  */
 @Stable
-internal class ArtworkShare(val handoff: CoverFlowHandoff) {
+internal class ArtworkShare(val handoff: VisualCollectionHandoff) {
     var origin = Offset.Zero
     var scale = 1f
 
@@ -36,7 +36,7 @@ internal class ArtworkShare(val handoff: CoverFlowHandoff) {
 internal val LocalArtworkShare = staticCompositionLocalOf<ArtworkShare?> { null }
 
 @Composable
-internal fun rememberArtworkShare(handoff: CoverFlowHandoff?): ArtworkShare? =
+internal fun rememberArtworkShare(handoff: VisualCollectionHandoff?): ArtworkShare? =
     if (handoff == null) null else remember(handoff) { ArtworkShare(handoff) }
 
 /**

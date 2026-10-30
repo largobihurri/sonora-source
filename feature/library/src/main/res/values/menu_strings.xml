@@ -27,17 +27,17 @@
 
     <!-- Remove from Library, asked every time. %1$s is the item's name. -->
     <string name="remove_title">Remove “%1$s”?</string>
-    <string name="remove_message">Remove it from Sonora only and keep the files, or delete the files from your phone.</string>
-    <string name="remove_message_playlist">Remove it from Sonora only, or delete the playlist. Its songs stay on your phone.</string>
+    <string name="remove_message">Remove it from Sonora only and keep the files, or delete the files from your device.</string>
+    <string name="remove_message_playlist">Remove it from Sonora only, or delete the playlist. Its songs stay on your device.</string>
     <string name="remove_from_sonora">Remove from Sonora</string>
-    <string name="remove_delete_from_phone">Delete from Phone</string>
+    <string name="remove_delete_from_phone">Delete from Device</string>
     <string name="remove_delete_playlist">Delete Playlist</string>
     <string name="remove_cancel">Cancel</string>
     <plurals name="delete_title">
-        <item quantity="one">Delete %1$d song from your phone?</item>
-        <item quantity="other">Delete %1$d songs from your phone?</item>
+        <item quantity="one">Delete %1$d song from your device?</item>
+        <item quantity="other">Delete %1$d songs from your device?</item>
     </plurals>
-    <string name="delete_message">This can\'t be undone. The files are deleted from your phone\'s storage and leave every playlist.</string>
+    <string name="delete_message">This can\'t be undone. The files are deleted from your device\'s storage and leave every playlist.</string>
     <string name="delete_confirm">Delete</string>
     <string name="delete_access_title">Allow Deleting</string>
     <string name="delete_access_message">Sonora can only read the folder “%1$s”. To delete these files, choose that folder again and allow access.</string>
@@ -46,7 +46,7 @@
 
     <!-- Banners after a menu action. -->
     <string name="notice_hidden">Removed from Sonora. Restore it in Settings › Hidden Items.</string>
-    <string name="notice_playlist_deleted">Deleted “%1$s”. Its songs stay on your phone.</string>
+    <string name="notice_playlist_deleted">Deleted “%1$s”. Its songs stay on your device.</string>
     <plurals name="notice_deleted">
         <item quantity="one">%1$d song deleted</item>
         <item quantity="other">%1$d songs deleted</item>

@@ -20,7 +20,7 @@ class TabletShellTest {
     fun `a phone keeps the bottom tab bar in both orientations, whatever the sidebar choice`() {
         for (windowClass in listOf(phone, phoneSideways)) {
             for (shown in listOf(true, false)) {
-                assertEquals(NavigationChrome.BottomTabBar, navigationChrome(windowClass, shown, coverFlowOnScreen = false))
+                assertEquals(NavigationChrome.BottomTabBar, navigationChrome(windowClass, shown, visualCollectionOnScreen = false))
             }
         }
     }
@@ -28,16 +28,16 @@ class TabletShellTest {
     @Test
     fun `a large screen shows the sidebar, or the top pill once it is hidden`() {
         for (windowClass in listOf(padLandscape, padPortrait)) {
-            assertEquals(NavigationChrome.Sidebar, navigationChrome(windowClass, sidebarShown = true, coverFlowOnScreen = false))
-            assertEquals(NavigationChrome.TopPill, navigationChrome(windowClass, sidebarShown = false, coverFlowOnScreen = false))
+            assertEquals(NavigationChrome.Sidebar, navigationChrome(windowClass, sidebarShown = true, visualCollectionOnScreen = false))
+            assertEquals(NavigationChrome.TopPill, navigationChrome(windowClass, sidebarShown = false, visualCollectionOnScreen = false))
         }
     }
 
     @Test
-    fun `a Cover Flow on screen takes a large screen's navigation away, and a phone's stays under its own gate`() {
+    fun `a visual collection on screen takes a large screen's navigation away, and a phone's stays under its own gate`() {
         for (shown in listOf(true, false)) {
-            assertEquals(NavigationChrome.None, navigationChrome(padLandscape, shown, coverFlowOnScreen = true))
-            assertEquals(NavigationChrome.BottomTabBar, navigationChrome(phone, shown, coverFlowOnScreen = true))
+            assertEquals(NavigationChrome.None, navigationChrome(padLandscape, shown, visualCollectionOnScreen = true))
+            assertEquals(NavigationChrome.BottomTabBar, navigationChrome(phone, shown, visualCollectionOnScreen = true))
         }
     }
 
@@ -156,41 +156,41 @@ class TabletShellTest {
     }
 
     @Test
-    fun `the Cover Flow on a large screen shows only when asked for`() {
+    fun `the visual collection on a large screen shows only when asked for`() {
         for (landscape in listOf(true, false)) {
             assertEquals(
-                LibraryCoverFlowMode.None,
-                libraryCoverFlowMode(landscape, TopLevelRoute.Library, libraryCoverFlow = true, nowPlayingOpen = false, windowClass = padLandscape),
+                LibraryVisualCollectionMode.None,
+                libraryVisualCollectionMode(landscape, TopLevelRoute.Library, libraryVisualCollection = true, nowPlayingOpen = false, windowClass = padLandscape),
             )
             assertEquals(
-                LibraryCoverFlowMode.Shown,
-                libraryCoverFlowMode(landscape, TopLevelRoute.Library, libraryCoverFlow = true, nowPlayingOpen = false, windowClass = padLandscape, coverFlowRequested = true),
+                LibraryVisualCollectionMode.Shown,
+                libraryVisualCollectionMode(landscape, TopLevelRoute.Library, libraryVisualCollection = true, nowPlayingOpen = false, windowClass = padLandscape, visualCollectionRequested = true),
             )
             assertEquals(
-                LibraryCoverFlowMode.Covered,
-                libraryCoverFlowMode(landscape, TopLevelRoute.Library, libraryCoverFlow = true, nowPlayingOpen = true, windowClass = padLandscape, coverFlowRequested = true),
+                LibraryVisualCollectionMode.Covered,
+                libraryVisualCollectionMode(landscape, TopLevelRoute.Library, libraryVisualCollection = true, nowPlayingOpen = true, windowClass = padLandscape, visualCollectionRequested = true),
             )
         }
     }
 
     @Test
-    fun `a request for the Cover Flow does nothing on another tab or a page without one, or on a phone`() {
+    fun `a request for the visual collection does nothing on another tab or a page without one, or on a phone`() {
         assertEquals(
-            LibraryCoverFlowMode.None,
-            libraryCoverFlowMode(true, TopLevelRoute.Search, libraryCoverFlow = true, nowPlayingOpen = false, windowClass = padLandscape, coverFlowRequested = true),
+            LibraryVisualCollectionMode.None,
+            libraryVisualCollectionMode(true, TopLevelRoute.Search, libraryVisualCollection = true, nowPlayingOpen = false, windowClass = padLandscape, visualCollectionRequested = true),
         )
         assertEquals(
-            LibraryCoverFlowMode.None,
-            libraryCoverFlowMode(true, TopLevelRoute.Library, libraryCoverFlow = false, nowPlayingOpen = false, windowClass = padLandscape, coverFlowRequested = true),
+            LibraryVisualCollectionMode.None,
+            libraryVisualCollectionMode(true, TopLevelRoute.Library, libraryVisualCollection = false, nowPlayingOpen = false, windowClass = padLandscape, visualCollectionRequested = true),
         )
-        // A phone's Cover Flow follows its orientation only; a stray request changes nothing.
+        // A phone's visual collection follows its orientation only; a stray request changes nothing.
         assertEquals(
-            LibraryCoverFlowMode.None,
-            libraryCoverFlowMode(false, TopLevelRoute.Library, libraryCoverFlow = true, nowPlayingOpen = false, windowClass = phone, coverFlowRequested = true),
+            LibraryVisualCollectionMode.None,
+            libraryVisualCollectionMode(false, TopLevelRoute.Library, libraryVisualCollection = true, nowPlayingOpen = false, windowClass = phone, visualCollectionRequested = true),
         )
         assertEquals(
-            LibraryCoverFlowMode.Shown,
-            libraryCoverFlowMode(true, TopLevelRoute.Library, libraryCoverFlow = true, nowPlayingOpen = false, windowClass = phoneSideways, coverFlowRequested = false),
+            LibraryVisualCollectionMode.Shown,
+            libraryVisualCollectionMode(true, TopLevelRoute.Library, libraryVisualCollection = true, nowPlayingOpen = false, windowClass = phoneSideways, visualCollectionRequested = false),
         )
     }
 
@@ -229,15 +229,15 @@ class TabletShellTest {
     }
 
     @Test
-    fun `no page reserves top room on a phone, with the sidebar shown or under a Cover Flow`() {
+    fun `no page reserves top room on a phone, with the sidebar shown or under a visual collection`() {
         for (windowClass in listOf(phone, phoneSideways)) {
             for (shown in listOf(true, false)) {
-                assertEquals(0f, topChromeInset(navigationChrome(windowClass, shown, coverFlowOnScreen = false)), 0f)
+                assertEquals(0f, topChromeInset(navigationChrome(windowClass, shown, visualCollectionOnScreen = false)), 0f)
             }
         }
         for (windowClass in listOf(padLandscape, padPortrait)) {
-            assertEquals(0f, topChromeInset(navigationChrome(windowClass, sidebarShown = true, coverFlowOnScreen = false)), 0f)
-            assertEquals(0f, topChromeInset(navigationChrome(windowClass, sidebarShown = false, coverFlowOnScreen = true)), 0f)
+            assertEquals(0f, topChromeInset(navigationChrome(windowClass, sidebarShown = true, visualCollectionOnScreen = false)), 0f)
+            assertEquals(0f, topChromeInset(navigationChrome(windowClass, sidebarShown = false, visualCollectionOnScreen = true)), 0f)
         }
     }
 
@@ -245,7 +245,7 @@ class TabletShellTest {
     fun `a large screen with the sidebar hidden reserves the room under the top pill, in both orientations`() {
         // The pill is 59 dp tall and rises 3.5 dp, so it ends 55.5 dp under the status bar; pages keep 8 dp clear of it.
         for (windowClass in listOf(padLandscape, padPortrait)) {
-            val inset = topChromeInset(navigationChrome(windowClass, sidebarShown = false, coverFlowOnScreen = false))
+            val inset = topChromeInset(navigationChrome(windowClass, sidebarShown = false, visualCollectionOnScreen = false))
             assertEquals(63.5f, inset, 0.001f)
             assertTrue(inset > TopPillHeight + TopChromeRise)
         }

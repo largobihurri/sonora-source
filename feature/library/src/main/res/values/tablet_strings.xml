@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Large screens: the button in Albums, Artists and Playlists that opens that list as a Cover Flow. -->
-    <string name="coverflow_open">Show as Visual Collection</string>
-    <!-- Large screens: the Cover Flow's visible close button (TalkBack label). -->
-    <string name="coverflow_close">Close Visual Collection</string>
+    <!-- Large screens: the button in Albums, Artists and Playlists that opens that list as a visual collection. -->
+    <string name="visualcollection_open">Show as Visual Collection</string>
+    <!-- Large screens: the visual collection's visible close button (TalkBack label). -->
+    <string name="visualcollection_close">Close Visual Collection</string>
 </resources>

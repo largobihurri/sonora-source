@@ -1,9 +1,7 @@
 package io.sonora.feature.library.ui
 
 import android.content.ActivityNotFoundException
-import android.content.ClipData
 import android.content.Context
-import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,6 +17,7 @@ import io.sonora.core.designsystem.component.BannerState
 import io.sonora.core.designsystem.component.TranslucentAlert
 import io.sonora.core.designsystem.component.TranslucentAlertButton
 import io.sonora.core.designsystem.icon.SonoraIcons
+import io.sonora.core.designsystem.share.shareAudio
 import io.sonora.core.designsystem.text.rememberStrings
 import io.sonora.feature.library.LibraryMenuViewModel
 import io.sonora.feature.library.MenuEvent
@@ -60,26 +59,8 @@ internal fun LibraryMenuEffects(viewModel: LibraryMenuViewModel, banner: BannerS
 }
 
 /** Opens the system share sheet for the files; false when no app can take them. */
-private fun Context.shareFiles(share: MenuEvent.Share, title: String): Boolean {
-    val uris = share.uris.map(Uri::parse)
-    if (uris.isEmpty()) return true
-    val type = share.mimeTypes.singleOrNull() ?: "audio/*"
-    val send = if (uris.size == 1) {
-        Intent(Intent.ACTION_SEND).putExtra(Intent.EXTRA_STREAM, uris.first())
-    } else {
-        Intent(Intent.ACTION_SEND_MULTIPLE).putParcelableArrayListExtra(Intent.EXTRA_STREAM, ArrayList(uris))
-    }
-    send.type = type
-    // The clip carries the read grant to whichever app is chosen.
-    send.clipData = ClipData.newRawUri(null, uris.first()).apply { uris.drop(1).forEach { addItem(ClipData.Item(it)) } }
-    send.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-    return try {
-        startActivity(Intent.createChooser(send, title).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-        true
-    } catch (_: ActivityNotFoundException) {
-        false
-    }
-}
+private fun Context.shareFiles(share: MenuEvent.Share, title: String): Boolean =
+    shareAudio(share.uris.map(Uri::parse), share.mimeTypes, share.title, title)
 
 @Composable
 private fun RemoveDialogs(step: RemoveStep?, viewModel: LibraryMenuViewModel) {

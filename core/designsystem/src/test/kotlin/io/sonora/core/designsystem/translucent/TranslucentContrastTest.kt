@@ -187,6 +187,18 @@ class TranslucentContrastTest {
     }
 
     @Test
+    fun `flat translucency over scrolling content is opaque, so no text behind it reads`() {
+        for (dark in listOf(true, false)) for (highContrast in listOf(false, true)) {
+            val over = TranslucentMaterial.of(dark, TranslucentTier.FLAT, highContrast, overContent = true)
+            assertThat(over.tintAlpha).isEqualTo(1f)
+        }
+        assertThat(TranslucentMaterial.of(dark = true, TranslucentTier.LIQUID, highContrast = false, overContent = true).tintAlpha)
+            .isEqualTo(TranslucentMaterial.of(dark = true, TranslucentTier.LIQUID, highContrast = false).tintAlpha)
+        assertThat(TranslucentMaterial.of(dark = true, TranslucentTier.FROSTED, highContrast = false, overContent = true).tintAlpha)
+            .isEqualTo(TranslucentMaterial.of(dark = true, TranslucentTier.FROSTED, highContrast = false).tintAlpha)
+    }
+
+    @Test
     fun `sampling translucency compresses the backdrop toward the theme so the tint can stay thin`() {
         val darkTranslucent = TranslucentMaterial.of(dark = true, TranslucentTier.LIQUID, highContrast = false)
         val lightTranslucent = TranslucentMaterial.of(dark = false, TranslucentTier.FROSTED, highContrast = false)

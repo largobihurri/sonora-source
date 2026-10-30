@@ -74,6 +74,22 @@ class DuplicateScanTest {
     }
 
     @Test
+    fun `a result marked stale is scanned again when needed, once`() = runBlocking<Unit> {
+        val scan = scanner()
+        scan.scan()
+        assertThat(scan.found()).hasSize(2)
+        library.files = listOf(a, b)
+        scan.markStale()
+        scan.scanIfNeeded()
+        yield()
+        assertThat(scan.found()).hasSize(1)
+        library.files = listOf(other1, other2)
+        scan.scanIfNeeded()
+        yield()
+        assertThat(scan.found().single().copies).containsExactly(a, b)
+    }
+
+    @Test
     fun `a failed scan says so and can be retried`() = runBlocking<Unit> {
         val scan = scanner()
         library.fails = true

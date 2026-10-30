@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="settings_import_history">Historial de importaciones</string>
-    <string name="import_history_footer">Archivos importados con Sonora. Abre uno para ver sus canciones, eliminarlo del teléfono o quitarlo de esta lista.</string>
+    <string name="import_history_footer">Archivos importados con Sonora. Abre uno para ver sus canciones, eliminarlo del dispositivo o quitarlo de esta lista.</string>
     <string name="import_history_empty">Ninguna importación</string>
     <string name="import_history_line">%1$s · %2$s</string>
-    <string name="import_history_delete_from_phone">Eliminar del teléfono</string>
+    <string name="import_history_delete_from_phone">Eliminar del dispositivo</string>
     <string name="import_history_remove">Quitar del historial</string>
-    <string name="import_history_remove_note">Quitar del historial solo olvida la importación: sus canciones siguen en tu teléfono y en tu biblioteca.</string>
+    <string name="import_history_remove_note">Quitar del historial solo olvida la importación: sus canciones siguen en tu dispositivo y en tu biblioteca.</string>
 
-    <string name="import_history_delete_title">¿Eliminar «%1$s» de tu teléfono?</string>
+    <string name="import_history_delete_title">¿Eliminar «%1$s» de tu dispositivo?</string>
     <string name="import_history_delete_message">No se puede deshacer. Se eliminan su carpeta y todos sus archivos, sus canciones salen de tu biblioteca, tus listas y tus favoritos, y se elimina la lista que recreó.</string>
     <string name="import_history_delete_confirm">Eliminar</string>
     <string name="import_history_cancel">Cancelar</string>
@@ -19,9 +19,9 @@
 
     <string name="import_history_deleted_title">Importación eliminada</string>
     <plurals name="import_history_deleted_message">
-        <item quantity="one">Su carpeta ya no está en tu teléfono, y %1$d canción ha salido de tu biblioteca.</item>
-        <item quantity="many">Su carpeta ya no está en tu teléfono, y %1$d canciones han salido de tu biblioteca.</item>
-        <item quantity="other">Su carpeta ya no está en tu teléfono, y %1$d canciones han salido de tu biblioteca.</item>
+        <item quantity="one">Su carpeta ya no está en tu dispositivo, y %1$d canción ha salido de tu biblioteca.</item>
+        <item quantity="many">Su carpeta ya no está en tu dispositivo, y %1$d canciones han salido de tu biblioteca.</item>
+        <item quantity="other">Su carpeta ya no está en tu dispositivo, y %1$d canciones han salido de tu biblioteca.</item>
     </plurals>
     <string name="import_history_incomplete_title">No se ha podido eliminar todo</string>
     <plurals name="import_history_incomplete_songs">

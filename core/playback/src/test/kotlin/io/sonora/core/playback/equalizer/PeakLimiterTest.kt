@@ -58,6 +58,22 @@ class PeakLimiterTest {
     }
 
     @Test
+    fun `frames taken without limiting come out unchanged even over the ceiling, and the gain recovers to unity`() {
+        // A burst limited first, then over-ceiling frames that ask for no reduction (the release reaches exact unity
+        // within about 13 time constants, 650 ms).
+        val burst = stereo(ms(20), { 1.5f })
+        val out = FloatArray(burst.size)
+        for (frame in 0 until burst.size / 2) limiter.process(burst, frame * 2, out, frame * 2)
+        val loud = stereo(ms(1_000), { f -> if ((f / 50) % 2 == 0) 0.999f else -0.999f })
+        val passed = FloatArray(loud.size)
+        for (frame in 0 until loud.size / 2) limiter.process(loud, frame * 2, passed, frame * 2, limit = false)
+
+        assertThat(limiter.gain).isEqualTo(1.0)
+        val tail = ms(800) * 2
+        for (i in tail until passed.size) assertThat(passed[i]).isEqualTo(loud[i - lookahead * 2])
+    }
+
+    @Test
     fun `the gain falls before the peak arrives and recovers smoothly to unity`() {
         val burstStart = ms(100)
         val burstEnd = ms(120)

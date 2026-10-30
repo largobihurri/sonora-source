@@ -11,30 +11,30 @@ import org.junit.Test
 class UprightHoldTest {
 
     @Test
-    fun `closing a sideways Now Playing over a screen without a Cover Flow holds the app upright`() {
-        assertTrue(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = true, coverFlowList = false))
+    fun `closing a sideways Now Playing over a screen without a visual collection holds the app upright`() {
+        assertTrue(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = true, visualCollectionList = false))
     }
 
     @Test
-    fun `closing a sideways Now Playing over a Cover Flow list holds nothing`() {
-        assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = true, coverFlowList = true))
+    fun `closing a sideways Now Playing over a visual collection list holds nothing`() {
+        assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = true, visualCollectionList = true))
     }
 
     @Test
-    fun `closing a gravity mode Now Playing headed upright over a Cover Flow list holds the portrait screen`() {
-        assertTrue(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = false, coverFlowList = true, gravityUpright = true))
+    fun `closing a gravity mode Now Playing headed upright over a visual collection list holds the portrait screen`() {
+        assertTrue(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = false, visualCollectionList = true, gravityUpright = true))
         // Elsewhere the portrait screen stays upright anyway, and a sideways window is the landscape flow's.
-        assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = false, coverFlowList = false, gravityUpright = true))
-        assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = true, landscape = false, coverFlowList = true, gravityUpright = true))
+        assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = false, visualCollectionList = false, gravityUpright = true))
+        assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = true, landscape = false, visualCollectionList = true, gravityUpright = true))
     }
 
     @Test
     fun `closing an upright Now Playing, or no change, holds nothing`() {
-        for (coverFlowList in listOf(true, false)) {
-            assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = false, coverFlowList))
-            assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = true, landscape = true, coverFlowList))
-            assertFalse(UprightHold.startsOnClose(wasOpen = false, isOpen = false, landscape = true, coverFlowList))
-            assertFalse(UprightHold.startsOnClose(wasOpen = false, isOpen = true, landscape = true, coverFlowList))
+        for (visualCollectionList in listOf(true, false)) {
+            assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = false, landscape = false, visualCollectionList))
+            assertFalse(UprightHold.startsOnClose(wasOpen = true, isOpen = true, landscape = true, visualCollectionList))
+            assertFalse(UprightHold.startsOnClose(wasOpen = false, isOpen = false, landscape = true, visualCollectionList))
+            assertFalse(UprightHold.startsOnClose(wasOpen = false, isOpen = true, landscape = true, visualCollectionList))
         }
     }
 
@@ -92,14 +92,14 @@ class UprightHoldTest {
     }
 
     @Test
-    fun `while held, every screen stays upright, Cover Flow and Now Playing included`() {
+    fun `while held, every screen stays upright, visual collection and Now Playing included`() {
         for (tab in TopLevelRoute.entries) {
             for (nowPlaying in listOf(true, false)) {
-                for (coverFlow in listOf(true, false)) {
+                for (visualCollection in listOf(true, false)) {
                     for (gravity in listOf(true, false)) {
                         assertEquals(
                             ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT,
-                            screenOrientation(nowPlaying, tab, coverFlow, uprightHold = true, gravity = gravity),
+                            screenOrientation(nowPlaying, tab, visualCollection, uprightHold = true, gravity = gravity),
                         )
                     }
                 }

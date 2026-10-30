@@ -13,7 +13,7 @@
     <string name="settings_duplicates">Duplicados</string>
     <string name="duplicates_footer">Canciones que están más de una vez en tu biblioteca: el mismo archivo o la misma canción en archivos distintos. Compara las copias, conserva la mejor y elimina las demás.</string>
     <string name="duplicates_notify">Avisar cuando se acumulen duplicados</string>
-    <string name="duplicates_notify_footer">Sonora busca duplicados de vez en cuando mientras el teléfono está inactivo y cargando, y te avisa cuando 20 canciones o más tienen copias.</string>
+    <string name="duplicates_notify_footer">Sonora busca duplicados de vez en cuando mientras el dispositivo está inactivo y cargando, y te avisa cuando 20 canciones o más tienen copias.</string>
     <string name="duplicates_scan_again">Volver a buscar duplicados</string>
     <string name="duplicates_looking">Buscando duplicados…</string>
     <string name="duplicates_checking">Comparando archivos… %1$s de %2$s</string>
@@ -66,20 +66,20 @@
     <string name="duplicates_value_yes">Sí</string>
     <string name="duplicates_value_no">No</string>
     <plurals name="duplicates_delete_selected">
-        <item quantity="one">Eliminar %1$d copia del teléfono</item>
-        <item quantity="many">Eliminar %1$d copias del teléfono</item>
-        <item quantity="other">Eliminar %1$d copias del teléfono</item>
+        <item quantity="one">Eliminar %1$d copia del dispositivo</item>
+        <item quantity="many">Eliminar %1$d copias del dispositivo</item>
+        <item quantity="other">Eliminar %1$d copias del dispositivo</item>
     </plurals>
     <string name="duplicates_not_duplicate">No es un duplicado</string>
     <string name="duplicates_not_duplicate_note">No es un duplicado oculta este grupo para siempre. Sus archivos se quedan como están.</string>
 
     <!-- Deleting copies -->
     <plurals name="duplicates_delete_title">
-        <item quantity="one">¿Eliminar %1$d copia del teléfono?</item>
-        <item quantity="many">¿Eliminar %1$d copias del teléfono?</item>
-        <item quantity="other">¿Eliminar %1$d copias del teléfono?</item>
+        <item quantity="one">¿Eliminar %1$d copia del dispositivo?</item>
+        <item quantity="many">¿Eliminar %1$d copias del dispositivo?</item>
+        <item quantity="other">¿Eliminar %1$d copias del dispositivo?</item>
     </plurals>
-    <string name="duplicates_delete_message">No se puede deshacer. Los archivos se eliminan del teléfono. La copia que conservas ocupa su lugar en las listas y se queda con sus favoritos, fijados y reproducciones.</string>
+    <string name="duplicates_delete_message">No se puede deshacer. Los archivos se eliminan del dispositivo. La copia que conservas ocupa su lugar en las listas y se queda con sus favoritos, fijados y reproducciones.</string>
     <string name="duplicates_delete_confirm">Eliminar</string>
     <string name="duplicates_cancel">Cancelar</string>
     <string name="duplicates_ok">Aceptar</string>
@@ -89,15 +89,15 @@
     <string name="duplicates_access_choose">Elegir carpeta…</string>
     <string name="duplicates_deleted_title">Copias eliminadas</string>
     <plurals name="duplicates_deleted_message">
-        <item quantity="one">%1$d copia ya no está en tu teléfono.</item>
-        <item quantity="many">%1$d copias ya no están en tu teléfono.</item>
-        <item quantity="other">%1$d copias ya no están en tu teléfono.</item>
+        <item quantity="one">%1$d copia ya no está en tu dispositivo.</item>
+        <item quantity="many">%1$d copias ya no están en tu dispositivo.</item>
+        <item quantity="other">%1$d copias ya no están en tu dispositivo.</item>
     </plurals>
     <string name="duplicates_incomplete_title">No se ha podido eliminar todo</string>
     <plurals name="duplicates_incomplete_message">
-        <item quantity="one">No se ha podido eliminar %1$d copia y sigue en tu teléfono.</item>
-        <item quantity="many">No se han podido eliminar %1$d copias y siguen en tu teléfono.</item>
-        <item quantity="other">No se han podido eliminar %1$d copias y siguen en tu teléfono.</item>
+        <item quantity="one">No se ha podido eliminar %1$d copia y sigue en tu dispositivo.</item>
+        <item quantity="many">No se han podido eliminar %1$d copias y siguen en tu dispositivo.</item>
+        <item quantity="other">No se han podido eliminar %1$d copias y siguen en tu dispositivo.</item>
     </plurals>
     <string name="duplicates_refused_title">No se puede eliminar aquí</string>
     <string name="duplicates_refused_message">El almacenamiento de esta carpeta no permite que Sonora elimine archivos.</string>

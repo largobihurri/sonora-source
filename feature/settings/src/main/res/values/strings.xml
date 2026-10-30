@@ -89,8 +89,8 @@
     <string name="settings_translucency_footer_frosted">This Android version blurs the translucent surfaces without refraction. Off uses a flat translucent surface.</string>
     <string name="settings_translucency_footer_flat">This Android version always uses a flat translucent surface.</string>
     <string name="settings_translucency_footer_contrast">Android\'s contrast settings ask for more contrast, so the translucent surfaces are flat and more opaque.</string>
-    <string name="settings_translucency_footer_limited_frosted">This phone\'s graphics chip could not keep up with the translucent effect, so it is blurred without refraction. Turn the switch off and on to try again.</string>
-    <string name="settings_translucency_footer_limited_flat">This phone\'s graphics chip could not keep up with the translucent effect, so it uses a flat translucent surface. Turn the switch off and on to try again.</string>
+    <string name="settings_translucency_footer_limited_frosted">This device\'s graphics chip could not keep up with the translucent effect, so it is blurred without refraction. Turn the switch off and on to try again.</string>
+    <string name="settings_translucency_footer_limited_flat">This device\'s graphics chip could not keep up with the translucent effect, so it uses a flat translucent surface. Turn the switch off and on to try again.</string>
     <string name="settings_accent_header">Accent Colour</string>
     <!-- Name of Android's wallpaper-based colour system; usually left in English. -->
     <string name="settings_accent_material_you">Material You</string>
@@ -118,13 +118,13 @@
     <string name="settings_now_playing_footer">File Info shows where a song is stored and its format, audio details and tags.</string>
     <string name="settings_rotation_header">When Rotating Now Playing</string>
     <string name="settings_rotation_now_playing">Now Playing Landscape</string>
-    <string name="settings_rotation_cover_flow">Album Visual Collection</string>
+    <string name="settings_rotation_visual_collection">Album Visual Collection</string>
     <string name="settings_rotation_footer">With auto-rotate on, turning the phone sideways in Now Playing shows its landscape layout or the albums’ Visual Collection, opened on the album playing.</string>
     <string name="settings_gravity_header">Gravity</string>
     <string name="settings_gravity">Keep Level as the Phone Tilts</string>
     <string name="settings_gravity_footer">Now Playing stays upright while its artwork and its controls each turn on their own centre to stay level. Lying flat, they hold still; the landscape choice above does not apply.</string>
     <string name="settings_hidden_items">Hidden Items</string>
-    <string name="settings_hidden_footer">Items removed from Sonora stay on your phone. Restore one to show it in your library again.</string>
+    <string name="settings_hidden_footer">Items removed from Sonora stay on your device. Restore one to show it in your library again.</string>
     <string name="settings_hidden_empty">No Hidden Items</string>
     <string name="settings_restore">Restore</string>
     <string name="settings_restore_item">Restore %1$s</string>

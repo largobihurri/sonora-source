@@ -48,8 +48,8 @@ data class MorphLayer(val scale: Float, val translation: Offset, val clip: Rect,
 
 /**
  * The geometry and timing of a translucent bubble that grows out of a small capsule (progress 0) into a full-screen
- * surface (progress 1) and back: the Cover Flow's "Now Playing" capsule opening Now Playing (T67), shared with the turn
- * into Cover Flow (T66). Progress is the sheet's own, so a finger dragging it moves the bubble one to one. Pure, so it
+ * surface (progress 1) and back: the visual collection's "Now Playing" capsule opening Now Playing (T67), shared with the turn
+ * into visual collection (T66). Progress is the sheet's own, so a finger dragging it moves the bubble one to one. Pure, so it
  * is unit-tested.
  */
 object TranslucentMorph {

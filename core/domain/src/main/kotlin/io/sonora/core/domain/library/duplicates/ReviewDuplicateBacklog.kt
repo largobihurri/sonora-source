@@ -14,7 +14,7 @@ object DuplicateBacklog {
  * Run after each library scan. The first time the library has songs, the analysis starts at once in the app, announced
  * (it may use more resources for those first minutes), and never again that way. Later, [DuplicateBacklog] songs or
  * more not checked yet ask for a catch-up scan that does not wait for the phone to be idle and charging; fewer are left
- * to the daily scan.
+ * to the daily scan, and make the last result stale, so the Duplicates page analyses again when it opens.
  */
 class ReviewDuplicateBacklog(
     private val library: DuplicateLibrary,
@@ -31,7 +31,11 @@ class ReviewDuplicateBacklog(
             scan.scan(announce = true)
             return BacklogAction.FIRST_ANALYSIS
         }
-        if (!DuplicateBacklog.needsCatchUp(DuplicateFingerprinting.pending(copies, fingerprints.all()))) return BacklogAction.NONE
+        val pending = DuplicateFingerprinting.pending(copies, fingerprints.all())
+        if (!DuplicateBacklog.needsCatchUp(pending)) {
+            if (pending > 0) scan.markStale()
+            return BacklogAction.NONE
+        }
         work.catchUp()
         return BacklogAction.CATCH_UP
     }

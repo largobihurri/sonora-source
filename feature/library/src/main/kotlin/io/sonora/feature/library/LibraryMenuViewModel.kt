@@ -85,7 +85,8 @@ internal sealed interface MenuEvent {
     data class Queued(val action: QueueAction) : MenuEvent
 
     /** Share these files ([uris]) through the system chooser. */
-    data class Share(val uris: List<String>, val mimeTypes: List<String>) : MenuEvent
+    /** [title] names a single shared song for the share sheet; null for several. */
+    data class Share(val uris: List<String>, val mimeTypes: List<String>, val title: String? = null) : MenuEvent
 
     data class Hidden(val title: String) : MenuEvent
 
@@ -210,7 +211,8 @@ class LibraryMenuViewModel @Inject constructor(
     }
 
     internal fun share(target: MenuTarget) = withTracks(target) { tracks ->
-        _events.send(MenuEvent.Share(tracks.map { it.uri }.distinct(), tracks.map { it.mimeType }.distinct()))
+        val uris = tracks.map { it.uri }.distinct()
+        _events.send(MenuEvent.Share(uris, tracks.map { it.mimeType }.distinct(), title = tracks.singleOrNull()?.title?.takeIf { uris.size == 1 }))
     }
 
     /** Queues [target]'s songs in the CDJ export as a Rekordbox playlist named after it. */

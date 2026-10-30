@@ -323,7 +323,12 @@ internal fun SelectionBar(
     if (!selection.active) return
     val picked = selection.state.picked(shown)
     val model = SelectionBarModel.of(picked.size, actions.canExport)
-    TranslucentSurface(modifier.padding(horizontal = 16.dp).fillMaxWidth(), shape = RoundedCornerShape(28.dp), darkTheme = darkTheme) {
+    TranslucentSurface(
+        modifier.padding(horizontal = 16.dp).fillMaxWidth(),
+        shape = RoundedCornerShape(28.dp),
+        darkTheme = darkTheme,
+        overContent = true,
+    ) {
         Row(Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
             for (action in model.actions) {
                 val (icon, label) = action.look()

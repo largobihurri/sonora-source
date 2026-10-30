@@ -106,7 +106,7 @@ fun TranslucentTabBar(
 
     // Cells share the bar equally (weight) for any tab count; [geometry] sizes the bar and its labels.
     val wash by chromeWash()
-    TranslucentSurface(modifier = modifier, shape = CapsuleShape, lightShift = pillShift, wash = { wash }) {
+    TranslucentSurface(modifier = modifier, shape = CapsuleShape, lightShift = pillShift, wash = { wash }, overContent = true) {
         val translucent = LocalTranslucentContentColors.current
         val policy = LocalTranslucentPolicy.current
         val pillColor = translucent.label.copy(alpha = if (translucent.tier == TranslucentTier.FLAT) 0.08f else 0.12f)

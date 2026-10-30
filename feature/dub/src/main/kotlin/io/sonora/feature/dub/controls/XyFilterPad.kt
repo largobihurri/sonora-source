@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.changedToUpIgnoreConsumed
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
@@ -44,6 +45,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.setProgress
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.sonora.core.designsystem.component.TranslucentPill
 import io.sonora.core.designsystem.component.TranslucentSurface
@@ -214,10 +216,25 @@ private fun sweepDescription(value: XyFilterValue, locale: Locale): String = whe
     XyFilterMode.HIGH_PASS -> stringResource(R.string.dub_xy_high_pass, DubText.frequency(value.cutoffHz, locale))
 }
 
+/** An edge label, left out on a pad too small to keep it clear of the centre and the LOCK pill. */
 @Composable
 private fun EdgeLabel(text: String, modifier: Modifier) {
     val colors = LocalTranslucentContentColors.current
-    Text(text, modifier, color = colors.label.copy(alpha = LabelAlpha), style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.SemiBold)
+    Text(
+        text,
+        Modifier.onlyOnPadsOf(EdgeLabelMinSide).then(modifier),
+        color = colors.label.copy(alpha = LabelAlpha),
+        style = MaterialTheme.typography.labelSmall,
+        fontWeight = FontWeight.SemiBold,
+    )
+}
+
+/** Lays the element out only when the pad around it (the incoming constraints) is at least [minSide] on each side. */
+private fun Modifier.onlyOnPadsOf(minSide: Dp): Modifier = layout { measurable, constraints ->
+    val side = minOf(constraints.maxWidth, constraints.maxHeight)
+    if (!XyMapping.showsEdgeLabels(side, minSide.roundToPx())) return@layout layout(0, 0) {}
+    val placeable = measurable.measure(constraints)
+    layout(placeable.width, placeable.height) { placeable.place(0, 0) }
 }
 
 @Composable
@@ -261,6 +278,9 @@ private fun DrawScope.drawField(position: XyPosition, label: Color, accent: Colo
 
 private val PadCorner = 24.dp
 private val LabelInset = 10.dp
+
+// Under this the side labels reach the centre dot and HP meets the LOCK pill (about 96 dp); 120 dp leaves a margin.
+private val EdgeLabelMinSide = 120.dp
 private val LockInset = 8.dp
 private val LockHeight = 32.dp
 private val DotRadius = 12.dp

@@ -107,6 +107,15 @@ class MediaPlaybackHandlersTest {
     }
 
     @Test
+    fun `64-bit and negative track ids are played`() = runBlocking<Unit> {
+        library.all = songs + track(7_636_189_893_023_974_685) + track(-1)
+
+        node.call(MediaPlayback.PlayTracks, PlayTracksRequest(listOf("7636189893023974685", "-1")))
+
+        assertThat(player.calls).containsExactly("playQueue [7636189893023974685, -1] start=0 shuffle=false")
+    }
+
+    @Test
     fun `an unknown track fails the whole request without touching the player`() = runBlocking<Unit> {
         val failure = koraFailure { node.call(MediaPlayback.PlayTracks, PlayTracksRequest(listOf("1", "42"))) }
 

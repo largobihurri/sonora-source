@@ -91,10 +91,15 @@ internal class TranslucentLoadMonitor(private val window: Window, private val on
             if (reported || metrics.getMetric(FrameMetrics.FIRST_DRAW_FRAME) == 1L) return@OnFrameMetricsAvailableListener
             val gpuMs = metrics.getMetric(FrameMetrics.GPU_DURATION) / NANOS_PER_MS
             val budgetMs = window.decorView.display?.refreshRate?.takeIf { it > 0 }?.let { 1000.0 / it } ?: DEFAULT_BUDGET_MS
-            if (policy.frame(gpuMs, budgetMs)) {
+            val rule = policy.frame(gpuMs, budgetMs)
+            if (rule != null) {
                 // One report per tier: the next tier gets a monitor of its own once it is on screen.
                 reported = true
-                Log.i(TAG, "GPU did not keep up with $tier translucent (last frame ${"%.0f".format(gpuMs)} ms, budget ${"%.1f".format(budgetMs)} ms)")
+                Log.i(
+                    TAG,
+                    "GPU did not keep up with $tier translucent (rule: ${rule.name.lowercase()}, " +
+                        "last frame ${"%.0f".format(gpuMs)} ms, budget ${"%.1f".format(budgetMs)} ms)",
+                )
                 main.post { onStepDown(tier) }
             }
         }

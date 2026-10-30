@@ -14,7 +14,7 @@ import io.sonora.core.domain.model.QueueAction
 import io.sonora.core.domain.model.ScanProgress
 import io.sonora.core.domain.model.Track
 import io.sonora.core.domain.playback.PlaybackBandLevels
-import io.sonora.core.domain.port.CoverFlowPreferencesRepository
+import io.sonora.core.domain.port.VisualCollectionPreferencesRepository
 import io.sonora.core.domain.port.LibraryFolderRepository
 import io.sonora.core.domain.port.LibraryRepository
 import io.sonora.core.domain.port.LibraryScanner
@@ -54,7 +54,7 @@ data class LibraryUiState(
     val pinnedSongs: Set<String> = emptySet(),
     val pinnedAlbums: Set<String> = emptySet(),
     val pinnedArtists: Set<String> = emptySet(),
-    /** Settings hides albums without artwork from Cover Flow (see [coverFlowAlbums]); the Albums list lists them all. */
+    /** Settings hides albums without artwork from visual collection (see [visualCollectionAlbums]); the Albums list lists them all. */
     val hideAlbumsWithoutArtwork: Boolean = false,
 )
 
@@ -66,9 +66,9 @@ class LibraryViewModel @Inject constructor(
     private val playback: PlaybackController,
     private val sorting: ListSorting,
     private val marks: LibraryMarksRepository,
-    /** The Cover Flow's own settings: whether it hides albums without artwork. */
-    coverFlow: CoverFlowPreferencesRepository,
-    /** The live band levels the Cover Flow's now-playing bars follow. */
+    /** The visual collection's own settings: whether it hides albums without artwork. */
+    visualCollection: VisualCollectionPreferencesRepository,
+    /** The live band levels the visual collection's now-playing bars follow. */
     val bandLevels: PlaybackBandLevels,
 ) : ViewModel() {
 
@@ -97,22 +97,22 @@ class LibraryViewModel @Inject constructor(
         )
     }
 
-    // Loading lasts until the Cover Flow setting is read too, so a Cover Flow never opens on the unfiltered albums.
+    // Loading lasts until the visual collection setting is read too, so a visual collection never opens on the unfiltered albums.
     val uiState: StateFlow<LibraryUiState> = combine(
         content,
         folders.folders(),
         scanner.progress,
-        coverFlow.hideAlbumsWithoutArtwork,
+        visualCollection.hideAlbumsWithoutArtwork,
     ) { state, list, progress, hideArtless ->
         state.copy(hasFolders = list.isNotEmpty(), scanning = progress is ScanProgress.Scanning, hideAlbumsWithoutArtwork = hideArtless)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), LibraryUiState())
 
-    /** The Cover Flow's play/pause button, `null` with nothing loaded. */
-    val playButton: StateFlow<CoverFlowPlayButton?> = playback.state.map(::coverFlowPlayButton).distinctUntilChanged()
+    /** The visual collection's play/pause button, `null` with nothing loaded. */
+    val playButton: StateFlow<VisualCollectionPlayButton?> = playback.state.map(::visualCollectionPlayButton).distinctUntilChanged()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
-    /** The Cover Flow's Now Playing capsule and playing-row cue, `null` with nothing loaded. */
-    internal val nowPlaying: StateFlow<CoverFlowNowPlaying?> = playback.state.map(::coverFlowNowPlaying).distinctUntilChanged()
+    /** The visual collection's Now Playing capsule and playing-row cue, `null` with nothing loaded. */
+    internal val nowPlaying: StateFlow<VisualCollectionNowPlaying?> = playback.state.map(::visualCollectionNowPlaying).distinctUntilChanged()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
     private val _addFailed = MutableStateFlow(false)

@@ -23,6 +23,8 @@ import io.sonora.core.domain.model.Track
 /** What the "…" menu's rows do. A new row brings its callback here, set where Now Playing builds its [BottomRow]. */
 internal data class MoreMenuActions(
     val onAddToPlaylist: (Track) -> Unit,
+    /** Opens the system share sheet for the song playing. */
+    val onShare: (Track) -> Unit = {},
     val onSleepTimer: () -> Unit = {},
     /** The A-B loop mode is on: its row shows a checkmark. */
     val abLoop: Boolean = false,
@@ -72,8 +74,9 @@ internal fun moreMenuSections(track: Track?, actions: MoreMenuActions): List<Lis
         MoreMenuEntry(R.string.now_playing_add_to_playlist, { SonoraIcons.Add }, enabled = track != null) {
             track?.let(actions.onAddToPlaylist)
         },
-        // Not available yet.
-        MoreMenuEntry(R.string.now_playing_share, { SonoraIcons.Share }, enabled = false) {},
+        MoreMenuEntry(R.string.now_playing_share, { SonoraIcons.Share }, enabled = track != null) {
+            track?.let(actions.onShare)
+        },
     ),
     buildList {
         add(MoreMenuEntry(R.string.sleep_timer_title, { MoonIcon }) { actions.onSleepTimer() })

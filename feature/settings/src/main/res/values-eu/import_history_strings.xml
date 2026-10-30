@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="settings_import_history">Inportazioen historia</string>
-    <string name="import_history_footer">Sonorarekin inportatutako artxiboak. Ireki bat haren abestiak ikusteko, telefonotik ezabatzeko edo zerrenda honetatik kentzeko.</string>
+    <string name="import_history_footer">Sonorarekin inportatutako artxiboak. Ireki bat haren abestiak ikusteko, gailutik ezabatzeko edo zerrenda honetatik kentzeko.</string>
     <string name="import_history_empty">Ez dago inportaziorik</string>
     <string name="import_history_line">%1$s · %2$s</string>
-    <string name="import_history_delete_from_phone">Ezabatu telefonotik</string>
+    <string name="import_history_delete_from_phone">Ezabatu gailutik</string>
     <string name="import_history_remove">Kendu historiatik</string>
-    <string name="import_history_remove_note">Historiatik kentzeak inportazioa ahazten du soilik: abestiak telefonoan eta liburutegian geratzen dira.</string>
+    <string name="import_history_remove_note">Historiatik kentzeak inportazioa ahazten du soilik: abestiak gailuan eta liburutegian geratzen dira.</string>
 
-    <string name="import_history_delete_title">«%1$s» telefonotik ezabatu?</string>
+    <string name="import_history_delete_title">«%1$s» gailutik ezabatu?</string>
     <string name="import_history_delete_message">Ezin da desegin. Karpeta eta barruko fitxategi guztiak ezabatuko dira, abestiak liburutegitik, zerrendetatik eta gogokoetatik kenduko dira, eta berriro sortutako zerrenda ezabatuko da.</string>
     <string name="import_history_delete_confirm">Ezabatu</string>
     <string name="import_history_cancel">Utzi</string>
@@ -19,8 +19,8 @@
 
     <string name="import_history_deleted_title">Inportazioa ezabatuta</string>
     <plurals name="import_history_deleted_message">
-        <item quantity="one">Karpeta telefonotik ezabatu da, eta abesti %1$d liburutegitik.</item>
-        <item quantity="other">Karpeta telefonotik ezabatu da, eta %1$d abesti liburutegitik.</item>
+        <item quantity="one">Karpeta gailutik ezabatu da, eta abesti %1$d liburutegitik.</item>
+        <item quantity="other">Karpeta gailutik ezabatu da, eta %1$d abesti liburutegitik.</item>
     </plurals>
     <string name="import_history_incomplete_title">Ezin izan da dena ezabatu</string>
     <plurals name="import_history_incomplete_songs">

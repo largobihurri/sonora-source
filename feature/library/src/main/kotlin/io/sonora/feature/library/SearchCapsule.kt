@@ -66,7 +66,7 @@ internal fun SearchCapsule(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        TranslucentSurface(Modifier.weight(1f).height(height), shape = CapsuleShape, backdrop = backdrop) {
+        TranslucentSurface(Modifier.weight(1f).height(height), shape = CapsuleShape, backdrop = backdrop, overContent = true) {
             val colors = LocalTranslucentContentColors.current
             val secondary = colors.label.copy(alpha = SECONDARY_ALPHA)
             // The whole capsule focuses the field, not only the text line.
@@ -116,7 +116,7 @@ internal fun SearchCapsule(
             }
         }
         if (focused) {
-            TranslucentSurface(Modifier.height(height), shape = CapsuleShape, backdrop = backdrop) {
+            TranslucentSurface(Modifier.height(height), shape = CapsuleShape, backdrop = backdrop, overContent = true) {
                 Box(
                     Modifier
                         .fillMaxHeight()
